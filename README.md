@@ -1,0 +1,2 @@
+# elreq
+Ethiopic Layout Requirements
