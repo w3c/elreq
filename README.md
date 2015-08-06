@@ -7,7 +7,7 @@ This document is being developed by the Ethiopic Layout Task Force and the W3C I
 
 Feedback about the content of this document can be submitted via issues or pull request in the GitHub repo. 
 
-If you prefer, you can also send comments to [public-i18n-ethiopic@w3.org](mailto:public-i18n-ethiopic@w3.org)([subscribe](mailto:public-i18n-ethiopic@w3.org?subject=subscribe).
+If you prefer, you can also send comments to [public-i18n-ethiopic@w3.org](mailto:public-i18n-ethiopic@w3.org) ([subscribe](mailto:public-i18n-ethiopic@w3.org?subject=subscribe)).
 
 
 ##Editorial guidelines:##
