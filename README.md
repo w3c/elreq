@@ -3,7 +3,7 @@
 development version: http://w3c.github.io/elreq/
 
 
-This document is being developed by the Ethiopic Layout Task Force and the W3C Internationalization Working Group.
+This document is being developed by the Ethiopic Layout Task Force and the W3C Internationalization Working Group. Knowledge capture of layout topcics, which will inform the work of the task force, is done in the group [wiki](https://github.com/w3c/elreq/wiki).
 
 Feedback about the content of this document can be submitted via issues or pull request in the GitHub repo. 
 
