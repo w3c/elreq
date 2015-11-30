@@ -73,48 +73,103 @@
     </div>
     
     
-<section id="h_introduction">
+<section id="intro">
       <h2>Introduction</h2>
-      <section id="classical_ethiopic">
-      <h3>Classical Ethiopic</h3>
-      <p><em>Discuss layout requirements of classical ethiopic (hand written manuscripts) in broad terms.</em></p>
+      <section id="purpose">
+      <h3>Purpose of this Document</h3>
+      <p>This document describes requirements of the layout and presentation of text in the Ethiopic script for use with Web standards and technologies, such as HTML, CSS, Mobile Web and Digital Publications (e.g. eBooks). In addition to the Ethiopian and Eritrean homelands, the script is widely used througout the diaspora of these two nations. Accordingly, requirements are gathered from stakeholders engaged in Ethiopic publishing from all regions.</p>
+      <p>The document does not describe implementations or issues related to specific technologies, such as CSS. Instead it describes the typographic requirements of Ethiopic in a technology-agnostic manner, so that the content remains evergreen and is equally relevant to all technologies that aim to represent Ethiopic text on the Web.</p>
       </section>
-          <section id="modern_ethiopic">
-      <h3>Modern Ethiopic</h3>
-      <p><em>Discuss layout requirements of modern ethiopic in broad terms.</em></p>
+      <section id="how_developed">
+      <h3>How this Docuemnt was Created</h3>
+      <p>This document was created by the W3C Ethiopic Layout Task Force.  The Task Force will discussed many issues and harmonized the requirements from user communities and solutions from technological experts.</p> 
+      <p>The following types of experts will be involved in the creation of this document:</p>
+      <ol>
+        <li>Ethiopic typography experts</li>
+        <li>Experts from the publishing industry representing the spectrum of traditional to modern layout practices</li>
+        <li>Academic experts with a focus on Ge'ez manuscripts and philogy</li>
+      </ol>
+      <p>The Task Force will conduct a survey of the publishing industry to solicit input and identify the set of in-use layout styles. This document will then represent the normalized results of the industry survey which in turn becomes a basis for its validity and suitability to purpose. In the interim before to the survey results have been compiled and applied to this document, tentative specifications will be given based on the most-probable survey results anticipated from participating experts. <span class="note">Survey Pending</span> notes will appear along side specification sections to denote their status.</p>
       </section>
-  <section id="h_about_this_document">
-    <h2>About this document</h2>
-      <p>Some text goes here.</p>
-  </section>
+      <section id="basic_principles">
+      <h3>Basic Principles for Document Development</h3>
+      <p>Growing out of the XX element <a href="#term.geez" class="termref">Ge'ez</a> language syllabary for two millenia, Ethiopic in its present day form is a multilingual, and multinational, script comprised by YY symbols reprsenting: syllables, numerals, punctuation and tonal marks.  Numerous linguistic, cultural, literary, historical and political issues surround the script and its utilization, all of which the authors strive to avoid discussing unless directly relevant to clarifying a given layout use case. The following principles are applied in the development of this document:</p>
+      <ol>
+        <li>View publishers as the primary stakeholders.</li>
+        <li>Attempt a "90% solution" where the common and primary needs of publishers are addressed. Important but less widely used practices such as for <a href="#term.yared-zaima" class="termref">Yaredic Zaima Notation</a> will be addressed at a future time.</li> 
+        <li>It does not cover every issue of Ethiopic typography, but only the import differences from the Western language systems.</li>
+        <li>The technical aspects of actual implementation are not covered by this document.</li>
+        <li>In order to help readers' understanding of how Ethiopic is used, typical real life examples are provided.</li>
+        <li>Text layout rules and recommendations for readable design are different things, however these two issues are difficult to discuss independently. In this document, these two aspects are carefully separated. The aesthetic design recommendations are mainly described using notes.</li>
+        <li>The main target of this document is common books. The authors' experiences are mainly related to common books, and the quality required for common books is the highest in the market. There are many kinds of books in the market, and the requirements are quite diverse. The task force has a lot of accumulated experience in requirements and solutions for Ethiopic text composition. Nonetheless, many issues, which have been discussed over a long period of time, are applicable for other kinds of publication.</li>
+        <li>In terms of frequency of use, the importance of magazines, technical manuals, and Web documents rates alongside common books. However, there are several characteristics in these publications, which are different from common books. These issues should be treated more fully in future documents.</li>
+      </ol>
+      </section>
+      <section id="ethiopic_eras">
+      <h3>In-Scope Publishing Eras</h3>
+      <p>While Ethiopic documents can be characterized under a number of time periods, we discern only two gross eras in this document. <a href="#term.classical-ethiopic" class="termref">Classical Ethiopic</a> encompases the layout requirements found in the documents of the first printing presses and coming into fruition under the reign of Emperoror Haile Selassie.  While not the focus of this document, "Classical Ethiopic" also encompasses handwritten manuscripts whose practices are present in early publishing. This era is characterized more by the influences of the Ge'ez tradition as embodied by the Ethiopian Orthodox Church with respect to spelling conventions, syntax and punctuation use, Ethiopic Wordspace and numeral system preference, less variation in layout practice which is likely the result of having fewer publishing houses in operation.</p>
+
+      <p>The Classical Ethiopic era is followed by the <a href="#term.modern-ethiopic" class="termref">Modern Ethiopic</a> spanning from the post-Imperial period up until the present day. Modern Ethiopic practices are characterized by looser spelling practices, the preference change toward whitespace and western numerals, more variation in layout styles  
+and in some cases limitations imposed by desktop publishing software designed for Western markets.</p>
+
+      <p>The focus of this document is on the Modern Ethiopic layout conventions with distinctions pertaining to Classical Ethiopic noted when known.  An exception will be a complication that the authors hope to resolve found in Classical era documents where Ethiopic Wordspace interplays with Whitespace in a number of contexts.</p>
+      </section>
 </section>
     
     
-<section id="h_characters">
+<section id="characters">
       <h2>Characters</h2>
     <p>Topic Keywords: Exemplar, Joining behavior, Arrangement, Sizing, Spacing.</p>
         <section id="ethiopic_with_other_scripts">
     <h3>Interlingual Documents with Ethiopic</h3>
     <p>Discuss any considerations for when foreign scripts (Latin, Arabic, etc) are used with Ethiopic text. Relative character heights and weights.</p>
+    <ol>
+      <li><em>Relative character heights.</em></li>
+      <li><em>Relative typeface weights.</em></li>
+      <li><em>Baseline alignment.</em></li>
+    </ol>
     </section>
     <section id="ethiopic_with_latin_punctuation">
     <h3>Latin Punctuation with Ethiopic</h3>
     <p><em>Discuss Latin/Western puncutation adopted for Ethiopic writing.  Ethiopicized (typeface stylized) punctuation. Reference the ES-781:2002 punctuation inventory.</em></p>
+    <ol>
+      <li><em>Ethiopicized punctuation.</em></li>
+      <li><em>Latin inventory (as per ES-781:2002).</em></li>
+      <li><em>Optical balancing - weight of encompassing punctuation around inline Latin text match latin weight, e.g. []()""''«»‹›</em></li>
+      <li><em>Ethiopic wordspace at Latin boundary (letter or punctuation). Consider example of wordspace follow an abbreviation which is terminated with a dot.</em></li>
+    </ol>
     </section>
 </section>
     
-    
-<section id="h_lines_and_paragraphs">
+<section id="lines_and_paragraphs">
       <h2>Lines and Paragraphs</h2>
     <p>Topic Keywords: Line composition rules, Punctuations, Mixed script text, Paragraph adjustment, Directionality and bidi, Tab setting, Alignment, <a href="#def_justify" class="termref">Justification</a>, Hyphenation, Word/Sentence boundaries, Special cases (e.g. poetry, math, vertical, etc.)</p>
     <section id="ethiopic_hyphenation">
       <h3>Hyphenation</h3> 
+	<ul>
+		<li>A word is split at a location where the user would not be able to infer from context whether one or two words appears across lines.  I.E. a split should not occur at the boundary of a compound word.</li>
+		<li>When whitespace is the word delimiter, the hyphen symbol should be applied when a word is split over lines.</li>
+		<li>Numbers are not split over lines.</li>
+		<li>Words of a single syllable are not split over lines.</li>
+		<li>Words of two letters are not split over lines.</li>
+		<li>Only letters, numbers, or opening punctuation may start a new line.</li>
+		<li>Words are split along a syllbale boundary.</li>
+		<li>A consonant cluster may not be split.</li>
+	</ul>
       </section>
       <section id="ethiopic_word_boundaries">
       <h3>Word Boundaries</h3>
       </section>
       <section id="ethiopic_line_breaking">
       <h3>Line Breaking</h3>
+      </section>
+      <section id="ethiopic_line_breaking">
+      <h3>Formatting of Ethiopic Wordspace</h3>
+    <ol>
+      <li><em>Handling the Wordspace-Punctuation boundary (consider</em></li>
+      <li><em>When to apply whitespace (e.g. indentation, following )</em></li>
+      <li><em></em></li>
+    </ol>
       </section>
       
     <section id="ethiopic_justification">
@@ -201,6 +256,19 @@
 
     </section>
     
+
+    <section id="lists_and_counters">
+    <h4>List and counters</h4>
+    <ol>
+    <li><em>bullet lists - what are preferred bullets?</em></li>
+    <li><em>list item marker - what are the preferred symbols?</em></li>
+    <li><em>inline lists - how much space after marker?</em></li>
+    <li><em>ordinal - reference ethiopic numeral algorithm</em></li>
+    <li><em>alphabetic - langauge specific lists</em></li>
+    <li><em>alphabetic - abegede</em></li>
+    <li><em>inline paragraph continuation at end of list - how much space after final list item?  is this common in classical style?</em></li>
+    </ol>
+    </section>
     
     </section>
     
@@ -214,6 +282,20 @@
 <section id="h_document">
       <h2>Document</h2>
     <p>Topic Keywords: Distinguished requirements: book/ebook/page, Inter-page spacing, first and last pages, TOC and lists, indexes, appendices (e.g. bibliographies, glossaries), endnotes.</p>
+</section>
+    
+    
+<section id="other">
+      <h2>Other</h2>
+    <p>Literature best practices of interest for the survey that are not know to be layout topics</p>
+    <ol>
+      <li><em>Abbreviation formation</em></li>
+      <li><em>Terminal punctuation on abbreviations</em></li>
+      <li><em>ordinal notation (superscript or not)</em></li>
+      <li><em>Ethiopic comma usage</em></li>
+      <li><em>Whitespace around punctuation.  Fiker Iske Makber and Oromay are good examples.</em></li>
+    </ol>
+    
 </section>
 
 
