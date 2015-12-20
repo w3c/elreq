@@ -1,0 +1,56 @@
+/* ሀለሐመ Styles */
+@counter-style ethiopic-halehame-gez {
+  system: alphabetic;
+  speak-as: upper-latin;
+  symbols: ሀ ለ ሐ መ ሠ ረ ሰ ቀ በ ተ ኀ ነ አ ከ ወ ዐ ዘ የ ደ ገ ጠ ጰ ጸ ፀ ፈ ፐ ;
+  suffix: "፦&#x2009;";
+}
+@counter-style ethiopic-halehame-am-et {
+  system: alphabetic;
+  speak-as: upper-latin;
+  symbols: ሀ ለ ሐ መ ሠ ረ ሰ ሸ ቀ በ ተ ቸ ኀ ነ ኘ አ ከ ኸ ወ ዐ ዘ ዠ የ ደ ጀ ገ ጠ ጨ ጰ ጸ ፀ ፈ ፐ ;
+  suffix: "/&#x2009;";
+}
+@counter-style ethiopic-halehame-ti-et {
+  system: alphabetic;
+  speak-as: upper-latin;
+  symbols: ሀ ለ ሐ መ ሠ ረ ሰ ሸ ቀ ቐ በ ተ ቸ ኀ ነ ኘ አ ከ ኸ ወ ዐ ዘ ዠ የ ደ ጀ ገ ጠ ጨ ጰ ጸ ፀ ፈ ፐ ;
+  suffix: "/&#x2009;";
+}
+@counter-style ethiopic-halehame-ti-er {
+  system: alphabetic;
+  speak-as: upper-latin;
+  symbols: ሀ ለ ሐ መ ረ ሰ ሸ ቀ ቐ በ ተ ቸ ነ ኘ አ ከ ኸ ወ ዐ ዘ ዠ የ ደ ጀ ገ ጠ ጨ ጰ ጸ ፈ ፐ ;
+  suffix: "/&#x2009;";
+}
+@counter-style ethiopic-halehame-byn {
+  system: alphabetic;
+  speak-as: upper-latin;
+  symbols:  ሀ ለ ሐ መ ረ ሰ ሸ ቀ ቐ በ ተ ቸ ነ ኘ አ ከ ኸ ወ ዐ ዘ ዠ የ ደ ጀ ገ ጘ ጠ ጨ ጰ ጸ ፈ ፐ ;
+  suffix: "/&#x2009;";
+}
+/* አበገደ Styles */
+@counter-style ethiopic-abegede-gez {
+  system: alphabetic;
+  speak-as: upper-latin;
+  symbols: አ በ ገ ደ ሀ ወ ዘ ሐ ጠ የ ከ ለ መ ነ ሠ ዐ ፈ ጸ ቀ ረ ሰ ተ ኀ ፀ ጰ ፐ ;
+  suffix: "፦&#x2009;";
+}
+@counter-style ethiopic-abegede-am-et {
+  system: alphabetic;
+  speak-as: upper-latin;
+  symbols: አ በ ገ ደ ጀ ሀ ወ ዘ ዠ ሐ ጠ ጨ የ ከ ኸ ለ መ ነ ኘ ሠ ዐ ፈ ጸ ቀ ረ ሰ ሸ ተ ቸ ኀ ፀ ጰ ፐ ;
+  suffix: "/&#x2009;";
+}
+@counter-style ethiopic-abegede-ti-et {
+  system: alphabetic;
+  speak-as: upper-latin;
+  symbols: አ በ ገ ደ ጀ ሀ ወ ዘ ዠ ሐ ጠ ጨ የ ከ ኸ ለ መ ነ ኘ ሠ ዐ ፈ ጸ ቀ ቐ ረ ሰ ሸ ተ ቸ ኀ ፀ ጰ ፐ ;
+  suffix: "/&#x2009;";
+}
+@counter-style ethiopic-abegede-ti-er {
+  system: alphabetic;
+  speak-as: upper-latin;
+  symbols: አ በ ገ ደ ጀ ሀ ወ ዘ ዠ ሐ ጠ ጨ የ ከ ኸ ለ መ ነ ኘ ሠ ዐ ፈ ጸ ቀ ቐ ረ ሰ ሸ ተ ቸ ኀ ፀ ጰ ፐ ;
+  suffix: "/&#x2009;";
+}
