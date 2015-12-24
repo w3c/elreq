@@ -168,6 +168,10 @@ and in some cases limitations imposed by desktop publishing software designed fo
 <section id="lines_and_paragraphs">
     <h2>Lines and Paragraphs</h2>
     <p>Topic Keywords: Line composition rules, Punctuations, Mixed script text, Paragraph adjustment, Directionality and bidi, Tab setting, Alignment, <a href="#def_justify" class="termref">Justification</a>, Hyphenation, Word/Sentence boundaries, Special cases (e.g. poetry, math, vertical, etc.)</p>
+    <section id="first_paragraph">
+      <h3>First Paragraph Rule</h3> 
+      <p><em>Issue: Is indentation applied to the the first paragraph?</em></p>
+    </section>
     <section id="ethiopic_hyphenation">
       <h3>Hyphenation</h3> 
 	<ul>
@@ -238,14 +242,14 @@ and in some cases limitations imposed by desktop publishing software designed fo
     <p>In the regular mode of Ethiopic justification (both  forms) <span class="uname">U+1362   ETHIOPIC FULL STOP</span> [።] will be treated equally  with all other punctuation symbols.  In a second mode, the Ethiopic full stop will have special spacing rules  applied to it whereby more separation space is allowed following the symbol and the start of the next  word.  In a sense, the right side space of the full stop is “more elastic” than in the regular mode.   The  elasticity rule and the visual effect are similar to that of the final line of a fully justified paragraph in  Western text.  When the final line of a paragraph of Latin script crosses a certain horizontal threshold,  the line will become fully justified. Below that threshold the line will appear left aligned.  The same rule  appears to be applied to the Ethiopic full stop but  on any line of the paragraph.  An illustration of  this  sub-mode is depicted in the following: </p>
     <figure> <img src="images/justification_mashafa_sawasew.png" alt=" " width="789" height="300" border="1" />
       <figcaption>Justification Sample from  Maṣḥafa Sawāsew , Page 159 (Kifle, 1955 (1948 EC))</figcaption>
-  </figure>
+    </figure>
     </section>
 
 
 
      <section id="shorcomings_in_electronic_typesetting">
     <h4>Shortcomings Found in Electronic Typesetting Systems</h4>
-    <p>To date, computer software that typesets text has a pplied justification rules for white space stretching  that were designed to meet publishing requirements  in the Western world.  When the same rules are  applied to Ethiopic text, the results are unsatisfactory as they do not meet user expectations. Largely  responsible for the formatting dissonance when Western justification is applied to Ethiopic text, is the  absence of a white space symbol in the writing system. There is no explicit white space symbol (in classic  Ethiopic writing) to be “stretched”.</p>
+    <p>To date, computer software that typesets text has applied justification rules for white space stretching  that were designed to meet publishing requirements  in the Western world.  When the same rules are  applied to Ethiopic text, the results are unsatisfactory as they do not meet user expectations. Largely  responsible for the formatting dissonance when Western justification is applied to Ethiopic text, is the  absence of a white space symbol in the writing system. There is no explicit white space symbol (in classic  Ethiopic writing) to be “stretched”.</p>
     <p>Formatting  algorithms  will  then  process  <span class="uname">U+1361   ETHIOPIC WORDSPACE</span> [፡] as  a  punctuation  symbol  where  word  binding rules, rather than word spacing rules, will  be applied.  While still stretchable, “white space” in  the Ethiopic  wordspace  is  implicit  rather  than  explicit.  For  a  complete  solution,  software  will  ultimately need to be enhanced to stretch implicit space as required.  Reclassifying the Ethiopic wordspace as a “Zs”  symbol  is  expected  to  help  alleviate  justification  issues  and  clears  the  way  for  software  firms  to  implement comprehensive support for Ethiopic justification. Since the Ethiopic wordspace interferes with  justification in present day software, users may opt not to use it or may “pad” wordspace and Ethiopic punctuation with explicit white space to obtain the  formatting desired.  The following samples depict  formatting  of  Kidane  Wolde  Kifle’s  seminal  work  <cite>Maṣḥafa  Sawāsew</cite> with  a  popular  word  processor  (Kifle, 1955 (1948 EC)) under the limitations of Western spacing rules justification.</p>
     <figure> <img src="images/justification_full_mashafa_sawasew.png" alt=" " width="788" height="295" border="1" />
       <figcaption>Full Justification Sample from Maṣḥafa Sawāsew, Page 65 (Kifle, 1955 (1948 EC))</figcaption>
@@ -267,7 +271,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
     <p>“Semi-justification”  is  mentioned  here  as  a  historical  note  and  to  provide  an  interpretation  of  formatting observed in hand written manuscripts. In  “semi-justification” the line spacing rules of  either mode of Ethiopic justification has been used, however, the text does not necessarily align  perfectly flush with the right side margin.  This practice is depicted in the following sample (Brita, 2012): </p>
     <figure> <img src="images/semi_justification.png" alt=" " border="1" />
       <figcaption>‘Adwā (Tegrāy), Dabra Madarā, Endā Abbā  Garimā, ms. C2 IV 92,  fol. 42r, Cropped (Brita, 2012)</figcaption>
-  </figure>
+    </figure>
     </section>
 
 
@@ -278,7 +282,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
     <p>An alternative view point on this practice is that   <span class="uname">U+1363   ETHIOPIC COMMA [፣]</span> is in fact in use by  these  user  communities;  however  its   glyph   has  decayed  whereby  the  line  segment  is  lost  and  so  it  visually coincides with <span class="uname">U+1361   ETHIOPIC WORDSPACE</span> [፡].  Under  this perspective, a simple solution would be modify an Ethiopic font for these users (perhaps adding an  alternative glyph in an OpenType stylistic set) where  the Ethiopic comma character address and semantics  remain intact though the visual form has been  tailored to meet aesthetic needs. </p>
     <figure> <img src="images/wordspace_with_comma.png" alt=" " width="790" height="542" border="1"/>
       <figcaption>Ethiopic Wordspace in the context of co mma (Abubeker, 1987 ( 1979 EC))</figcaption>
-  </figure>
+    </figure>
     </section>
 
 
@@ -291,14 +295,20 @@ and in some cases limitations imposed by desktop publishing software designed fo
 
     <section id="bullet_lists">
     	<h4>Bullet Lists</h4>
+    	<p>Bullet lists are utilized regularly in Ethiopic literature. Authors using a computer or typewriter will work with the list marker
+    	symbols made available by their software or machine. Many marker, or "bullet", symbols are accepted for Ethiopic literature though not all
+    	will be considered optimal.</p>
 		<p><em>Issues:
 		<ol>
 		  <li>What are the preferred bullet shapes?</li>
 		  <li>What is bullet height and width relative to letter dimensions? [create comparative sample images]</li>
-		  <li>Are lists indented (left  margin)? If so, how much? </li>
+		  <li>Are lists indented (left  margin)? If so, how much?</li>
+		  <li>Examples are needed for pre-digital, classical, literature.</li>
 		</ol></em>
 		</p>
-		<p>⬩ (U+2B29)<br/>◆ (U+25C6)<br/>⬥ (U+2B25)<br/>❖ (U+2756)<br/>♦ (U+2666)<br/></p>
+		<p>Diamond shaped bullets are found commonly and may represent a desired default.
+		The Unicode standard provides a number of similar diamond shaped symbols. From this set of diamond symbols, those suitable for adorning Ethiopic bullet lists must be determined.</p> 
+		<p style="margin-left: 20px">⬩ (U+2B29)<br/>◆ (U+25C6)<br/>⬥ (U+2B25)<br/>❖ (U+2756)<br/>♦ (U+2666)<br/></p>
 		<!-- See reference: http://unicode-search.net/unicode-namesearch.pl?term=DIAMOND -->
     </section>
     
@@ -306,7 +316,10 @@ and in some cases limitations imposed by desktop publishing software designed fo
     	<h4>List Item Marker</h4>
    		 <p><em>What are the preferred suffix symbols? How much, if any, white space follows the suffix? space, punctuation space, thin space, hair space, etc? produce comparative examples</em>
    		 </p>
-   		 <p style="margin-left: 40px">፦<br/>.<br/>)<br/>፡</p>
+   		 <p style="margin-left: 20px">፦<br/>.<br/>)<br/>፡</p>
+    </section>
+    <section id="list_item_marker_alignment">
+    	<h4>List Item Marker Alignment</h4>
    		 <img src="images/list-aligned-on-counter-left.png" border="1"/><br/>
    		 <img src="images/list-aligned-on-suffix.png" border="1"/>
     </section>
@@ -322,8 +335,8 @@ and in some cases limitations imposed by desktop publishing software designed fo
     <p><a href="http://www.w3.org/TR/css-counter-styles-3/#valdef-counter-style-name-ethiopic-numeric">Ethiopic Numeric Counter Style</a> section of the <a href="http://www.w3.org/TR/css-counter-styles-3/">CSS Counter Styles Level 3</a> specification.</p>
     </section>
     
-    <section id="alphabetic_lists">
-    <h4>Alphabetic (ሀለሐመ) Lists</h4>
+    <section id="alphabetical_lists">
+    <h4>Alphabetical (ሀለሐመ) Lists</h4>
     <p>The Unicode standard encodes Ethiopic syllables for many languages using Ethiopic script past and present.
     Alphabetic lists are commonplace in Ethiopic literature, but will conform to the letter inventory of the language of the surrounding content.
     The alphabetical style lists specified here do not encompass <em>all</em> languages using Ethiopic, but only those with a demonstrated requirement as found in corpus or stakeholder input.</p>
@@ -827,10 +840,19 @@ and in some cases limitations imposed by desktop publishing software designed fo
     	</div>       	
     </section>
     
-    <section id="inline_continuation">
+    <section id="inlined_continuation">
     	<h4>Inline End of List Continuation</h4>
-    	<p><em>paragraph continuation at end of list - how much space after final list item?  is this common in classical style?</em></p>
-    	<img src="images/end-of-list-inline-continuation.png"  alt=" " border="1" />
+    	<p>An observed formatting practice is the start of a following paragraph inline with the last list item.  The paragraph may flow immediately from the last item, or some indentation may be applied.</p>
+    	<p><em>Issues:
+    	  <ol>
+    	    <li>Is this an older style? Idiosyncratic to a few authors? The desired norm?</li>
+    	    <li>When appropriate, what is the width of the paragraph offset (if any) from the final list item?</li>
+    	  </ol>
+    	</em></p>
+    	<figure id="end_of_list_inlined_paragraph_continuation">
+    	  <img src="images/end-of-list-inline-continuation.png"  alt=" " border="1" />
+    	 <figcaption>Sample for inlined paragraph continuation at end of list.</figcaption>
+    	</figure>
 	</section>
 	
     </section>
@@ -868,7 +890,6 @@ and in some cases limitations imposed by desktop publishing software designed fo
       	<h3>Ethiopic Comma Usage</h3>
       	<p><em>Rules of usage for the two Ethiopic commas. Note language specific conventions.</em></p>
       </section>
- 
 </section>
 
 
