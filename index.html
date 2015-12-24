@@ -291,14 +291,22 @@ and in some cases limitations imposed by desktop publishing software designed fo
 
     <section id="bullet_lists">
     	<h4>Bullet Lists</h4>
-		<p><em>what are the preferred bullet shapes?</em></p>
-		<p>◆ (U+25C6)<br/>◆ (U+2666)<br/>⬥ (U+2B25)<br/>⬩ (U+2B29)<br/>❖ (U+2756)<br/></p><!-- See reference: http://unicode-search.net/unicode-namesearch.pl?term=DIAMOND -->
+		<p><em>Issues:
+		<ol>
+		  <li>What are the preferred bullet shapes?</li>
+		  <li>What is bullet height and width relative to letter dimensions? [create comparative sample images]</li>
+		  <li>Are lists indented (left  margin)? If so, how much? </li>
+		</ol></em>
+		</p>
+		<p>⬩ (U+2B29)<br/>◆ (U+25C6)<br/>⬥ (U+2B25)<br/>❖ (U+2756)<br/>♦ (U+2666)<br/></p>
+		<!-- See reference: http://unicode-search.net/unicode-namesearch.pl?term=DIAMOND -->
     </section>
     
     <section id="list_item_marker">
     	<h4>List Item Marker</h4>
    		 <p><em>What are the preferred suffix symbols? How much, if any, white space follows the suffix? space, punctuation space, thin space, hair space, etc? produce comparative examples</em>
-   		 <br/>/<br/>፦<br/>.<br/>)</p>
+   		 </p>
+   		 <p style="margin-left: 40px">፦<br/>.<br/>)<br/>፡</p>
    		 <img src="images/list-aligned-on-counter-left.png" border="1"/><br/>
    		 <img src="images/list-aligned-on-suffix.png" border="1"/>
     </section>
@@ -320,7 +328,20 @@ and in some cases limitations imposed by desktop publishing software designed fo
     Alphabetic lists are commonplace in Ethiopic literature, but will conform to the letter inventory of the language of the surrounding content.
     The alphabetical style lists specified here do not encompass <em>all</em> languages using Ethiopic, but only those with a demonstrated requirement as found in corpus or stakeholder input.</p>
     
-    <p><em>Issue: ቨ appears to be equally included and omitted in lists.</em></p>
+    <p><em>Issues:
+    <ol>
+      <li>ቨ appears to be equally included and omitted in lists.</li>
+      <li>How is end of sequence handled?
+      <ol type="a">
+        <li>Sequence as radix, e.g.: ... ፈ ... ፐ ... ሀሀ ... ሀለ ...</li>
+        <li>Columnar radix, e.g.: ... ፈ ... ፐ ... ሀሁ ... ሀሉ ...</li>
+        <li>Wrap to next column, e.g.: ... ፈ ... ፐ ... ሁ ... ሉ ...</li>
+        <li>With any approach, how is the end of matrix handled?</li>
+      </ol>
+      </li>
+      <li></li>
+    </ol>
+    </em></p>
     <table>
     <tr>
       <th>Ge'ez</th>
@@ -583,6 +604,22 @@ and in some cases limitations imposed by desktop publishing software designed fo
     	<p>The አበገደ ordering is potentially desirable to any language using the Ethiopic syllabary.
     	The ordering is less likely to be found in the writing traditions of languages that have a written tradition of under a hundred years.
     	The language specific orders orders shown here are those found in utilization in corpus (<em>give references</em>.</p>
+    	
+    <p><em>Issues:
+    <ol>
+      <li>ቨ appears to be equally included and omitted in lists.</li>
+      <li>How is end of sequence handled?
+      <ol type="a">
+        <li>Sequence as radix, e.g.: ... ጰ ... ፐ ... አአ ... አበ ...</li>
+        <li>Columnar radix, e.g.: ... ጰ ... ፐ ... አቡ ... አጉ ...</li>
+        <li>Wrap to next column, e.g.: ... ጰ ... ፐ ... ቡ ... ጉ ...</li>
+        <li>With any approach, how is the end of matrix handled?</li>
+      </ol>
+      </li>
+      <li></li>
+    </ol>
+    </em></p>    	
+
     <table>
     <tr>
       <th>Ge'ez</th>
