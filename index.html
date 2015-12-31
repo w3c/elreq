@@ -160,8 +160,19 @@ and in some cases limitations imposed by desktop publishing software designed fo
     
     <section id="ethiopic_wordspace_at_latin_boundaries">
     	<h4>Ethiopic Wordspace at Latin Boundaries</h4>
-    	<p><em>letter or punctuation boundary, Consider example of wordspace follow an abbreviation which is terminated with a dot.</em>
-    </section>    
+    	<p><em>letter or punctuation boundary, Consider example of wordspace follow an abbreviation which is terminated with a dot.</em></p>
+    </section>
+    
+    <section id="space_wordspace_substitution rules">
+    	<h4>Space-Wordspace Substitution Rules</h4>
+    	<p>Rules are presented here to aid layout software that would offer the functionality of space symbol conversion to and from
+    	Ethiopic wordspaces.
+    	This functionality is desirable in a viewer application (e.g. web browser, eBook reader) to make the same
+    	substitution as per a user preference.  Thus the user would be able to read a document with Ethiopic wordspaces that
+    	was composed and delivered with white space. Likewise in the reverse, a user who preferred white space could have their preference
+    	supported in a document that encodes Ethiopic wordspaces only. Similarly, this functionality would be useful to users of an editor application.</p>
+    	<p><em>Develop rules for space-wordspace substitution (e.g. context for when not to substitute a space for wordspace).</em></p>
+    </section>         
     </section>
 </section>
     
@@ -302,7 +313,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
 		<ol><em>
 		  <li>What are the preferred bullet shapes?</li>
 		  <li>What are the preferred shape sequences in nested lists?</li>
-		  <li>What is bullet height and width relative to letter dimensions? [create comparative sample images]</li>
+		  <li>What is bullet height and width relative to letter dimensions? [TBD: Create comparative sample images]</li>
 		  <li>Are lists indented (left  margin)? If so, how much?</li>
 		  <li>Examples are needed for pre-digital, classical, literature.</li>
 
@@ -331,7 +342,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
     	<p>Ethiopic corpus will present lists with two styles of alignment. These are a left side alignment at the
     	list counter, or alignment along the list marker (suffix). Layout software will align a list at the marker in
     	keeping with the later style.  The former style (left justified at counter) may reflect a limitation of the
-    	layout technology employed and not a preference of the author, copy editor or typesetter. A depcition of these
+    	layout technology employed and not a preference of the author, copy editor or typesetter. A depiction of these
     	two alignment styles is presented in the following figures:</p>
 
    	    <p>
@@ -882,17 +893,20 @@ and in some cases limitations imposed by desktop publishing software designed fo
     
     <section id="inlined_continuation">
     	<h4>Inline End of List Continuation</h4>
-    	<p>An observed formatting practice is the start of a following paragraph inline with the last list item.  The paragraph may flow immediately from the last item, or some indentation may be applied.</p>
+    	<p>An observed formatting practice is the start of a following paragraph inline with the last list item.
+    	The paragraph may flow immediately from the last item, or some indentation may be applied. This practice is illustrated in the following figure:</p>
+
+    	<figure id="end_of_list_inlined_paragraph_continuation">
+    	  <img src="images/end-of-list-inline-continuation.png"  alt=" " border="1" />
+    	 <figcaption>Sample for inlined paragraph continuation at end of list.</figcaption>
+    	</figure>
+    	
     	<p><em>Issues:
     	  <ol>
     	    <li>Is this an older style? Idiosyncratic to a few authors? The desired norm?</li>
     	    <li>When appropriate, what is the width of the paragraph offset (if any) from the final list item?</li>
     	  </ol>
     	</em></p>
-    	<figure id="end_of_list_inlined_paragraph_continuation">
-    	  <img src="images/end-of-list-inline-continuation.png"  alt=" " border="1" />
-    	 <figcaption>Sample for inlined paragraph continuation at end of list.</figcaption>
-    	</figure>
 	</section>
 	
     </section>
