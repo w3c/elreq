@@ -879,23 +879,27 @@ and in some cases limitations imposed by desktop publishing software designed fo
       <section id="ethiopic_abbreviation_formation">
       	<h3>Abbreviation formation</h3>
 		<p>Abbreviations in Ethiopic languages will apply an abbreviation marker ("/" or ".") placed between the first letters of each word in a phrase.
-		Two letter words may not be abbreviated. The last word in an abbreviation may remain whole. Single word abbreviation that applies a right side truncation
-		(vs mid) will apply a "." as the abbreviation maker.
+		Single word abbreviation that applies a right side truncation (vs mid) will apply a "." as the abbreviation maker.
+		In a multi-word abbreviations the last word may remain whole. Two letter words are only be abbreviated in a multi-word abbreviation. 
 		</p>
-		<p>Examples<br/>
-		<span style="text-decoration: underline;">Multi Word</span><br/>
-		ሆ/ል	ሆስፒታል
-		<br/>&nbsp;<br/>
+		<p><strong>Examples:</strong><br/>
 		<span style="text-decoration: underline;">Single Word</span><br/>
-      	ጠ/ሚ  ጠቅላይ ሚኒስትር<br/>
-      	ኢ/ኦ/ተ/ቤ/ክ
+		<span style="margin-left:40px;">
+		ሆስፒታል ⇒ ሆ/ል</span><br/>
+		<span style="margin-left:40px;">
+		ሚኒስትር ⇒ ሚ/ር</span><br/>
+		<span style="text-decoration: underline;">Multi Word</span><br/>
+		<span style="margin-left:40px;">
+      	ጠቅላይ ሚኒስትር ⇒ ጠ/ሚ/ር</span><br/>
+      	<span style="margin-left:40px;">
+      	ኢትዮጵያ ኦርቶዶክስ ተዋሕዶ ቤተ ክርስቲያን ⇒ ኢ/ኦ/ተ/ቤ/ክ</span>
       	</p>
       	<p><em>Issues:
 		<ol>
 		  <li>When "." is used as the abbreviation marker, it is sometimes found at the end of the abbreviation.</li>
 		  <li>Confirm single word abbreviation rule.</li>
 		  <li>Are mixed abbreviation markers appropriate? Some well established abbreviations apply a "." as the marker, for example
-		  "አዲስ አበባ ዩኒቨርሲቲ" becomes "አ.አ.ዩ".</li>
+		  "አዲስ አበባ ዩኒቨርሲቲ" becomes "አ.አ.ዩ".  This may reflect the chosen convention of the institute.</li>
 		  <li>What symbol is applied for foreign words transcribed into an Ethiopic languages?</li>
 		</ol>
 		</em></p>
@@ -904,7 +908,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
       
       <section id="ethiopic_ordinal_notation">
       	<h3>Ordinal Notation</h3>
-     	 <p>An ordinal number is formed in Amharic when "ኛ", and in Tigrinya when "ይ", follows a cardinal number.
+     	 <p>An ordinal is formed in Amharic when "ኛ", and in Tigrinya when "ይ", follows a cardinal number.
      	 The ordinal marker is often, but not always, rendered in superscript form. The superscript practice is most prevalent with ordinals
      	 in western numerals, but is also applied with Ethiopic numerals.
      	<p><em>Issues:
@@ -922,8 +926,27 @@ and in some cases limitations imposed by desktop publishing software designed fo
       <section id="ethiopic_comma_usage">
       	<h3>Ethiopic Comma Usage</h3>
       	<p><em>Rules of usage for the two Ethiopic commas. Note language specific conventions.</em></p>
-      	፣ ፥
-      	mention "," used with numbers -only?
+      	<dl>
+      	  <dt>፣ - ነጠላ ሠረዝ</dt>
+      	  <dd>ETHIOPIC COMMA (አማ/ ነጠላ ሠረዝ, ትግ/ ንጽል ሰረዝ) is used as a comma in Ethiopian practices and as a semicolon in Eritrea. ፣ will also be
+      	  used in Ge'ez writing as a semicolon (is this a modern usage or classic?).
+      	  ETHIOPIC SEMICOLON, ፤, in turn is used as a colon in Eritrean writing (verify).</dd>
+      	  <dt>፥ - ንዑስ ሠረዝ</dt>
+      	  <dd>ETHIOPIC COLON in contrast to its Unicode name, is never(?) used as a colon in any known Ethiopic practices.
+      	  Rather, it is a classical glyph variant of ETHIOPIC COMMA (፣). ፥ is the default comma glyph in Ge'ez writing and is the preferred
+      	  comma glyph by some modern writers writing in other languages. ፥ is the default comma in most Amharic bibles, likely in keeping with
+      	  the Ge'ez Bible that the Amharic would have been translated from.  Some modern Bible translations into Amharic, as well as other religious
+      	  literature, will use ፣ as the default comma in prose but maintain ፥ for passage references, e.g. ማቴ4፥23 , ዮሐ13፥16 , etc. Given this
+      	  common usage in religious materials "ecclesiastical comma" is a practical English term for referring to the ፥ glyph variant.
+      	  </dd>
+      	  <dt>፡ - ንዑስ ነጥብ</dt>
+      	  <dd>ETHIOPIC WORDSPACE (አማ/ ሁለት ነጥብ, ትግ/ ክልተ ነጥቢ) in keeping with Ge'ez heritage, is used as word separator (i.e. space) in the classical writing practices
+      	      of both Eritrean and Ethiopia.  In in modern Eritrean writing practices in the role of a comma.
+      	      When used in modern Ethiopian writing, it retains its classic role as word separator (space).
+      	  </dd>
+      	  <dt>, - comma</dt>
+      	  <dd>COMMA is utilized in Eritrean and Ethiopian writing practices in the formatting of western numbers only.</dd>
+      	</dl>
       </section>
 </section>
 
