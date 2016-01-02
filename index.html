@@ -83,7 +83,7 @@
       <p>The document does not describe implementations or issues related to specific technologies, such as CSS. Instead it describes the typographic requirements of Ethiopic in a technology-agnostic manner, so that the content remains evergreen and is equally relevant to all technologies that aim to represent Ethiopic text on the Web.</p>
       </section>
       <section id="how_developed">
-      <h3>How this Docuemnt was Created</h3>
+      <h3>How this Document was Created</h3>
       <p>This document was created by the W3C Ethiopic Layout Task Force.  The Task Force will discussed many issues and harmonized the requirements from user communities and solutions from technological experts.</p> 
       <p>The following types of experts will be involved in the creation of this document:</p>
       <ol>
@@ -127,14 +127,41 @@ and in some cases limitations imposed by desktop publishing software designed fo
     <p>Discuss any considerations for when foreign scripts (Latin, Arabic, etc) are used with Ethiopic text. Relative character heights and weights.</p>
     <section id="relative_character_heights">
         <h4>Relative Character Heights</h4>
+        <p>In multilingual documents, differences between the heights of letters in Ethiopic script and its companion foreign script are often found.
+        The difference is likely an artifact of the typesetting technology in use and does not represent the intent of the author or publisher.
+        In the classic typeface style of Ethiopic script the letters will be of variable heights. Fixed height styles are more generally used for
+        advertisement and not publishing. The nature of variable height Ethiopic letters is a factor that complicates how to be best align letter height with a foreign script.</p>
+        <p><em>Issues:</em>
+		<ol><em>
+		  <li>What Ethiopic letter should be applied as a height reference point for alignment?</li>
+		  <li>Should height alignment be attempted as per the letter inventory of a target language level or for the script as a whole (practical but less optimal)?</li>
+		  <li>Relative to a Latin uppercase letter, should the height of Ethiopic letters: a) equal (b) shorter (c) taller?</li>
+		  <li>Is height alignment an issue with other writing systems?  If so, how is it addressed?</li>
+		</em></ol>
     </section>
 
     <section id="relative_typeface_weights">
         <h4>Relative Typeface Weights</h4>
+        <p>A common practice in Ethiopic literature is the change of typeface weight in one script to appear more visually similar to the other.
+        Most typically a Latin typeface will be made heavier to better match its Ethiopic counterpart.  This weight increase is demonstrated in many
+        Ethiopic fonts that include the Latin letters. The font designer may have increased the weight of the Latin range primarily to provide heavier
+        weight punctuation to use with Ethiopic script (see <a href="#ethiopicized_punctuation">Ethiopized Punctuation</a>).</p>
+        <p>Literature produced with a heavier Latin tyepface may represent the author's stylistic sensibilities but in some cases may be only be a
+        pragmatic outcome when an author finds manually changing between fonts too burdensome. 
+        The view of professional publishers is unknown here and should be determined.</p>
+        <p><em>Issues:</em>
+		<ol><em>
+		  <li>When publishing in the classical Ethiopic weight, should English words appear in their default English weight?</li>
+		  <li>If heavier Latin letters are desirable, how much so? Can a weight increase be defined as a percentage of the Ethiopic?</li>
+		</em></ol>
     </section>
 
     <section id="baseline_alignment">
         <h4>Baseline Alignment</h4>
+        <p><em>This may only be an issue with pre-digital typesetting systems where Latin text and Ethiopic would appear to be
+        use different baselines in a line of text.  The most common example of this appears from documents produced with a typewriter
+        where a sheet of paper had to be moved between typewriters to produce a line in two scripts.  An apparent baseline difference here
+        would be the result of mechanical misalignment.</em></p>
     </section>
     </section>
     
@@ -182,7 +209,18 @@ and in some cases limitations imposed by desktop publishing software designed fo
     <p>Topic Keywords: Line composition rules, Punctuations, Mixed script text, Paragraph adjustment, Directionality and bidi, Tab setting, Alignment, <a href="#def_justify" class="termref">Justification</a>, Hyphenation, Word/Sentence boundaries, Special cases (e.g. poetry, math, vertical, etc.)</p>
     <section id="first_paragraph">
       <h3>First Paragraph Rule</h3> 
-      <p><em>Issue: Is indentation applied to the the first paragraph?</em></p>
+      <p>Paragraph indentation is a modern Ethiopic practice.  The initial paragraph of a section is sometimes not indented.  This practice may be
+      idiosyncratic to an author but may represent a convention in use by a publishing house.  A best practice supported by stakeholders should be
+      established here.</p> 
+    
+      <p><em>Issues:</em>
+		<ol><em>
+		  <li>How much should a paragraph be indented?</li>
+		  <li>Should the first paragraph of a section be indented?</li>
+		  <li>Should a new paragraph be indented following a list?</li>
+		  <li>Are there any other special rules for when to, or not to, indent a paragraph?</li>
+	    </em></ol>
+	  </p>
     </section>
     <section id="ethiopic_hyphenation">
       <h3>Hyphenation</h3> 
