@@ -532,20 +532,6 @@ The shape and weight of these symbols are often changed for a better visual fit 
     Alphabetic lists are commonplace in Ethiopic literature, but will conform to the letter inventory of the language of the surrounding content.
     The alphabetical style lists specified here do not encompass <em>all</em> languages using Ethiopic, but only those with a demonstrated requirement as found in corpus or stakeholder input.</p>
     
-    <p><em>Issues:
-    <ol>
-      <li>ቨ appears to be equally included and omitted in lists.</li>
-      <li>How is end of sequence handled?
-      <ol type="a">
-        <li>Sequence as radix, e.g.: ... ፈ ... ፐ ... ሀሀ ... ሀለ ...</li>
-        <li>Columnar radix, e.g.: ... ፈ ... ፐ ... ሀሁ ... ሀሉ ...</li>
-        <li>Wrap to next column, e.g.: ... ፈ ... ፐ ... ሁ ... ሉ ...</li>
-        <li>With any approach, how is the end of matrix handled?</li>
-      </ol>
-      </li>
-      <li></li>
-    </ol>
-    </em></p>
     <table>
     <tr>
       <th>Ge'ez</th>
@@ -755,6 +741,9 @@ The shape and weight of these symbols are often changed for a better visual fit 
      </td>
     </tr>
     </table>
+
+    <p>These tables are expressed in the following as per the <a href="http://www.w3.org/TR/css-counter-styles-3/">CSS Counter Styles Level 3</a> recommendation.</p>
+
     	<div class="example" id="tbd">
 <pre class="stylesheet">@counter-style <dfn data-dfn-type="dfn" data-noexport="" id="ethiopic-halehame-gez">ethiopic-halehame-gez<a class="self-link" href="#ethiopic-halehame-gez"></a></dfn> {
   system: alphabetic;
@@ -800,6 +789,21 @@ The shape and weight of these symbols are often changed for a better visual fit 
 }
 </pre>    	
     	</div>
+
+    <p><em>Issues:
+    <ol>
+      <li>ቨ appears to be equally included and omitted in lists.</li>
+      <li>How is end of sequence handled?
+      <ol type="a">
+        <li>Sequence as radix, e.g.: ... ፈ ... ፐ ... ሀሀ ... ሀለ ...</li>
+        <li>Columnar radix, e.g.: ... ፈ ... ፐ ... ሀሁ ... ሀሉ ...</li>
+        <li>Wrap to next column, e.g.: ... ፈ ... ፐ ... ሁ ... ሉ ...</li>
+        <li>With any approach, how is the end of matrix handled?</li>
+      </ol>
+      </li>
+      <li></li>
+    </ol>
+    </em></p>
     </section>
     
     <section id="አበገደ_lists">
@@ -810,22 +814,8 @@ The shape and weight of these symbols are often changed for a better visual fit 
         entire works such as dictionaries. More often authors will apply the ordering for list orders.</p>
     	<p>The አበገደ ordering is potentially desirable to any language using the Ethiopic syllabary.
     	The ordering is less likely to be found in the writing traditions of languages that have a written tradition of under a hundred years.
-    	The language specific orders orders shown here are those found in utilization in corpus (<em>give references</em>.</p>
+    	The language specific orders orders shown here are only those found utlized in corpus.</p>
     	
-    <p><em>Issues:
-    <ol>
-      <li>ቨ appears to be equally included and omitted in lists.</li>
-      <li>How is end of sequence handled?
-      <ol type="a">
-        <li>Sequence as radix, e.g.: ... ጰ ... ፐ ... አአ ... አበ ...</li>
-        <li>Columnar radix, e.g.: ... ጰ ... ፐ ... አቡ ... አጉ ...</li>
-        <li>Wrap to next column, e.g.: ... ጰ ... ፐ ... ቡ ... ጉ ...</li>
-        <li>With any approach, how is the end of matrix handled?</li>
-      </ol>
-      </li>
-      <li></li>
-    </ol>
-    </em></p>    	
 
     <table>
     <tr>
@@ -993,6 +983,9 @@ The shape and weight of these symbols are often changed for a better visual fit 
      </td>
     </tr>
     </table>
+
+    <p>These tables are expressed in the following as per the <a href="http://www.w3.org/TR/css-counter-styles-3/">CSS Counter Styles Level 3</a> recommendation.</p>
+
     	<div class="example" id="tbd">
 <pre class="stylesheet">@counter-style <dfn data-dfn-type="dfn" data-noexport="" id="ethiopic-abegede-gez">ethiopic-abegede-gez<a class="self-link" href="#ethiopic-abegede-gez"></a></dfn> {
   system: alphabetic;
@@ -1032,6 +1025,21 @@ The shape and weight of these symbols are often changed for a better visual fit 
 }
 </pre>    	
     	</div>       	
+
+    <p><em>Issues:
+    <ol>
+      <li>ቨ appears to be equally included and omitted in lists.</li>
+      <li>How is end of sequence handled?
+      <ol type="a">
+        <li>Sequence as radix, e.g.: ... ጰ ... ፐ ... አአ ... አበ ...</li>
+        <li>Columnar radix, e.g.: ... ጰ ... ፐ ... አቡ ... አጉ ...</li>
+        <li>Wrap to next column, e.g.: ... ጰ ... ፐ ... ቡ ... ጉ ...</li>
+        <li>With any approach, how is the end of matrix handled?</li>
+      </ol>
+      </li>
+      <li></li>
+    </ol>
+    </em></p>    	
     </section>
     
     <section id="inlined_continuation">
