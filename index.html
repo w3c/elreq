@@ -258,6 +258,12 @@ The shape and weight of these symbols are often changed for a better visual fit 
     	supported in a document that encodes Ethiopic wordspaces only. Similarly, this functionality would be useful to users of an editor application.</p>
     	<p><em>Develop rules for space-wordspace substitution (e.g. context for when not to substitute a space for wordspace).</em></p>
     	<p><em>This could lead to a CSS word-separator property that a javascript could manipulate to toggle the wordspace.</em></p>
+        <ol>
+          <li>A sequences of one or more spaces is treated as a single space.</li>
+          <li>A space is substituted for wordspace when bounded by letters or numbers only.</li>
+        </ol>
+        <p>An additional wordspace conversion rule that is independed of the above space-wordspace substitution rules: Very commonly in Ethiopic documents
+           a  sequence of two worspaces are found and may be substituted for ethiopic fullstop.</p>
     </section>         
 
     
