@@ -301,10 +301,24 @@ The shape and weight of these symbols are often changed for a better visual fit 
 
     <section id="ethiopic_gemination_mark_positioning">
     	<h4>Ethiopic Gemination Mark (ጥበቅ) Vertical Positioning</h4>
-        <p><em>Notes on the positioning of the Ethiopic gemination mark above a letter. The SIL Abyssinica font demonstrates that
-        OpenType shaping logic is sufficient to handle the issue.  Thus a specification here might only be utilized by font 
-        designers and not the layout engine community. This topic is possibly beyond the scope of the W3C layout charter (Richard?). </em></p>
-	<p>[TBD: Provide Sample Images]</p>
+        <p>The Ethiopic gemination mark, ጥበቅ, is almost universally found at a fixed height above the baseline in typeset literature. The marks position must
+        then be fixed so that it remains above the tallest Ethiopic letter symbol; this produces a variable height gap between the top of the letter and the mark.
+        Conversely, when the symbol is hand written (often above typeset text) the mark will be found at a varialbe height above the baseline and demonstrating
+        a fixed height above the letter symbol.
+        Quite possibly the former style is an artifact of a limitation of the layout technology employed, and the later representative of an author's
+        desired rendering.</p>
+        <figure>
+          <img src="images/gemination-heights-comparison.png" alt=" " border="1" />
+          <figcaption>Two gemination styles compared.</figcaption>
+        </figure>
+        <p><em>Issues:</em>
+		<ol><em>
+		  <li>What do stakeholders feel should be the default style (fixed, floating)?</li>
+		  <li>The same rules apply to the ETHIOPIC COMBINING VOWEL LENGTH MARK (U+135E) and ETHIOPIC COMBINING GEMINATION AND VOWEL LENGTH MARK (U+135D). Stakeholders here (current or past) should be identified.</li>
+                 <li>OpenType shaping logic may be sufficient to handle the issue.  Thus a specification here might only be utilized by font 
+        designers and not the layout engine community. This topic is possibly beyond the scope of the W3C layout charter (Richard?). </li>
+	    </em></ol>
+	  </p>
     </section>
 
     <section id="ethiopic_numeral_bars">
@@ -314,10 +328,13 @@ The shape and weight of these symbols are often changed for a better visual fit 
         may share a common upper and lower bar. Conceivably the joining style went out of favor as it proved more difficult to support in publishing technology. Modern
         preferences should be determined from stakeholders.</p>
 
-	<p>[TBD: Provide Comparative Images]</p>
-      <p><em>Issues:</em>
+        <figure>
+          <img src="images/isolated-and-joining-numeral-bars.png" alt=" " border="1" />
+          <figcaption>Two numeral styles compared.</figcaption>
+        </figure>
+        <p><em>Issues:</em>
 		<ol><em>
-		  <li>What do stakeholders feel should be the default style (joined, independent)?</li>
+		  <li>What do stakeholders feel should be the default style (joined, isolated)?</li>
 		  <li>Do stakeholders want the option for both styles?</li>
 		  <li>Are there any context rules to determine when a given style is appropriate?</li>
 	    </em></ol>
@@ -372,7 +389,7 @@ The shape and weight of these symbols are often changed for a better visual fit 
 
      	 <section id="ethiopic_wordspace_punctuation_boundary_rules">	
      		<h4>Rules of Formatting the Ethiopic Wordspace-Punctuation Boundary</h4>
-     		<p><em>[image samples needed]</em></p>
+     		<p><em>This section has become redundant and should be combined with <a href="#ethiopic_wordspace_at_latin_boundaries">Ethiopic Wordspace at Latin Boundaries</a></p>
      	 </section>
       
      	 <section id="ethiopic_whitespace_rules">	
