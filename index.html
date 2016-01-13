@@ -138,6 +138,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
         </figure>
         </p>
         <p>
+          
         <figure id="inline_list_with_spaces">
           <img src="images/Z-Reference-Monotype.png" border="1"/>
           <figcaption>Comparative letter heights.</figcaption>
@@ -279,8 +280,8 @@ The shape and weight of these symbols are often changed for a better visual fit 
         would have kept copy editors and publishers view formatting conformance here as critical. Observed practices are:</p>
       	<dl>
           <dt>Always</dt>
-          <dd>An Ethiopic word ends with either a wordspace or punctuation. This rule allows a word to split across lines without the need for a hyphenation symbol.
-          Ethiopic wordspace does not precede or follow another punctuation, with the possible exception of preceding a right-side enclosing symbol (brackets and quotation).
+          <dd>An Ethiopic word ends with either a wordspace or punctuation. This rule allows a word to be split across lines without the need for a hyphenation symbol.
+          Ethiopic wordspace does not precede or follow another punctuation, with the possible exception when preceding a right-side enclosing symbol (brackets and quotation).
           </dd>
       	  <dt>Right-Side Enclosing Symbol Convention 1</dt>
       	  <dd>Ethiopic wordspace does not precede but does follow a right-side enclosing symbol. This appears to be the most commonly used convention during imperial times.</dd>
@@ -291,7 +292,8 @@ The shape and weight of these symbols are often changed for a better visual fit 
           after quotation.  ፍቅር እስከ መቃብር by Haddis Alemayehu is also an easily found reference here.
           </dd>
       	  <dt>Right-Side Enclosing Symbol Convention 3</dt>
-          <dd>Ethiopic wordspace does not precede or follow the right-side enclosing symbol -?</dd>
+          <dd>Ethiopic wordspace does not precede or follow the right-side enclosing symbol. This style is observed but some width of white space will appear
+          outside the enclosing symbols.</dd>
       	</dl>
         <p><em>[TBD: somewhere in this document mention the mouse text selection rule that a following wordspace should be automatically selected with text, analagous
                to the rule applied to white space. MS Word does this.]</em></p>
@@ -307,18 +309,28 @@ The shape and weight of these symbols are often changed for a better visual fit 
     	supported in a document that encodes Ethiopic wordspaces only. Similarly, this functionality would be useful to users of an editor application.</p>
     	<p><em>Develop rules for space-wordspace substitution (e.g. context for when not to substitute a space for wordspace).</em></p>
     	<p><em>This could lead to a CSS word-separator property that a javascript could manipulate to toggle the wordspace.</em></p>
-    	<p><em>Test cases should be developed to validate these rules.</em></p>
-        <p><span style="text-decoration: underline;"><strong>Bidirectional Transformation Rules</strong></span></p>
-        <ol>
-          <li>A sequences of one or more spaces is treated as a single space.</li>
-          <li>A space is substituted for wordspace when bounded by letters or numbers.</li>
-          <li></li>
-        </ol>
+    	<p><em>TBD: Test cases should be developed to validate these rules.</em></p>
         <p><span style="text-decoration: underline;"><strong>Space to Wordspace Transformation Rules</strong></span></p>
         <ol>
-          <li>A wordspace is inserted after a letter when bounded on the left by a letter or number and on the right by an
-          a closing encompasing punctuation (e.g. quotation and bracket symbols).</li>
-          <li>Wordspace will be appended to the end of line </li>
+          <li>White space symbols other than space (U+0020) are not processed. <em>Issue: how should non-breaking-space be handled?</em></li>
+          <li>Space(s) at the start of a line are assumed to be there for positioning and are not processed.</li>
+          <li>A sequences of one or more spaces is treated as a single space.</li>
+          <li>A space is substituted for wordspace when bounded by letters, or between a letter and number.</li>
+
+          <li>A wordspace may be added before a right-side enclosing punctuation as per the convention applied in <a href="#ethiopic_wordspace_at_latin_boundaries">Ethiopic Wordspace at Latin Boundaries</a>.</li>
+          <li>A space is substituted for wordspace on the outside of an enclosing punctuation as per the convention applied in <a href="#ethiopic_wordspace_at_latin_boundaries">Ethiopic Wordspace at Latin Boundaries</a>.</li>
+          <li>A space following non-encompasing punctuation is removed.</li>
+
+          <li>Space(s) before or after quotation are removed.</li>
+          <li>Space(s) bounded by non-Ethiopic numbers are not processed.</li>
+          <li>A wordspace will be appended to the end of line (a line ending with a hard return) that does not end with punctuation.</li>
+        </ol>
+        <p><span style="text-decoration: underline;"><strong>Wordspace to Space Transformation Rules</strong></span></p>
+        <ol>
+          <li>A sequence of more than two worspaces is not converted as the author's intent is indeterminate.</li>
+          <li>A sequence of exactly two worspaces is converted to an ETHIOPIC FULLSTOP (U+1362).</li>
+          <li>A sequence of exactly one wordspace is convert to space.</li>
+          <li>A wordspace at the end of a line may be removed.</li>
         </ol>
         <ol>
           <li>A wordspace may not start a line.</li>
