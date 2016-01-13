@@ -138,31 +138,45 @@ and in some cases limitations imposed by desktop publishing software designed fo
         </figure>
         </p>
         <p>
-          
+        At a given point size, letter heights within a script may vary widely between typefaces. This adds another level of difficulty
+        to aligning heights between scripts as an alignment will only be optimal between a typeface pair. Within a script featuring variable
+        (not fixed) height letters the relative heights of letters are subject to change between typefaces. This phenomena reinforces the
+        previous assertion on typeface pair optimization, but also introduces the possibility that alignment optimization can be language
+        sensistive. This happens when an alignment pair designed for the letter inventory of one language is applied to another language
+        that includes letters that exceed the heights of the optimized set.
         <figure id="inline_list_with_spaces">
           <img src="images/Z-Reference-Monotype.png" border="1"/>
           <figcaption>Comparative letter heights.</figcaption>
         </figure>
         </p>
-        <p>
+        <p>The relative heights of letters used in different languages may also change with typeface as this next figure illustrates.
         <figure id="inline_list_with_spaces">
           <img src="images/Z-Reference-Abyssinica.png" border="1"/>
-          <figcaption>Comparative letter heights change with typeface.</figcaption>
+          <figcaption>Comparative letter heights change with typeface, ቕ of Blin and Tigrinya now exceeds the heights of Amharic.</figcaption>
         </figure>
         </p>
         <p>
+        With these caveats considered, "Zen" alignment is a means to optimize an Ethiopic-Latin typeface pair that is suitable for a general
+        use case when priori knowledge of a document language is unknown. Its basis is reviewed here.
+        The Latin letter "Z" and Ethiopic letter "ን" are chosen as pairing symbols representative of the mean height .  The both feature broad
+        horizontal strokes that are easy for the eye to follow as a nearly continuous stroke.
+        Ethiopic letters that were introduced as an extension to the Ge'ez core will have typically feature a macron on other modifier at the top of
+        a base letter in order to form the extension letter. The macron necessarily extends the height of a letter.  Using the top of the macron
+        for the reference height of a letter leads to height alignment that makes the majority of Ethiopic letters appear too short against Latin letters.
         <figure id="inline_list_with_spaces">
           <img src="images/Z-Ny-N-Top-Aligned.png" border="1"/>
           <figcaption>Alignment and top of symbols (Ethiopic letters too squat).</figcaption>
         </figure>
         </p>
         <p>
+        A better approach is to align Z with caron (Ž) against ን with marcon (ኝ) while aligning and Z with ን and find typefaces with a good tuple of aligned pairings. 
         <figure id="inline_list_with_spaces">
           <img src="images/Z-caron-Ny-Z-N-Alignment.png" border="1"/>
           <figcaption>Alignment below accent (better sizing).</figcaption>
         </figure>
         </p>
-        <p>
+        <p>Going furhter, we may assume that the ኝ and Ž will align satisfactorily (optionally check any irregularities) and simply align the Z-ን pair.
+        Phonetically the sequence of these two letters would sound like "zen", hence the name.
         <figure id="inline_list_with_spaces">
           <img src="images/Z-N-Alignment.png" border="1"/>
           <figcaption>Z-ን or "Zen" Reference Alignment.</figcaption>
