@@ -1226,29 +1226,50 @@ The shape and weight of these symbols are often changed for a better visual fit 
 
     <section id="heading_emphasis">
       <h3>Section Headings</h3>
-      <p>Bold with standard sizes, (no underline or typeface change)</p>
-     <pre>
-TBD:
+      <p>The default section headings stylistic changes (size, weight) applied to Roman script in word processors and web browsers are generally applicable to Ethiopic literature.  In classic and modern layout practices applied to books and magazines, the document and chapter titles will be centered. The use of underlining and color changes are not recommended for Ethiopic headings as they are not a traditional practice.</p>
+      <p>The following presents the six heading levels defined in the HTML standard and their applicable context in Ethiopic literature.  Samples are provided here for review and consideration of the default settings for letter sizing and line spacing.</p>
+      <dl>
+       <dt>Heading 1</dt>
+       <dd>To be applied for document titles (usually centered). Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h1.html</a></dd>
+       <dt>Heading 2</dt>
+       <dd>To be applied for chapter titles (usually centered). Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h2.html</a></dd>
+       <dt>Heading 3</dt>
+       <dd>To be applied for chapter section titles. Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h3.html</a></dd>
+       <dt>Heading 4</dt>
+       <dd>To be applied for chapter sub-section titles. Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h4.html</a></dd>
+       <dt>Heading 5</dt>
+       <dd>To be applied for chapter sub-sub-section titles. Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h5.html</a></dd>
+       <dt>Heading 6</dt>
+       <dd>To be applied for chapter sub-sub-sub-section titles. Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h6.html</a></dd>
+      </dl>
 
-Title
+      <p>Relative sizes for comparison:  
+      <span style="display: inline; color: black; font-size: 2em; font-weight: bold;">አርእስት</span
+      ><span style="display: inline; color: black; font-size: 1.5em; font-weight: bold;">አርእስት</span
+      ><span style="display: inline; color: black; font-size: 1.17em; font-weight: bold;">አርእስት</span
+      ><span style="display: inline; color: black; font-weight: bold;">አርእስት</span
+      ><span style="display: inline; color: black; font-size: .83em; font-weight: bold;">አርእስት</span
+      ><span style="display: inline; color: black; font-size: .67em; font-weight: bold;">አርእስት</span>
+      </p>
 
-Heading 1
-Heading 2
-Heading 3
-Heading 4
-Heading 5
-Heading 6
+      <p>The following illustrates vertical spacing of the heading sizes. Heading and paragraph blocks are highlighted to illuminate spacing boundaries.</p>
+      <h1 style="display: block; color: black; font-size: 2em; margin-before: 0.67em; margin-after: 0.67em; margin-start: 0; margin-end: 0; font-weight: bold; background-color: #99ccff">አርእስት 1</h1>
+      <p style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
+      <h2 style="display: block; color: black; font-size: 1.5em; margin-before: 0.83em; margin-after: 0.83em; margin-start: 0; margin-end: 0; font-weight: bold; background-color: #99ccff">አርእስት 2</h2>
+      <p style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
+      <h3 style="display: block; color: black; font-size: 1.17em; margin-before: 1em; margin-after: 1em; margin-start: 0; margin-end: 0; font-weight: bold; background-color: #99ccff">አርእስት 3</h3>
+      <p style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
+      <h4 style="display: block; color: black; margin-before: 1.33em; margin-after: 1.33em; margin-start: 0; margin-end: 0; font-weight: bold; background-color: #99ccff">አርእስት 4</h4>
+      <p style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
+      <h5 style="display: block; color: black; font-size: .83em; margin-before: 1.67em; margin-after: 1.67em; margin-start: 0; margin-end: 0; font-weight: bold; background-color: #99ccff">አርእስት 5</h5>
+      <p style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
+      <h6 style="display: block; color: black; font-size: .67em; margin-before: 2.33em; margin-after: 2.33em; margin-start: 0; margin-end: 0; font-weight: bold; background-color: #99ccff">አርእስት 6</h6>
+      <p style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
 
-1 Heading 1
-1.1 Heading 2
-1.1.1 Heading 3
-1.1.1.1 Heading 4
-1.1.1.1.1 Heading 5
-1.1.1.1.1.1 Heading 6
-     </pre>
       <p><em>Issues:
       <ol>
-        <li>What percentage bold?</li>
+        <li>Should heading sizes 1 and 2 be centered by default, or should this be left to custom stylesheet?</li>
+        <li>What percentage emboldened when a bold designed typeface is not available?</li>
       </ol>
       </em></p>
    </section>
@@ -1256,18 +1277,37 @@ Heading 6
 
     <section id="emphasis_within_prose">
       <h3>Emphasis Within Prose</h3>
-      <p>Within a paragraph, a reference to a book title, or section title is given in italic.</p>
+      <p>Within a paragraph, a reference to a book title, or section title is given in italic. Words may also be emboldened to emphasize importance.</p>
       <p>[Examples Needed]</p>
       <p><em>Issues:
       <ol>
         <li>How much slant when an italic designed typeface is not available? 10% is suggested.</li>
       </ol>
       </em></p>
+<!--
+      <p><span style="-moz-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(10deg, 0deg);
+         -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(10deg, 0deg);
+         -o-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(10deg, 0deg);
+         -ms-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(10deg, 0deg);
+          transform: scale(1) rotate(0deg) translate(0px, 0px) skew(10deg, 0deg);">ልዩ</span>
+         <span style="-moz-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(15deg, 0deg);
+         -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(15deg, 0deg);
+         -o-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(15deg, 0deg);
+         -ms-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(15deg, 0deg);
+          transform: scale(1) rotate(0deg) translate(0px, 0px) skew(15deg, 0deg);">ልዩ</span>
+         <span style="-moz-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(20, 0deg);
+         -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(20, 0deg);
+         -o-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(20, 0deg);
+         -ms-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(20, 0deg);
+          transform: scale(1) rotate(0deg) translate(0px, 0px) skew(20, 0deg);">ልዩ</span>
+      </p>
+-->
    </section>
 
     <section id="lists_and_counters">
       <h3>Ecclesiastical Emphasis</h3>
       <p>Context dependent.  A word red in one sentence may not be red in the next.</p>
+      <p>[Examples Needed, show color interlacing of letters within a word]</p>
       <p><em>Issues:
       <ol>
         <li>What shade of red?</li>
@@ -1286,6 +1326,11 @@ Heading 6
            over an ethiopic page number that presents the western equivalent would be useful.  Are there any rules on page number position?</em></p>
     <p><em>Page margin differences?  A special case: many religious books have an extra large lower margin to make it easier to hold the book with two hands
            while not obscuring the text</em></p>
+
+<section id="h_preface_pages">
+  <h3>Preface Pages</h3>
+    <p><em>Note the practice of using two numeral systems for page numbering in books.  For example in preface paging Ethiopic numerals may be used in documents where page numbers use western numerals.  This is analagous to the practice in western literature of using Roman numerals in preface numbering and western numerals afterwards. A general statement should be made in this document that Ethiopic Numerals should Replace Roman Numerals where the later is a default.</em></p>
+</section>
 </section>
     
     
