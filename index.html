@@ -98,7 +98,7 @@
       <p>Growing out of the 182 element Ge'ez language syllabary for two millenia, Ethiopic in its present day form is a multilingual, and multinational, script comprised by 494 symbols representing: syllables, numerals, punctuation and tonal marks.  Numerous linguistic, cultural, literary, historical and political issues surround the script and its utilization -all of which the authors strive to avoid discussing unless directly relevant to clarifying a given layout use case. The following principles are applied in the development of this document:</p>
       <ol>
         <li>View publishers as the primary stakeholders.</li>
-        <li>Attempt a "90% solution" where the common and primary needs of publishers are addressed. Important but less widely used practices such as for <a href="#term.yared-zaima" class="termref">Yaredic Zaima Notation</a> will be addressed at a future time.</li> 
+        <li>Attempt a “90% solution” where the common and primary needs of publishers are addressed. Important but less widely used practices such as for <a href="#term.yared-zaima" class="termref">Yaredic Zaima Notation</a> will be addressed at a future time.</li> 
         <li>It does not cover every issue of Ethiopic typography, but only the import differences from the Western language systems.</li>
         <li>The technical aspects of actual implementation are not covered by this document.</li>
         <li>In order to help readers' understanding of how Ethiopic is used, typical real life examples are provided.</li>
@@ -314,8 +314,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
     
     <section id="space_wordspace_substitution rules">
     	<h4>Space-Wordspace Substitution Rules</h4>
-    	<p>Rules are presented here to aid layout software that would offer the functionality of space symbol conversion to and from
-    	Ethiopic wordspaces.
+    	<p>Rules are presented here to aid layout software that would offer the functionality of space symbol conversion to and from Ethiopic wordspaces.
     	This functionality is desirable in a viewer application (e.g. web browser, eBook reader) to make the same
     	substitution as per a user preference.  Thus the user would be able to read a document with Ethiopic wordspaces that
     	was composed and delivered with white space. Likewise in the reverse, a user who preferred white space could have their preference
@@ -485,22 +484,23 @@ and in some cases limitations imposed by desktop publishing software designed fo
       <h4>Justification When ETHIOPIC WORDSPACE is the Word Delimiter</h4>
       <p>Since the arrival of the printing press to Ethiopia in 1863 (Pankhurst, 1998), full justification of Ethiopic has been a common typesetting practice in Ethiopian, and later Eritrean, publishing houses. Earlier, Ethiopic justification rules are a feature of Hiob Ludolf’s Historia Æthiopica which is noted as the first use of movable type for Ethiopic script (Ludolf, 1681). Prior to letterpress typography, calligraphic manuscripts rendered on parchment also featured full, or approximately full, justification. Though the latter likely reflects the scribe’s desire not to waste a millimeter of available lateral writing space.</p>
       <p>The placement of Ethiopic wordspace presents a complication to the justification of Ethiopic text. Two placement styles developed in typeset
-      literature which will be referred to here as "left bounded" and "centered" styles. Additionally, the word spacing following an Ethiopic fullstop
+      literature which will be referred to here as “word bounded” and “centered” styles. Additionally, the word spacing following an Ethiopic fullstop
       may (or may not) be governed by a special rule and in combination with the two wordspace spacing styles. These spacing rules are discussed in the
       following sections.</p>
+    
       <figure id="justification_in_historia_aethiopica">
         <img src="images/justification_in_historia_aethiopica.png" alt=" " border="1" />
-        <figcaption>Ethiopic Justification in <cite>Historia Æthiopica</cite> (Ludolf, 1681) </figcaption>
+        <figcaption>Ethiopic Justification in <cite>Historia Æthiopica</cite> (Ludolf, 1681)</figcaption>
       </figure>
     </section>
 
     
-    <section id="justification_with_left_bounded_wordspace">
-    <h5>Justification with Left Bounded Wordspace and Punctuation</h5>
-    <p>In keeping with line justification for Latin script, the non-printed or “white space” between words is treated as stretchable. The width of the space symbol itself will be elongated to some aesthetic width value that may vary from space symbol to space symbol across a printed line. In Ethiopic justification, the white space between the Ethiopic word separator and the words it separates is likewise allowed to stretch. This stretching of white space may be either symmetrical (“centered”) or asymmetrical but in the latter case space stretching is always between the right side of the separator and the following word –referred to here as “left bounded”. </p>
-    <p>In  “left  bounded”  justification  the  word  separator,   which  may  be  either  a  punctuation  symbol  or  <span class="uname">U+1361   ETHIOPIC WORDSPACE</span> [፡], appears to adhere to the word to the left as if it were its final character. Figures <a href="#justification_left_bounded"></a> and <a href="#justification_in_historia_aethiopica"></a> both illustrate the left bounded style.</p>
-    <figure id="justification_left_bounded"> <img src="images/justification_left_bounded.png" alt=" " height="235" width="787" border="1" />
-      <figcaption>Ethiopic justification in left bounded style (Erikson, 1921 (1913 EC)) </figcaption>
+    <section id="justification_with_word_bounded_wordspace">
+    <h5>Justification with Word Bounded Wordspace and Punctuation</h5>
+    <p>In keeping with line justification for Latin script, the non-printed or “white space” between words is treated as stretchable. The width of the space symbol itself will be elongated to some aesthetic width value that may vary from space symbol to space symbol across a printed line. In Ethiopic justification, the white space between the Ethiopic word separator and the words it separates is likewise allowed to stretch. This stretching of white space may be either symmetrical (“centered”) or asymmetrical but in the latter case space stretching is always between the right side of the separator and the following word –referred to here as “word bounded”. </p>
+    <p>In  “word  bounded”  justification  the  word  separator,   which  may  be  either  a  punctuation  symbol  or  <span class="uname">U+1361   ETHIOPIC WORDSPACE</span> [፡], appears to adhere to the word to the left as if it were its final character. Figures <a href="#justification_word_bounded"></a> and <a href="#justification_in_historia_aethiopica"></a> both illustrate the word bounded style.</p>
+    <figure id="justification_word_bounded"> <img src="images/justification_word_bounded.png" alt=" " height="235" width="787" border="1" />
+      <figcaption>Ethiopic justification in word bounded style (Erikson, 1921 (1913 EC))</figcaption>
     </figure>
     </section>
 
@@ -508,7 +508,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
       <h5>Justification with Centered Wordspace and Punctuation</h5>
       <p>In the second major form of Ethiopic justification  the white space around word separators is stretched  equally on  both the left and right sides; giving the appearance of the separator being centered between the words  it divides.  <a href="#fig_justification_centered"></a>  depicts the white space stretching in both forms of justification using Ethiopic Wordspace as an example,  though the stretching rules apply equally to Ethiopic punctuation as well. </p>
       <figure id="fig_justification_centered"> <img src="images/justification_centered.png" alt=" " width="790" height="446" border="1" />
-        <figcaption>Ethiopic justification in centered style  (Gubenya, 1973 (1966 EC)).   </figcaption>
+        <figcaption>Ethiopic justification in centered style (Gubenya, 1973 (1966 EC)).</figcaption>
       </figure>
       <p>To further illustrate the justification spacing applied to both Ethiopic punctuation and wordspace, <a href="#fig_white_space_round_wordspace"></a> presents white space stretching from the point of view of the symbol’s typographic bounding box. Here the “design white space”, the space between the visible symbol and the box border, is itself stretched as needed to meet line justification: </p>
       <figure id="fig_white_space_round_wordspace"> <img src="images/white_space_round_wordspace.png" alt=" " />
@@ -517,7 +517,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
       <p><em>Issues:
       <ol>
         <li>Which spacing style should be the default used by applications?</li>
-        <li>Is "word bounded" a better (more descriptive) term than "left bounded"?</li>
+        <li>Is "left bounded" a better (more descriptive) term than "word bounded"?</li>
       </ol>
       </em></p>
     </section>
@@ -525,7 +525,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
     
     <section id="spacing_threshold_following_full_stop">
       <h5>Spacing Threshold Following Full Stop</h5>
-      <p>In the regular mode of Ethiopic justification (both  forms) <span class="uname">U+1362   ETHIOPIC FULL STOP</span> [።] will be treated equally  with all other punctuation symbols.  In a second mode, the Ethiopic full stop will have special spacing rules  applied to it whereby more separation space is allowed following the symbol and the start of the next  word.  In a sense, the right side space of the full stop is “more elastic” than in the regular mode.   The  elasticity rule and the visual effect are similar to that of the final line of a fully justified paragraph in  Western text.  When the final line of a paragraph of Latin script crosses a certain horizontal threshold,  the line will become fully justified. Below that threshold the line will appear left aligned.  The same rule  appears to be applied to the Ethiopic full stop but  on any line of the paragraph.  An illustration of  this  sub-mode is depicted in the following: </p>
+      <p>In the regular mode of Ethiopic justification (both  forms) <span class="uname">U+1362 ETHIOPIC FULL STOP</span> [።] will be treated equally with all other punctuation symbols.  In a second mode, the Ethiopic full stop will have special spacing rules applied to it whereby more separation space is allowed following the symbol and the start of the next word.  In a sense, the right side space of the full stop is “more elastic” than in the regular mode.  The elasticity rule and the visual effect are similar to that of the final line of a fully justified paragraph in Western text.  When the final line of a paragraph of Latin script crosses a certain horizontal threshold, the line will become fully justified. Below that threshold the line will appear left aligned.  The same rule appears to be applied to the Ethiopic full stop but on any line of the paragraph.  An illustration of this sub-mode is depicted in the following: </p>
       <figure> <img src="images/justification_mashafa_sawasew.png" alt=" " width="789" height="300" border="1" />
         <figcaption>Justification Sample from  Maṣḥafa Sawāsew, Page 159 (Kifle, 1955 (1948 EC))</figcaption>
       </figure>
@@ -542,7 +542,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
     <section id="shorcomings_in_electronic_typesetting">
       <h5>Shortcomings Found in Electronic Typesetting Systems</h5>
       <p>To date, computer software that typesets text has applied justification rules for white space stretching  that were designed to meet publishing requirements  in the Western world.  When the same rules are  applied to Ethiopic text, the results are unsatisfactory as they do not meet user expectations. Largely  responsible for the formatting dissonance when Western justification is applied to Ethiopic text, is the  absence of a white space symbol in the writing system. There is no explicit white space symbol (in classic  Ethiopic writing) to be “stretched”.</p>
-      <p>Formatting  algorithms  will  then  process  <span class="uname">U+1361   ETHIOPIC WORDSPACE</span> [፡] as  a  punctuation  symbol  where  word  enclosing rules, rather than word spacing rules, will  be applied.  While still stretchable, “white space” in  the Ethiopic  wordspace  is  implicit  rather  than  explicit.  For  a  complete  solution,  software  will  ultimately need to be enhanced to stretch implicit space as required.  Reclassifying the Ethiopic wordspace as a “Zs”  symbol  is  expected  to  help  alleviate  justification  issues  and  clears  the  way  for  software  firms  to  implement comprehensive support for Ethiopic justification. Since the Ethiopic wordspace interferes with  justification in present day software, users may opt not to use it or may “pad” wordspace and Ethiopic punctuation with explicit white space to obtain the  formatting desired.  The following samples depict  formatting  of  Kidane  Wolde  Kifle’s  seminal  work  <cite>Maṣḥafa  Sawāsew</cite> with  a  popular  word  processor  (Kifle, 1955 (1948 EC)) under the limitations of Western spacing rules justification.</p>
+      <p>Formatting algorithms will then process <span class="uname">U+1361 ETHIOPIC WORDSPACE</span> [፡] as a punctuation symbol where word enclosing rules, rather than word spacing rules, will be applied.  While still stretchable, “white space” in the Ethiopic wordspace is implicit rather than explicit.  For a complete solution, software will ultimately need to be enhanced to stretch implicit space as required.  Reclassifying the Ethiopic wordspace as a “Zs” symbol is expected to help alleviate justification issues and clears the way for software firms to implement comprehensive support for Ethiopic justification. Since the Ethiopic wordspace interferes with justification in present day software, users may opt not to use it or may “pad” wordspace and Ethiopic punctuation with explicit white space to obtain the formatting desired.  The following samples depict formatting of Kidane Wolde Kifle’s seminal work <cite>Maṣḥafa Sawāsew</cite> with a popular word processor (Kifle, 1955 (1948 EC)) under the limitations of Western spacing rules justification.</p>
     <figure> <img src="images/justification_full_mashafa_sawasew.png" alt=" " width="788" height="295" border="1" />
       <figcaption>Full Justification Sample from Maṣḥafa Sawāsew, Page 65 (Kifle, 1955 (1948 EC))</figcaption>
     </figure>
@@ -552,12 +552,8 @@ and in some cases limitations imposed by desktop publishing software designed fo
     <figure> <img src="images/justification_sample_with_spaces.png" alt=" " width="806"/>
       <figcaption>The sample from the earlier figure  with space (U+0020) replacing Ethiopic wordspace. Space characters  have additionally  been added following Ethiopic punctuation. </figcaption>
     </figure>
-    <p>In digital documents such as in web pages and eBooks, it is recommended that the appearance of either  <span class="uname">U+0020   SPACE</span> [ ] or <span class="uname">U+1361   ETHIOPIC WORDSPACE</span> [፡] be  configurable  as  a user  preference.  An  easy to  access “space”  toggle  button would enhance a viewing application’s usability.</p>
-
+    <p>In digital documents such as in web pages and eBooks, it is recommended that the appearance of either <span class="uname">U+0020 SPACE</span> [ ] or <span class="uname">U+1361 ETHIOPIC WORDSPACE</span> [፡] be configurable as a user preference.  An easy to access “space” toggle button would enhance a viewing application’s usability.</p>
      </section>   
-
-
-
     </section>
     
 
@@ -1427,8 +1423,8 @@ and in some cases limitations imposed by desktop publishing software designed fo
 
     <section id="wordspace_in_comma_context">
       <h3>Ethiopic Wordspace in the Context of Comma</h3>
-      <p>In recent decades some communities have adopted a practice of employing the wordspace symbol as a  comma when <span class="uname">U+0020   SPACE</span> [ ] is used as the word separator. The  interpretation of the symbol is then dependent  on the context of the writing convention in use by  the author. Accordingly, an application user setting  could be offered to set the symbol context.</p>
-      <p>An alternative view point on this practice is that   <span class="uname">U+1363   ETHIOPIC COMMA [፣]</span> is in fact in use by  these  user  communities;  however  its   glyph   has  decayed  whereby  the  line  segment  is  lost  and  so  it  visually coincides with <span class="uname">U+1361   ETHIOPIC WORDSPACE</span> [፡].  Under  this perspective, a simple solution would be modify an Ethiopic font for these users (perhaps adding an  alternative glyph in an OpenType stylistic set) where  the Ethiopic comma character address and semantics  remain intact though the visual form has been  tailored to meet aesthetic needs. </p>
+      <p>In recent decades some communities have adopted a practice of employing the wordspace symbol as a comma when <span class="uname">U+0020 SPACE</span> [ ] is used as the word separator. The interpretation of the symbol is then dependent on the context of the writing convention in use by the author. Accordingly, an application user setting could be offered to set the symbol context.</p>
+      <p>An alternative view point on this practice is that <span class="uname">U+1363 ETHIOPIC COMMA [፣]</span> is in fact in use by these user communities; however its glyph has decayed whereby the line segment is lost and so it visually coincides with <span class="uname">U+1361 ETHIOPIC WORDSPACE</span> [፡].  Under this perspective, a simple solution would be modify an Ethiopic font for these users (perhaps adding an alternative glyph in an OpenType stylistic set) where the Ethiopic comma character address and semantics remain intact though the visual form has been tailored to meet aesthetic needs. </p>
       <figure> <img src="images/wordspace_with_comma.png" alt=" " width="790" height="542" border="1"/>
         <figcaption>Ethiopic Wordspace in the context of comma (Abubeker, 1987 (1979 EC))</figcaption>
       </figure>
@@ -1504,29 +1500,59 @@ and in some cases limitations imposed by desktop publishing software designed fo
     <thead>
       <tr>
         <th>Term</th>
-        <th>Amharic<span data-lang="zh"></span></th>
-        <th>Tigrinya<span data-lang="zh"></span></th>
-        <th>Definition<span data-lang="zh"></span></th>
+        <th>Amharic<span data-lang="am"></span></th>
+        <th>Tigrinya<span data-lang="ti"></span></th>
+        <th>Definition<span data-lang="en"></span></th>
       </tr>
     </thead>
     <tbody>
+      <tr id="def_geez">
+        <td>Ge'ez</td>
+        <td lang="am">TBD</td>
+        <td lang="ti">TBD</td>
+        <td>The part of the page normally occupied by text.</td>
+      </tr>
+      <tr id="def_wordspace">
+        <td>wordspace</td>
+        <td lang="am">TBD</td>
+        <td lang="ti">TBD</td>
+        <td>TBD</td>
+      </tr>
       <tr id="def_text_block">
         <td>text block</td>
-        <td lang="ar">aslkjafs</td>
-        <td lang="fa">lkjlasd</td>
+        <td lang="am">TBD</td>
+        <td lang="ti">TBD</td>
         <td>The part of the page normally occupied by text.</td>
       </tr>
       <tr id="def_justify">
         <td>justify</td>
-        <td>aslkjasd</td>
-        <td>fqlkj</td>
+        <td lang="am">TBD</td>
+        <td lang="ti">TBD</td>
         <td>To adjust the length of the line so that it is flush left and right on the measure.</td>
       </tr>
       <tr id="def_measure">
         <td>measure</td>
-        <td>oqepo</td>
-        <td>ooos</td>
-        <td>The standard length of th eline; ie. column width or width of the overall textblock.</td>
+        <td lang="am">TBD</td>
+        <td lang="ti">TBD</td>
+        <td>The standard length of the line; ie. column width or width of the overall textblock.</td>
+      </tr>
+      <tr id="def_classical_ethiopic">
+        <td>Classical Ethiopic</td>
+        <td lang="am">TBD</td>
+        <td lang="ti">TBD</td>
+        <td>TBD</td>
+      </tr>
+      <tr id="def_modern_ethiopic">
+        <td>Modern Ethiopic</td>
+        <td lang="am">TBD</td>
+        <td lang="ti">TBD</td>
+        <td>TBD</td>
+      </tr>
+      <tr id="def_yaredic_zaima_notation">
+        <td>Yaredic Zaima Notation</td>
+        <td lang="am">TBD</td>
+        <td lang="ti">TBD</td>
+        <td>TBD</td>
       </tr>
     </tbody>
   </table>
@@ -1535,7 +1561,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
 
  <section class="appendix" id="acknowledgements">
   <h2>Acknowledgements</h2>
-  <p>Special thanks  to the following people who contributed to this document (contributors' names listed in in alphabetic order).</p>
+  <p>Special thanks to the following people who contributed to this document (contributors' names listed in in alphabetic order).</p>
   <p class="acknowledgement">This Person, That Person, etc</p>
   <p data-lang="en">Please find the latest info of the contributors at the <a href="https://github.com/w3c/elreq/graphs/contributors">GitHub contributors list</a>.</p>
 </section>
