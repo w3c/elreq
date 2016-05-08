@@ -131,7 +131,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
         advertisement and not publishing. The nature of variable height Ethiopic letters is a factor that complicates how to be best align letter height with a foreign script.</p>
         <p>
         <figure id="inline_list_with_spaces">
-          <img src="images/English-Ethiopic-Relative-Heights-3.png" border="1"/>
+          <img src="images/English-Ethiopic-Relative-Heights-With-Guide-Lines.png" border="1"/>
           <figcaption>Comparative heights of English and Ethiopic script.</figcaption>
         </figure>
         </p>
@@ -517,7 +517,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
     <h5>Justification with Word Bounded Wordspace and Punctuation</h5>
     <p>In keeping with line justification for Latin script, the non-printed or “white space” between words is treated as stretchable. The width of the space symbol itself will be elongated to some aesthetic width value that may vary from space symbol to space symbol across a printed line. In Ethiopic justification, the white space between the Ethiopic word separator and the words it separates is likewise allowed to stretch. This stretching of white space may be either symmetrical (“centered”) or asymmetrical but in the latter case space stretching is always between the right side of the separator and the following word –referred to here as “word bounded”. </p>
     <p>In  “word  bounded”  justification  the  word  separator,   which  may  be  either  a  punctuation  symbol  or  <span class="uname">U+1361   ETHIOPIC WORDSPACE</span> [፡], appears to adhere to the word to the left as if it were its final character. Figures <a href="#justification_word_bounded"></a> and <a href="#justification_in_historia_aethiopica"></a> both illustrate the word bounded style.</p>
-    <figure id="justification_word_bounded"> <img src="images/justification_word_bounded.png" alt=" " height="235" width="787" border="1" />
+    <figure id="justification_word_bounded"> <img src="images/corpus-samples/Ografi-Page-35-Cropped.png" alt=" " width="800" height="223" border="1" />
       <figcaption>Ethiopic justification in word bounded style (Erikson, 1921 (1913 EC))</figcaption>
     </figure>
     </section>
@@ -525,7 +525,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
     <section id="justification_with_centered_wordspace">
       <h5>Justification with Centered Wordspace and Punctuation</h5>
       <p>In the second major form of Ethiopic justification  the white space around word separators is stretched  equally on  both the left and right sides; giving the appearance of the separator being centered between the words  it divides.  <a href="#fig_justification_centered"></a>  depicts the white space stretching in both forms of justification using Ethiopic Wordspace as an example,  though the stretching rules apply equally to Ethiopic punctuation as well. </p>
-      <figure id="fig_justification_centered"> <img src="images/justification_centered.png" alt=" " width="790" height="446" border="1" />
+      <figure id="fig_justification_centered"> <img src="images/corpus-samples/Alweledim-Page-87-Cropped.png" alt=" " width="800" height="443" border="1" />
         <figcaption>Ethiopic justification in centered style (Gubenya, 1973 (1966 EC)).</figcaption>
       </figure>
       <p>To further illustrate the justification spacing applied to both Ethiopic punctuation and wordspace, <a href="#fig_white_space_round_wordspace"></a> presents white space stretching from the point of view of the symbol’s typographic bounding box. Here the “design white space”, the space between the visible symbol and the box border, is itself stretched as needed to meet line justification: </p>
@@ -544,7 +544,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
     <section id="spacing_threshold_following_full_stop">
       <h5>Spacing Threshold Following Full Stop</h5>
       <p>In the regular mode of Ethiopic justification (both  forms) <span class="uname">U+1362 ETHIOPIC FULL STOP</span> [።] will be treated equally with all other punctuation symbols.  In a second mode, the Ethiopic full stop will have special spacing rules applied to it whereby more separation space is allowed following the symbol and the start of the next word.  In a sense, the right side space of the full stop is “more elastic” than in the regular mode.  The elasticity rule and the visual effect are similar to that of the final line of a fully justified paragraph in Western text.  When the final line of a paragraph of Latin script crosses a certain horizontal threshold, the line will become fully justified. Below that threshold the line will appear left aligned.  The same rule appears to be applied to the Ethiopic full stop but on any line of the paragraph.  An illustration of this sub-mode is depicted in the following: </p>
-      <figure> <img src="images/justification_mashafa_sawasew.png" alt=" " width="789" height="300" border="1" />
+      <figure> <img src="images/corpus-samples/KWK-Page-159-Cropped.png" alt=" " width="800" height="297" border="1" />
         <figcaption>Justification Sample from  Maṣḥafa Sawāsew, Page 159 (Kifle, 1955 (1948 EC))</figcaption>
       </figure>
       <p><em>Issues:
@@ -561,7 +561,7 @@ and in some cases limitations imposed by desktop publishing software designed fo
       <h5>Shortcomings Found in Electronic Typesetting Systems</h5>
       <p>To date, computer software that typesets text has applied justification rules for white space stretching  that were designed to meet publishing requirements  in the Western world.  When the same rules are  applied to Ethiopic text, the results are unsatisfactory as they do not meet user expectations. Largely  responsible for the formatting dissonance when Western justification is applied to Ethiopic text, is the  absence of a white space symbol in the writing system. There is no explicit white space symbol (in classic  Ethiopic writing) to be “stretched”.</p>
       <p>Formatting algorithms will then process <span class="uname">U+1361 ETHIOPIC WORDSPACE</span> [፡] as a punctuation symbol where word enclosing rules, rather than word spacing rules, will be applied.  While still stretchable, “white space” in the Ethiopic wordspace is implicit rather than explicit.  For a complete solution, software will ultimately need to be enhanced to stretch implicit space as required.  Reclassifying the Ethiopic wordspace as a “Zs” symbol is expected to help alleviate justification issues and clears the way for software firms to implement comprehensive support for Ethiopic justification. Since the Ethiopic wordspace interferes with justification in present day software, users may opt not to use it or may “pad” wordspace and Ethiopic punctuation with explicit white space to obtain the formatting desired.  The following samples depict formatting of Kidane Wolde Kifle’s seminal work <cite>Maṣḥafa Sawāsew</cite> with a popular word processor (Kifle, 1955 (1948 EC)) under the limitations of Western spacing rules justification.</p>
-    <figure> <img src="images/justification_full_mashafa_sawasew.png" alt=" " width="788" height="295" border="1" />
+    <figure> <img src="images/corpus-samples/KWK-Page-65-Cropped.png" alt=" " width="800" height="297" border="1" />
       <figcaption>Full Justification Sample from Maṣḥafa Sawāsew, Page 65 (Kifle, 1955 (1948 EC))</figcaption>
     </figure>
     <figure> <img src="images/justification_sample_with_12pt.png" alt=" " width="806"/>
@@ -1441,8 +1441,8 @@ and in some cases limitations imposed by desktop publishing software designed fo
       <h3>Ethiopic Wordspace in the Context of Comma</h3>
       <p>In recent decades some communities have adopted a practice of employing the wordspace symbol as a comma when <span class="uname">U+0020 SPACE</span> [ ] is used as the word separator. The interpretation of the symbol is then dependent on the context of the writing convention in use by the author. Accordingly, an application user setting could be offered to set the symbol context.</p>
       <p>An alternative view point on this practice is that <span class="uname">U+1363 ETHIOPIC COMMA [፣]</span> is in fact in use by these user communities; however its glyph has decayed whereby the line segment is lost and so it visually coincides with <span class="uname">U+1361 ETHIOPIC WORDSPACE</span> [፡].  Under this perspective, a simple solution would be modify an Ethiopic font for these users (perhaps adding an alternative glyph in an OpenType stylistic set) where the Ethiopic comma character address and semantics remain intact though the visual form has been tailored to meet aesthetic needs. </p>
-      <figure> <img src="images/wordspace_with_comma.png" alt=" " width="790" height="542" border="1"/>
-        <figcaption>Ethiopic Wordspace in the context of comma (Abubeker, 1987 (1979 EC))</figcaption>
+      <figure> <img src="images/corpus-samples/Nebiy-Mohammed-Page-35-Cropped.png" alt=" " width="800" height="540" border="1"/>
+        <figcaption>Ethiopic Wordspace in the context of comma (Itedalewe, 1987 (1979 EC))</figcaption>
       </figure>
       <p><em>Issues:
       <ol>
@@ -1583,16 +1583,167 @@ and in some cases limitations imposed by desktop publishing software designed fo
         <td lang="ti">TBD</td>
         <td>The system of marking intonation in Ge'ez hymnody devised by the 6<sup>th</sup> century Saint Yared of Axum.</td>
       </tr>
+      <tr id="term.acknolwedgment">
+        <td>Acknowledgment</td>
+        <td lang="am">ምስጋና</td>
+        <td lang="ti">TBD</td>
+        <td></td>
+      </tr>
+      <tr id="term.authors-note">
+        <td>Author's Note</td>
+        <td lang="am">ማስታወቂያ (same as "ማስተዋወቂያ"?)</td>
+        <td lang="ti"></td>
+        <td></td>
+      </tr>
+      <tr id="term.chapter">
+        <td>Chapter</td>
+        <td lang="am">ምዕራፍ</td>
+        <td lang="ti">TBD</td>
+        <td></td>
+      </tr>
+      <tr id="term.preface">
+        <td>Preface (?)</td>
+        <td lang="am">ቅድመ መቅድም</td>
+        <td lang="ti">TBD</td>
+        <td></td>
+      </tr>
+      <tr id="term.foreward">
+        <td>Foreward</td>
+        <td lang="am">መቅድም </td>
+        <td lang="ti">TBD</td>
+        <td></td>
+      </tr>
+      <tr id="term.index">
+        <td>Index</td>
+        <td lang="am">መጠቍ ም</td>
+        <td lang="ti">TBD</td>
+        <td></td>
+      </tr>
+      <tr id="term.introduction">
+        <td>Introduction</td>
+        <td lang="am">መግቢያ</td>
+        <td lang="ti">TBD</td>
+        <td></td>
+      </tr>
+      <tr id="term.table-of-contents">
+        <td>Table of Contents</td>
+        <td lang="am">ማውጫ  (same as "መክሥተ አርእስት"?)</td>
+        <td lang="ti">TBD</td>
+        <td></td>
+      </tr>
+      <tr id="term.title">
+        <td>Title</td>
+        <td lang="am">አርእስት</td>
+        <td lang="ti">TBD</td>
+        <td></td>
+      </tr>
+      <tr id="term.tbd-1">
+        <td>TBD</td>
+        <td lang="am">መታሰቢያ (same as "መሳሰቢያ"</td>
+        <td lang="ti">መታሓሳሰቢ</td>
+        <td></td>
+      </tr>
+      <tr id="term.tbd-2">
+        <td>TBD</td>
+        <td lang="am">መስታወሻ</td>
+        <td lang="ti"></td>
+        <td></td>
+      </tr>
+      <!-- መግለጫ -->
     </tbody>
   </table>
 </section>
-
 
  <section class="appendix" id="acknowledgements">
   <h2>Acknowledgements</h2>
   <p>Special thanks to the following people who contributed to this document (contributors' names listed in in alphabetic order).</p>
   <p class="acknowledgement">This Person, That Person, etc</p>
   <p data-lang="en">Please find the latest info of the contributors at the <a href="https://github.com/w3c/elreq/graphs/contributors">GitHub contributors list</a>.</p>
+</section>
+
+<section class="appendix" id="references">
+  <h2>References</h2>
+<dl class="ref">
+  <dt>Pankhurst, 1998</dt>
+  <dd>
+<cite>
+<!-- use this alternative link until the Addis Tribute archive is restored -->
+<a href="http://web.linkethiopia.org/guide-to-ethiopia/the-pankhurst-history-library/geez-literature-church-libraries-and-the-coming-from-europe-of-the-printed-word/">Ge'ez Literature, Church Libraries, and the Coming, from Europe, of the Printed Word. </a>
+</cite> R. Pankhurst. Addis Tribune, August 28, 1998. Addis Ababa.
+  </dd>
+</dl>
+  <dt>Alemayehu, 1965</dt>
+  <dd><p><em>Transcribed Citation:</em><br/>
+     <span style="margin-left:2em;">
+     <cite>Fəqər əskä Mäqabər</cite>,
+     H. Alemayehu.  Berhanenna Selam Printing Enterprise, 1965. Addis Ababa.
+     </span></p>
+     <p><em>Source Citation:</em><br/>
+     <span style="margin-left:2em;">
+     <cite>ፍቅር፡እስከ፡መቃብር</cite>፣
+     ሀዲስ አለማየሁ። ብርሃንና ሰላም ማተሚያ ድርጀት፣ ፲፱፻፶፰። አዲስ አበባ።
+     </span></p>
+  </dd>
+  <h2>Full Image References</h2>
+<p>[TBD: Correlate the image references with Figure numbers]</p>
+<dl class="ref">
+  <dt>Ludolf, 1681</dt>
+  <dd>
+<cite>
+  <a href="https://books.google.com/books?id=j10VAAAAQAAJ&pg=PT237#v=onepage&q&f=false">Historia Aethiopica, sive brevis et succincta descriptio regni Habessinorum</a>
+</cite>
+H. Ludolf.  L.III.c.5 Paragraph 35.  Frankfurt: prostat apud Joh. David Zunne. 1681
+  </dd>
+  <dt>Erikson, 1921</dt>
+  <dd><p><em>Transcribed Citation:</em><br/>
+     <span style="margin-left:2em;">
+     <cite>Yeografi LeEthiopia Lijoch Tiqim</cite>,
+     O. Erikson. Page 35. Swedish Mission, 1921 (1913 EC). Asmara.
+     </span></p>
+     <p><em>Source Citation:</em><br/>
+     <span style="margin-left:2em;">
+     <cite>የኦግራፊ። ለኢትዮጵያ፡ልጆች፡ጥቅም</cite>፣
+     ኤሪክሶን። ገጽ ፴፭። የሚስዮንግ፡ስዌዱኣማህተም፡ታተመች፣ ፲፱፻፲፫። አስመራ።
+     </span></p>
+  </dd>
+  <dt>Gubenya, 1973</dt>
+  <dd><p><em>Transcribed Citation:</em><br/>
+     <span style="margin-left:2em;">
+     <cite>Alweledem</cite>,
+     A. Gubenya. Page 87. Brana Publisher,  1973 (1966 EC). Addis Ababa.
+     </span></p>
+     <p><em>Source Citation:</em><br/>
+     <span style="margin-left:2em;">
+     <cite>አልወለደም</cite>፣
+     አቤ ጉበኛ። ገጽ ፹፯። ብራና ማተሚያ ደርጅት ታተመ፣ ፲፱፻፷፮። አዲስ አበባ።
+     </span></p>
+  </dd>
+  <dt>Itedalewe, 1987</dt>
+  <dd><p><em>Transcribed Citation:</em><br/>
+     <span style="margin-left:2em;">
+     <cite>Ḥaṣir Tarix Nebiy Muḥamed</cite>,
+     J.H.A. Itedalewe. Page 35. Selam Printing House, 1987 (1979 EC). Asmara.
+     </span></p>
+     <p><em>Source Citation:</em><br/>
+     <span style="margin-left:2em;">
+     <cite>ሐጺር ታሪኽ ነቢይ ሙሐመድ (ሰለላሁ ዓለይሂ ወሰለም) ብጅብሪል</cite>፣
+     ጅብሪል ሐጂ አቡበከር እተዳለወ። ገጽ 35። ቤት ማኅተም ሰላም፣ ፲፱፻፸፰። አሥመራ።
+     </span></p>
+  </dd>
+  <dt>Kifle, 1955</dt>
+  <dd><p><em>Transcribed Citation:</em><br/>
+     <span style="margin-left:2em;">
+     <cite>Maṣḥafa Sawāsew Wages Wamazgaba Qālāt Hadis</cite>,
+     K.W. Kifle. Pages 65 &amp; 159. Artistic Printers, 1955 (1948 EC). Addis Ababa. 
+     </span></p>
+     <p><em>Source Citation:</em><br/>
+     <span style="margin-left:2em;">
+     <cite>መጽሐፈ፡ሰዋስው፡ወግስ፡ወመዝገበ፡ቃላት፡ሐዲስ</cite>፣
+     ኪዳነ፡ወልድ፡ክፍሌ። አርቲስቲክ፡ማተሚያ፡ቤት፣ ፲፱፻፵፰። አዲስ አበባ።
+     </span></p>
+  </dd>
+</dl>
+
 </section>
   
 </body>
