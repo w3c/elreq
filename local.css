@@ -96,3 +96,6 @@ table td {
 	float: left; 
 	margin:10px;
 	}
+.issues { 
+	font-style: italic;
+	}
