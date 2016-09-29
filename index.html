@@ -10,7 +10,7 @@
           useExperimentalStyles: true,
           // specification status (e.g. WD, LCWD, WG-NOTE, etc.). If in doubt use ED.
           specStatus:          "ED",
-          //publishDate:  		"2016-09-06",
+          //publishDate:  		"2016-09-08",
           //previousPublishDate:  "2014-12-16",
           //previousMaturity:  "FPWD",
 
@@ -122,12 +122,12 @@
           <p>In multilingual documents, differences between the heights of letters in Ethiopic script and its companion foreign script are often found.
         The difference is likely an artifact of the typesetting technology in use and does not represent the intent of the author or publisher.
         In the classic typeface style of Ethiopic script the letters will be of variable heights. Fixed height styles are more generally used for
-        advertisement and not publishing. The nature of variable height Ethiopic letters is a factor that complicates how to be best align letter height with a foreign script.</p>
+        advertisement and not publishing. The nature of variable height Ethiopic letters is a factor that complicates how to  best align letter height with a foreign script.</p>
           <figure id="comparative_heights_latn_ethi"> <img src="images/English-Ethiopic-Relative-Heights-With-Guide-Lines.png" alt=""/>
         <figcaption>Comparative heights of English and Ethiopic script.</figcaption>
       </figure>
           <p> At a given point size, letter heights within a script may vary widely between typefaces. This adds another level of difficulty
-        to aligning heights between scripts as an alignment will only be optimal between a typeface pair. Within a script featuring variable
+        to aligning heights between scripts as an alignment will only be optimal between a specific typeface pair. Within a script featuring variable
         (not fixed) height letters the relative heights of letters are subject to change between typefaces. This phenomena reinforces the
         previous assertion on typeface pair optimization, but also introduces the possibility that alignment optimization can be language
         sensistive. This happens when an alignment pair designed for the letter inventory of one language is applied to another language
@@ -141,9 +141,9 @@
       </figure>
           <p> With these caveats considered, “Zen” alignment is a means to optimize an Ethiopic-Latin typeface pair that is suitable for a general
         use case when priori knowledge of a document language is unknown. Its basis is reviewed here.
-        The Latin letter “Z” and Ethiopic letter "ን" are chosen as pairing symbols representative of the mean height .  The both feature broad
+        The Latin letter “Z” and Ethiopic letter "ን" are chosen as pairing symbols representative of the mean height .  They both feature broad
         horizontal strokes that are easy for the eye to follow as a nearly continuous stroke.
-        Ethiopic letters that were introduced as an extension to the Ge'ez core will have typically feature a macron on other modifier at the top of
+        Ethiopic letters that were introduced as an extension to the Ge'ez core will  typically feature a macron or other modifier at the top of
         a base letter in order to form the extension letter. The macron necessarily extends the height of a letter.  Using the top of the macron
         for the reference height of a letter leads to height alignment that makes the majority of Ethiopic letters appear too short against Latin letters. </p>
           <figure id="align_top_symbol"> <img src="images/Z-Ny-N-Top-Aligned.png" alt=""/>
@@ -172,9 +172,9 @@
           <h4>Relative Typeface Weights</h4>
           <p>A common practice in Ethiopic literature is the change of typeface weight in one script to appear more visually similar to the other.
         Most typically a Latin typeface will be made heavier to better match its Ethiopic counterpart.  This weight increase is demonstrated in many
-        Ethiopic fonts that include the Latin letters. The font designer may have increased the weight of the Latin range primarily to provide heavier
+        Ethiopic fonts that include  Latin letters. The font designer may have increased the weight of the Latin range primarily to provide heavier
         weight punctuation to use with Ethiopic script (see <a href="#ethiopicized_punctuation">Ethiopicized Punctuation</a>).</p>
-          <p>Literature produced with a heavier Latin tyepface may represent the author's stylistic sensibilities but in some cases may be only be a
+          <p>Literature produced with a heavier Latin tyepface may represent the author's stylistic sensibilities but in some cases may  only be a
         pragmatic outcome when an author finds manually changing between fonts too burdensome. 
         The view of professional publishers is unknown here and should be determined.</p>
           <div  class="issues">
@@ -207,7 +207,7 @@
           <p>The shape and weight of these symbols are often changed for a better visual fit with an accompanying
         Ethiopic typeface. Enhanced foreign symbols are referred to here as <a href="#term.ethiopicized" class="termref">“Ethiopicized”</a>. While many symbols are borrowed from western writing,
         not all necessarily benefit from Ethiopicization.  Those that do will primarily be used in a context where the foreign symbol directly
-        abuts some Ethiopic symbol. Commonly Ethiopic symbols are demonstrated in the following figure:</p>
+        abuts some Ethiopic symbol. Common Ethiopic symbols are demonstrated in the following figure:</p>
           <figure id="ethiopicized_punctuation_260"> <img src="images/Ethiopicized-Punctuation-Sample-260.png" alt=""/>
         <figcaption>Samples of Ethiopicized punctuation compared to shapes in a companion Latin typeface.</figcaption>
       </figure>
@@ -226,8 +226,8 @@
     <section id="optical_balancing">
           <h4>Optical Balancing</h4>
           <p>Foreign language words or phrases are regularly found inline within a paragraph of Ethiopic text, often enclosed within
-        encompassing punctuation such as brackets and quotaiton marks (e.g. []()""''«»‹›).  This practice is most often observed in
-        news articles on international topics.  The weight of the encompassing punctuation may found as matching either the Ethiopic
+        encompassing punctuation such as brackets and quotation marks (e.g. []()""''«»‹›).  This practice is most often observed in
+        news articles on international topics.  The weight of the encompassing punctuation may found as matching either the Ethiopic or
         Latin weight.  The preference of stakeholders must be determined here. Comparative samples follow:</p>
           <figure> <img src="images/Punctuation-At-Latin-Boundary-Latin-Guillemets.png" alt=" " />
         <figcaption>Latin text enclosed with Latin weight guillemets.</figcaption>
@@ -241,8 +241,8 @@
           <figure> <img src="images/Punctuation-At-Latin-Boundary-Ethiopic-Quotes.png" alt=" " />
         <figcaption>Latin text enclosed with Ethiopic weight quotes.</figcaption>
       </figure>
-          <p>As a rule within the embedded foreign script, the weight of punctuation and other symbol (numbers, etc) should be in keeping
-        with the weight of the foreign weight and not that of the surrounding Ethiopic.</p>
+          <p>As a rule within the embedded foreign script, the weight of punctuation and other symbols (numbers, etc) should be in keeping
+        with the weight of the foreign text and not that of the surrounding Ethiopic.</p>
           <div  class="issues">
         <p>Issues/Questions:</p>
         <ol>
@@ -289,12 +289,12 @@
           <ol>
         <li>White space symbols other than space (U+0020) are not processed. <span  class="issues">Issue: how should non-breaking-space be handled?</span></li>
         <li>Space(s) at the start of a line are assumed to be there for positioning and are not processed.</li>
-        <li>A sequences of one or more spaces is treated as a single space.</li>
+        <li>A sequence of one or more spaces is treated as a single space.</li>
         <li>A space is substituted for wordspace when bounded by letters, or between a letter and number.</li>
         <li>A wordspace may be added before a right-side enclosing punctuation as per the convention applied in <a href="#ethiopic_wordspace_at_latin_boundaries">Ethiopic Wordspace at Latin Boundaries</a>.</li>
         <li>A space is substituted for wordspace on the outside of an enclosing punctuation as per the convention applied in <a href="#ethiopic_wordspace_at_latin_boundaries">Ethiopic Wordspace at Latin Boundaries</a>.</li>
         <li>A space following non-encompasing punctuation is removed.</li>
-        <li>Space(s) before or after quotation are removed.</li>
+        <li>Space(s) before or after quotation marks are removed.</li>
         <li>Space(s) bounded by non-Ethiopic numbers are not processed.</li>
         <li>A wordspace will be appended to the end of line (a line ending with a hard return) that does not end with punctuation.</li>
       </ol>
@@ -324,7 +324,7 @@
         Quite possibly the former style is an artifact of a limitation of the layout technology employed, and the later representative of an author's
         desired rendering.</p>
           <figure> <img src="images/gemination-heights-comparison.png" alt=" " />
-        <figcaption>Two gemination styles compared.</figcaption>
+        <figcaption>Two gemination styles compared: typical printed (above) and handwritten (below).</figcaption>
       </figure>
           <div  class="issues">
         <p>Issues/Questions:</p>
@@ -338,8 +338,8 @@
         </section>
     <section id="ethiopic_numeral_bars">
           <h4>Ethiopic Numeral Bars</h4>
-          <p>Sequences of Ethiopic numerals, such as years and page numbers, may be written in one of two styles.  In the most commonly find style in modern literature
-        the numerals are written as discrete, independent, symbols.  In a second “joining” style of writing, primarily found in calligraphical and handwriting, the numerals
+          <p>Sequences of Ethiopic numerals, such as years and page numbers, may be written in one of two styles.  In the most common style in modern literature
+        the numerals are written as discrete, independent, symbols.  In a second “joining” style of writing, primarily found in calligraphic text and handwriting, the numerals
         may share a common upper and lower bar. Conceivably the joining style went out of favor as it proved more difficult to support in publishing technology. Modern
         preferences should be determined from stakeholders.</p>
           <figure> <img src="images/isolated-and-joining-numeral-bars.png" alt=" " />
@@ -451,7 +451,7 @@
         </section>
     <section id="justification_with_wordspace">
           <h4>Justification When ETHIOPIC WORDSPACE is the Word Delimiter</h4>
-          <p>Since the arrival of the printing press to Ethiopia in 1863 (Pankhurst, 1998), full justification of Ethiopic has been a common typesetting practice in Ethiopian, and later Eritrean, publishing houses. Earlier, Ethiopic justification rules are a feature of Hiob Ludolf’s Historia Æthiopica which is noted as the first use of movable type for Ethiopic script (Ludolf, 1681). Prior to letterpress typography, calligraphic manuscripts rendered on parchment also featured full, or approximately full, justification. Though the latter likely reflects the scribe’s desire not to waste a millimeter of available lateral writing space.</p>
+          <p>Since the arrival of the printing press in Ethiopia in 1863 (Pankhurst, 1998), full justification of Ethiopic has been a common typesetting practice in Ethiopian, and later Eritrean, publishing houses. Earlier, Ethiopic justification rules are a feature of Hiob Ludolf’s Historia Æthiopica which is noted as the first use of movable type for Ethiopic script (Ludolf, 1681). Prior to letterpress typography, calligraphic manuscripts rendered on parchment also featured full, or approximately full, justification. Though the latter likely reflects the scribe’s desire not to waste a millimeter of available lateral writing space.</p>
           <p>The placement of Ethiopic wordspace presents a complication to the justification of Ethiopic text. Two placement styles developed in typeset
         literature which will be referred to here as “word bounded” and “centered” styles. Additionally, the word spacing following an Ethiopic fullstop
         may (or may not) be governed by a special rule and in combination with the two wordspace spacing styles. These spacing rules are discussed in the
@@ -1128,12 +1128,14 @@
     </section>
 <section id="h_emphasis">
       <h2>Ethiopic Emphasis</h2>
-      <p>Classical Ethiopic writing does not feature a letter shape stylistic change to communicate word emphasis. In religious works, the color red will be used to emphasize a spiritual aspect of a word in a passage.  Emphasis in modern Ethiopic writing will employ every emphasis device available from the available publishing technology (e.g. underline, slant, embolden, letter size, letter outline, background shapes, etc.). The practice however is idiosyncratic and inconsistently applied leading to debate and disagreement within the publishing community.</p>
+      <p>Classical Ethiopic writing does not feature a letter shape stylistic change to communicate word emphasis. In religious works, the color red will be used to emphasize a spiritual aspect of a word in a passage.  </p>
+      <p>Emphasis in modern Ethiopic writing will employ every emphasis device available from the available publishing technology (e.g. underline, slant, embolden, letter size, letter outline, background shapes, etc.). The practice however is idiosyncratic and inconsistently applied leading to debate and disagreement within the publishing community.</p>
       <p>The following subsections present a proposed best practice of the authors.</p>
       <section id="heading_emphasis">
     <h3>Section Headings</h3>
     <p><em>[Consider if all or part of this section should be integrated with <a href="#html5-alignment"></a>]</em></p>
-    <p>The default section headings stylistic changes (size, weight) applied to Roman script in word processors and web browsers are generally applicable to Ethiopic literature.  In classic and modern layout practices applied to books and magazines, the document and chapter titles will be centered. The use of underlining and color changes are not recommended for Ethiopic headings as they are not a traditional practice.</p>
+    <p>The default section headings stylistic changes (size, weight) applied to Roman script in word processors and web browsers are generally applicable to Ethiopic literature.  In classic and modern layout practices applied to books and magazines, the document and chapter titles will be centered. </p>
+    <p>The use of underlining and color changes are not recommended for Ethiopic headings as they are not a traditional practice.</p>
     <p>The following presents the six heading levels defined in the HTML standard and their applicable context in Ethiopic literature.  Samples are provided here for review and consideration of the default settings for letter sizing and line spacing.</p>
     <dl>
           <dt>Heading 1</dt>
@@ -1326,23 +1328,23 @@
         Usage rules are as follows:</p>
           <dl>
         <dt>፣ - ነጠላ ሠረዝ</dt>
-        <dd>ETHIOPIC COMMA (አማ/ ነጠላ ሠረዝ, ትግ/ ንጽል ሰረዝ) is used as a comma in Ethiopian practices and as a semicolon in Eritrea. ፣ will also be
+        <dd><span class="uname">U+1363 ETHIOPIC COMMA</span> (አማ/ ነጠላ ሠረዝ, ትግ/ ንጽል ሰረዝ) is used as a comma in Ethiopian practices and as a semicolon in Eritrea. ፣ will also be
               used in Ge'ez writing as a semicolon (is this a modern usage or classic?).
-              ETHIOPIC SEMICOLON, ፤, in turn is used as a colon in Eritrean writing (verify).</dd>
+              <span class="uname">U+1364 ETHIOPIC SEMICOLON</span>, ፤, in turn is used as a colon in Eritrean writing (verify).</dd>
         <dt>፥ - ንዑስ ሠረዝ</dt>
-        <dd>ETHIOPIC COLON in contrast to its Unicode name, is never(?) used as a colon in any known Ethiopic practices.
-              Rather, it is a classical glyph variant of ETHIOPIC COMMA (፣). ፥ is the default comma glyph in Ge'ez writing and is the preferred
+        <dd><span class="uname">U+1365 ETHIOPIC COLON</span> in contrast to its Unicode name, is never(?) used as a colon in any known Ethiopic practices.
+              Rather, it is a classical glyph variant of <span class="uname">U+1364 ETHIOPIC SEMICOLON</span> (፣). ፥ is the default comma glyph in Ge'ez writing and is the preferred
               comma glyph by some modern writers writing in other languages. ፥ is the default comma in most Amharic bibles, likely in keeping with
               the Ge'ez Bible that the Amharic would have been translated from.  Some modern Bible translations into Amharic, as well as other religious
               literature, will use ፣ as the default comma in prose but maintain ፥ for passage references, e.g. ማቴ4፥23 , ዮሐ13፥16 , etc. Given this
               common usage in religious materials "ecclesiastical comma" is a practical English term for referring to the ፥ glyph variant.  Kidane Wolde Kifle and Desta Tekle Wolde note the equivalence of the two commas. </dd>
         <dt>፡ - ንዑስ ነጥብ</dt>
-        <dd>ETHIOPIC WORDSPACE (አማ/ ሁለት ነጥብ, ትግ/ ክልተ ነጥቢ) in keeping with Ge'ez heritage, is used as the word separator (i.e. space) in the classical writing practices
-              of both Eritrean and Ethiopia.  In modern Eritrean writing practices ETHIOPIC WORDSPACE will be used in the role of a comma (illustrated in Figure <a href="#ecclesiastical_emphasis_sample"></a>).
+        <dd><span class="uname">U+1361 ETHIOPIC WORDSPACE</span> (አማ/ ሁለት ነጥብ, ትግ/ ክልተ ነጥቢ) in keeping with Ge'ez heritage, is used as the word separator (i.e. space) in the classical writing practices
+              of both Eritrean and Ethiopia.  In modern Eritrean writing practices <span class="uname">ETHIOPIC WORDSPACE</span> will be used in the role of a comma (illustrated in Figure <a href="#ecclesiastical_emphasis_sample"></a>).
               When used in modern Ethiopian writing, it retains its classic role as word separator (space).
               See <a href="#wordspace_in_comma_context"></a> for elaboration on this topic. </dd>
         <dt>, - comma</dt>
-        <dd>COMMA is utilized in Eritrean and Ethiopian writing practices in the formatting of western numbers only.</dd>
+        <dd><span class="uname">U+002C COMMA</span> is utilized in Eritrean and Ethiopian writing practices in the formatting of western numbers only.</dd>
       </dl>
         </section>
     <section id="wordspace_in_comma_context">
@@ -1485,7 +1487,7 @@
   </section>
     </section>
 <section class="appendix" id="glossary">
-      <h1>Glossary</h1>
+  <h1>Glossary</h1>
       <table class="glossary">
     <thead>
           <tr>
