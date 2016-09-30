@@ -371,9 +371,11 @@
             </ol>
       </div>
         </section>
-  </section>
+      </section>
     </section>
-<section id="lines_and_paragraphs">
+
+
+  <section id="lines_and_paragraphs">
       <h2>Lines and Paragraphs</h2>
       <p class="issues">Discuss: line composition rules, Punctuations, Mixed script text, Paragraph adjustment, Directionality and bidi, Tab setting, Alignment, <a href="#def_justify" class="termref">Justification</a>, Hyphenation, Word/Sentence boundaries, Special cases (e.g. poetry, math, vertical, etc.)</p>
       <section id="first_paragraph">
@@ -389,22 +391,11 @@
         <li>Should a new paragraph be indented following a list?</li>
         <li>Are there any other special rules for when to, or not to, indent a paragraph?</li>
       </ol>
-        </div>
-  </section>
-      <section id="ethiopic_hyphenation">
-    <h3>Hyphenation</h3>
-    <ul>
-          <li>A word is split at a location where the user would not be able to infer from context whether one or two words appears across lines.  I.E. a split should not occur at the boundary of a compound word.</li>
-          <li>When whitespace is the word delimiter, the hyphen symbol should be applied when a word is split over lines.</li>
-          <li>Numbers are not split over lines.</li>
-          <li>Words of a single syllable are not split over lines.</li>
-          <li>Words of two letters are not split over lines.</li>
-          <li>Only letters, numbers, or opening punctuation may start a new line.</li>
-          <li>Words are split along a syllable boundary.</li>
-          <li>A consonant cluster may not be split.</li>
-        </ul>
-  </section>
-      <section id="ethiopic_word_boundaries">
+    </div>
+   </section>
+
+
+   <section id="ethiopic_word_boundaries">
     <h3>Word Boundaries</h3>
     <p><em>Regular rules apply?  One consideration for Ethiopic would be that a newline is not a dependable word boundary
       in the common case where words are split across lines without a hyphen symbol and white space is the default wordspace.
@@ -412,8 +403,47 @@
   </section>
       <section id="ethiopic_line_breaking">
     <h3>Line Breaking</h3>
-    <p><em>Are western rules ok for Modern Ethiopic? Cover breaking rules with Ethiopic Wordspace in Classical Ethiopic</em></p>
+    <p>Word processors and text readers such as web browsers, ebook devices, etc. will automatically format the sentences of a paragraph over a number of lines as allowable by the available width of the viewing area.  These software systems apply formatting rules that govern where how a line may end and a new line begin.  Line breaking rules for Ethiopic are expressed with rules for how a line may start. A line may start with:</p>
+    <ul>
+      <li>A letter.</li>
+      <li>A number.</li>
+      <li>A tag.</li>
+      <li>A non-terminal or non-joining punctuation (such as  « ‹ “ $ ( [ { ). Conversely, may not start with a terminal or joining punctuation (suchas: ? ! ¡ ።) ] } / % – ” › » ፡ ፣ ፤ ፥ ፦ space, math operators)</li>
+    </ul>
+
+    <div  class="issues">
+    <p>Issues/Questions:</p>
+      <ol>
+        <li>Are the above rules valid?</li>
+        <li>Are any additional rules needed to govern how a line may end or begin?</li>
+      </ol>
+    </div>
   </section>
+
+
+  <section id="ethiopic_hyphenation">
+    <h3>Hyphenation</h3>
+    <p>In classical Ethiopic writing the wordspace separator symbol (፡) negated the need for word hyphenation across a line of text. When wordspace fell out of favor in modern writing the practice of splitting a word across lines of text continued.  The reader would know to mentally reconstruct the word by relying on the knowledge of lexicon and context.</p>
+    <div  class="issues">
+    <p>Issues/Questions:</p>
+      <ol>
+        <li>When wordspace, “፡”, is used, what rules for splitting a word across lines apply?</li>
+        <li>When space is used, should Ethiopic writing use a hyphen “‐” to split words across lines?</li>
+        <li>When space is used, and if words should be split across lines (with or without a hyphen), are the following rules for word splitting suitable?
+    <ul>
+      <li>Words are split at a morpheme boundary, for example: ቤተ‐<br/>መንግሥት . </li>
+      <li>Words are split along a syllable boundary.</li>
+      <li>Words of a single syllable are not split over lines.</li>
+      <li>Words are split after a prefix.</li>
+      <li>Words are split before a suffix.</li>
+      <li>Numbers are not split over lines.</li>
+      <li>Words of two letters are not split over lines.</li>
+    </ul>
+        </li>
+      </ol>
+        </div>
+  </section>
+
       <section id="ethiopic_wordspace_format">
     <h3>Formatting of Ethiopic Wordspace</h3>
     <section id="ethiopic_wordspace_punctuation_boundary_rules">
