@@ -371,9 +371,11 @@
             </ol>
       </div>
         </section>
-  </section>
+      </section>
     </section>
-<section id="lines_and_paragraphs">
+
+
+  <section id="lines_and_paragraphs">
       <h2>Lines and Paragraphs</h2>
       <p class="issues">Discuss: line composition rules, Punctuations, Mixed script text, Paragraph adjustment, Directionality and bidi, Tab setting, Alignment, <a href="#def_justify" class="termref">Justification</a>, Hyphenation, Word/Sentence boundaries, Special cases (e.g. poetry, math, vertical, etc.)</p>
       <section id="first_paragraph">
@@ -389,22 +391,11 @@
         <li>Should a new paragraph be indented following a list?</li>
         <li>Are there any other special rules for when to, or not to, indent a paragraph?</li>
       </ol>
-        </div>
-  </section>
-      <section id="ethiopic_hyphenation">
-    <h3>Hyphenation</h3>
-    <ul>
-          <li>A word is split at a location where the user would not be able to infer from context whether one or two words appears across lines.  I.E. a split should not occur at the boundary of a compound word.</li>
-          <li>When whitespace is the word delimiter, the hyphen symbol should be applied when a word is split over lines.</li>
-          <li>Numbers are not split over lines.</li>
-          <li>Words of a single syllable are not split over lines.</li>
-          <li>Words of two letters are not split over lines.</li>
-          <li>Only letters, numbers, or opening punctuation may start a new line.</li>
-          <li>Words are split along a syllable boundary.</li>
-          <li>A consonant cluster may not be split.</li>
-        </ul>
-  </section>
-      <section id="ethiopic_word_boundaries">
+    </div>
+   </section>
+
+
+   <section id="ethiopic_word_boundaries">
     <h3>Word Boundaries</h3>
     <p><em>Regular rules apply?  One consideration for Ethiopic would be that a newline is not a dependable word boundary
       in the common case where words are split across lines without a hyphen symbol and white space is the default wordspace.
@@ -412,8 +403,47 @@
   </section>
       <section id="ethiopic_line_breaking">
     <h3>Line Breaking</h3>
-    <p><em>Are western rules ok for Modern Ethiopic? Cover breaking rules with Ethiopic Wordspace in Classical Ethiopic</em></p>
+    <p>Word processors and text readers such as web browsers, ebook devices, etc. will automatically format the sentences of a paragraph over a number of lines as allowable by the available width of the viewing area.  These software systems apply formatting rules that govern where how a line may end and a new line begin.  Line breaking rules for Ethiopic are expressed with rules for how a line may start. A line may start with:</p>
+    <ul>
+      <li>A letter.</li>
+      <li>A number.</li>
+      <li>A tag.</li>
+      <li>A non-terminal or non-joining punctuation (such as  « ‹ “ $ ( [ { ). Conversely, may not start with a terminal or joining punctuation (suchas: ? ! ¡ ።) ] } / % – ” › » ፡ ፣ ፤ ፥ ፦ space, math operators)</li>
+    </ul>
+
+    <div  class="issues">
+    <p>Issues/Questions:</p>
+      <ol>
+        <li>Are the above rules valid?</li>
+        <li>Are any additional rules needed to govern how a line may end or begin?</li>
+      </ol>
+    </div>
   </section>
+
+
+  <section id="ethiopic_hyphenation">
+    <h3>Hyphenation</h3>
+    <p>In classical Ethiopic writing the wordspace separator symbol (፡) negated the need for word hyphenation across a line of text. When wordspace fell out of favor in modern writing the practice of splitting a word across lines of text continued.  The reader would know to mentally reconstruct the word by relying on the knowledge of lexicon and context.</p>
+    <div  class="issues">
+    <p>Issues/Questions:</p>
+      <ol>
+        <li>When wordspace, “፡”, is used, what rules for splitting a word across lines apply?</li>
+        <li>When space is used, should Ethiopic writing use a hyphen “‐” to split words across lines?</li>
+        <li>When space is used, and if words should be split across lines (with or without a hyphen), are the following rules for word splitting suitable?
+    <ul>
+      <li>Words are split at a morpheme boundary, for example: ቤተ‐<br/>መንግሥት . </li>
+      <li>Words are split along a syllable boundary.</li>
+      <li>Words of a single syllable are not split over lines.</li>
+      <li>Words are split after a prefix.</li>
+      <li>Words are split before a suffix.</li>
+      <li>Numbers are not split over lines.</li>
+      <li>Words of two letters are not split over lines.</li>
+    </ul>
+        </li>
+      </ol>
+        </div>
+  </section>
+
       <section id="ethiopic_wordspace_format">
     <h3>Formatting of Ethiopic Wordspace</h3>
     <section id="ethiopic_wordspace_punctuation_boundary_rules">
@@ -453,19 +483,19 @@
           <h4>Justification When ETHIOPIC WORDSPACE is the Word Delimiter</h4>
           <p>Since the arrival of the printing press in Ethiopia in 1863 (Pankhurst, 1998), full justification of Ethiopic has been a common typesetting practice in Ethiopian, and later Eritrean, publishing houses. Earlier, Ethiopic justification rules are a feature of Hiob Ludolf’s Historia Æthiopica which is noted as the first use of movable type for Ethiopic script (Ludolf, 1681). Prior to letterpress typography, calligraphic manuscripts rendered on parchment also featured full, or approximately full, justification. Though the latter likely reflects the scribe’s desire not to waste a millimeter of available lateral writing space.</p>
           <p>The placement of Ethiopic wordspace presents a complication to the justification of Ethiopic text. Two placement styles developed in typeset
-        literature which will be referred to here as “word bounded” and “centered” styles. Additionally, the word spacing following an Ethiopic fullstop
+        literature which will be referred to here as “word bound” and “centered” styles. Additionally, the word spacing following an Ethiopic fullstop
         may (or may not) be governed by a special rule and in combination with the two wordspace spacing styles. These spacing rules are discussed in the
         following sections.</p>
           <figure id="justification_in_historia_aethiopica"> <img src="images/justification_in_historia_aethiopica.png" alt=" " />
         <figcaption>Ethiopic Justification in <cite>Historia Æthiopica</cite> (Ludolf, 1681)</figcaption>
       </figure>
         </section>
-    <section id="justification_with_word_bounded_wordspace">
-          <h5>Justification with Word Bounded Wordspace and Punctuation</h5>
-          <p>In keeping with line justification for Latin script, the non-printed or “white space” between words is treated as stretchable. The width of the space symbol itself will be elongated to some aesthetic width value that may vary from space symbol to space symbol across a printed line. In Ethiopic justification, the white space between the Ethiopic word separator and the words it separates is likewise allowed to stretch. This stretching of white space may be either symmetrical (“centered”) or asymmetrical but in the latter case space stretching is always between the right side of the separator and the following word –referred to here as “word bounded”. </p>
-          <p>In  “word  bounded”  justification  the  word  separator,   which  may  be  either  a  punctuation  symbol  or <span class="uname">U+1361   ETHIOPIC WORDSPACE</span> [፡], appears to adhere to the word to the left as if it were its final character. Figures <a href="#justification_word_bounded"></a> and <a href="#justification_in_historia_aethiopica"></a> both illustrate the word bounded style.</p>
-          <figure id="justification_word_bounded"> <img src="images/corpus-samples/Ografi-Page-35-Cropped.png" alt=" " width="800" height="223" />
-        <figcaption>Ethiopic justification in word bounded style (Erikson, 1921 (1913 EC))</figcaption>
+    <section id="justification_with_word_bound_wordspace">
+          <h5>Justification with Word Bound Wordspace and Punctuation</h5>
+          <p>In keeping with line justification for Latin script, the non-printed or “white space” between words is treated as stretchable. The width of the space symbol itself will be elongated to some aesthetic width value that may vary from space symbol to space symbol across a printed line. In Ethiopic justification, the white space between the Ethiopic word separator and the words it separates is likewise allowed to stretch. This stretching of white space may be either symmetrical (“centered”) or asymmetrical but in the latter case space stretching is always between the right side of the separator and the following word –referred to here as “word bound”. </p>
+          <p>In  “word bound”  justification  the  word  separator,   which  may  be  either  a  punctuation  symbol  or <span class="uname">U+1361   ETHIOPIC WORDSPACE</span> [፡], appears to adhere to the word to the left as if it were its final character. Figures <a href="#justification_word_bound"></a> and <a href="#justification_in_historia_aethiopica"></a> both illustrate the word bound style.</p>
+          <figure id="justification_word_bound"> <img src="images/corpus-samples/Ografi-Page-35-Cropped.png" alt=" " width="800" height="223" />
+        <figcaption>Ethiopic justification in word bound style (Erikson, 1921 (1913 EC))</figcaption>
       </figure>
         </section>
     <section id="justification_with_centered_wordspace">
@@ -885,7 +915,7 @@
       </div>
         </section>
     <section id="አበገደ_lists">
-          <h4>አበገደ Lists</h4>
+          <h4>Abegede (አበገደ) Lists</h4>
           <p>The አበገደ ordering of the Ethiopic syllabary is an alignment with the Coptic and Greek alphabets possibly to
         facilitate interdenominational communication or for the transfer of gematria practices.
         The ordering is used today largely for pedagogical purposes and has been used by some authors for the collation of
