@@ -1,0 +1,37 @@
+/*
+AbyssinicaSIL-webfont-example.css
+AbyssinicaSIL v1.500
+1 Dec 2013
+This file is part of Abyssinica SIL font family (http://scripts.sil.org/AbyssinicaSIL)
+and is Copyright (c) 2000-2013 SIL International (http://www.sil.org/),
+with Reserved Font Names "Abyssinica" and "SIL". This Font Software is licensed
+under the SIL Open Font License, Version 1.1. You should have received a copy
+of the license along with this Font Software. If this is not the case, go to
+(http://scripts.sil.org/OFL) for all the details including a FAQ.
+*/
+
+/* use Abyssinica SIL - Regular in .woff format */
+@font-face {
+  font-family: AbyssinicaSILW;
+  src: url(AbyssinicaSIL-R.woff);
+}
+
+/* set body to use Abyssinica SIL in .woff format */
+body {
+  font-family: AbyssinicaSILW, sans-serif;
+    /* fall back to sans serif so that it's really obvious if the fonts don't load */
+}
+
+/* remove bold styling from heading */
+h1 {
+  font-weight: normal;	
+}
+
+.cv320 {
+  font-family: AbyssinicaSILW;
+  -moz-font-feature-settings: "cv32" 0; font-size: 200%;
+}
+.cv321 {
+  font-family: AbyssinicaSILW;
+  -moz-font-feature-settings: "cv32" 1; font-size: 200%;
+}
