@@ -1498,17 +1498,17 @@
             &lt;Citation&gt; ::=
             &lt;Author Full Name&gt; "፤"
             &lt;Publication Date&gt; "፤"
-            &lt;i&gt;&lt;Terminated Title&gt;|(&lt;Unterminated Title&gt; "።")&lt;/i&gt;
+            &lt;i&gt;&lt;Title&gt;&lt;/i&gt;
             &lt;City&gt; "፤"
             &lt;Publisher&gt; "።"<br/>
             </code></p>
           <p>where</p>
           <p><code> &nbsp;&nbsp;&nbsp;&nbsp;
-            &lt;Title&gt; ::= &lt;Terminated Title&gt; | &lt;Unterminated Title&gt;<br/>
+            &lt;Title&gt; ::= &lt;Terminated Title&gt; | ( &lt;Unterminated Title&gt; "።" )<br/>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            &lt;Terminated Title&gt; ::= &lt;Title&gt; [፡፤።?]<br/>
+            &lt;Terminated Title&gt; ::= &lt;Unterminated Title&gt; [፡፤።?]<br/>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            &lt;Unterminated Title&gt; ::= &lt;Text&gt; [:Letter:] </code></p>
+            &lt;Unterminated Title&gt; ::= &lt;Text&gt; [:Letter:]</code></p>
           An example:
           <div class="example" id="-example"> &nbsp;&nbsp;&nbsp;&nbsp;
         ደረጀ ገብሬ፤ ሚያዝያ 1996፤ <i>ተግባራዊ፡የጽህፈት፡መማሪያ።</i> ንግድ ማተሚያ ድርጅት፤ አዲስ አበባ። </div>
