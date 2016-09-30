@@ -253,25 +253,31 @@
         </section>
     <section id="ethiopic_wordspace_at_latin_boundaries">
           <h4>Ethiopic Wordspace at Latin Boundaries</h4>
-          <p>Classical era Ethiopic documents do not exhibit a very high degree of constency with respect to the presence of Ethiopic wordspace
-        before or following Latin punctuation. Exceptions to an apparent convention are usually found within an individual document, making internal
-        constency problematic for a work of any significant length beyond 20 pages. It is likely that the lack of a well established convention here
-        would have kept copy editors and publishers view formatting conformance here as critical. Observed practices are:</p>
-          <dl>
-        <dt>Always</dt>
-        <dd>An Ethiopic word ends with either a wordspace or punctuation. This rule allows a word to be split across lines without the need for a hyphenation symbol.
-              Ethiopic wordspace does not precede or follow another punctuation, with the possible exception when preceding a right-side enclosing symbol (brackets and quotation). </dd>
-        <dt>Right-Side Enclosing Symbol Convention 1</dt>
-        <dd>Ethiopic wordspace does not precede but does follow a right-side enclosing symbol. This appears to be the most commonly used convention during imperial times.</dd>
-        <dt>Right-Side Enclosing Symbol Convention 2</dt>
-        <dd>Ethiopic wordspace will precede a right-side enclosing symbol but not follow it. In these cases white space generally appears after
-              the Latin punctuation, this whitespace is however observed as an artifact of justification spacing and does not demonstrate an inserted space symbol.
-              The figure in this document illustrating <a href="#fig_justification_centered">centered wordspace justification style</a> provides an example of white space
-              after quotation.  ፍቅር እስከ መቃብር by Haddis Alemayehu (Alemayehu, 1965 (1958 EC)) is also an easily found reference here. </dd>
-        <dt>Right-Side Enclosing Symbol Convention 3</dt>
-        <dd>Ethiopic wordspace does not precede or follow the right-side enclosing symbol. This style is observed but some width of white space will appear
-              outside the enclosing symbols.</dd>
-      </dl>
+          <p>It modern literature where punctuation may be borrowed from Western writing, inconsistent formatting practices are found with respect to the presence of Ethiopic Wordspace (፡) alongside borrowed punctuation. It is helpful to establish rules for Ethiopic Wordspace in the presence of other symbols so that software grammar and formatting checkers can offer corrections leading to better quality and more consistent literature. The following rules are proposed:</p>
+
+         <ul>
+           <li>A letter or number may border either side of Ethiopic Wordspace.</li>
+           <li>Ethiopic Wordspace may appear before, but not after, an opening punctuation, such as: ( , [ , { ,  « , ‹ , “ .</li>
+           <li>Ethiopic Wordspace may appear after, but not before, an closing punctuation, such as: ) , ] , } , » , › , ” .<br/>
+<dir>
+<em>Example:</em><br/>
+<dir>
+Incorrect: … ፅፋት፡(ፅፍዓት፡)፡ከመ፡ኪደተ፡ንስር፡(እንደ፡አሞራ፡ፈጣን፡)።<br/>
+&nbsp;&nbsp;Correct: … ፅፋት፡(ፅፍዓት)፡ከመ፡ኪደተ፡ንስር፡(እንደ፡አሞራ፡ፈጣን)።<br/>
+</dir>
+</dir>
+           </li>
+           <li>No other punctuation may border Ethiopic Wordspace.</li>
+           <li>A new line may follow, but not precede, an Ethiopic Wordspace (a wordspace may not start a new line).</li>
+           <li>Whitespace may not follow or precede an Ethiopic Wordspace (note, this does not include stretchable space used in line justification).</li>
+           <li>An Ethiopic Wordspace followed by another Ethiopic Wordspace must be interpreted as an Ethiopic Full Stop (።).</li>
+         </ul>
+        <div class="issues">
+        <p>Issues/Questions:</p>
+        <ol>
+              <li>Are the above rules valid?</li>
+        </ol>
+      </div>
           <p class="issues">[TBD: somewhere in this document mention the mouse text selection rule that a following wordspace should be automatically selected with text, analagous
         to the rule applied to white space. MS Word does this.]</p>
         </section>
@@ -446,10 +452,6 @@
 
   <section id="ethiopic_wordspace_format">
     <h3>Formatting of Ethiopic Wordspace</h3>
-    <section id="ethiopic_wordspace_boundary_rules">
-      <h4>Symbols Preceding and Following Ethiopic Wordspace</h4>
-      <p><em>TBD</em></p>
-    </section>
 
     <section id="ethiopic_whitespace_rules">
       <h4>Rules of Applying Whitespace in Ethiopic Text</h4>
@@ -1422,29 +1424,6 @@
               <li>Of interest: when are parenthesis first found in Ethiopic writing and in what form?</li>
             </ol>
       </div>
-          <section id="parenthetical_expressions_with_wordspace">
-        <h4>Parenthetical Expressions with Ethiopic Wordspace</h4>
-        <p>When Ethiopic Wordspace is the space delimiter in a document, an issue for consideration arises with the closing parenthesis. 
-              As a general rule, an Ethiopic word will be terminated by either an Ethiopic Wordspace or a punctuation symbol. In practice, however,
-              the wordspace is sometimes found both before and following the closing parenthesis.  An example to illustrate the two forms:</p>
-        <ol>
-              <li>With inner wordspace:
-            <blockquote> … ፅፋት፡(ፅፍዓት፡)፡ከመ፡ኪደተ፡ንስር፡(እንደ፡አሞራ፡ፈጣን፡)። </blockquote>
-          </li>
-              <li>Without inner wordspace:
-            <blockquote> … ፅፋት፡(ፅፍዓት)፡ከመ፡ኪደተ፡ንስር፡(እንደ፡አሞራ፡ፈጣን)። </blockquote>
-          </li>
-            </ol>
-        <p>The identical scenarios are likewise found with Ethiopic wordspace in the presence of a closing quotation mark and must also be addressed. </p>
-      </section>
-          <div class="issues">
-        <p>Issues/Questions:</p>
-        <ol>
-              <li>Which of the above two forms is considered most appropriate?</li>
-              <li>Do special rules, or exceptions, apply with Ethiopic wordspace around closing symbols?</li>
-            </ol>
-      </div>
-        </section>
     <section id="quotation">
           <h3>Quotation</h3>
           <p>Classical Ethiopic literature applying quotation marks will employ double guillemet (« ») in a primary style and single
