@@ -242,49 +242,51 @@
           <figure> <img src="images/Punctuation-At-Latin-Boundary-Ethiopic-Quotes.png" alt=" " />
         <figcaption>Latin text enclosed with Ethiopic weight quotes.</figcaption>
       </figure>
-          <p>As a rule within the embedded foreign script, the weight of punctuation and other symbols (numbers, etc) should be in keeping
-        with the weight of the foreign text and not that of the surrounding Ethiopic.</p>
-          <div class="issues">
+      <p>As a rule within the embedded foreign script, the weight of punctuation and other symbols (numbers, etc) should be in keeping
+         with the weight of the foreign text and not that of the surrounding Ethiopic.</p>
+      <div class="issues">
         <p>Issues/Questions:</p>
         <ol>
-              <li>What do stakeholders feel should be the default weight for enclosing punctuation?</li>
-              <li>Would preferences change if Ethiopic wordspace were applied in the samples?</li>
-            </ol>
-      </div>
-        </section>
-    <section id="ethiopic_wordspace_at_latin_boundaries">
-          <h4>Ethiopic Wordspace at Latin Boundaries</h4>
-          <p>It modern literature where punctuation may be borrowed from Western writing, inconsistent formatting practices are found with respect to the presence of Ethiopic Wordspace (፡) alongside borrowed punctuation. It is helpful to establish rules for Ethiopic Wordspace in the presence of other symbols so that software grammar and formatting checkers can offer corrections leading to better quality and more consistent literature. The following rules are proposed:</p>
-
-         <ul>
-           <li>A letter or number may border either side of Ethiopic Wordspace.</li>
-           <li>Ethiopic Wordspace may appear before, but not after, an opening punctuation, such as: ( , [ , { ,  « , ‹ , “ .</li>
-           <li>Ethiopic Wordspace may appear after, but not before, an closing punctuation, such as: ) , ] , } , » , › , ” .<br/>
-<dir>
-<em>Example:</em><br/>
-<dir>
-Incorrect: … ፅፋት፡(ፅፍዓት፡)፡ከመ፡ኪደተ፡ንስር፡(እንደ፡አሞራ፡ፈጣን፡)።<br/>
-&nbsp;&nbsp;Correct: … ፅፋት፡(ፅፍዓት)፡ከመ፡ኪደተ፡ንስር፡(እንደ፡አሞራ፡ፈጣን)።<br/>
-</dir>
-</dir>
-           </li>
-           <li>No other punctuation may border Ethiopic Wordspace.</li>
-           <li>A new line may follow, but not precede, an Ethiopic Wordspace (a wordspace may not start a new line).</li>
-           <li>Whitespace may not follow or precede an Ethiopic Wordspace (note, this does not include stretchable space used in line justification).</li>
-           <li>An Ethiopic Wordspace followed by another Ethiopic Wordspace must be interpreted as an Ethiopic Full Stop (።).</li>
-         </ul>
-        <div class="issues">
-        <p>Issues/Questions:</p>
-        <ol>
-              <li>Are the above rules valid?</li>
+          <li>What do stakeholders feel should be the default weight for enclosing punctuation?</li>
+          <li>Would preferences change if Ethiopic wordspace were applied in the samples?</li>
         </ol>
       </div>
-          <p class="issues">[TBD: somewhere in this document mention the mouse text selection rule that a following wordspace should be automatically selected with text, analagous
+    </section>
+
+    <section id="ethiopic_wordspace_at_latin_boundaries">
+      <h4>Ethiopic Wordspace at Latin Boundaries</h4>
+      <p>It modern literature where punctuation may be borrowed from Western writing, inconsistent formatting practices are found with respect to the presence of Ethiopic Wordspace (፡) alongside borrowed punctuation. It is helpful to establish rules for Ethiopic Wordspace in the presence of other symbols so that software grammar and formatting checkers can offer corrections leading to better quality and more consistent literature. The following rules are proposed:</p>
+
+       <ul>
+         <li>A letter or number may border either side of Ethiopic Wordspace.</li>
+         <li>Ethiopic Wordspace may appear before, but not after, an opening punctuation, such as: ( , [ , { ,  « , ‹ , “ .</li>
+         <li>Ethiopic Wordspace may appear after, but not before, an closing punctuation, such as: ) , ] , } , » , › , ” .<br/>
+<ul>
+<em>Example:</em><br/>
+<ul>
+Incorrect: … ፅፋት፡(ፅፍዓት፡)፡ከመ፡ኪደተ፡ንስር፡(እንደ፡አሞራ፡ፈጣን፡)።<br/>
+&nbsp;&nbsp;Correct: … ፅፋት፡(ፅፍዓት)፡ከመ፡ኪደተ፡ንስር፡(እንደ፡አሞራ፡ፈጣን)።<br/>
+</ul>
+</ul>
+         </li>
+         <li>No other punctuation may border Ethiopic Wordspace.</li>
+         <li>A new line may follow, but not precede, an Ethiopic Wordspace (a wordspace may not start a new line).</li>
+         <li>Whitespace may not follow or precede an Ethiopic Wordspace (note, this does not include stretchable space used in line justification).</li>
+         <li>An Ethiopic Wordspace followed by another Ethiopic Wordspace must be interpreted as an Ethiopic Full Stop (።).</li>
+       </ul>
+       <div class="issues">
+         <p>Issues/Questions:</p>
+         <ol>
+           <li>Are the above rules valid?</li>
+         </ol>
+        </div>
+        <p class="issues">[TBD: somewhere in this document mention the mouse text selection rule that a following wordspace should be automatically selected with text, analagous
         to the rule applied to white space. MS Word does this.]</p>
-        </section>
+    </section>
+
     <section id="space_wordspace_substitution_rules">
-          <h4>Space-Wordspace Substitution Rules</h4>
-          <p>Rules are presented here to aid layout software that would offer the functionality of space symbol conversion to and from Ethiopic wordspaces.
+      <h4>Space-Wordspace Substitution Rules</h4>
+      <p>Rules are presented here to aid layout software that would offer the functionality of space symbol conversion to and from Ethiopic wordspaces.
         This functionality is desirable in a viewer application (e.g. web browser, eBook reader) to make the same
         substitution as per a user preference.  Thus the user would be able to read a document with Ethiopic wordspaces that
         was composed and delivered with white space. Likewise in the reverse, a user who preferred white space could have their preference
@@ -456,7 +458,7 @@ Incorrect: … ፅፋት፡(ፅፍዓት፡)፡ከመ፡ኪደተ፡ንስር፡
 
     <section id="ethiopic_whitespace_rules">
       <h4>Rules of Applying Whitespace in Ethiopic Text</h4>
-      <p>When Ethiopic Wordspace (፡) is used to separate words, there may still be some valid application for white space “ ”. White space is permittable to support the following formatting needs:</>
+      <p>When Ethiopic Wordspace (፡) is used to separate words, there may still be some valid application for white space “ ”. White space is permittable to support the following formatting needs:</p>
       <ul>
         <li>Indentation.</li>
         <li>Following a counter suffix.</li>
@@ -1218,21 +1220,23 @@ Incorrect: … ፅፋት፡(ፅፍዓት፡)፡ከመ፡ኪደተ፡ንስር፡
       </p>
 -->
   </section>
-      <section id="ecclesiastical_emphasis">
+
+  <section id="ecclesiastical_emphasis">
     <h3>Ecclesiastical Emphasis</h3>
     <p>In religous literature, certain words or phrases with a spiritual or more holy aspect may be colored in red.  The practice is context dependent and a word that will appear in red in one sentence may not be red in the next (or elsewhere in the same sentence).</p>
     <figure id="ecclesiastical_emphasis_sample"> <img src="images/ecclesiastical-emphasis-sample-cropped.jpg" alt=" " width="600"/>
-          <figcaption>Ecclesiastical emphasis sample from Maṣḥafa Ṣalot Mes Ser'ate Kiddase Betegreññā, Page 32 (Weldemariam, 1995 (1988 EC))</figcaption>
-        </figure>
+      <figcaption>Ecclesiastical emphasis sample from Maṣḥafa Ṣalot Mes Ser'ate Kiddase Betegreññā, Page 32 (Weldemariam, 1995 (1988 EC))</figcaption>
+    </figure>
     <div class="issues">
-          <p>Issues/Questions:</p>
-          <ol>
+      <p>Issues/Questions:</p>
+      <ol>
         <li>What shade of red?</li>
         <li>What is the preferred substitute for red when only monochrome publishing is available?</li>
       </ol>
-        </div>
+    </div>
   </section>
-      <section id="emphasis_with_wordspace">
+
+  <section id="emphasis_with_wordspace">
     <h3>Emphasis With Ethiopic Wordspace</h3>
     <p>As a rule, a wordspace following a word that is emphasized in any way (color, bold, italic, underline, etc.) shall receive the same emphasis. This is in keeping with the Ge'ez literature tradition. </p>
     <div class="issues">
@@ -1241,14 +1245,17 @@ Incorrect: … ፅፋት፡(ፅፍዓት፡)፡ከመ፡ኪደተ፡ንስር፡
         <li>Does this rule make aesthetic sense in full justification with wordspace in centered positioning style? In Ge'ez manuscripts no issue arrises since little or no white space appears between the wordspace and boundary words.  The elastic space around wordspace may stretch considerably in typeset documents, under justification, where continuation of the emphasis may appear peculiar after some stretching threshold width.</li>
       <li>Related: Does word emphasis include a following punctuation?</li>
       </ol>
-        </div>
+    </div>
   </section>
-    </section>
-<section id="h_pages">
-      <h2>Pages</h2>
-      <p><em>Discuss: Basic common templates, Page elements, Page-level directionality, Bidirectional characteristics, Arrangement of elements, Text columns, Header, Footer, Illustrations, Tables, Page numbers, Margins, Positioning and arrangement of content, Pagination rules, Specimens and examples.</em></p>
-      <p><em>Page and section numbering can be discussed here.  The user (author) should be to set the numeral system with a CSS attribute. A tool tip to 
+  </section>
+
+  <section id="h_pages">
+    <h2>Pages</h2>
+    <p><em>Discuss: Basic common templates, Page elements, Page-level directionality, Bidirectional characteristics, Arrangement of elements, Text columns, Header, Footer, Illustrations, Tables, Page numbers, Margins, Positioning and arrangement of content, Pagination rules, Specimens and examples.</em></p>
+    <p><em>Page and section numbering can be discussed here.  The user (author) should be to set the numeral system with a CSS attribute. A tool tip to 
         over an ethiopic page number that presents the western equivalent would be useful.  Are there any rules on page number position?</em></p>
+    <section id="h_page_margins">
+      <h3>Page Margins</h3>
       <p>Proper document layout is very import for religious works in the Ge’ez traditions. Certain works like homiliaries (such as ድርሳነ፡ሚካኤል) are consistently formatted in two columns and the Synaxarium (መጽሐፈ፡ስንክሳር) in three.  Margins in this class of literature will most common exhibit a 1x2x4 ratio where the top and fore edge margins are twice that of the gutter and half that of the bottom (depicted in the following figure).</p>
       <figure> <img src="images/GeezMargins.png" alt=" "/>
         <figcaption>Page margins in Ge’ez literature.</figcaption>
@@ -1266,6 +1273,7 @@ Incorrect: … ፅፋት፡(ፅፍዓት፡)፡ከመ፡ኪደተ፡ንስር፡
             <li>Does Ethiopic page layout have any special requirements that are different from Western?</li>
           </ol>
         </div>
+    </section>
 
     <section id="h_preface_page_numbering">
     <h3>Preface Page Numbering</h3>
@@ -1338,7 +1346,7 @@ Incorrect: … ፅፋት፡(ፅፍዓት፡)፡ከመ፡ኪደተ፡ንስር፡
       ><span style="display: inline; color: black; font-size: 1.17em; font-weight: bold;">አርእስት</span
       ><span style="display: inline; color: black; font-weight: bold;">አርእስት</span
       ><span style="display: inline; color: black; font-size: .83em; font-weight: bold;">አርእስት</span
-      ><span style="display: inline; color: black; font-size: .67em; font-weight: bold;">አርእስት</span> </p>
+      ><span style="display: inline; color: black; font-size: .67em; font-weight: bold;">አርእስት</span></p>
     <p>The following illustrates vertical spacing of the heading sizes. Heading and paragraph blocks are highlighted to illuminate spacing boundaries.</p>
     <h1 style="text-align: center; display: block; color: black; font-size: 2em; font-weight: bold; background-color: #99ccff">አርእስት 1</h1>
     <p style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
