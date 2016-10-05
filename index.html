@@ -73,9 +73,9 @@
     <p data-lang="en">To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using  a URL for the dated version of the document.</p>
   </div>
     </div>
-<section id="intro">
-      <h2>Introduction</h2>
-      <section id="purpose">
+  <section id="intro">
+    <h2>Introduction</h2>
+    <section id="purpose">
     <h3>Purpose of this Document</h3>
     <p>This document describes requirements of the layout and presentation of text in the Ethiopic script for use with Web standards and technologies, such as HTML, CSS, Mobile Web and Digital Publications (e.g. eBooks). In addition to the Ethiopian and Eritrean homelands, the script is widely used througout the diaspora of these two nations. Accordingly, requirements are gathered from stakeholders engaged in Ethiopic publishing from all regions.</p>
     <p>The document does not describe implementations or issues related to specific technologies, such as CSS. Instead it describes the typographic requirements of Ethiopic in a technology-agnostic manner, so that the content remains evergreen and is equally relevant to all technologies that aim to represent Ethiopic text on the Web.</p>
@@ -939,10 +939,14 @@
     </section>
 
     <section id="alphabetical_lists">
-          <h4>Alphabetical (ሀለሐመ) Lists</h4>
-          <p>The Unicode standard encodes Ethiopic syllables for many languages using Ethiopic script past and present.
-        Alphabetic lists are commonplace in Ethiopic literature, but will conform to the letter inventory of the language of the surrounding content.
-        The alphabetical style lists specified here do not encompass <em>all</em> languages using Ethiopic, but only those with a demonstrated requirement as found in corpus or stakeholder input.</p>
+      <h4>Alphabetical (ሀለሐመ) Lists</h4>
+      <p>The Unicode standard encodes Ethiopic syllables for many languages using Ethiopic script past and present.
+         Alphabetic lists are commonplace in Ethiopic literature, but will conform to the letter inventory of the language of the surrounding content.
+         The W3C's <a href="https://www.w3.org/International/core/Overview">Internationalization Working Group</a> publishes alphabetical
+         counter style code snippets for a <a href="http://w3c.github.io/predefined-counter-styles/#ethiopic-styles">large number of languages using Ethiopic script.</a>
+         Many of these lists are believed to be only hypothetical and based upon the letter inventory of the identified languages;
+         but may not have been used in practice.  The alphabetical counter styles specified here encompass a smaller collection of languages with a
+         demonstrated requirement as found by example in corpus or have come from stakeholder input.</p>
           <table>
             <tr>
               <th>Ge'ez</th>
@@ -1149,8 +1153,9 @@
                 </ul></td>
             </tr>
       </table>
-          <p>These tables are expressed in the following as per the <a href="https://www.w3.org/TR/css-counter-styles-3/">CSS Counter Styles Level 3</a> recommendation.</p>
-          <div class="example" id="ethiopic-halehame-gez-example">
+<!---
+     <p>These tables are expressed in the following as per the <a href="https://www.w3.org/TR/css-counter-styles-3/">CSS Counter Styles Level 3</a> recommendation.</p>
+     <div class="example" id="ethiopic-halehame-gez-example">
         <pre class="stylesheet">@counter-style <dfn data-dfn-type="dfn" data-noexport="" id="ethiopic-halehame-gez">ethiopic-halehame-gez<a class="self-link" href="#ethiopic-halehame-gez"></a></dfn> {
   system: alphabetic;
   speak-as: upper-latin;
@@ -1209,7 +1214,8 @@
           </li>
             </ol>
       </div>
-        </section>
+-->
+    </section>
     <section id="አበገደ_lists">
           <h4>Abegede (አበገደ) Lists</h4>
           <p>The አበገደ ordering of the Ethiopic syllabary is an alignment with the Coptic and Greek alphabets possibly to
@@ -1383,8 +1389,9 @@
                 </ul></td>
             </tr>
       </table>
-          <p>These tables are expressed in the following as per the <a href="https://www.w3.org/TR/css-counter-styles-3/">CSS Counter Styles Level 3</a> recommendation.</p>
-          <div class="example" id="ethiopic-abegede-gez-example">
+<!--
+      <p>These tables are expressed in the following as per the <a href="https://www.w3.org/TR/css-counter-styles-3/">CSS Counter Styles Level 3</a> recommendation.</p>
+      <div class="example" id="ethiopic-abegede-gez-example">
         <pre class="stylesheet">@counter-style <dfn data-dfn-type="dfn" data-noexport="" id="ethiopic-abegede-gez">ethiopic-abegede-gez<a class="self-link" href="#ethiopic-abegede-gez"></a></dfn> {
   system: alphabetic;
   speak-as: upper-latin;
@@ -1420,7 +1427,8 @@
 }
 </pre>
       </div>
-          <div class="issues">
+-->
+      <div class="issues">
         <p>Issues/Questions:</p>
         <ol>
               <li>ቨ appears to be equally included and omitted in አበገደ lists. Stakeholders should be resolve to include or exclude it, or define two list styles (with and without ቨ).</li>
