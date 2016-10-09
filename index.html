@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
     <title>Ethiopic Layout Requirements</title>
     <meta charset="utf-8"/>
-    <script src="https://www.w3.org/Tools/respec/respec-w3c-common"
-            async class="remove"></script>
+    <script src="https://www.w3.org/Tools/respec/respec-w3c-common" async class="remove"></script>
     <script class="remove">
       var respecConfig = {
           useExperimentalStyles: true,
@@ -59,19 +58,19 @@
     </script>
     <link rel="stylesheet" href="local.css" type="text/css" />
     <link rel="stylesheet" href="AbyssinicaSIL-webfont-elreq.css" type="text/css">
-    </head>
-    <body>
-<div id="abstract">
+  </head>
+  <body>
+    <div id="abstract">
       <p>This document describes requirements for the layout and presentation of text in languages that use the Ethiopic script when they are used by Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode.</p>
     </div>
-<div id="sotd">
+    <div id="sotd">
       <p>This document describes the basic requirements for Ethiopic script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support users of Ethiopic scripts.  Currently the document focuses on Amharic and Tigrinya. </p>
       <p>The editor's draft of this document is being developed by the <a href="https://www.w3.org/International/groups/ethiopic-layout/">Ethiopic Layout Task Force</a>, part of the W3C <a href="https://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
       <div class="note">
-    <p data-lang="en" style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
-    <p data-lang="en">If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/elreq/issues" style="font-size: 120%;">github issues</a> <!--against the <a href="https://www.w3.org/TR/2015/WD-elreq-20150721/" style="font-size: 120%">latest dated version in /TR</a>-->. Only send comments by email if you are unable to raise issues on github (see links below).   All comments are welcome.</p>
-    <p data-lang="en">To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using  a URL for the dated version of the document.</p>
-  </div>
+        <p data-lang="en" style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
+        <p data-lang="en">If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/elreq/issues" style="font-size: 120%;">github issues</a> <!--against the <a href="https://www.w3.org/TR/2015/WD-elreq-20150721/" style="font-size: 120%">latest dated version in /TR</a>-->. Only send comments by email if you are unable to raise issues on github (see links below).   All comments are welcome.</p>
+        <p data-lang="en">To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using  a URL for the dated version of the document.</p>
+      </div>
     </div>
   <section id="intro">
     <h2>Introduction</h2>
@@ -79,31 +78,31 @@
     <h3>Purpose of this Document</h3>
     <p>This document describes requirements of the layout and presentation of text in the Ethiopic script for use with Web standards and technologies, such as HTML, CSS, Mobile Web and Digital Publications (e.g. eBooks). In addition to the Ethiopian and Eritrean homelands, the script is widely used througout the diaspora of these two nations. Accordingly, requirements are gathered from stakeholders engaged in Ethiopic publishing from all regions.</p>
     <p>The document does not describe implementations or issues related to specific technologies, such as CSS. Instead it describes the typographic requirements of Ethiopic in a technology-agnostic manner, so that the content remains evergreen and is equally relevant to all technologies that aim to represent Ethiopic text on the Web.</p>
-  </section>
-      <section id="how_developed">
+    </section>
+    <section id="how_developed">
     <h3>How this Document was Created</h3>
     <p>This document was created by the W3C Ethiopic Layout Task Force.  The Task Force will discuss many issues and harmonize the requirements from user communities and solutions from technological experts.</p>
     <p>The following types of experts will be involved in the creation of this document:</p>
     <ol>
-          <li>Ethiopic typography experts</li>
-          <li>Experts from the publishing industry representing the spectrum of traditional to modern layout practices</li>
-          <li>Academic experts with a focus on <a href="#term.geez" class="termref">Ge'ez</a> manuscripts and philogy</li>
-        </ol>
+      <li>Ethiopic typography experts</li>
+      <li>Experts from the publishing industry representing the spectrum of traditional to modern layout practices</li>
+      <li>Academic experts with a focus on <a href="#term.geez" class="termref">Ge'ez</a> manuscripts and philogy</li>
+    </ol>
     <p>The Task Force will conduct a survey of the publishing industry to solicit input and identify the set of in-use layout styles. This document will then represent the normalized results of the industry survey which in turn becomes a basis for its validity and suitability to purpose. In the interim before to the survey results have been compiled and applied to this document, tentative specifications will be given based on the most-probable survey results anticipated from participating experts. <span class="note">Survey Pending</span> notes will appear along side specification sections to denote their status.</p>
   </section>
-      <section id="basic_principles">
+  <section id="basic_principles">
     <h3>Basic Principles for Document Development</h3>
     <p>Growing out of the 182 element Ge'ez language syllabary for two millenia, Ethiopic in its present day form is a multilingual, and multinational, script comprised by 494 symbols representing: syllables, numerals, punctuation and tonal marks.  Numerous linguistic, cultural, literary, historical and political issues surround the script and its utilization -all of which the authors strive to avoid discussing unless directly relevant to clarifying a given layout use case. The following principles are applied in the development of this document:</p>
     <ol>
-          <li>View publishers as the primary stakeholders.</li>
-          <li>Attempt a “90% solution” where the common and primary needs of publishers are addressed. Important but less widely used practices such as for <a href="#term.yaredic-zaima-notation" class="termref">Yaredic Zaima Notation</a> will be addressed at a future time.</li>
-          <li>It does not cover every issue of Ethiopic typography, but only the import differences from the Western language systems.</li>
-          <li>The technical aspects of actual implementation are not covered by this document.</li>
-          <li>In order to help readers' understanding of how Ethiopic is used, typical real life examples are provided.</li>
-          <li>Text layout rules and recommendations for readable design are different things, however these two issues are difficult to discuss independently. In this document, these two aspects are carefully separated. The aesthetic design recommendations are mainly described using notes.</li>
-          <li>The main target of this document is common books. The authors' experiences are mainly related to common books, and the quality required for common books is the highest in the market. There are many kinds of books in the market, and the requirements are quite diverse. The task force has a lot of accumulated experience in requirements and solutions for Ethiopic text composition. Nonetheless, many issues, which have been discussed over a long period of time, are applicable for other kinds of publication.</li>
-          <li>In terms of frequency of use, the importance of magazines, technical manuals, and Web documents rates alongside common books. However, there are several characteristics in these publications, which are different from common books. These issues should be treated more fully in future documents.</li>
-        </ol>
+      <li>View publishers as the primary stakeholders.</li>
+      <li>Attempt a “90% solution” where the common and primary needs of publishers are addressed. Important but less widely used practices such as for <a href="#term.yaredic-zaima-notation" class="termref">Yaredic Zaima Notation</a> will be addressed at a future time.</li>
+      <li>It does not cover every issue of Ethiopic typography, but only the import differences from the Western language systems.</li>
+      <li>The technical aspects of actual implementation are not covered by this document.</li>
+      <li>In order to help readers' understanding of how Ethiopic is used, typical real life examples are provided.</li>
+      <li>Text layout rules and recommendations for readable design are different things, however these two issues are difficult to discuss independently. In this document, these two aspects are carefully separated. The aesthetic design recommendations are mainly described using notes.</li>
+      <li>The main target of this document is common books. The authors' experiences are mainly related to common books, and the quality required for common books is the highest in the market. There are many kinds of books in the market, and the requirements are quite diverse. The task force has a lot of accumulated experience in requirements and solutions for Ethiopic text composition. Nonetheless, many issues, which have been discussed over a long period of time, are applicable for other kinds of publication.</li>
+      <li>In terms of frequency of use, the importance of magazines, technical manuals, and Web documents rates alongside common books. However, there are several characteristics in these publications, which are different from common books. These issues should be treated more fully in future documents.</li>
+    </ol>
   </section>
 
   <section id="ethiopic_eras">
@@ -165,9 +164,9 @@
         <ol>
           <li>What Ethiopic letter should be applied as a height reference point for alignment?</li>
           <li>Should height alignment be attempted as per the letter inventory of a target language or for the script as a whole (practical but less optimal)?</li>
-           <li>Relative to a Latin uppercase letter, should the height of Ethiopic letters: (a) equal (b) shorter (c) taller?</li>
-           <li>Is height alignment an issue with other writing systems?  If so, how is it addressed?</li>
-         </ol>
+          <li>Relative to a Latin uppercase letter, should the height of Ethiopic letters: (a) equal (b) shorter (c) taller?</li>
+          <li>Is height alignment an issue with other writing systems?  If so, how is it addressed?</li>
+        </ol>
       </div>
     </section>
 
@@ -207,7 +206,7 @@
        language communities utilizing Ethiopic script.  In Sebatbeit publishing a number of modifications to diacritical marks are regularly
        applied to aid glyph clarity.  These modified glyphs will sometimes appear within in font as a <em>Stylistic Alternative</em> or an
        entirely separate font may be used in publishing where these letter shapes appear as the default forms.  The glyphs are enumerated here and
-      are recommended for Sebatbeit liteature.</p>
+       are recommended for Sebatbeit liteature.</p>
     <figure id="sebatbeit_glyph_preferences_sample"> <img src="images/Sebatbeit-Glyph-Preferences.png" alt=" " height="477" width="412" />
       <figcaption>Labiovelar leter shape preferences for Sebatbeit (Sebat Bet) literature.</figcaption>
     </figure>
@@ -218,7 +217,23 @@
   <h3>Punctuation</h3>
   <section id="ethiopic_punctuation">
     <h4>Punctuation used in Ethiopic</h4>
-    <p><em>[TBD: Add a punctuation overview, include Timherte Slaq as a special case with rules different from Spanish usage.]</em></p>
+    <p>In Classical era Ethiopic up to nine puncutation marks can be found. Though rarely, if ever, would all nine be found in a single document.
+       The Classical Ethiopic punctuation inventory may <em>appear</em> to be larger in number as a result of bi-chromatic rendering which can be
+       applied to any punctuation and in several different styles.  However, the bi-chromatic forms do not change the syntactic role of a given
+       punctuation.  In the Modern era, a third of the punctuation marks: ፧, ፨, and ፠ have largely fallen into disuse while a number of punctuation
+       marks from Western practices have been adopted. Bi-chromatic punctuation is reserved for spiritual materials and remains a calligraphic practice.</p>
+    <p>Ethiopic punctuation segments text and is non-encompassing. Adopted into Ethiopic writing practices are encompassing punctuation such as 
+       parenthesis, brackets, single and double quotation marks and guillemets.  Expressive punctuation such as question mark, exclaimation point,
+       inverted exclaimation mark, and ellipsis are also incorporated into Ethiopic practices. Inverted exclaimation mark is repurposed and utilized
+       differently than in its Western usage.  In Ethiopic writing the inverted exclaimation mark is known as "Timherte Slaq" appears at the end of
+       a sentence and will denote sarcasm. All borrowed punctuation is subject to typeface alignment with Ethiopic weights and shapes, an aesthetic
+       enhancement discussed in this section as <a href="#ethiopicized_punctuation">"Ethiopicized Punctuation"</a>.</p>
+    <p>The Ethiopic word separator, labeled "Ethiopic Wordspace" in the Unicode standard, is given special attention in this section as follows more
+       complex rules of interaction with other punctuation as well as justification.  Ethiopic punctuation is often aligned with similar English
+       punctuation though these associations must be understood as approximate.  Ethiopic fullstop and wordspace are highly regular in their application,
+       others, particularly ፣, ፤, and ፥ will be consistently used within a document but their roles may change between authors or institutes.  Addressing
+       puncutation semantic is beyond the scope of this document, however Ethiopic comma is given special attention in the following section.
+    </p>
   </section>
 
   <section id="ethiopic_comma_usage">
@@ -290,15 +305,15 @@
     <section id="ethiopicized_punctuation">
       <h4>Ethiopicized Punctuation</h4>
       <p>Modern Ethiopic borrows a number of foreign symbols to denote currency, express emphasis, time, mathematics, or communicate with
-        Internet protocols (e.g. "@" , "://"). 
-        The ES-781:2002 standard identifies the following inventory of western symbols to be used with Ethiopic:</p>
+         Internet protocols (e.g. "@" , "://"). 
+         The ES-781:2002 standard identifies the following inventory of western symbols to be used with Ethiopic:</p>
       <p style="margin-left: 20px"><code>1234567890 ? ! ¡ . / () [] {} &lt; = &gt; \ # % &amp; _ - + ± × ÷ ‘ ’  “ ” ‹ › « »</code></p>
       <p>Additionally the following punctuation is observed to be used with Ethiopic writing:</p>
       <p style="margin-left: 20px"><code>$ : , € @ …</code></p>
       <p>The shape and weight of these symbols are often changed for a better visual fit with an accompanying
-        Ethiopic typeface. Enhanced foreign symbols are referred to here as <a href="#term.ethiopicized" class="termref">“Ethiopicized”</a>. While many symbols are borrowed from western writing,
-        not all necessarily benefit from Ethiopicization.  Those that do will primarily be used in a context where the foreign symbol directly
-        abuts some Ethiopic symbol. Common Ethiopic symbols are demonstrated in the following figure:</p>
+         Ethiopic typeface. Enhanced foreign symbols are referred to here as <a href="#term.ethiopicized" class="termref">“Ethiopicized”</a>. While many symbols are borrowed from western writing,
+         not all necessarily benefit from Ethiopicization.  Those that do will primarily be used in a context where the foreign symbol directly
+         abuts some Ethiopic symbol. Common Ethiopic symbols are demonstrated in the following figure:</p>
       <figure id="ethiopicized_punctuation_260"> <img src="images/Ethiopicized-Punctuation-Sample-260.png" alt=""/>
         <figcaption>Samples of Ethiopicized punctuation compared to shapes in a companion Latin typeface.</figcaption>
       </figure>
@@ -318,9 +333,9 @@
     <section id="optical_balancing">
       <h4>Optical Balancing</h4>
       <p>Foreign language words or phrases are regularly found inline within a paragraph of Ethiopic text, often enclosed within
-        encompassing punctuation such as brackets and quotation marks (e.g. []()""''«»‹›).  This practice is most often observed in
-        news articles on international topics.  The weight of the encompassing punctuation may found as matching either the Ethiopic or
-        Latin weight.  The preference of stakeholders must be determined here. Comparative samples follow:</p>
+         encompassing punctuation such as brackets and quotation marks (e.g. []()""''«»‹›).  This practice is most often observed in
+         news articles on international topics.  The weight of the encompassing punctuation may found as matching either the Ethiopic or
+         Latin weight.  The preference of stakeholders must be determined here. Comparative samples follow:</p>
       <figure> <img src="images/Punctuation-At-Latin-Boundary-Latin-Guillemets.png" alt=" " />
         <figcaption>Latin text enclosed with Latin weight guillemets.</figcaption>
       </figure>
@@ -345,7 +360,7 @@
     </section>
 
     <section id="ethiopic_wordspace_at_latin_boundaries">
-      <h4>Ethiopic Wordspace at Latin Boundaries</h4>
+      <h4>Ethiopic Wordspace Alongside Other Punctuation And Line Breaks</h4>
       <p>It modern literature where punctuation may be borrowed from Western writing, inconsistent formatting practices are found with respect to the presence of Ethiopic Wordspace (፡) alongside borrowed punctuation. It is helpful to establish rules for Ethiopic Wordspace in the presence of other symbols so that software grammar and formatting checkers can offer corrections leading to better quality and more consistent literature. The following rules are proposed:</p>
 
        <ul>
@@ -373,21 +388,21 @@
     <section id="space_wordspace_substitution_rules">
       <h4>Space-Wordspace Substitution Rules</h4>
       <p>Rules are presented here to aid layout software that would offer the functionality of space symbol conversion to and from Ethiopic wordspaces.
-        This functionality is desirable in a viewer application (e.g. web browser, eBook reader) to make the same
-        substitution as per a user preference.  Thus the user would be able to read a document with Ethiopic wordspaces that
-        was composed and delivered with white space. Likewise in the reverse, a user who preferred white space could have their preference
-        supported in a document that encodes Ethiopic wordspaces only. Similarly, this functionality would be useful to users of an editor application.</p>
-          <p class="issues">Develop rules for space-wordspace substitution (e.g. context for when not to substitute a space for wordspace).</p>
-          <p class="issues">This could lead to a CSS word-separator property that a javascript could manipulate to toggle the wordspace.</p>
-          <p class="issues">TBD: Test cases should be developed to validate these rules.</p>
-          <p><span style="text-decoration: underline;"><strong>Space to Wordspace Transformation Rules</strong></span></p>
-          <ol>
+         This functionality is desirable in a viewer application (e.g. web browser, eBook reader) to make the same
+         substitution as per a user preference.  Thus the user would be able to read a document with Ethiopic wordspaces that
+         was composed and delivered with white space. Likewise in the reverse, a user who preferred white space could have their preference
+         supported in a document that encodes Ethiopic wordspaces only. Similarly, this functionality would be useful to users of an editor application.</p>
+      <p class="issues">Develop rules for space-wordspace substitution (e.g. context for when not to substitute a space for wordspace).</p>
+      <p class="issues">This could lead to a CSS word-separator property that a javascript could manipulate to toggle the wordspace.</p>
+      <p class="issues">TBD: Test cases should be developed to validate these rules.</p>
+      <p><span style="text-decoration: underline;"><strong>Space to Wordspace Transformation Rules</strong></span></p>
+      <ol>
         <li>White space symbols other than space (U+0020) are not processed. <span  class="issues">Issue: how should non-breaking-space be handled?</span></li>
         <li>Space(s) at the start of a line are assumed to be there for positioning and are not processed.</li>
         <li>A sequence of one or more spaces is treated as a single space.</li>
         <li>A space is substituted for wordspace when bounded by letters, or between a letter and number.</li>
-        <li>A wordspace may be added before a right-side enclosing punctuation as per the convention applied in <a href="#ethiopic_wordspace_at_latin_boundaries">Ethiopic Wordspace at Latin Boundaries</a>.</li>
-        <li>A space is substituted for wordspace on the outside of an enclosing punctuation as per the convention applied in <a href="#ethiopic_wordspace_at_latin_boundaries">Ethiopic Wordspace at Latin Boundaries</a>.</li>
+        <li>A wordspace may be added before a right-side enclosing punctuation as per the convention applied in <a href="#ethiopic_wordspace_at_latin_boundaries">Ethiopic Wordspace Alongside Other Punctuation and Line Breaks</a>.</li>
+        <li>A space is substituted for wordspace on the outside of an enclosing punctuation as per the convention applied in <a href="#ethiopic_wordspace_at_latin_boundaries">Ethiopic Wordspace Alongside Other Punctuation and Line Breaks</a>.</li>
         <li>A space following non-encompasing punctuation is removed.</li>
         <li>Space(s) before or after quotation marks are removed.</li>
         <li>Space(s) bounded by non-Ethiopic numbers are not processed.</li>
@@ -407,40 +422,40 @@
 -->
       </ol>
       <p>An additional wordspace conversion rule that is independent of the above space-wordspace substitution rules: Very commonly in Ethiopic documents
-        a sequence of two worspaces are found and may be substituted for ethiopic fullstop. This may be considered a defect correction rule.</p>
+         a sequence of two worspaces are found and may be substituted for ethiopic fullstop. This may be considered a defect correction rule.</p>
       <p>Note that hyphenation is not required when wordspace is present, words split anywhere, would stakeholders still desire the hyphen nonetheless?</p>
     </section>
 
     <section id="ethiopic_gemination_mark_positioning">
       <h4>Ethiopic Gemination Mark (ጥበቅ) Vertical Positioning</h4>
       <p>The Ethiopic gemination mark, ጥበቅ, is almost universally found at a fixed height above the baseline in typeset literature. The mark's position must
-        then be fixed so that it remains above the tallest Ethiopic letter symbol; this produces a variable height gap between the top of the letter and the mark.
-        Conversely, when the symbol is hand written (often above typeset text) the mark will be found at a variable height above the baseline and demonstrating
-        a fixed height above the letter symbol.
-        Quite possibly the former style is an artifact of a limitation of the layout technology employed, and the later representative of an author's
-        desired rendering.</p>
+         then be fixed so that it remains above the tallest Ethiopic letter symbol; this produces a variable height gap between the top of the letter and the mark.
+         Conversely, when the symbol is hand written (often above typeset text) the mark will be found at a variable height above the baseline and demonstrating
+         a fixed height above the letter symbol.
+         Quite possibly the former style is an artifact of a limitation of the layout technology employed, and the later representative of an author's
+         desired rendering.</p>
       <figure> <img src="images/gemination-heights-comparison.png" alt=" " />
         <figcaption>Two gemination styles compared: typical printed (above) and handwritten (below).</figcaption>
       </figure>
       <div class="issues">
         <p>Issues/Questions:</p>
         <ol>
-              <li>What do stakeholders feel should be the default style (fixed, floating)?</li>
-              <li>The same rules apply to the ETHIOPIC COMBINING VOWEL LENGTH MARK (U+135E) and ETHIOPIC COMBINING GEMINATION AND VOWEL LENGTH MARK (U+135D). Stakeholders here (current or past) should be identified.</li>
-              <li>OpenType shaping logic may be sufficient to handle the issue.  Thus a specification here might only be utilized by font.</li>
-              <li>Note that the same "fixed-vs-floating" question applies to superscript text relative to base text.</li>
-            </ol>
+          <li>What do stakeholders feel should be the default style (fixed, floating)?</li>
+          <li>The same rules apply to the ETHIOPIC COMBINING VOWEL LENGTH MARK (U+135E) and ETHIOPIC COMBINING GEMINATION AND VOWEL LENGTH MARK (U+135D). Stakeholders here (current or past) should be identified.</li>
+          <li>OpenType shaping logic may be sufficient to handle the issue.  Thus a specification here might only be utilized by font.</li>
+          <li>Note that the same "fixed-vs-floating" question applies to superscript text relative to base text.</li>
+        </ol>
       </div>
     </section>
 
     <section id="quotation">
       <h4>Quotation</h4>
       <p>Classical Ethiopic literature applying quotation marks will employ double guillemet (« ») in a primary style and single
-        guillemets (‹ ›) in a secondary style. Single guillemets will be used for inner-quotation and single word quotation.
-        Modern Ethiopic writing will additionally utilize Latin quotation marks similarly (“ ” ‘ ’, U+201C, U+201D, U+2018, U+2019). 
-        The choice of Latin script quotation may represent either an author preference or a software limitation that made guillemets
-        unavailable or difficult to access.</p>
-        <div class="issues">
+         guillemets (‹ ›) in a secondary style. Single guillemets will be used for inner-quotation and single word quotation.
+         Modern Ethiopic writing will additionally utilize Latin quotation marks similarly (“ ” ‘ ’, U+201C, U+201D, U+2018, U+2019). 
+         The choice of Latin script quotation may represent either an author preference or a software limitation that made guillemets
+         unavailable or difficult to access.</p>
+      <div class="issues">
         <p>Issues/Questions:</p>
         <ol>
           <li>What are the preferred quotation marks for modern Ethiopic literature?</li>
@@ -1619,7 +1634,7 @@
     <h1>Glossary</h1>
     <table class="glossary">
     <thead>
-          <tr>
+      <tr>
         <th>Term</th>
         <th>Amharic<span data-lang="am"></span></th>
         <th>Tigrinya<span data-lang="ti"></span></th>
@@ -1668,17 +1683,17 @@
         <td lang="am">TBD</td>
         <td lang="ti">TBD</td>
         <td>In the scope of this specification Classical Ethiopic refers to the set of practices observed
-              in the mechanic printing of Ethiopian and Eritrean literature through the end of the imperial era.
-              Literature at the start of this era begins as an outgrowth of scribal practices and in the the later half
-              is more uniform in layout and editorial quality which is likely the result of state control over publishing. </td>
+            in the mechanic printing of Ethiopian and Eritrean literature through the end of the imperial era.
+            Literature at the start of this era begins as an outgrowth of scribal practices and in the the later half
+            is more uniform in layout and editorial quality which is likely the result of state control over publishing.</td>
       </tr>
       <tr id="term.modern-ethiopic">
         <td>Modern Ethiopic</td>
         <td lang="am">TBD</td>
         <td lang="ti">TBD</td>
         <td>Ethiopic manuscripts published primarily after the reign of Emperor Haile Selassie where
-              writing practices have become less adherent to the Ge'ez tradition, more pragmatic so as
-              to fascilitate the constraints and limitations imposed by mass media. </td>
+            writing practices have become less adherent to the Ge'ez tradition, more pragmatic so as
+            to fascilitate the constraints and limitations imposed by mass media.</td>
       </tr>
       <tr id="term.yaredic-zaima-notation">
         <td>Yaredic Zaima Notation</td>
@@ -1782,175 +1797,164 @@
         <td lang="ti"></td>
         <td>"Advertisement" resolve this with "Author's Note". Sometimes seen as "ማስተዋወቂያ".</td>
       </tr>
-          <!-- መልመጃ -->
-        </tbody>
+      <!-- መልመጃ -->
+    </tbody>
   </table>
-    </section>
-<section class="appendix" id="html5-alignment">
-      <h1>Alignment with HTML5 Layout &amp; Formatting</h1>
-      <p>This appendix is introduced to help insure that the Ethiopic layout requirements in this recommendation has a sufficient and practical coverage in its scope.
-    HTML5 is applied here for comparison as it is anticipated as the most frequently applied document language under which the recommendation will be applied.
-    HTML5 elements will be reviewed in this appendix and remarks made to indicate that either: no recommendation is needed (western defaults are applicable),
-    a document section is identified that covers the element in the Ethiopic context, or that a gap in coverage is identified and will be addressed.</p>
-      <h2>Layout</h2>
-      <dl>
-    <dt>&lt;header&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;nav&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;section&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;article&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;aside&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;footer&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-  </dl>
-      <h2>Quotation &amp; Citation</h2>
-      <dl>
-    <dt>&lt;q&gt;</dt>
-    <dd>Covered in <a href="#quotation"></a> (verify that &lt;q&gt; is sufficiently addressed).</dd>
-    <dt>&lt;blockquote&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;abbr&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;address&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;cite&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;dfn&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;bdo&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;details&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;summary&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-  </dl>
-      <h2>Formatting</h2>
-      <dl>
-    <dt>&lt;b&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;strong&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;i&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;em&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;mark&gt;</dt>
-    <dd>Review: Assume for now that the yellow ( rgb(255,255,0) ) highlight default convention is adequate.</dd>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;small&gt;</dt>
-    <dd>Review: Assume for now that the size change for Latin script is adequate.</dd>
-    <dt>&lt;del&gt;</dt>
-    <dd>Review: Consider the application of the traditional overscore mark for deletion, at least in manuscript context.</dd>
-    <dt>&lt;ins&gt;</dt>
-    <dd><i>TBD Notes</i></dd>
-    <dt>&lt;sub&gt;</dt>
-    <dd>Review: Assume for now that the vertical offset for Latin script is adequate.</dd>
-    <dt>&lt;sup&gt;</dt>
-    <dd>Review: Assume for now that the vertical offset for Latin script is adequate.</dd>
-  </dl>
-      <h2>Lists</h2>
-      <dl>
-    <dt>&lt;ul&gt;</dt>
-    <dd>Covered in <a href="#bullet_lists"></a>.</dd>
-    <dt>&lt;ol&gt;</dt>
-    <dd>Covered in <a href="#numbered_lists"></a>.</dd>
-    <dt>&lt;li&gt;</dt>
-    <dd>Covered in <a href="#counter_suffix"></a>.</dd>
-    <dt>&lt;dl&gt;</dt>
-    <dd>Review: Find a sample in traditional publishing.</dd>
-    <dt>&lt;dt&gt;</dt>
-    <dd>Review: Is bold an appropriate emphasis? Find a sample in traditional publishing.</dd>
-    <dt>&lt;dd&gt;</dt>
-    <dd>Review: How much indentation?  Find a sample in traditional publishing.</dd>
-  </dl>
-    </section>
-<section class="appendix" id="acknowledgements">
-      <h1>Acknowledgements</h1>
-      <p>Special thanks to the following people who contributed to this document (contributors' names listed in in alphabetic order).</p>
-      <p class="acknowledgement">This Person, That Person, etc</p>
-      <p data-lang="en">Please find the latest info of the contributors at the <a href="https://github.com/w3c/elreq/graphs/contributors">GitHub contributors list</a>.</p>
-    </section>
-<section class="appendix" id="references">
-      <h1>References</h1>
-      <dl class="ref">
-    <dt>Pankhurst, 1998</dt>
-    <dd> <cite> 
+  </section>
+
+  <section class="appendix" id="html5-alignment">
+    <h1>Alignment with HTML5 Layout &amp; Formatting</h1>
+    <p>This appendix is introduced to help insure that the Ethiopic layout requirements in this recommendation has a sufficient and practical coverage in its scope.
+       HTML5 is applied here for comparison as it is anticipated as the most frequently applied document language under which the recommendation will be applied.
+       HTML5 elements will be reviewed in this appendix and remarks made to indicate that either: no recommendation is needed (western defaults are applicable),
+       a document section is identified that covers the element in the Ethiopic context, or that a gap in coverage is identified and will be addressed.</p>
+    <h2>Layout</h2>
+    <dl>
+      <dt>&lt;header&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;nav&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;section&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;article&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;aside&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;footer&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+    </dl>
+    <h2>Quotation &amp; Citation</h2>
+    <dl>
+      <dt>&lt;q&gt;</dt>
+      <dd>Covered in <a href="#quotation"></a> (verify that &lt;q&gt; is sufficiently addressed).</dd>
+      <dt>&lt;blockquote&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;abbr&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;address&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;cite&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;dfn&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;bdo&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;details&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;summary&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+    </dl>
+    <h2>Formatting</h2>
+    <dl>
+      <dt>&lt;b&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;strong&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;i&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;em&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;mark&gt;</dt>
+      <dd>Review: Assume for now that the yellow ( rgb(255,255,0) ) highlight default convention is adequate.</dd>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;small&gt;</dt>
+      <dd>Review: Assume for now that the size change for Latin script is adequate.</dd>
+      <dt>&lt;del&gt;</dt>
+      <dd>Review: Consider the application of the traditional overscore mark for deletion, at least in manuscript context.</dd>
+      <dt>&lt;ins&gt;</dt>
+      <dd><i>TBD Notes</i></dd>
+      <dt>&lt;sub&gt;</dt>
+      <dd>Review: Assume for now that the vertical offset for Latin script is adequate.</dd>
+      <dt>&lt;sup&gt;</dt>
+      <dd>Review: Assume for now that the vertical offset for Latin script is adequate.</dd>
+    </dl>
+    <h2>Lists</h2>
+    <dl>
+      <dt>&lt;ul&gt;</dt>
+      <dd>Covered in <a href="#bullet_lists"></a>.</dd>
+      <dt>&lt;ol&gt;</dt>
+      <dd>Covered in <a href="#numbered_lists"></a>.</dd>
+      <dt>&lt;li&gt;</dt>
+      <dd>Covered in <a href="#counter_suffix"></a>.</dd>
+      <dt>&lt;dl&gt;</dt>
+      <dd>Review: Find a sample in traditional publishing.</dd>
+      <dt>&lt;dt&gt;</dt>
+      <dd>Review: Is bold an appropriate emphasis? Find a sample in traditional publishing.</dd>
+      <dt>&lt;dd&gt;</dt>
+      <dd>Review: How much indentation?  Find a sample in traditional publishing.</dd>
+    </dl>
+  </section>
+
+  <section class="appendix" id="acknowledgements">
+    <h1>Acknowledgements</h1>
+    <p>Special thanks to the following people who contributed to this document (contributors' names listed in in alphabetic order).</p>
+    <p class="acknowledgement">This Person, That Person, etc</p>
+    <p data-lang="en">Please find the latest info of the contributors at the <a href="https://github.com/w3c/elreq/graphs/contributors">GitHub contributors list</a>.</p>
+  </section>
+
+  <section class="appendix" id="references">
+    <h1>References</h1>
+    <dl class="ref">
+      <dt>Pankhurst, 1998</dt>
+      <dd> <cite> 
       <!-- use this alternative link until the Addis Tribute archive is restored --> 
       <a href="http://web.linkethiopia.org/guide-to-ethiopia/the-pankhurst-history-library/geez-literature-church-libraries-and-the-coming-from-europe-of-the-printed-word/">Ge'ez Literature, Church Libraries, and the Coming, from Europe, of the Printed Word. </a> </cite> R. Pankhurst. Addis Tribune, August 28, 1998. Addis Ababa. </dd>
-    <dt>Alemayehu, 1965</dt>
-    <dd>
-          <p><em>Transcribed Citation:</em><br/>
-        <span style="margin-left:2em;"> <cite>Fəqər əskä Mäqabər</cite>,
-            H. Alemayehu. Berhanenna Selam Printing Enterprise, 1965. Addis Ababa. </span></p>
-          <p><em>Source Citation:</em><br/>
-        <span style="margin-left:2em;"> <cite>ፍቅር፡እስከ፡መቃብር</cite>፣
-            ሀዲስ አለማየሁ። ብርሃንና ሰላም ማተሚያ ድርጀት፣ ፲፱፻፶፰። አዲስ አበባ። </span></p>
-        </dd>
-    <dt>Gebre, 2004</dt>
-    <dd>
-          <p><em>Transcribed Citation:</em><br/>
-        <span style="margin-left:2em;"> <cite>Tegbarawi Yetsihifet Memariya</cite>,
-            D. Gebre. Commercial Printing Enterprises, 2004. Addis Ababa. </span></p>
-          <p><em>Source Citation:</em><br/>
-        <span style="margin-left:2em;"> <cite>ተግባራዊ፡የጽህፈት፡መማሪያ</cite>፣
-            ደረጀ ገብሬ። ንግድ ማተሚያ ድርጅት፣ ሚያዝያ 1996። አዲስ አበባ። </span></p>
-        </dd>
-  </dl>
-      <h2>Full Image References</h2>
-      <p>[TBD: Correlate the image references with Figure numbers]</p>
-      <dl class="ref">
-    <dt>Ludolf, 1681</dt>
-    <dd> <cite> <a href="https://books.google.com/books?id=j10VAAAAQAAJ&pg=PT237">Historia Aethiopica, sive brevis et succincta descriptio regni Habessinorum</a> </cite> H. Ludolf.  L.III.c.5 Paragraph 35.  Frankfurt: prostat apud Joh. David Zunne. 1681 </dd>
-    <dt>Erikson, 1921</dt>
-    <dd>
-          <p><em>Transcribed Citation:</em><br/>
-        <span style="margin-left:2em;"> <cite>Yeografi LeEthiopia Lijoch Tiqim</cite>,
-            O. Erikson. Page 35. Swedish Mission, 1921 (1913 EC). Asmara. </span></p>
-          <p><em>Source Citation:</em><br/>
-        <span style="margin-left:2em;"> <cite>የኦግራፊ። ለኢትዮጵያ፡ልጆች፡ጥቅም</cite>፣
-            ኤሪክሶን። ገጽ ፴፭። የሚስዮንግ፡ስዌዱኣማህተም፡ታተመች፣ ፲፱፻፲፫። አስመራ። </span></p>
-        </dd>
-    <dt>Gubenya, 1973</dt>
-    <dd>
-          <p><em>Transcribed Citation:</em><br/>
-        <span style="margin-left:2em;"> <cite>Alweledem</cite>,
-            A. Gubenya. Page 87. Brana Publisher,  1973 (1966 EC). Addis Ababa. </span></p>
-          <p><em>Source Citation:</em><br/>
-        <span style="margin-left:2em;"> <cite>አልወለደም</cite>፣
-            አቤ ጉበኛ። ገጽ ፹፯። ብራና ማተሚያ ደርጅት ታተመ፣ ፲፱፻፷፮። አዲስ አበባ። </span></p>
-        </dd>
-    <dt>Itedalewe, 1987</dt>
-    <dd>
-          <p><em>Transcribed Citation:</em><br/>
-        <span style="margin-left:2em;"> <cite>Ḥaṣir Tarix Nebiy Muḥamed</cite>,
-            J.H.A. Itedalewe. Page 35. Selam Printing House, 1987 (1979 EC). Asmara. </span></p>
-          <p><em>Source Citation:</em><br/>
-        <span style="margin-left:2em;"> <cite>ሐጺር ታሪኽ ነቢይ ሙሐመድ (ሰለላሁ ዓለይሂ ወሰለም) ብጅብሪል</cite>፣
-            ጅብሪል ሐጂ አቡበከር እተዳለወ። ገጽ 35። ቤት ማኅተም ሰላም፣ ፲፱፻፸፰። አሥመራ። </span></p>
-        </dd>
-    <dt>Kifle, 1955</dt>
-    <dd>
-          <p><em>Transcribed Citation:</em><br/>
-        <span style="margin-left:2em;"> <cite>Maṣḥafa Sawāsew Wages Wamazgaba Qālāt Hadis</cite>,
-            K.W. Kifle. Pages 65 &amp; 159. Artistic Printers, 1955 (1948 EC). Addis Ababa. </span></p>
-          <p><em>Source Citation:</em><br/>
-        <span style="margin-left:2em;"> <cite>መጽሐፈ፡ሰዋስው፡ወግስ፡ወመዝገበ፡ቃላት፡ሐዲስ</cite>፣
-            ኪዳነ፡ወልድ፡ክፍሌ። ገጾች ፷፭ እና ፻፶፱። አርቲስቲክ፡ማተሚያ፡ቤት፣ ፲፱፻፵፰። አዲስ አበባ። </span></p>
-        </dd>
-    <dt>Weldemariam, 1995</dt>
-    <dd>
-          <p><em>Transcribed Citation:</em><br/>
-        <span style="margin-left:2em;"> <cite>Maṣḥafa Ṣalot Mes Ser'ate Kiddase Betegreññā</cite>,
-            B. Weldemariam. Page 32. Mahbere Haawaryat F-Ha Bet Mahtem Tehatmet, 1995 (1988 EC). Asmera. </span></p>
-          <p><em>Source Citation:</em><br/>
-        <span style="margin-left:2em;"> <cite>መጽሐፈ ጸሎት ምስ ሥርዓተ ቅዳሴ ብትግርኛ</cite>፣
-            በርሀ ወልደማርያም። ገጽ ፴፪። ማኅበረ ሐዋርያት ፍ-ሃ ቤት ማኅተም ተኀትመት፣ ፲፱፻፹፰። አሥመራ። </span></p>
-        </dd>
-  </dl>
-    </section>
+      <dt>Alemayehu, 1965</dt>
+      <dd>
+        <p><em>Transcribed Citation:</em><br/>
+        <span style="margin-left:2em;"> <cite>Fəqər əskä Mäqabər</cite>, H. Alemayehu. Berhanenna Selam Printing Enterprise, 1965. Addis Ababa.</span></p>
+        <p><em>Source Citation:</em><br/>
+        <span style="margin-left:2em;"> <cite>ፍቅር፡እስከ፡መቃብር</cite>፣ ሀዲስ አለማየሁ። ብርሃንና ሰላም ማተሚያ ድርጀት፣ ፲፱፻፶፰። አዲስ አበባ።</span></p>
+      </dd>
+      <dt>Gebre, 2004</dt>
+      <dd>
+        <p><em>Transcribed Citation:</em><br/>
+        <span style="margin-left:2em;"> <cite>Tegbarawi Yetsihifet Memariya</cite>, D. Gebre. Commercial Printing Enterprises, 2004. Addis Ababa.</span></p>
+        <p><em>Source Citation:</em><br/>
+        <span style="margin-left:2em;"> <cite>ተግባራዊ፡የጽህፈት፡መማሪያ</cite>፣ ደረጀ ገብሬ። ንግድ ማተሚያ ድርጅት፣ ሚያዝያ 1996። አዲስ አበባ።</span></p>
+      </dd>
+    </dl>
+    <h2>Full Image References</h2>
+    <p>[TBD: Correlate the image references with Figure numbers]</p>
+    <dl class="ref">
+      <dt>Ludolf, 1681</dt>
+      <dd> <cite> <a href="https://books.google.com/books?id=j10VAAAAQAAJ&pg=PT237">Historia Aethiopica, sive brevis et succincta descriptio regni Habessinorum</a> </cite> H. Ludolf.  L.III.c.5 Paragraph 35.  Frankfurt: prostat apud Joh. David Zunne. 1681 </dd>
+      <dt>Erikson, 1921</dt>
+      <dd>
+        <p><em>Transcribed Citation:</em><br/>
+        <span style="margin-left:2em;"> <cite>Yeografi LeEthiopia Lijoch Tiqim</cite>, O. Erikson. Page 35. Swedish Mission, 1921 (1913 EC). Asmara.</span></p>
+        <p><em>Source Citation:</em><br/>
+        <span style="margin-left:2em;"> <cite>የኦግራፊ። ለኢትዮጵያ፡ልጆች፡ጥቅም</cite>፣ ኤሪክሶን። ገጽ ፴፭። የሚስዮንግ፡ስዌዱኣማህተም፡ታተመች፣ ፲፱፻፲፫። አስመራ።</span></p>
+      </dd>
+      <dt>Gubenya, 1973</dt>
+      <dd>
+        <p><em>Transcribed Citation:</em><br/>
+        <span style="margin-left:2em;"> <cite>Alweledem</cite>, A. Gubenya. Page 87. Brana Publisher,  1973 (1966 EC). Addis Ababa.</span></p>
+        <p><em>Source Citation:</em><br/>
+        <span style="margin-left:2em;"> <cite>አልወለደም</cite>፣ አቤ ጉበኛ። ገጽ ፹፯። ብራና ማተሚያ ደርጅት ታተመ፣ ፲፱፻፷፮። አዲስ አበባ።</span></p>
+      </dd>
+      <dt>Itedalewe, 1987</dt>
+      <dd>
+        <p><em>Transcribed Citation:</em><br/>
+        <span style="margin-left:2em;"> <cite>Ḥaṣir Tarix Nebiy Muḥamed</cite>, J.H.A. Itedalewe. Page 35. Selam Printing House, 1987 (1979 EC). Asmara.</span></p>
+        <p><em>Source Citation:</em><br/>
+        <span style="margin-left:2em;"> <cite>ሐጺር ታሪኽ ነቢይ ሙሐመድ (ሰለላሁ ዓለይሂ ወሰለም) ብጅብሪል</cite>፣ ጅብሪል ሐጂ አቡበከር እተዳለወ። ገጽ 35። ቤት ማኅተም ሰላም፣ ፲፱፻፸፰። አሥመራ።</span></p>
+      </dd>
+      <dt>Kifle, 1955</dt>
+      <dd>
+        <p><em>Transcribed Citation:</em><br/>
+        <span style="margin-left:2em;"> <cite>Maṣḥafa Sawāsew Wages Wamazgaba Qālāt Hadis</cite>, K.W. Kifle. Pages 65 &amp; 159. Artistic Printers, 1955 (1948 EC). Addis Ababa.</span></p>
+        <p><em>Source Citation:</em><br/>
+        <span style="margin-left:2em;"> <cite>መጽሐፈ፡ሰዋስው፡ወግስ፡ወመዝገበ፡ቃላት፡ሐዲስ</cite>፣ ኪዳነ፡ወልድ፡ክፍሌ። ገጾች ፷፭ እና ፻፶፱። አርቲስቲክ፡ማተሚያ፡ቤት፣ ፲፱፻፵፰። አዲስ አበባ።</span></p>
+      </dd>
+      <dt>Weldemariam, 1995</dt>
+      <dd>
+        <p><em>Transcribed Citation:</em><br/>
+        <span style="margin-left:2em;"> <cite>Maṣḥafa Ṣalot Mes Ser'ate Kiddase Betegreññā</cite>, B. Weldemariam. Page 32. Mahbere Haawaryat F-Ha Bet Mahtem Tehatmet, 1995 (1988 EC). Asmera.</span></p>
+        <p><em>Source Citation:</em><br/>
+        <span style="margin-left:2em;"> <cite>መጽሐፈ ጸሎት ምስ ሥርዓተ ቅዳሴ ብትግርኛ</cite>፣ በርሀ ወልደማርያም። ገጽ ፴፪። ማኅበረ ሐዋርያት ፍ-ሃ ቤት ማኅተም ተኀትመት፣ ፲፱፻፹፰። አሥመራ።</span></p>
+      </dd>
+    </dl>
+  </section>
 </body>
 </html>
