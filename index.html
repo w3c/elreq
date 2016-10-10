@@ -65,7 +65,7 @@
     </div>
     <div id="sotd">
       <p>This document describes the basic requirements for Ethiopic script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support users of Ethiopic scripts.  Currently the document focuses on Amharic and Tigrinya. </p>
-      <p>The editor's draft of this document is being developed by the <a href="https://www.w3.org/International/groups/ethiopic-layout/">Ethiopic Layout Task Force</a>, part of the W3C <a href="https://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
+      <p>The editor’s draft of this document is being developed by the <a href="https://www.w3.org/International/groups/ethiopic-layout/">Ethiopic Layout Task Force</a>, part of the W3C <a href="https://www.w3.org/International/ig/">Internationalization Interest Group</a>. It is published by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Note.</p>
       <div class="note">
         <p data-lang="en" style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
         <p data-lang="en">If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/elreq/issues" style="font-size: 120%;">github issues</a>. Only send comments by email if you are unable to raise issues on github (see links below).   All comments are welcome.</p>
@@ -86,28 +86,28 @@
     <ol>
       <li>Ethiopic typography experts</li>
       <li>Experts from the publishing industry representing the spectrum of traditional to modern layout practices</li>
-      <li>Academic experts with a focus on <a href="#term.geez" class="termref">Ge'ez</a> manuscripts and philogy</li>
+      <li>Academic experts with a focus on <a href="#term.geez" class="termref">Ge’ez</a> manuscripts and philogy</li>
     </ol>
     <p>The Task Force will conduct a survey of the publishing industry to solicit input and identify the set of in-use layout styles. This document will then represent the normalized results of the industry survey which in turn becomes a basis for its validity and suitability to purpose. In the interim before to the survey results have been compiled and applied to this document, tentative specifications will be given based on the most-probable survey results anticipated from participating experts. <span class="note">Survey Pending</span> notes will appear along side specification sections to denote their status.</p>
   </section>
   <section id="basic_principles">
     <h3>Basic Principles for Document Development</h3>
-    <p>Growing out of the 182 element Ge'ez language syllabary for two millenia, Ethiopic in its present day form is a multilingual, and multinational, script comprised by 494 symbols representing: syllables, numerals, punctuation and tonal marks.  Numerous linguistic, cultural, literary, historical and political issues surround the script and its utilization -all of which the authors strive to avoid discussing unless directly relevant to clarifying a given layout use case. The following principles are applied in the development of this document:</p>
+    <p>Growing out of the 182 element Ge’ez language syllabary for two millenia, Ethiopic in its present day form is a multilingual, and multinational, script comprised by 494 symbols representing: syllables, numerals, punctuation and tonal marks.  Numerous linguistic, cultural, literary, historical and political issues surround the script and its utilization -all of which the authors strive to avoid discussing unless directly relevant to clarifying a given layout use case. The following principles are applied in the development of this document:</p>
     <ol>
       <li>View publishers as the primary stakeholders.</li>
       <li>Attempt a “90% solution” where the common and primary needs of publishers are addressed. Important but less widely used practices such as for <a href="#term.yaredic-zaima-notation" class="termref">Yaredic Zaima Notation</a> will be addressed at a future time.</li>
       <li>It does not cover every issue of Ethiopic typography, but only the import differences from the Western language systems.</li>
       <li>The technical aspects of actual implementation are not covered by this document.</li>
-      <li>In order to help readers' understanding of how Ethiopic is used, typical real life examples are provided.</li>
+      <li>In order to help readers’ understanding of how Ethiopic is used, typical real life examples are provided.</li>
       <li>Text layout rules and recommendations for readable design are different things, however these two issues are difficult to discuss independently. In this document, these two aspects are carefully separated. The aesthetic design recommendations are mainly described using notes.</li>
-      <li>The main target of this document is common books. The authors' experiences are mainly related to common books, and the quality required for common books is the highest in the market. There are many kinds of books in the market, and the requirements are quite diverse. The task force has a lot of accumulated experience in requirements and solutions for Ethiopic text composition. Nonetheless, many issues, which have been discussed over a long period of time, are applicable for other kinds of publication.</li>
+      <li>The main target of this document is common books. The authors’ experiences are mainly related to common books, and the quality required for common books is the highest in the market. There are many kinds of books in the market, and the requirements are quite diverse. The task force has a lot of accumulated experience in requirements and solutions for Ethiopic text composition. Nonetheless, many issues, which have been discussed over a long period of time, are applicable for other kinds of publication.</li>
       <li>In terms of frequency of use, the importance of magazines, technical manuals, and Web documents rates alongside common books. However, there are several characteristics in these publications, which are different from common books. These issues should be treated more fully in future documents.</li>
     </ol>
   </section>
 
   <section id="ethiopic_eras">
     <h3>In-Scope Publishing Eras</h3>
-    <p>While Ethiopic documents can be characterized under a number of time periods, we discern only two gross eras herein. <a href="#term.classical-ethiopic" class="termref">Classical Ethiopic</a> encompases the layout requirements found in the documents of the first printing presses and coming into fruition under the reign of Emperor Haile Selassie.  While not the focus of this document, “Classical Ethiopic” also encompasses handwritten manuscripts whose practices are present in early publishing. This era is characterized more by the influences of the Ge'ez tradition as embodied by the Ethiopian Orthodox Church with respect to spelling conventions, syntax and punctuation use, <a href="#term.wordspace" class="termref">Ethiopic Wordspace</a> and numeral system preference. Also featuring less variation in layout practice which is likely the result of having fewer publishing houses in operation.</p>
+    <p>While Ethiopic documents can be characterized under a number of time periods, we discern only two gross eras herein. <a href="#term.classical-ethiopic" class="termref">Classical Ethiopic</a> encompases the layout requirements found in the documents of the first printing presses and coming into fruition under the reign of Emperor Haile Selassie.  While not the focus of this document, “Classical Ethiopic” also encompasses handwritten manuscripts whose practices are present in early publishing. This era is characterized more by the influences of the Ge’ez tradition as embodied by the Ethiopian Orthodox Church with respect to spelling conventions, syntax and punctuation use, <a href="#term.wordspace" class="termref">Ethiopic Wordspace</a> and numeral system preference. Also featuring less variation in layout practice which is likely the result of having fewer publishing houses in operation.</p>
     <p>The Classical Ethiopic era is followed by <a href="#term.modern-ethiopic" class="termref">Modern Ethiopic</a> spanning from the post-Imperial period up until the present day. Modern Ethiopic practices are characterized by looser spelling conventions, the preference change toward whitespace and western numerals, more variation in layout styles  and in some cases limitations imposed by desktop publishing software designed for Western markets.</p>
     <p>The focus of this document is on the Modern Ethiopic layout conventions with distinctions pertaining to Classical Ethiopic noted when known.  An exception will be a complication that the authors hope to resolve found in Classical era documents where Ethiopic Wordspace interplays with Whitespace in a number of contexts.</p>
   </section>
@@ -144,7 +144,7 @@
         use case when priori knowledge of a document language is unknown. Its basis is reviewed here.
         The Latin letter “Z” and Ethiopic letter "ን" are chosen as pairing symbols representative of the mean height .  They both feature broad
         horizontal strokes that are easy for the eye to follow as a nearly continuous stroke.
-        Ethiopic letters that were introduced as an extension to the Ge'ez core will  typically feature a macron or other modifier at the top of
+        Ethiopic letters that were introduced as an extension to the Ge’ez core will  typically feature a macron or other modifier at the top of
         a base letter in order to form the extension letter. The macron necessarily extends the height of a letter.  Using the top of the macron
         for the reference height of a letter leads to height alignment that makes the majority of Ethiopic letters appear too short against Latin letters. </p>
       <figure id="align_top_symbol"> <img src="images/Z-Ny-N-Top-Aligned.png" alt=""/>
@@ -176,7 +176,7 @@
         Most typically a Latin typeface will be made heavier to better match its Ethiopic counterpart.  This weight increase is demonstrated in many
         Ethiopic fonts that include  Latin letters. The font designer may have increased the weight of the Latin range primarily to provide heavier
         weight punctuation to use with Ethiopic script (see <a href="#ethiopicized_punctuation">Ethiopicized Punctuation</a>).</p>
-      <p>Literature produced with a heavier Latin tyepface may represent the author's stylistic sensibilities but in some cases may  only be a
+      <p>Literature produced with a heavier Latin tyepface may represent the author’s stylistic sensibilities but in some cases may  only be a
         pragmatic outcome when an author finds manually changing between fonts too burdensome. 
         The view of professional publishers is unknown here and should be determined.</p>
       <div class="issues">
@@ -223,7 +223,7 @@
        punctuation.  In the Modern era, a third of the punctuation marks: ፧, ፨, and ፠ have largely fallen into disuse while a number of punctuation
        marks from Western practices have been adopted. Bi-chromatic punctuation is now reserved for spiritual materials and remains a calligraphic practice.</p>
     <p>Ethiopic punctuation segments text and is non-encompassing. 
-       The Ethiopic word separator, labeled "Ethiopic Wordspace" in the Unicode standard, is given special attention in this section as follows more
+       The Ethiopic word separator, labeled “Ethiopic Wordspace” in the Unicode standard, is given special attention in this section as follows more
        complex rules of interaction with other punctuation as well as justification.  Ethiopic punctuation is often aligned with similar English
        punctuation though these associations must be understood as approximate.  Ethiopic fullstop and wordspace are highly regular in their application,
        others, particularly ፣, ፤, and ፥ will be consistently used within a document but their roles may change between authors or institutes.  A detailed
@@ -242,7 +242,7 @@
         <tr>
           <td style="text-align: center;">፡</td>
           <td>U+1361</td>
-          <td>Ge'ez: ንዑስ ነጥብ<br/>
+          <td>Ge’ez: ንዑስ ነጥብ<br/>
               Amharic: ሁለት ነጥብ<br/>
               Tigrinya: ክልተ-ነጥቢ<br/>
               English: Ethiopic Wordspace<br/>
@@ -252,7 +252,7 @@
         <tr>
           <td style="text-align: center;">፦</td>
           <td>U+1366</td>
-          <td>Ge'ez: አስተአምሮ<br/>
+          <td>Ge’ez: አስተአምሮ<br/>
               Amharic: አስረጂ ሰረዝ<br/>
               Tigrinya: <br/>
               English: Ethiopic Preface Colon<br/>
@@ -262,7 +262,7 @@
         <tr>
           <td style="text-align: center;">፥</td>
           <td>U+1365</td>
-          <td>Ge'ez: ንዑስ ሠረዝ<br/>
+          <td>Ge’ez: ንዑስ ሠረዝ<br/>
               Amharic: ነጠላ ሰረዝ<br/>
               Tigrinya: <br/>
               English: Ethiopic Colon<br/>
@@ -272,7 +272,7 @@
         <tr>
           <td style="text-align: center;">፣</td>
           <td>U+1363</td>
-          <td>Ge'ez: ነጠላ ሠረዝ<br/>
+          <td>Ge’ez: ነጠላ ሠረዝ<br/>
               Amharic: ነጠላ ሰረዝ<br/>
               Tigrinya: ንጽል ጭሕጋር (ንጽል ሰረዝ)<br/>
               English: Ethiopic Comma<br/>
@@ -282,7 +282,7 @@
         <tr>
           <td style="text-align: center;">፤</td>
           <td>U+1364</td>
-          <td>Ge'ez: ዐቢይ ሠረዝ<br/>
+          <td>Ge’ez: ዐቢይ ሠረዝ<br/>
               Amharic: ድርብ ሰረዝ<br/>
               Tigrinya: ድርብ ጭሕጋር<br/>
               English: Ethiopic Semicolon<br/>
@@ -292,7 +292,7 @@
         <tr>
           <td style="text-align: center;">፧</td>
           <td>U+1367</td>
-          <td>Ge'ez: ሠለስተ ነጥብ<br/>
+          <td>Ge’ez: ሠለስተ ነጥብ<br/>
               Amharic: ሦስት ነጥብ<br/>
               Tigrinya: ምልክት ሕቶ (ትእምርተ ሕቶ)<br/>
               English: Ethiopic Question Mark<br/>
@@ -302,7 +302,7 @@
         <tr>
           <td style="text-align: center;">።</td>
           <td>U+1362</td>
-          <td>Ge'ez: ዐቢይ ነጥብ<br/>
+          <td>Ge’ez: ዐቢይ ነጥብ<br/>
               Amharic: አራት ነጥብ<br/>
               Tigrinya: ኣርባዕተ ነጥቢ<br/>
               English: Ethiopic Fullstop<br/>
@@ -312,7 +312,7 @@
         <tr>
           <td style="text-align: center;">፠</td>
           <td>U+1360</td>
-          <td>Ge'ez: <br/>
+          <td>Ge’ez: <br/>
               Amharic: <br/>
               Tigrinya: <br/>
               English: Ethiopic Section Mark<br/>
@@ -322,7 +322,7 @@
         <tr>
           <td style="text-align: center;">፨</td>
           <td>U+1368</td>
-          <td>Ge'ez: <br/>
+          <td>Ge’ez: <br/>
               Amharic: <br/>
               Tigrinya: <br/>
               English: Ethiopic Paragraph Separator<br/><span style="color: #ffffff">English: </span>Ethiopic Seven Dot Section Mark
@@ -341,7 +341,7 @@
     <p>Additionally the following punctuation is observed to be used with Ethiopic writing:</p>
     <p style="margin-left: 20px"><code>$ : , € @ …</code></p>
     <p>Inverted exclaimation mark is repurposed and utilized differently than in its Western usage.
-       In Ethiopic writing the inverted exclaimation mark is known as "Timherte Slaq" appears at the end of
+       In Ethiopic writing the inverted exclaimation mark is known as “Timherte Slaq” appears at the end of
        a sentence and will denote sarcasm. All borrowed punctuation is subject to typeface alignment with Ethiopic weights and shapes, an aesthetic
        enhancement discussed in this section as <a href="#ethiopicized_punctuation">"Ethiopicized Punctuation"</a>.</p>
   </section>
@@ -354,17 +354,17 @@
       <dl>
         <dt>፣ - ነጠላ ሠረዝ</dt>
         <dd><span class="uname">U+1363 ETHIOPIC COMMA</span> (አማ/ ነጠላ ሠረዝ, ትግ/ ንጽል ሰረዝ) is used as a comma in Ethiopian practices and as a semicolon in Eritrea. ፣ will also be
-              used in Ge'ez writing as a semicolon (is this a modern usage or classic?).
+              used in Ge’ez writing as a semicolon (is this a modern usage or classic?).
               <span class="uname">U+1364 ETHIOPIC SEMICOLON</span>, ፤, in turn is used as a colon in Eritrean writing (verify).</dd>
         <dt>፥ - ንዑስ ሠረዝ</dt>
         <dd><span class="uname">U+1365 ETHIOPIC COLON</span> in contrast to its Unicode name, is never(?) used as a colon in any known Ethiopic practices.
-              Rather, it is a classical glyph variant of <span class="uname">U+1364 ETHIOPIC SEMICOLON</span> (፣). ፥ is the default comma glyph in Ge'ez writing and is the preferred
+              Rather, it is a classical glyph variant of <span class="uname">U+1364 ETHIOPIC SEMICOLON</span> (፣). ፥ is the default comma glyph in Ge’ez writing and is the preferred
               comma glyph by some modern writers writing in other languages. ፥ is the default comma in most Amharic bibles, likely in keeping with
-              the Ge'ez Bible that the Amharic would have been translated from.  Some modern Bible translations into Amharic, as well as other religious
+              the Ge’ez Bible that the Amharic would have been translated from.  Some modern Bible translations into Amharic, as well as other religious
               literature, will use ፣ as the default comma in prose but maintain ፥ for passage references, e.g. ማቴ4፥23 , ዮሐ13፥16 , etc. Given this
-              common usage in religious materials "ecclesiastical comma" is a practical English term for referring to the ፥ glyph variant.  Kidane Wolde Kifle and Desta Tekle Wolde note the equivalence of the two commas. </dd>
+              common usage in religious materials “ecclesiastical comma” is a practical English term for referring to the ፥ glyph variant.  Kidane Wolde Kifle and Desta Tekle Wolde note the equivalence of the two commas. </dd>
         <dt>፡ - ንዑስ ነጥብ</dt>
-        <dd><span class="uname">U+1361 ETHIOPIC WORDSPACE</span> (አማ/ ሁለት ነጥብ, ትግ/ ክልተ ነጥቢ) in keeping with Ge'ez heritage, is used as the word separator (i.e. space) in the classical writing practices
+        <dd><span class="uname">U+1361 ETHIOPIC WORDSPACE</span> (አማ/ ሁለት ነጥብ, ትግ/ ክልተ ነጥቢ) in keeping with Ge’ez heritage, is used as the word separator (i.e. space) in the classical writing practices
               of both Eritrean and Ethiopia.  In modern Eritrean writing practices <span class="uname">ETHIOPIC WORDSPACE</span> will be used in the role of a comma (illustrated in Figure <a href="#ecclesiastical_emphasis_sample"></a>).
               When used in modern Ethiopian writing, it retains its classic role as word separator (space).
               See <a href="#wordspace_in_comma_context"></a> for elaboration on this topic. </dd>
@@ -392,7 +392,7 @@
         <p>Issues/Questions:</p>
         <ol>
           <li>Should comma context be a user preference?</li>
-          <li>Not an issue but a note; an author of this document recommends strongly preserving the symbol semantics of Ethiopic Wordspace and not overloading it with the semantics of Ethiopic Comma. Doing so simplifies spacing rules for the Wordspace symbol as the comma usage context will not need to be addressed. Applying the "decayed glyph" perspective as an alternative glyph in a font is preferred as it mitigates the semantic overloading.</li>
+          <li>Not an issue but a note; an author of this document recommends strongly preserving the symbol semantics of Ethiopic Wordspace and not overloading it with the semantics of Ethiopic Comma. Doing so simplifies spacing rules for the Wordspace symbol as the comma usage context will not need to be addressed. Applying the “decayed glyph” perspective as an alternative glyph in a font is preferred as it mitigates the semantic overloading.</li>
         </ol>
       </div>
     </section>
@@ -499,7 +499,7 @@
       </ol>
       <p><span style="text-decoration: underline;"><strong>Wordspace to Space Transformation Rules</strong></span></p>
       <ol>
-        <li>A sequence of more than two worspaces is not converted as the author's intent is indeterminate.</li>
+        <li>A sequence of more than two worspaces is not converted as the author’s intent is indeterminate.</li>
         <li>A sequence of exactly two worspaces is converted to an ETHIOPIC FULLSTOP (U+1362).<br/><em>Note: This conversion is suggested as an auto-correct feature.</em></li>
         <li>A sequence of exactly one wordspace is convert to space.</li>
         <li>A wordspace at the end of a line may be removed.</li>
@@ -517,11 +517,11 @@
 
     <section id="ethiopic_gemination_mark_positioning">
       <h4>Ethiopic Gemination Mark (ጥበቅ) Vertical Positioning</h4>
-      <p>The Ethiopic gemination mark, ጥበቅ, is almost universally found at a fixed height above the baseline in typeset literature. The mark's position must
+      <p>The Ethiopic gemination mark, ጥበቅ, is almost universally found at a fixed height above the baseline in typeset literature. The mark’s position must
          then be fixed so that it remains above the tallest Ethiopic letter symbol; this produces a variable height gap between the top of the letter and the mark.
          Conversely, when the symbol is hand written (often above typeset text) the mark will be found at a variable height above the baseline and demonstrating
          a fixed height above the letter symbol.
-         Quite possibly the former style is an artifact of a limitation of the layout technology employed, and the later representative of an author's
+         Quite possibly the former style is an artifact of a limitation of the layout technology employed, and the later representative of an author’s
          desired rendering.</p>
       <figure> <img src="images/gemination-heights-comparison.png" alt=" " />
         <figcaption>Two gemination styles compared: typical printed (above) and handwritten (below).</figcaption>
@@ -575,7 +575,7 @@
     <section id="ellipsis">
       <h4>Ellipsis</h4>
       <p>Both pre-composed and mid-line ellipses are found in Ethiopic literature. The presence of one over the other may simply be an
-         artifact of the publishing technology and not necessarily in line with the publisher's preference.</p>
+         artifact of the publishing technology and not necessarily in line with the publisher’s preference.</p>
       <div class="issues">
         <p>Issues/Questions:</p>
         <ol>
@@ -673,8 +673,8 @@
           <li>What letters should be superscripted, and it what contexts? For example, "ሳ" and "ብር" may also be superscripted in
               presentation of prices but is not common in print (found mostly in store front advertising).</li>
           <li> Are ordinals always superscripted, or is superscript language or locale specific? Should superscript for ordinals be a setting?</li>
-          <li>An argument goes that superscript of "ኛ" should not follow an Ethiopic numerals since the counting system is put into a Ge'ez context
-              and Ge'ez literature does not use a superscript.  Yet "ኛ" is appropriate to Amharic language and is not a letter found in Ge'ez. The class of
+          <li>An argument goes that superscript of "ኛ" should not follow an Ethiopic numerals since the counting system is put into a Ge’ez context
+              and Ge’ez literature does not use a superscript.  Yet "ኛ" is appropriate to Amharic language and is not a letter found in Ge’ez. The class of
               literature may be at issue here, such a religious materials.</li>
           <li>What should the height (in percentage) of the superscripted symbol be with respect to the base text?</li>
           <li>How should the superscripted symbol be aligned vertically with the base text?</li>
@@ -722,7 +722,7 @@
     <h4>Ecclesiastical Emphasis</h4>
     <p>In religous literature, certain words or phrases with a spiritual or more holy aspect may be colored in red.  The practice is context dependent and a word that will appear in red in one sentence may not be red in the next (or elsewhere in the same sentence).</p>
     <figure id="ecclesiastical_emphasis_sample"> <img src="images/ecclesiastical-emphasis-sample-cropped.jpg" alt=" " width="600"/>
-      <figcaption>Ecclesiastical emphasis sample from Maṣḥafa Ṣalot Mes Ser'ate Kiddase Betegreññā, Page 32 (Weldemariam, 1995 (1988 EC))</figcaption>
+      <figcaption>Ecclesiastical emphasis sample from Maṣḥafa Ṣalot Mes Ser’ate Kiddase Betegreññā, Page 32 (Weldemariam, 1995 (1988 EC))</figcaption>
     </figure>
     <div class="issues">
       <p>Issues/Questions:</p>
@@ -735,11 +735,11 @@
 
   <section id="emphasis_with_wordspace">
     <h4>Emphasis With Ethiopic Wordspace</h4>
-    <p>As a rule, a wordspace following a word that is emphasized in any way (color, bold, italic, underline, etc.) shall receive the same emphasis. This is in keeping with the Ge'ez literature tradition. </p>
+    <p>As a rule, a wordspace following a word that is emphasized in any way (color, bold, italic, underline, etc.) shall receive the same emphasis. This is in keeping with the Ge’ez literature tradition. </p>
     <div class="issues">
       <p>Issues/Questions:</p>
       <ol>
-        <li>Does this rule make aesthetic sense in full justification with wordspace in centered positioning style? In Ge'ez manuscripts no issue arrises since little or no white space appears between the wordspace and boundary words.  The elastic space around wordspace may stretch considerably in typeset documents, under justification, where continuation of the emphasis may appear peculiar after some stretching threshold width.</li>
+        <li>Does this rule make aesthetic sense in full justification with wordspace in centered positioning style? In Ge’ez manuscripts no issue arrises since little or no white space appears between the wordspace and boundary words.  The elastic space around wordspace may stretch considerably in typeset documents, under justification, where continuation of the emphasis may appear peculiar after some stretching threshold width.</li>
       <li>Related: Does word emphasis include a following punctuation?</li>
       </ol>
     </div>
@@ -911,11 +911,12 @@
        </ol>
       </div>
     </section>
+       
 
     <section id="shorcomings_in_electronic_typesetting">
       <h5>Shortcomings Found in Electronic Typesetting Systems</h5>
       <p>To date, computer software that typesets text has applied justification rules for white space stretching  that were designed to meet publishing requirements  in the Western world.  When the same rules are  applied to Ethiopic text, the results are unsatisfactory as they do not meet user expectations. Largely  responsible for the formatting dissonance when Western justification is applied to Ethiopic text, is the  absence of a white space symbol in the writing system. There is no explicit white space symbol (in classic  Ethiopic writing) to be “stretched”.</p>
-       <p>Formatting algorithms will then process <span class="uname">U+1361 ETHIOPIC WORDSPACE</span> [፡] as a punctuation symbol where word enclosing rules, rather than word spacing rules, will be applied.  While still stretchable, “white space” in the Ethiopic wordspace is implicit rather than explicit.  For a complete solution, software will ultimately need to be enhanced to stretch implicit space as required.  Reclassifying the Ethiopic wordspace as a “Zs” symbol is expected to help alleviate justification issues and clears the way for software firms to implement comprehensive support for Ethiopic justification. Since the Ethiopic wordspace interferes with justification in present day software, authors may opt not to use it or may “pad” wordspace and Ethiopic punctuation with explicit white space to produce the desired justification style (i.e. <a href="#justification_with_word_bound_wordspace">Word Bound</a> or <a href="justification_with_centered_wordspace">Centered</a>). To properly render text formatted in this way, future "wordspace aware" software, should elide spaces bordering Ethiopic wordspace and punctuation when producing justified text.</p>
+       <p>Formatting algorithms will then process <span class="uname">U+1361 ETHIOPIC WORDSPACE</span> [፡] as a punctuation symbol where word enclosing rules, rather than word spacing rules, will be applied.  While still stretchable, “white space” in the Ethiopic wordspace is implicit rather than explicit.  For a complete solution, software will ultimately need to be enhanced to stretch implicit space as required.  Reclassifying the Ethiopic wordspace as a “Zs” symbol is expected to help alleviate justification issues and clears the way for software firms to implement comprehensive support for Ethiopic justification. Since the Ethiopic wordspace interferes with justification in present day software, authors may opt not to use it or may “pad” wordspace and Ethiopic punctuation with explicit white space to produce the desired justification style (i.e. <a href="#justification_with_word_bound_wordspace">Word Bound</a> or <a href="justification_with_centered_wordspace">Centered</a>). To properly render text formatted in this way, future “wordspace aware” software, should elide spaces bordering Ethiopic wordspace and punctuation when producing justified text.</p>
       <p>The following samples depict formatting of Kidane Wolde Kifle’s seminal work <cite>Maṣḥafa Sawāsew</cite> with a popular word processor (Kifle, 1955 (1948 EC)) under the limitations of Western spacing rules justification.</p>
       <figure> <img src="images/corpus-samples/KWK-Page-65-Cropped.png" alt=" " width="800" height="297" />
         <figcaption>Full Justification Sample from Maṣḥafa Sawāsew, Page 65 (Kifle, 1955 (1948 EC))</figcaption>
@@ -1062,14 +1063,14 @@
       <h4>Alphabetical (ሀለሐመ) Lists</h4>
       <p>The Unicode standard encodes Ethiopic syllables for many languages using Ethiopic script past and present.
          Alphabetic lists are commonplace in Ethiopic literature, but will conform to the letter inventory of the language of the surrounding content.
-         The W3C's <a href="https://www.w3.org/International/core/Overview">Internationalization Working Group</a> publishes alphabetical
+         The W3C’s <a href="https://www.w3.org/International/core/Overview">Internationalization Working Group</a> publishes alphabetical
          counter style code snippets for a <a href="http://w3c.github.io/predefined-counter-styles/#ethiopic-styles">large number of languages using Ethiopic script.</a>
          Many of these lists are believed to be only hypothetical and based upon the letter inventory of the identified languages;
          but may not have been used in practice.  The alphabetical counter styles specified here encompass a smaller collection of languages with a
          demonstrated requirement as found by example in corpus or have come from stakeholder input.</p>
           <table>
             <tr>
-              <th>Ge'ez</th>
+              <th>Ge’ez</th>
               <th>Amharic</th>
               <th>Blin</th>
               <th>Tigrinya<br/>
@@ -1078,7 +1079,7 @@
             (Ethiopian)</th>
             </tr>
             <tr style="padding-left:0px; vertical-align: top;">
-              <td><!-- Ge'ez -->
+              <td><!-- Ge’ez -->
             
             <ul style="list-style-type:none; padding-left:0px; list-style-type: none;
         list-style-position:inside;
@@ -1347,7 +1348,7 @@
         The language specific orders shown here are only those found utilized in corpus.</p>
           <table>
         <tr>
-              <th>Ge'ez</th>
+              <th>Ge’ez</th>
               <th>Amharic</th>
               <th>Tigrinya<br/>
             (Eritrean)</th>
@@ -1355,7 +1356,7 @@
             (Ethiopian)</th>
             </tr>
         <tr style="padding-left:0px; vertical-align:top;">
-              <td><!-- Ge'ez -->
+              <td><!-- Ge’ez -->
             
             <ul style="list-style-type:none; padding-left:0px; list-style-type: none;
         list-style-position:inside;
@@ -1704,7 +1705,7 @@
          publishing community, and bibliographic convention is left to the discretion of individual authors. Establishing a standard
          is recommended by the present authors and will aid in document consistency and in the machine processing of reference citations.
          To address a book citation convention, a strong starting point 
-         is available from the work of a recognized subject matter expert, <a href="http://www.aau.edu.et/chls/ato-dereje-gebre/">Dereje Gebre</a> of the AAU Amharic Language Department, and past Vice President of the Ethiopian Writer's Association. Professor Dereje
+         is available from the work of a recognized subject matter expert, <a href="http://www.aau.edu.et/chls/ato-dereje-gebre/">Dereje Gebre</a> of the AAU Amharic Language Department, and past Vice President of the Ethiopian Writer’s Association. Professor Dereje
          employs the following convention: </p>
       <p><code> &nbsp;&nbsp;&nbsp;&nbsp;
             &lt;Citation&gt; ::=
@@ -1728,7 +1729,7 @@
       <div class="issues">
         <p>Issues/Questions:</p>
         <ol>
-          <li>Does the Ethiopian Writer's Association endorse any conventions for media citation?</li>
+          <li>Does the Ethiopian Writer’s Association endorse any conventions for media citation?</li>
           <li>What are formats for other media types?</li>
         </ol>
       </div>
@@ -1748,7 +1749,7 @@
     </thead>
     <tbody>
       <tr id="term.geez">
-        <td>Ge'ez</td>
+        <td>Ge’ez</td>
         <td lang="am">ግዕዝ</td>
         <td lang="ti">ግዕዝ</td>
         <td>The name of both the ancient Semitic language of northern Ethiopia and Eritrea as well as the name of the corresponding syllabic writing system.  Also known as “Ethiopic”. It survives today as the liturgical language language of the Eritrean and Ethiopian Orthodox Chuches.</td>
@@ -1797,14 +1798,14 @@
         <td lang="am">TBD</td>
         <td lang="ti">TBD</td>
         <td>Ethiopic manuscripts published primarily after the reign of Emperor Haile Selassie where
-            writing practices have become less adherent to the Ge'ez tradition, more pragmatic so as
+            writing practices have become less adherent to the Ge’ez tradition, more pragmatic so as
             to fascilitate the constraints and limitations imposed by mass media.</td>
       </tr>
       <tr id="term.yaredic-zaima-notation">
         <td>Yaredic Zaima Notation</td>
         <td lang="am">ያሬዳዊ ዜማ ምልክቶቻ</td>
         <td lang="ti">TBD</td>
-        <td>The system of marking intonation in Ge'ez hymnody devised by the 6<sup>th</sup> century Saint Yared of Axum.</td>
+        <td>The system of marking intonation in Ge’ez hymnody devised by the 6<sup>th</sup> century Saint Yared of Axum.</td>
       </tr>
       <tr id="term.acknolwedgment">
         <td>Acknowledgment</td>
@@ -1813,7 +1814,7 @@
         <td></td>
       </tr>
       <tr id="term.tbd-2">
-        <td>Author's Note</td>
+        <td>Author’s Note</td>
         <td lang="am">መስታወሻ</td>
         <td lang="ti"></td>
         <td>Also የአሳታሚው ማስታወሻ</td>
@@ -1876,13 +1877,13 @@
         <td>Preface</td>
         <td lang="am">መቅድም</td>
         <td lang="ti">TBD</td>
-        <td>Sometimes "መግለጫ " in older books</td>
+        <td>Sometimes “መግለጫ ” in older books</td>
       </tr>
       <tr id="term.table-of-contents">
         <td>Table of Contents</td>
         <td lang="am">ማውጫ </td>
         <td lang="ti">TBD</td>
-        <td>Same as "መክሥተ አርእስት"?</td>
+        <td>Same as “መክሥተ አርእስት”?</td>
       </tr>
       <tr id="term.title">
         <td>Title</td>
@@ -1894,13 +1895,13 @@
         <td>TBD</td>
         <td lang="am">መሳሰቢያ</td>
         <td lang="ti"></td>
-        <td>Same as "ማሳሰቢያ"?</td>
+        <td>Same as “ማሳሰቢያ”?</td>
       </tr>
       <tr id="term.tbd-3">
         <td>TBD</td>
         <td lang="am">ማስታወቂያ</td>
         <td lang="ti"></td>
-        <td>"Advertisement" resolve this with "Author's Note". Sometimes seen as "ማስተዋወቂያ".</td>
+        <td>"Advertisement" resolve this with “Author’s Note”. Sometimes seen as “ማስተዋወቂያ”.</td>
       </tr>
       <!-- መልመጃ -->
     </tbody>
@@ -1992,7 +1993,7 @@
 
   <section class="appendix" id="acknowledgements">
     <h1>Acknowledgements</h1>
-    <p>Special thanks to the following people who contributed to this document (contributors' names listed in in alphabetic order).</p>
+    <p>Special thanks to the following people who contributed to this document (contributors’ names listed in in alphabetic order).</p>
     <p class="acknowledgement">This Person, That Person, etc</p>
     <p data-lang="en">Please find the latest info of the contributors at the <a href="https://github.com/w3c/elreq/graphs/contributors">GitHub contributors list</a>.</p>
   </section>
@@ -2003,7 +2004,7 @@
       <dt>Pankhurst, 1998</dt>
       <dd> <cite> 
       <!-- use this alternative link until the Addis Tribute archive is restored --> 
-      <a href="http://web.linkethiopia.org/guide-to-ethiopia/the-pankhurst-history-library/geez-literature-church-libraries-and-the-coming-from-europe-of-the-printed-word/">Ge'ez Literature, Church Libraries, and the Coming, from Europe, of the Printed Word. </a> </cite> R. Pankhurst. Addis Tribune, August 28, 1998. Addis Ababa. </dd>
+      <a href="http://web.linkethiopia.org/guide-to-ethiopia/the-pankhurst-history-library/geez-literature-church-libraries-and-the-coming-from-europe-of-the-printed-word/">Ge’ez Literature, Church Libraries, and the Coming, from Europe, of the Printed Word. </a> </cite> R. Pankhurst. Addis Tribune, August 28, 1998. Addis Ababa. </dd>
       <dt>Alemayehu, 1965</dt>
       <dd>
         <p><em>Transcribed Citation:</em><br/>
@@ -2055,7 +2056,7 @@
       <dt>Weldemariam, 1995</dt>
       <dd>
         <p><em>Transcribed Citation:</em><br/>
-        <span style="margin-left:2em;"> <cite>Maṣḥafa Ṣalot Mes Ser'ate Kiddase Betegreññā</cite>, B. Weldemariam. Page 32. Mahbere Haawaryat F-Ha Bet Mahtem Tehatmet, 1995 (1988 EC). Asmera.</span></p>
+        <span style="margin-left:2em;"> <cite>Maṣḥafa Ṣalot Mes Ser’ate Kiddase Betegreññā</cite>, B. Weldemariam. Page 32. Mahbere Haawaryat F-Ha Bet Mahtem Tehatmet, 1995 (1988 EC). Asmera.</span></p>
         <p><em>Source Citation:</em><br/>
         <span style="margin-left:2em;"> <cite>መጽሐፈ ጸሎት ምስ ሥርዓተ ቅዳሴ ብትግርኛ</cite>፣ በርሀ ወልደማርያም። ገጽ ፴፪። ማኅበረ ሐዋርያት ፍ-ሃ ቤት ማኅተም ተኀትመት፣ ፲፱፻፹፰። አሥመራ።</span></p>
       </dd>
