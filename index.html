@@ -506,7 +506,7 @@
         <li>A space is substituted for wordspace when bounded by letters, or between a letter and number.</li>
         <li>A wordspace may be added before a right-side enclosing punctuation as per the convention applied in <a href="#ethiopic_wordspace_at_latin_boundaries">Ethiopic Wordspace Alongside Other Punctuation and Line Breaks</a>.</li>
         <li>A space is substituted for wordspace on the outside of an enclosing punctuation as per the convention applied in <a href="#ethiopic_wordspace_at_latin_boundaries">Ethiopic Wordspace Alongside Other Punctuation and Line Breaks</a>.</li>
-        <li>A space following non-encompasing punctuation is removed.</li>
+        <li>A space next to non-encompasing punctuation is removed.</li>
         <li>Space(s) before or after quotation marks are removed.</li>
         <li>Space(s) bounded by non-Ethiopic numbers are not processed.</li>
         <li>A wordspace will be appended to the end of line (a line ending with a hard return) that does not end with punctuation.</li>
@@ -514,7 +514,7 @@
       <p><span style="text-decoration: underline;"><strong>Wordspace to Space Transformation Rules</strong></span></p>
       <ol>
         <li>A sequence of more than two worspaces is not converted as the author's intent is indeterminate.</li>
-        <li>A sequence of exactly two worspaces is converted to an ETHIOPIC FULLSTOP (U+1362).</li>
+        <li>A sequence of exactly two worspaces is converted to an ETHIOPIC FULLSTOP (U+1362).<br/><em>Note: This conversion is suggested as an auto-correct feature.</em></li>
         <li>A sequence of exactly one wordspace is convert to space.</li>
         <li>A wordspace at the end of a line may be removed.</li>
         <!--
