@@ -848,7 +848,7 @@
     <h3>Justification</h3>
     <section id="justification_with_space">
       <h4>Justification When SPACE is the Word Delimiter</h4>
-      <p>When white space (U+0020) is used as the word separator in Ethiopic text, the line spacing rules applicable to western text may be applied to meet user expectations.</p>
+      <p>When space (U+0020) is used as the word separator in Ethiopic text, the line spacing rules applicable to western text may be applied to meet user expectations.</p>
       <div class="issues">
         <p>Issues/Questions:</p>
         <ol>
@@ -871,7 +871,7 @@
 
     <section id="justification_with_word_bound_wordspace">
       <h5>Justification with Word Bound Wordspace and Punctuation</h5>
-      <p>In keeping with line justification for Latin script, the non-printed or “white space” between words is treated as stretchable. The width of the space symbol itself will be elongated to some aesthetic width value that may vary from space symbol to space symbol across a printed line. In Ethiopic justification, the white space between the Ethiopic word separator and the words it separates is likewise allowed to stretch. This stretching of white space may be either symmetrical (“centered”) or asymmetrical but in the latter case space stretching is always between the right side of the separator and the following word –referred to here as “word bound”. </p>
+      <p>In keeping with line justification for Latin script, the non-printed or “blank space” (space and gaps) between words is treated as stretchable. The width of the space symbol itself will be elongated to some aesthetic width value that may vary from space symbol to space symbol across a printed line. In Ethiopic justification, the blank space between the Ethiopic word separator and the words it separates is likewise allowed to stretch. This stretching of blank space may be either symmetrical (“centered”) or asymmetrical but in the latter case space stretching is always between the right side of the separator and the following word –referred to here as “word bound”. </p>
       <p>In  “word bound”  justification  the  word  separator,   which  may  be  either  a  punctuation  symbol  or <span class="uname">U+1361   ETHIOPIC WORDSPACE</span> [፡], appears to adhere to the word to the left as if it were its final character. Figures <a href="#justification_word_bound"></a> and <a href="#justification_in_historia_aethiopica"></a> both illustrate the word bound style.</p>
       <figure id="justification_word_bound"> <img src="images/corpus-samples/Ografi-Page-35-Cropped.png" alt=" " width="800" height="223" />
         <figcaption>Ethiopic justification in word bound style (Erikson, 1921 (1913 EC))</figcaption>
@@ -880,13 +880,13 @@
 
     <section id="justification_with_centered_wordspace">
       <h5>Justification with Centered Wordspace and Punctuation</h5>
-      <p>In the second major form of Ethiopic justification  the white space around word separators is stretched  equally on  both the left and right sides; giving the appearance of the separator being centered between the words  it divides. <a href="#fig_justification_centered"></a> depicts the white space stretching in both forms of justification using Ethiopic Wordspace as an example,  though the stretching rules apply equally to Ethiopic punctuation as well. </p>
+      <p>In the second major form of Ethiopic justification  the blank space around word separators is stretched  equally on  both the left and right sides; giving the appearance of the separator being centered between the words  it divides. <a href="#fig_justification_centered"></a> depicts the blank space stretching in both forms of justification using Ethiopic Wordspace as an example,  though the stretching rules apply equally to Ethiopic punctuation as well. </p>
       <figure id="fig_justification_centered"> <img src="images/corpus-samples/Alweledim-Page-87-Cropped.png" alt=" " width="800" height="443" />
         <figcaption>Ethiopic justification in centered style (Gubenya, 1973 (1966 EC)).</figcaption>
       </figure>
-      <p>To further illustrate the justification spacing applied to both Ethiopic punctuation and wordspace, <a href="#fig_white_space_round_wordspace"></a> presents white space stretching from the point of view of the symbol’s typographic bounding box. Here the “design white space”, the space between the visible symbol and the box border, is itself stretched as needed to meet line justification: </p>
+      <p>To further illustrate the justification spacing applied to both Ethiopic punctuation and wordspace, <a href="#fig_white_space_round_wordspace"></a> presents blank space stretching from the point of view of the symbol’s typographic bounding box. Here the “design blank space”, the space between the visible symbol and the box border, is itself stretched as needed to meet line justification: </p>
       <figure id="fig_white_space_round_wordspace"> <img src="images/white_space_round_wordspace.png" alt=" " />
-        <figcaption> Depiction of white space around Ethiopic wordspace for three modes of text justification.</figcaption>
+        <figcaption> Depiction of blank space around Ethiopic wordspace for three modes of text justification.</figcaption>
       </figure>
       <div class="issues">
         <p>Issues/Questions:</p>
@@ -915,8 +915,8 @@
 
     <section id="shorcomings_in_electronic_typesetting">
       <h5>Shortcomings Found in Electronic Typesetting Systems</h5>
-      <p>To date, computer software that typesets text has applied justification rules for white space stretching  that were designed to meet publishing requirements  in the Western world.  When the same rules are  applied to Ethiopic text, the results are unsatisfactory as they do not meet user expectations. Largely  responsible for the formatting dissonance when Western justification is applied to Ethiopic text, is the  absence of a white space symbol in the writing system. There is no explicit white space symbol (in classic  Ethiopic writing) to be “stretched”.</p>
-       <p>Formatting algorithms will then process <span class="uname">U+1361 ETHIOPIC WORDSPACE</span> [፡] as a punctuation symbol where word enclosing rules, rather than word spacing rules, will be applied.  While still stretchable, “white space” in the Ethiopic wordspace is implicit rather than explicit.  For a complete solution, software will ultimately need to be enhanced to stretch implicit space as required.  Reclassifying the Ethiopic wordspace as a “Zs” symbol is expected to help alleviate justification issues and clears the way for software firms to implement comprehensive support for Ethiopic justification. Since the Ethiopic wordspace interferes with justification in present day software, authors may opt not to use it or may “pad” wordspace and Ethiopic punctuation with explicit white space to produce the desired justification style (i.e. <a href="#justification_with_word_bound_wordspace">Word Bound</a> or <a href="justification_with_centered_wordspace">Centered</a>). To properly render text formatted in this way, future “wordspace aware” software, should elide spaces bordering Ethiopic wordspace and punctuation when producing justified text.</p>
+      <p>To date, computer software that typesets text has applied justification rules for blank space stretching that were designed to meet publishing requirements in the Western world. When the same rules are applied to Ethiopic text, the results are unsatisfactory as they do not meet user expectations. Largely responsible for the formatting dissonance when Western justification is applied to Ethiopic text, is the absence of a white space symbol in the writing system. There is no explicit white space symbol (in classic Ethiopic writing) to be “stretched”.</p>
+       <p>Formatting algorithms will then process <span class="uname">U+1361 ETHIOPIC WORDSPACE</span> [፡] as a punctuation symbol where word enclosing rules, rather than word spacing rules, will be applied. While still stretchable, “white space” in the Ethiopic wordspace is implicit rather than explicit. For a complete solution, software will ultimately need to be enhanced to stretch implicit space as required. Reclassifying the Ethiopic wordspace as a “Zs” symbol is expected to help alleviate justification issues and clears the way for software firms to implement comprehensive support for Ethiopic justification. Since the Ethiopic wordspace interferes with justification in present day software, authors may opt not to use it or may “pad” wordspace and Ethiopic punctuation with explicit white space to produce the desired justification style (i.e. <a href="#justification_with_word_bound_wordspace">Word Bound</a> or <a href="justification_with_centered_wordspace">Centered</a>). To properly render text formatted in this way, future “wordspace aware” software, should elide spaces bordering Ethiopic wordspace and punctuation when producing justified text.</p>
       <p>The following samples depict formatting of Kidane Wolde Kifle’s seminal work <cite>Maṣḥafa Sawāsew</cite> with a popular word processor (Kifle, 1955 (1948 EC)) under the limitations of Western spacing rules justification.</p>
       <figure> <img src="images/corpus-samples/KWK-Page-65-Cropped.png" alt=" " width="800" height="297" />
         <figcaption>Full Justification Sample from Maṣḥafa Sawāsew, Page 65 (Kifle, 1955 (1948 EC))</figcaption>
@@ -927,7 +927,7 @@
       <figure> <img src="images/justification_sample_with_spaces.png" alt=" " width="806"/>
         <figcaption>The sample from the earlier figure  with space (U+0020) replacing Ethiopic wordspace. Space characters  have additionally  been added following Ethiopic punctuation. </figcaption>
       </figure>
-      <p>In digital documents such as in web pages and eBooks, it is recommended that the appearance of either <span class="uname">U+0020 SPACE</span> [ ] or <span class="uname">U+1361 ETHIOPIC WORDSPACE</span> [፡] be configurable as a user preference.  An easy to access “space” toggle button would enhance a viewing application’s usability.</p>
+      <p>In digital documents such as in web pages and eBooks, it is recommended that the appearance of either <span class="uname">U+0020 SPACE</span> [ ] or <span class="uname">U+1361 ETHIOPIC WORDSPACE</span> [፡] be configurable as a user preference. An easy to access “space” toggle button would enhance a viewing application’s usability.</p>
         </section>
     </section>
 
