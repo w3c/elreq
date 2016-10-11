@@ -384,7 +384,7 @@
     <section id="wordspace_in_comma_context">
       <h4>Ethiopic Wordspace in the Context of Comma</h4>
       <p>In recent decades some communities have adopted a practice of employing the wordspace symbol as a comma when <span class="uname">U+0020 SPACE</span> [ ] is used as the word separator. The interpretation of the symbol is then dependent on the context of the writing convention in use by the author. Accordingly, an application user setting could be offered to set the symbol context.</p>
-      <p>An alternative view point on this practice is that <span class="uname">U+1363 ETHIOPIC COMMA [<span lang="am">፣</span>] is in fact in use by these user communities; however its glyph has decayed whereby the line segment is lost and so it visually coincides with <span class="uname">U+1361 ETHIOPIC WORDSPACE</span> [<span lang="am">፡</span>].  Under this perspective, a simple solution would be modify an Ethiopic font for these users (perhaps adding an alternative glyph in an OpenType stylistic set) where the Ethiopic comma character address and semantics remain intact though the visual form has been tailored to meet aesthetic needs. </p>
+      <p>An alternative view point on this practice is that <span class="uname">U+1363 ETHIOPIC COMMA</span> [<span lang="am">፣</span>] is in fact in use by these user communities; however its glyph has decayed whereby the line segment is lost and so it visually coincides with <span class="uname">U+1361 ETHIOPIC WORDSPACE</span> [<span lang="am">፡</span>].  Under this perspective, a simple solution would be modify an Ethiopic font for these users (perhaps adding an alternative glyph in an OpenType stylistic set) where the Ethiopic comma character address and semantics remain intact though the visual form has been tailored to meet aesthetic needs. </p>
       <figure> <img src="images/corpus-samples/Nebiy-Mohammed-Page-35-Cropped.png" alt=" " width="800" height="540"/>
         <figcaption>Ethiopic Wordspace in the context of comma (Itedalewe, 1987 (1979 EC))</figcaption>
       </figure>
@@ -500,7 +500,7 @@
       <p><span style="text-decoration: underline;"><strong>Wordspace to Space Transformation Rules</strong></span></p>
       <ol>
         <li>A sequence of more than two worspaces is not converted as the author’s intent is indeterminate.</li>
-        <li>A sequence of exactly two worspaces is converted to an ETHIOPIC FULLSTOP (U+1362).<br/><em>Note: This conversion is suggested as an auto-correct feature.</em></li>
+        <li>A sequence of exactly two worspaces is converted to an <span class="uname">ETHIOPIC FULLSTOP</span> (U+1362).<br/><em>Note: This conversion is suggested as an auto-correct feature.</em></li>
         <li>A sequence of exactly one wordspace is convert to space.</li>
         <li>A wordspace at the end of a line may be removed.</li>
         <!--
@@ -530,7 +530,7 @@
         <p>Issues/Questions:</p>
         <ol>
           <li>What do stakeholders feel should be the default style (fixed, floating)?</li>
-          <li>The same rules apply to the ETHIOPIC COMBINING VOWEL LENGTH MARK (U+135E) and ETHIOPIC COMBINING GEMINATION AND VOWEL LENGTH MARK (U+135D). Stakeholders here (current or past) should be identified.</li>
+          <li>The same rules apply to the <span class="uname">ETHIOPIC COMBINING VOWEL LENGTH MARK</span> (U+135E) and <span class="uname">ETHIOPIC COMBINING GEMINATION AND VOWEL LENGTH MARK</span> (U+135D). Stakeholders here (current or past) should be identified.</li>
           <li>OpenType shaping logic may be sufficient to handle the issue.  Thus a specification here might only be utilized by font.</li>
           <li>Note that the same "fixed-vs-floating" question applies to superscript text relative to base text.</li>
         </ol>
@@ -872,7 +872,7 @@
     <section id="justification_with_word_bound_wordspace">
       <h5>Justification with Word Bound Wordspace and Punctuation</h5>
       <p>In keeping with line justification for Latin script, the non-printed or “blank space” (space and gaps) between words is treated as stretchable. The width of the space symbol itself will be elongated to some aesthetic width value that may vary from space symbol to space symbol across a printed line. In Ethiopic justification, the blank space between the Ethiopic word separator and the words it separates is likewise allowed to stretch. This stretching of blank space may be either symmetrical (“centered”) or asymmetrical but in the latter case space stretching is always between the right side of the separator and the following word –referred to here as “word bound”. </p>
-      <p>In  “word bound”  justification  the  word  separator,   which  may  be  either  a  punctuation  symbol  or <span class="uname">U+1361   ETHIOPIC WORDSPACE</span> [<span lang="am">፡</span>], appears to adhere to the word to the left as if it were its final character. Figures <a href="#justification_word_bound"></a> and <a href="#justification_in_historia_aethiopica"></a> both illustrate the word bound style.</p>
+      <p>In  “word bound”  justification  the  word  separator,   which  may  be  either  a  punctuation  symbol  or <span class="uname">U+1361 ETHIOPIC WORDSPACE</span> [<span lang="am">፡</span>], appears to adhere to the word to the left as if it were its final character. Figures <a href="#justification_word_bound"></a> and <a href="#justification_in_historia_aethiopica"></a> both illustrate the word bound style.</p>
       <figure id="justification_word_bound"> <img src="images/corpus-samples/Ografi-Page-35-Cropped.png" alt=" " width="800" height="223" />
         <figcaption>Ethiopic justification in word bound style (Erikson, 1921 (1913 EC))</figcaption>
       </figure>
@@ -990,7 +990,7 @@
     <section id="counter_suffix">
       <h4>Ordered List Counter Suffix</h4>
       <p>In Ethiopic ordered lists a number of symbols are used for the counter suffix.
-         For example: "/" , "፦" , "." , ")" and even "፡" (Ethiopic Wordspace).</p>
+         For example: "/" , "<span lang="am">፦</span>" , "." , ")" and even "፡" (Ethiopic Wordspace).</p>
       <div class="issues">
         <p>Issues/Questions:</p>
         <ol>
@@ -1073,10 +1073,8 @@
               <th>Ge’ez</th>
               <th>Amharic</th>
               <th>Blin</th>
-              <th>Tigrinya<br/>
-            (Eritrean)</th>
-              <th>Tigrinya<br/>
-            (Ethiopian)</th>
+              <th>Tigrinya<br/>(Eritrean)</th>
+              <th>Tigrinya<br/>(Ethiopian)</th>
             </tr>
             <tr style="padding-left:0px; vertical-align: top;">
               <td><!-- Ge’ez -->
@@ -1321,42 +1319,41 @@
 }
 </pre>
       </div>
-          <div class="issues">
+-->
+      <div class="issues">
         <p>Issues/Questions:</p>
         <ol>
-              <li>ቨ appears to be equally included and omitted in ሀለሐመ  lists. Stakeholders should be resolve to include or exclude it, or define two list styles (with and without ቨ).</li>
-              <li>How is end of sequence handled in ሀለሐመ  lists?
+          <li><span lang="am">ቨ</span> appears to be equally included and omitted in ሀለሐመ  lists. Stakeholders should be resolve to include or exclude it, or define two list styles (with and without ቨ).</li>
+          <li>How is end of sequence handled in <span lang="am">ሀለሐመ</span>  lists?
             <ol type="a">
-                  <li>Sequence as radix, e.g.: ... ፈ ... ፐ ... ሀሀ ... ሀለ ...</li>
-                  <li>Columnar radix, e.g.: ... ፈ ... ፐ ... ሀሁ ... ሀሉ ...</li>
-                  <li>Wrap to next column, e.g.: ... ፈ ... ፐ ... ሁ ... ሉ ...</li>
-                  <li>With any approach, how is the end of matrix handled?</li>
-                </ol>
-          </li>
+              <li>Sequence as radix, e.g.: <span lang="am">... ፈ ... ፐ ... ሀሀ ... ሀለ ...</span></li>
+              <li>Columnar radix, e.g.: <span lang="am">... ፈ ... ፐ ... ሀሁ ... ሀሉ ...</span></li>
+              <li>Wrap to next column, e.g.: <span lang="am">... ፈ ... ፐ ... ሁ ... ሉ ...</span></li>
+              <li>With any approach, how is the end of matrix handled?</li>
             </ol>
+          </li>
+        </ol>
       </div>
--->
     </section>
+
     <section id="አበገደ_lists">
-          <h4>Abegede (አበገደ) Lists</h4>
-          <p>The አበገደ ordering of the Ethiopic syllabary is an alignment with the Coptic and Greek alphabets possibly to
-        facilitate interdenominational communication or for the transfer of gematria practices.
-        The ordering is used today largely for pedagogical purposes and has been used by some authors for the collation of
-        entire works such as dictionaries. More often authors will apply the ordering for list orders.</p>
-          <p>The አበገደ ordering is potentially desirable to any language using the Ethiopic syllabary.
-        The ordering is less likely to be found in the writing practices of languages that have a written tradition of under a hundred years.
-        The language specific orders shown here are only those found utilized in corpus.</p>
-          <table>
+      <h4>Abegede (<span lang="am">አበገደ</span>) Lists</h4>
+      <p>The <span lang="am">አበገደ</span> ordering of the Ethiopic syllabary is an alignment with the Coptic and Greek alphabets possibly to
+         facilitate interdenominational communication or for the transfer of gematria practices.
+         The ordering is used today largely for pedagogical purposes and has been used by some authors for the collation of
+         entire works such as dictionaries. More often authors will apply the ordering for list orders.</p>
+      <p>The አበገደ ordering is potentially desirable to any language using the Ethiopic syllabary.
+         The ordering is less likely to be found in the writing practices of languages that have a written tradition of under a hundred years.
+         The language specific orders shown here are only those found utilized in corpus.</p>
+      <table>
         <tr>
-              <th>Ge’ez</th>
-              <th>Amharic</th>
-              <th>Tigrinya<br/>
-            (Eritrean)</th>
-              <th>Tigrinya<br/>
-            (Ethiopian)</th>
-            </tr>
+          <th>Ge’ez</th>
+          <th>Amharic</th>
+          <th>Tigrinya<br/>(Eritrean)</th>
+          <th>Tigrinya<br/>(Ethiopian)</th>
+        </tr>
         <tr style="padding-left:0px; vertical-align:top;">
-              <td><!-- Ge’ez -->
+          <td><!-- Ge’ez -->
             
             <ul lang="am" style="list-style-type:none; padding-left:0px; list-style-type: none;
         list-style-position:inside;
@@ -1552,12 +1549,12 @@
       <div class="issues">
         <p>Issues/Questions:</p>
         <ol>
-              <li>ቨ appears to be equally included and omitted in አበገደ lists. Stakeholders should be resolve to include or exclude it, or define two list styles (with and without ቨ).</li>
+              <li><span lang="am">ቨ</span> appears to be equally included and omitted in አበገደ lists. Stakeholders should be resolve to include or exclude it, or define two list styles (with and without ቨ).</li>
               <li>How is end of sequence handled in አበገደ lists?
             <ol type="a">
-                  <li>Sequence as radix, e.g.: ... ጰ ... ፐ ... አአ ... አበ ...</li>
-                  <li>Columnar radix, e.g.: ... ጰ ... ፐ ... አቡ ... አጉ ...</li>
-                  <li>Wrap to next column, e.g.: ... ጰ ... ፐ ... ቡ ... ጉ ...</li>
+                  <li>Sequence as radix, e.g.: <span lang="am">... ጰ ... ፐ ... አአ ... አበ ...</span></li>
+                  <li>Columnar radix, e.g.: <span lang="am">... ጰ ... ፐ ... አቡ ... አጉ ...</span></li>
+                  <li>Wrap to next column, e.g.: <span lang="am">... ጰ ... ፐ ... ቡ ... ጉ ...</span></li>
                   <li>With any approach, how is the end of matrix handled?</li>
                 </ol>
           </li>
