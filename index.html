@@ -25,9 +25,9 @@
           // editors, add as many as you like
           // only "name" is required
           editors:  [
-              { name: "Daniel Yacob", mailto: "dmekonnen@topquadrant.com  ",
-                company: "TopQuadrant" },
-			     ],
+              { name: "Daniel Yacob", mailto: "dmekonnen@topquadrant.com  ", company: "TopQuadrant", w3cid: 81827 },
+              { name: "Richard Ishida", mailto: "ishida@w3.org  ", company: "W3C", w3cid: 3439 },
+			  ],
          
 
           wg:           "Internationalization Working Group",
@@ -2061,5 +2061,15 @@
       </dd>
     </dl>
   </section>
+  
+  // SCRIPT TO COLLECT DATA FOR ECHIDNA PUBLISHING
+  <!--script>
+  var items = document.querySelectorAll('img')
+  var str = ''
+  for (var i=0;i<items.length;i++) {
+	if (items[i].src) str += items[i].src + '\n'
+  	}
+	alert( str )
+  </script-->
 </body>
 </html>
