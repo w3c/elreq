@@ -222,7 +222,7 @@
        applied to any punctuation and in several different styles.  However, the bi-chromatic forms do not change the syntactic role of a given
        punctuation.  In the Modern era, a third of the punctuation marks: <span lang="am">፧</span>, <span lang="am">፨</span>, and <span lang="am">፠</span> have largely fallen into disuse while a number of punctuation
        marks from Western practices have been adopted. Bi-chromatic punctuation is now reserved for spiritual materials and remains a calligraphic practice.</p>
-    <p>Ethiopic punctuation segments text and is non-encompassing. 
+    <p>Ethiopic punctuation segments text and is non-enclosing. 
        The Ethiopic word separator, labeled “Ethiopic Wordspace” in the Unicode standard, is given special attention in this section as follows more
        complex rules of interaction with other punctuation as well as justification.  Ethiopic punctuation is often aligned with similar English
        punctuation though these associations must be understood as approximate.  Ethiopic fullstop and wordspace are highly regular in their application,
@@ -332,7 +332,7 @@
       </tbody>
     </table>
 
-    <p>Adopted into Ethiopic writing practices are encompassing punctuation such as parenthesis, brackets, single and double quotation marks and guillemets.
+    <p>Adopted into Ethiopic writing practices are enclosing punctuation such as parenthesis, brackets, single and double quotation marks and guillemets.
        Expressive punctuation such as question mark, exclaimation point, inverted exclaimation mark, and ellipsis are also incorporated into Ethiopic practices. 
        Additional foreign symbols that denote currency, time, mathematics, or communicate with Internet protocols (e.g. "@" , "://") have also
        been adopted as over the last century as international communication grew.</p>
@@ -421,9 +421,9 @@
 
     <section id="optical_balancing">
       <h4>Optical Balancing</h4>
-      <p>Foreign language words or phrases are regularly found inline within a paragraph of Ethiopic text, often enclosed within
-         encompassing punctuation such as brackets and quotation marks (e.g. []()""''«»‹›).  This practice is most often observed in
-         news articles on international topics.  The weight of the encompassing punctuation may found as matching either the Ethiopic or
+      <p>Foreign language words or phrases are regularly found inline within a paragraph of Ethiopic text, often bounded within
+         enclosing punctuation such as brackets and quotation marks (e.g. []()""''«»‹›).  This practice is most often observed in
+         news articles on international topics.  The weight of the enclosing punctuation may found as matching either the Ethiopic or
          Latin weight.  The preference of stakeholders must be determined here. Comparative samples follow:</p>
       <figure> <img src="images/Punctuation-At-Latin-Boundary-Latin-Guillemets.png" alt=" " />
         <figcaption>Latin text enclosed with Latin weight guillemets.</figcaption>
@@ -489,18 +489,17 @@
         <li>White space symbols other than space (U+0020) are not processed. <span  class="issues">Issue: how should non-breaking-space be handled?</span></li>
         <li>Space(s) at the start of a line are assumed to be there for positioning and are not processed.</li>
         <li>A sequence of one or more spaces is treated as a single space.</li>
-        <li>A space is substituted for wordspace when bounded by letters, or between a letter and number.</li>
-        <li>A wordspace may be added before a right-side enclosing punctuation as per the convention applied in <a href="#ethiopic_wordspace_at_latin_boundaries">Ethiopic Wordspace Alongside Other Punctuation and Line Breaks</a>.</li>
-        <li>A space is substituted for wordspace on the outside of an enclosing punctuation as per the convention applied in <a href="#ethiopic_wordspace_at_latin_boundaries">Ethiopic Wordspace Alongside Other Punctuation and Line Breaks</a>.</li>
-        <li>A space next to non-encompasing punctuation is removed.</li>
-        <li>Space(s) before or after quotation marks are removed.</li>
+        <li>Space(s) are substituted for wordspace when bounded by letters, or between a letter and number.</li>
+        <li>Space(s) are substituted for wordspace before or after enclosing punctuation as per the convention applied in <a href="#ethiopic_wordspace_at_latin_boundaries">Ethiopic Wordspace Alongside Other Punctuation and Line Breaks</a>.</li>
+        <li>Space(s) before or after non-enclosing punctuation are removed.</li>
+        <!-- li>Space(s) before or after quotation marks are removed.</li  I don't think a special rule is needed for quotation marks. -->
         <li>Space(s) bounded by non-Ethiopic numbers are not processed.</li>
         <li>A wordspace will be appended to the end of line (a line ending with a hard return) that does not end with punctuation.</li>
       </ol>
       <p><span style="text-decoration: underline;"><strong>Wordspace to Space Transformation Rules</strong></span></p>
       <ol>
-        <li>A sequence of more than two worspaces is not converted as the author’s intent is indeterminate.</li>
-        <li>A sequence of exactly two worspaces is converted to an <span class="uname">ETHIOPIC FULLSTOP</span> (U+1362).<br/><em>Note: This conversion is suggested as an auto-correct feature.</em></li>
+        <li>A sequence of more than two wordspaces is not converted as the author’s intent is indeterminate.</li>
+        <li>A sequence of exactly two wordspaces is converted to an <span class="uname">ETHIOPIC FULLSTOP</span> (U+1362).<br/><em>Note: This conversion is suggested as an auto-correct feature.</em></li>
         <li>A sequence of exactly one wordspace is convert to space.</li>
         <li>A wordspace at the end of a line may be removed.</li>
         <!--
@@ -511,7 +510,7 @@
 -->
       </ol>
       <p>An additional wordspace conversion rule that is independent of the above space-wordspace substitution rules: Very commonly in Ethiopic documents
-         a sequence of two worspaces are found and may be substituted for ethiopic fullstop. This may be considered a defect correction rule.</p>
+         a sequence of two wordspaces are found and may be substituted for ethiopic fullstop. This may be considered a defect correction rule.</p>
       <p>Note that hyphenation is not required when wordspace is present, words split anywhere, would stakeholders still desire the hyphen nonetheless?</p>
     </section>
 
