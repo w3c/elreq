@@ -905,7 +905,6 @@
        </ol>
       </div>
     </section>
-       
 
     <section id="shorcomings_in_electronic_typesetting">
       <h5>Shortcomings Found in Electronic Typesetting Systems</h5>
@@ -1604,11 +1603,29 @@
 
     <section id="h_preface_page_numbering">
     <h3>Preface Page Numbering</h3>
-    <p><em>TBD: Note the practice of using two numeral systems for page numbering in books.  For example in preface paging Ethiopic numerals may be used in documents where page numbers use western numerals.  This is analagous to the practice in western literature of using Roman numerals in preface numbering and western numerals afterwards. A general statement should be made in this document that Ethiopic Numerals should Replace Roman Numerals where the later is a default. Additionally, note Desta Tekle Wold's <span lang="am">አበገደ</span> based preface numbering in "<span lang="am">ዐዲስ፡ያማርኛ፡መዝገበ፡ቃላት።</span>".</em></p>
+    <p>The first numbered page in Ethiopic literature will generally be seen on the <span lang="am">መቅድም</span> section. When a <span lang="am">መቅድም</span> is not present,
+       numbering is expected to begin at the <span lang="am">መግቢያ</span>. The prevailing Modern Ethiopic practice is to begin counting pages from the inner cover page (this
+       is a matter of perception, by some views the outer cover is the first page and the inner cover, which is generally empty, is not counted). Thus the first printed
+       number appearing at either the <span lang="am">መቅድም</span> or <span lang="am">መግቢያ</span> is not "1" (or "<span lang="am">፩</span>") but the physical page count up to
+       this point (for example "4" or "5"). Most often the page number itself will appear in the center footer position.</p>
+    <p>Increasingly, modern authors and publishers are adding additional front matter sections (see <a href="#h_document_structure">Document Structure</a>) and moving "page 1"
+       out to either the <span lang="am">መቅድም</span> or <span lang="am">መግቢያ</span>. Prior to "page 1" preceding pages may be numbered in one of two ways.  In the first
+       convention where pages are numbered with Ethiopic numerals, the preface numbering may be alphabetic in the <span lang="am">ሀለሐመ</span> counting system or in the
+       <span lang="am">አበገደ</span> sequence (for example in Deste Tekle Wold's "<span lang="am">ዐዲስ፡ያማርኛ፡መዝገበ፡ቃላት።</span>").</p>
+    <p>In the second convetion where pages are numbers with Western numerals, the preface page numbering will apply Ethiopic numerals.  Under both conventions the preface page
+       number begins on the first printed page after the cover.</p>
+      <div class="issues">
+        <p>Issues/Questions:</p>
+          <ol>
+            <li>Are the above descriptions accurate?</li>
+            <li>Are there any other page numbering conventions that should be supported by software?</li>
+          </ol>
+        </div>
     </section>
 
     <section id="h_document_structure">
       <h3>Document Structure</h3>
+      <p>[TBD: Introduce this section.]</p>
       <p lang="am">መጽሐፍ<br/>
           &nbsp;&nbsp;አርእስት<br/>
           &nbsp;&nbsp;መታሰቢያ<br/>
@@ -1640,56 +1657,55 @@
             <li>Do any sections require special formatting?</li>
           </ol>
         </div>
+    </section>
 
-  </section>
 
-
-  <section id="section_headings">
-    <h3>Section Headings</h3>
-    <p><em>[Consider if all or part of this section should be integrated with <a href="#html5-alignment"></a>]</em></p>
-    <p>The default section headings stylistic changes (size, weight) applied to Roman script in word processors and web browsers are generally applicable to Ethiopic literature.  In classic and modern layout practices applied to books and magazines, the document and chapter titles will be centered. </p>
-    <p>The use of underlining and color changes are not recommended for Ethiopic headings as they are not a traditional practice.</p>
-    <p>The following presents the six heading levels defined in the HTML standard and their applicable context in Ethiopic literature.  Samples are provided here for review and consideration of the default settings for letter sizing and line spacing.</p>
-    <dl>
-          <dt>Heading 1</dt>
-          <dd>To be applied for document titles (usually centered). Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h1.html</a></dd>
-          <dt>Heading 2</dt>
-          <dd>To be applied for chapter titles (usually centered). Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h2.html</a></dd>
-          <dt>Heading 3</dt>
-          <dd>To be applied for chapter section titles. Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h3.html</a></dd>
-          <dt>Heading 4</dt>
-          <dd>To be applied for chapter sub-section titles. Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h4.html</a></dd>
-          <dt>Heading 5</dt>
-          <dd>To be applied for chapter sub-sub-section titles. Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h5.html</a></dd>
-          <dt>Heading 6</dt>
-          <dd>To be applied for chapter sub-sub-sub-section titles. Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h6.html</a></dd>
-        </dl>
-    <p>Relative sizes for comparison: <span lang="am" style="display: inline; color: black; font-size: 2em; font-weight: bold;">አርእስት</span
+    <section id="section_headings">
+      <h3>Section Headings</h3>
+      <p><em>[Consider if all or part of this section should be integrated with <a href="#html5-alignment"></a>]</em></p>
+      <p>The default section headings stylistic changes (size, weight) applied to Roman script in word processors and web browsers are generally applicable to Ethiopic literature.  In classic and modern layout practices applied to books and magazines, the document and chapter titles will be centered. </p>
+      <p>The use of underlining and color changes are not recommended for Ethiopic headings as they are not a traditional practice.</p>
+      <p>The following presents the six heading levels defined in the HTML standard and their applicable context in Ethiopic literature.  Samples are provided here for review and consideration of the default settings for letter sizing and line spacing.</p>
+      <dl>
+        <dt>Heading 1</dt>
+        <dd>To be applied for document titles (usually centered). Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h1.html</a></dd>
+        <dt>Heading 2</dt>
+        <dd>To be applied for chapter titles (usually centered). Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h2.html</a></dd>
+        <dt>Heading 3</dt>
+        <dd>To be applied for chapter section titles. Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h3.html</a></dd>
+        <dt>Heading 4</dt>
+        <dd>To be applied for chapter sub-section titles. Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h4.html</a></dd>
+        <dt>Heading 5</dt>
+        <dd>To be applied for chapter sub-sub-section titles. Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h5.html</a></dd>
+        <dt>Heading 6</dt>
+        <dd>To be applied for chapter sub-sub-sub-section titles. Default display properties: <a href="https://www.w3.org/TR/html-markup/h1.html#h1">https://www.w3.org/TR/html-markup/h6.html</a></dd>
+      </dl>
+      <p>Relative sizes for comparison: <span lang="am" style="display: inline; color: black; font-size: 2em; font-weight: bold;">አርእስት</span
       ><span lang="am" style="display: inline; color: black; font-size: 1.5em; font-weight: bold;">አርእስት</span
       ><span lang="am" style="display: inline; color: black; font-size: 1.17em; font-weight: bold;">አርእስት</span
       ><span lang="am" style="display: inline; color: black; font-weight: bold;">አርእስት</span
       ><span lang="am" style="display: inline; color: black; font-size: .83em; font-weight: bold;">አርእስት</span
       ><span lang="am" style="display: inline; color: black; font-size: .67em; font-weight: bold;">አርእስት</span></p>
-    <p>The following illustrates vertical spacing of the heading sizes. Heading and paragraph blocks are highlighted to illuminate spacing boundaries.</p>
-    <h1 lang="am" style="text-align: center; display: block; color: black; font-size: 2em; font-weight: bold; background-color: #99ccff">አርእስት 1</h1>
-    <p lang="am" style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
-    <h2 lang="am" style="text-align: center; display: block; color: black; font-size: 1.5em; font-weight: bold; background-color: #99ccff">አርእስት 2</h2>
-    <p lang="am" style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
-    <h3 lang="am" style="text-align: center; display: block; color: black; font-size: 1.17em; font-weight: bold; background-color: #99ccff">አርእስት 3</h3>
-    <p lang="am" style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
-    <h4 lang="am" style="text-align: center; display: block; color: black; font-weight: bold; background-color: #99ccff">አርእስት 4</h4>
-    <p lang="am" style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
-    <h5 lang="am" style="text-align: center; display: block; color: black; font-size: .83em; font-weight: bold; background-color: #99ccff">አርእስት 5</h5>
-    <p lang="am" style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
-    <h6 lang="am" style="text-align: center; display: block; color: black; font-size: .67em; font-weight: bold; background-color: #99ccff">አርእስት 6</h6>
-    <p lang="am" style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
-    <div class="issues">
-      <p>Issues/Questions:</p>
-      <ol>
-        <li>Should heading sizes 1 and 2 be centered by default, or should this be left to custom stylesheet?</li>
-        <li>What percentage emboldened when a bold designed typeface is not available?</li>
-      </ol>
-    </div>
+      <p>The following illustrates vertical spacing of the heading sizes. Heading and paragraph blocks are highlighted to illuminate spacing boundaries.</p>
+      <h1 lang="am" style="text-align: center; display: block; color: black; font-size: 2em; font-weight: bold; background-color: #99ccff">አርእስት 1</h1>
+      <p lang="am" style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
+      <h2 lang="am" style="text-align: center; display: block; color: black; font-size: 1.5em; font-weight: bold; background-color: #99ccff">አርእስት 2</h2>
+      <p lang="am" style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
+      <h3 lang="am" style="text-align: center; display: block; color: black; font-size: 1.17em; font-weight: bold; background-color: #99ccff">አርእስት 3</h3>
+      <p lang="am" style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
+      <h4 lang="am" style="text-align: center; display: block; color: black; font-weight: bold; background-color: #99ccff">አርእስት 4</h4>
+      <p lang="am" style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
+      <h5 lang="am" style="text-align: center; display: block; color: black; font-size: .83em; font-weight: bold; background-color: #99ccff">አርእስት 5</h5>
+      <p lang="am" style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
+      <h6 lang="am" style="text-align: center; display: block; color: black; font-size: .67em; font-weight: bold; background-color: #99ccff">አርእስት 6</h6>
+      <p lang="am" style="background-color: #ccffcc">ይህን መጽሐፍ ለመጻፍ ያሰብኩበት ምክንያት የሮማ ልዑካን ባጼ ልብነ ድንግል በሺ፭፻፲፯ ዓ.ም ...</p>
+      <div class="issues">
+        <p>Issues/Questions:</p>
+        <ol>
+          <li>Should heading sizes 1 and 2 be centered by default, or should this be left to custom stylesheet?</li>
+          <li>What percentage emboldened when a bold designed typeface is not available?</li>
+        </ol>
+      </div>
     </section>
 
     <section id="bibliographic_citation">
@@ -2056,8 +2072,8 @@
     </dl>
   </section>
   
-  // SCRIPT TO COLLECT DATA FOR ECHIDNA PUBLISHING
   <!--script>
+  // SCRIPT TO COLLECT DATA FOR ECHIDNA PUBLISHING
   var items = document.querySelectorAll('img')
   var str = ''
   for (var i=0;i<items.length;i++) {
