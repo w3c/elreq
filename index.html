@@ -27,7 +27,7 @@
 		editors:  [
 			{ name: "Daniel Yacob", mailto: "dmekonnen@topquadrant.com  ", company: "TopQuadrant", w3cid: 81827 },
 			{ name: "Richard Ishida", mailto: "ishida@w3.org  ", company: "W3C", w3cid: 3439 },
-			],
+		],
 		 
 	
 		wg:           "Internationalization Working Group",
@@ -42,13 +42,13 @@
 				value: "repository",
 				href: "https://github.com/w3c/elreq"
 				}
-				]
+			]
 			}
-			],
+		],
 		  
           
 		wgPatentURI:  "https://www.w3.org/2004/01/pp-impl/32113/status",
-		};
+	};
     </script>
     <link rel="stylesheet" href="local.css" type="text/css" />
     <link rel="stylesheet" href="AbyssinicaSIL-webfont-elreq.css" type="text/css">
@@ -586,7 +586,7 @@
       <p><em>Discuss: Do regular rules apply?  One consideration for Ethiopic would be that a newline is not a dependable word boundary
           in the common case where words are split across lines without a hyphen symbol and white space is the default wordspace.
         Word boundaries are known here only by context.</em></p>
-        <p class="issues">Discuss: The special case with wordspace sticking to a word leading to the mouse text selection rule that a following wordspace should be automatically selected with text, analagous to the rule applied to white space. MS Word does this.]</p>
+        <p class="issues">Discuss: The special case with wordspace sticking to a word leading to the mouse text selection rule that a following wordspace should be automatically selected with text, analagous to the rule applied to white space. MS Word does this.</p>
     </section>
 
     <section id="ethiopic_wordspace_format">
@@ -945,8 +945,10 @@
     <section id="bullet_lists">
         <h4>Bullet Lists</h4>
         <p>Bullet lists are utilized regularly in Ethiopic literature. Authors using a computer or typewriter will work with the list marker
-        symbols made available by their software or machine. Many marker, or “bullet”, symbols are accepted for Ethiopic literature though not all
-        will be considered optimal.</p>
+           symbols made available by their software or machine. Many marker, or “bullet”, symbols are accepted for Ethiopic literature though
+           not all will be considered optimal. Some creative writers have even recently applied <span lang="am">፨</span> and <span lang="am">፠</span>
+           (U+1368 <span class="uname">ETHIOPIC PARAGRAPH SEPARATOR</span> and U+1360 <span class="uname">ETHIOPIC SECTION MARK</span> respectively)
+           as list bullets.  The following samples compare common bullet shapes and sizes with example lists:</p>
         <figure id="circle_bullet_size_samples"> <img src="images/circle-bullet-size-samples.png" alt=""/>
           <figcaption>Circle bullet size relative to letter height.</figcaption>
         </figure>
@@ -960,13 +962,15 @@
           <p>Issues/Questions:</p>
           <ol>
             <li>What are the preferred bullet shapes?</li>
+            <li>Should <span lang="am">፨</span> and <span lang="am">፠</span> be available as bullet choices?</li>
             <li>What are the preferred shape sequences in nested lists (e.g. bullet hierarchy)?</li>
             <li>What is bullet height and width relative to letter dimensions?</li>
             <li>What is the default distance of the list item text from the bullet?</li>
             <li>Are lists indented (left  margin)? If so, how much?</li>
             <li>Examples are needed for pre-digital, classical, literature.</li>
             <li>Diamond shaped bullets are found commonly and may represent a desired default.
-            The Unicode standard provides a number of similar diamond shaped symbols. From this set of diamond symbols, those suitable for adorning Ethiopic bullet lists must be determined.
+                The Unicode standard provides a number of similar diamond shaped symbols.
+                From this set of diamond symbols, those suitable for adorning Ethiopic bullet lists must be determined.
             <p style="margin-left: 20px">⬩ (U+2B29)<br/>
                   ◆ (U+25C6)<br/>
                   ⬥ (U+2B25)<br/>
@@ -977,7 +981,7 @@
             <li>Of interest: when are bullet lists first found in Ethiopic writing and in what form?</li>
           </ol>
         </div>
-          <!-- See reference: http://unicode-search.net/unicode-namesearch.pl?term=DIAMOND -->
+        <!-- See reference: http://unicode-search.net/unicode-namesearch.pl?term=DIAMOND -->
     </section>
 
     <section id="counter_suffix">
@@ -1604,7 +1608,7 @@
       <p>The layout and formatting of page and section numbering in Ethiopic practices does not demonstrate a marked difference from Western conventions. 
          Most often the page number itself will appear in the center footer position but may appear in any standard position (header, footer, center or right side).
          Page counting differences do need to be considered.</p>
-      <p>In Ethiopic book publishing, first numbered page will generally be seen on the <span lang="am">መቅድም</span> section. When a <span lang="am">መቅድም</span> is not present,
+      <p>In Ethiopic book publishing, the first numbered page will generally be seen on the <span lang="am">መቅድም</span> section. When a <span lang="am">መቅድም</span> is not present,
          numbering is expected to begin at the <span lang="am">መግቢያ</span>. The prevailing Modern Ethiopic practice is to begin counting pages from the inner cover page (this
          is a matter of perception, by some views the outer cover is the first page and the inner cover, which is generally empty, is not counted). Thus the first printed
          number appearing at either the <span lang="am">መቅድም</span> or <span lang="am">መግቢያ</span> is not "1" (or "<span lang="am">፩</span>") but the physical page count up to
