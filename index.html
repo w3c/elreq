@@ -78,9 +78,9 @@
     <p>This document was created by the W3C Ethiopic Layout Task Force.  The Task Force will discuss many issues and harmonize the requirements from user communities and solutions from technological experts.</p>
     <p>The following types of experts will be involved in the creation of this document:</p>
     <ol>
-      <li>Ethiopic typography experts</li>
-      <li>Experts from the publishing industry representing the spectrum of traditional to modern layout practices</li>
-      <li>Academic experts with a focus on <a href="#term.geez" class="termref">Ge’ez</a> manuscripts and philogy</li>
+      <li>Ethiopic typography experts.</li>
+      <li>Experts from the publishing industry representing the spectrum of traditional to modern layout practices.</li>
+      <li>Academic experts with a focus on <a href="#term.geez" class="termref">Ge’ez</a> manuscripts and philogy.</li>
     </ol>
     <p>The Task Force will conduct a survey of the publishing industry to solicit input and identify the set of in-use layout styles. This document will then represent the normalized results of the industry survey which in turn becomes a basis for its validity and suitability to purpose. In the interim before to the survey results have been compiled and applied to this document, tentative specifications will be given based on the most-probable survey results anticipated from participating experts. <span class="note">Survey Pending</span> notes will appear along side specification sections to denote their status.</p>
   </section>
@@ -156,7 +156,8 @@
       <div class="issues">
         <p>Issues/Questions:</p>
         <ol>
-          <li>What Ethiopic letter should be applied as a height reference point for alignment?</li>
+          <li>Does Z-<span lang="am">ን</span> alignment seem reasonable?</li>
+          <li>If not Z-<span lang="am">ን</span> alignment, what Ethiopic letter should be applied as a height reference point for alignment? Or what other height alignment basis should be used?</li>
           <li>Should height alignment be attempted as per the letter inventory of a target language or for the script as a whole (practical but less optimal)?</li>
           <li>Relative to a Latin uppercase letter, should the height of Ethiopic letters: (a) equal (b) shorter (c) taller?</li>
           <li>Is height alignment an issue with other writing systems?  If so, how is it addressed?</li>
@@ -194,6 +195,7 @@
     </section>
   </section>
 
+
   <section id="sebatbeit_glyph_preferences">
     <h3>Sebatbeit Glyph Preferences</h3>
     <p>The Sebatbeit (aka Sebat Bet) language features a greater number and frequency of labiovelarized letter forms in comparison to the larger
@@ -204,6 +206,14 @@
     <figure id="sebatbeit_glyph_preferences_sample"> <img src="images/Sebatbeit-Glyph-Preferences.png" alt=" " height="477" width="412" />
       <figcaption>Labiovelar leter shape preferences for Sebatbeit (Sebat Bet) literature.</figcaption>
     </figure>
+
+    <div class="issues">
+      <p>Issues/Questions:</p>
+      <ol>
+        <li>Do any parties publishing in Sebatbeit disagree with these letter shapes?</li>
+        <li>Are any other glyph changes known for other languages?</li>
+      </ol>
+    </div>
   </section>
 
 
@@ -331,13 +341,13 @@
        Additional foreign symbols that denote currency, time, mathematics, or communicate with Internet protocols (e.g. "@" , "://") have also
        been adopted as over the last century as international communication grew.</p>
     <p>The ES-781:2002 standard identifies the following inventory of western symbols to be used with Ethiopic:</p>
-    <p style="margin-left: 20px"><code>1234567890 ? ! ¡ . / () [] {} &lt; = &gt; \ # % &amp; _ - + ± × ÷ ‘ ’  “ ” ‹ › « »</code></p>
+    <p style="margin-left: 20px"><code>1234567890 ? ! ¡ . / () [] {} &lt; = &gt; \ # % &amp; _ - + ± × ÷ ‘ ’ “ ” ‹ › « »</code></p>
     <p>Additionally the following punctuation is observed to be used with Ethiopic writing:</p>
     <p style="margin-left: 20px"><code>$ : , € @ …</code></p>
     <p>Inverted exclaimation mark is repurposed and utilized differently than in its Western usage.
        In Ethiopic writing the inverted exclaimation mark is known as “Timirte Slaq” (<span lang="am">ትእምርተ፡ሥላቅ</span>) appears at the end of
        a sentence and will denote sarcasm. All borrowed punctuation is subject to typeface alignment with Ethiopic weights and shapes, an aesthetic
-       enhancement discussed in this section as <a href="#ethiopicized_punctuation">"Ethiopicized Punctuation"</a>.</p>
+       enhancement discussed in this section as <a href="#ethiopicized_punctuation">“Ethiopicized Punctuation”</a>.</p>
   </section>
 
   <section id="ethiopic_comma_usage">
@@ -407,7 +417,8 @@
           <li>Are any symbols from other foreign script (Chinese, Arabic, etc) that should be included?</li>
           <li>What symbols benefit from shape change?</li>
           <li>What symbols benefit from weight change?</li>
-          <li>Noteworthy for layout correction is that an isolated left double guillemet, », is common in tabular text to indicate that the entry above is to be duplicated.</li>
+          <li>Noteworthy for layout correction is that an isolated left double guillemet, », is common in tabular text to indicate that the entry above is to be duplicated. This is a use case
+              where the left double guillemet is not required to be balanced by a right double guillemet.</li>
           <li>Are square "dots" in punctuation preferable over circular?</li>
         </ol>
       </div>
@@ -519,10 +530,9 @@
       <div class="issues">
         <p>Issues/Questions:</p>
         <ol>
-          <li>What do stakeholders feel should be the default style (fixed, floating)?</li>
+          <li>What do stakeholders feel should be the default positioning style (fixed, floating)?</li>
           <li>The same rules apply to the <span class="uname">ETHIOPIC COMBINING VOWEL LENGTH MARK</span> (U+135E) and <span class="uname">ETHIOPIC COMBINING GEMINATION AND VOWEL LENGTH MARK</span> (U+135D). Stakeholders here (current or past) should be identified.</li>
-          <li>OpenType shaping logic may be sufficient to handle the issue.  Thus a specification here might only be utilized by font.</li>
-          <li>Note that the same "fixed-vs-floating" question applies to superscript text relative to base text.</li>
+          <li>OpenType shaping logic may be sufficient to handle the issue.  Thus a specification here might only be utilized by font implementations.</li>
         </ol>
       </div>
     </section>
@@ -654,17 +664,17 @@
 
     <section id="ethiopic_ordinal_notation">
       <h4>Ordinal Notation</h4>
-      <p>An ordinal is formed in Amharic when "<span lang="am">ኛ</span>", and in Tigrinya when "<span lang="ti">ይ</span>", follows a cardinal number.
+      <p>An ordinal is formed in Amharic when “<span lang="am">ኛ</span>”, and in Tigrinya when “<span lang="ti">ይ</span>”, follows a cardinal number.
          The ordinal marker is often, but not always, rendered in superscript form. The superscript practice is most prevalent with ordinals
          in western numerals, but is also applied with Ethiopic numerals.</p>
       <div class="issues">
         <p>Issues/Questions:</p>
         <ol>
-          <li>What letters should be superscripted, and it what contexts? For example, "<span lang="am">ሳ</span>" and "<span lang="am">ብር</span>" may also be superscripted in
+          <li>What letters should be superscripted, and it what contexts? For example, “<span lang="am">ሳ</span>” and “<span lang="am">ብር</span>” may also be superscripted in
               presentation of prices but is not common in print (found mostly in store front advertising).</li>
           <li> Are ordinals always superscripted, or is superscript language or locale specific? Should superscript for ordinals be a setting?</li>
-          <li>An argument goes that superscript of "<span lang="am">ኛ</span>" should not follow an Ethiopic numerals since the counting system is put into a Ge’ez context
-              and Ge’ez literature does not use a superscript.  Yet "<span lang="am">ኛ</span>" is appropriate to Amharic language and is not a letter found in Ge’ez. The class of
+          <li>An argument goes that superscript of “<span lang="am">ኛ</span>” should not follow an Ethiopic numerals since the counting system is put into a Ge’ez context
+              and Ge’ez literature does not use a superscript.  Yet “<span lang="am">ኛ</span>” is appropriate to Amharic language and is not a letter found in Ge’ez. The class of
               literature may be at issue here, such a religious materials.</li>
           <li>What should the height (in percentage) of the superscripted symbol be with respect to the base text?</li>
           <li>How should the superscripted symbol be aligned vertically with the base text?</li>
@@ -756,7 +766,7 @@
         <li>When "." is used as the abbreviation marker, it is sometimes found at the end of the abbreviation.</li>
         <li>Confirm single word abbreviation rule.</li>
         <li>Are mixed abbreviation markers appropriate? Some well established abbreviations apply a "." as the marker, for example
-            "<span lang="am">አዲስ አበባ ዩኒቨርሲቲ</span>" becomes "<span lang="am">አ.አ.ዩ</span>".  This may reflect the chosen convention of the institute.</li>
+            “<span lang="am">አዲስ አበባ ዩኒቨርሲቲ</span>” becomes “<span lang="am">አ.አ.ዩ</span>”.  This may reflect the chosen convention of the institute.</li>
         <li>What symbol is applied for foreign words transcribed into an Ethiopic languages?</li>
         <li>Do copy editors or publishers set a policy for abbreviation, or leave it up to the author to decide?</li>
         <li>Of interest: when are abbreviations first found in Ethiopic writing and in what form?</li>
@@ -1651,6 +1661,7 @@
           &nbsp;&nbsp;አርእስት<br/>
           &nbsp;&nbsp;መታሰቢያ<br/>
           &nbsp;&nbsp;መስታወሻ<br/>
+          &nbsp;&nbsp;መዘክር<br/>
           &nbsp;&nbsp;ምስጋና<br/>
           &nbsp;&nbsp;ማውጫ<br/>
           &nbsp;&nbsp;ቅድመ መቅድም<br/>
@@ -1726,6 +1737,28 @@
         <ol>
           <li>Should heading sizes 1 and 2 be centered by default, or should this be left to custom stylesheet?</li>
           <li>What percentage emboldened when a bold designed typeface is not available?</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="ethiopic_footnotes">
+      <h4>Footnotes &amp; Superscript</h4>
+      <p>Using MicroSoft Word as a reference point, Footnote counters are simple superscripted cardinal numbers.  The superscripted text is "top-aligned" with the reference text.  This alignment
+         style works well the letters of the typeface are fixed height, but may not be visually optimal in a variable height writing sytem. We will apply Z-<span lang="am">ን</span> Alignment
+         to illustrate the difficulty encountered with Ethiopic text.</p>
+      <figure> <img src="images/ZN-Superscript.png" alt=" " />
+        <figcaption>Superscript Top Alignment.</figcaption>
+      </figure>
+      <p>The variable heights of Ethiopic letters introduces the same “fixed-vs-floating” issue with superscript text as discussed in the previous section on the Ethiopic gemination mark.</p>
+      <figure> <img src="images/Superscript-Vertical-Alignment.png" alt=" " />
+        <figcaption>Two superscript styles compared.</figcaption>
+      </figure>
+      <div class="issues">
+        <p>Issues/Questions:</p>
+        <ol>
+          <li>What do stakeholders feel should be the default positioning style (fixed, floating)?</li>
+          <li>What should the relative height be of the superscripted text? The English default is a 7/12ths ratio.</li>
+          <li>Are Ethiopic numerals used for footnote counting?</li>
         </ol>
       </div>
     </section>
