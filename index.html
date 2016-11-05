@@ -356,12 +356,13 @@
               used in Ge’ez writing as a semicolon (is this a modern usage or classic?).
               <span class="uname">U+1364 ETHIOPIC SEMICOLON</span>, <span lang="am">፤</span>, in turn is used as a colon in Eritrean writing (verify).</dd>
         <dt lang="am">፥ - ንዑስ ሠረዝ</dt>
-        <dd><span class="uname">U+1365 ETHIOPIC COLON</span> in contrast to its Unicode name, is never(?) used as a colon in any known Ethiopic practices.
+        <dd><span class="uname">U+1365 ETHIOPIC COLON</span> in contrast to its Unicode name, is never used as a colon in any known Ethiopic practices.
               Rather, it is a classical glyph variant of <span class="uname">U+1364 ETHIOPIC SEMICOLON</span> <span lang="am">(፣)</span>. <span lang="am">፥</span> is the default comma glyph in Ge’ez writing and is the preferred
               comma glyph by some modern writers writing in other languages. <span lang="am">፥</span> is the default comma in most Amharic bibles, likely in keeping with
               the Ge’ez Bible that the Amharic would have been translated from.  Some modern Bible translations into Amharic, as well as other religious
               literature, will use <span lang="am">፣</span> as the default comma in prose but maintain <span lang="am">፥</span> for passage references, e.g. <span lang="am">ማቴ4፥23 , ዮሐ13፥16 ,</span> etc. Given this
-              common usage in religious materials “ecclesiastical comma” is a practical English term for referring to the <span lang="am">፥</span> glyph variant.  Kidane Wolde Kifle and Desta Tekle Wolde note the equivalence of the two commas. </dd>
+              common usage in religious materials “ecclesiastical comma” is a practical English term for referring to the <span lang="am">፥</span> glyph variant. 
+              As mentioned already, writing experts Desta Tekle Wold, Kidane Wolde Kifle, Dereje Gebre, and Tesfaye Shewaye all attest to the equivalence of the two symbols.</dd>
         <dt lang="am">፡ - ንዑስ ነጥብ</dt>
         <dd><span class="uname">U+1361 ETHIOPIC WORDSPACE</span> <span lang="am">(አማ/ ሁለት ነጥብ, ትግ/ ክልተ ነጥቢ)</span> in keeping with Ge’ez heritage, is used as the word separator (i.e. space) in the classical writing practices
               of both Eritrean and Ethiopia.  In modern Eritrean writing practices <span class="uname">ETHIOPIC WORDSPACE</span> will be used in the role of a comma (illustrated in Figure <a href="#ecclesiastical_emphasis_sample"></a>).
@@ -581,7 +582,7 @@
         <p>Issues/Questions:</p>
         <ol>
           <li>How many dots should be in an ellipsis?</li>
-          <li>Which ellipsis form is the preferred as the default?</li>
+          <li>Which ellipsis form is preferred as the default?</li>
           <li>How much spacing between dots is desirable?</li>
           <li>Are square dots preferable over circular?</li>
           <li>What spacing (if any) before and after the dots?</li>
@@ -762,8 +763,14 @@
   <section id="ethiopic_abbreviation_formation">
     <h3>Abbreviation Formation</h3>
     <p>Abbreviations in Ethiopic languages will apply an abbreviation marker ("/" or ".") placed between the first letters of each word in a phrase.
-         Single word abbreviation that applies a right side truncation (vs mid) will apply a "." as the abbreviation maker.
-         In a multi-word abbreviations the last word may remain whole. Two letter words are only abbreviated in a multi-word abbreviation. </p>
+       In a multi-word abbreviations the last word may sometimes remain whole. Abbreviation of a single word will keep the first and final letters of the word separated by slash “/”.
+       Classical literature that uses the Ethiopic Wordspace may not use an abbreviation marker and instead will rely on the Ethiopic Wordspace to separate initial letter abbreviations
+       that will be understood from context: (e.g. <span lang="am">ዓመተ፡ምሕረት፡</span> ⇒ <span lang="am">ዓ፡ም፡</span>).
+       </p>
+    <!-- 
+       Single word abbreviation that applies a right side truncation (vs mid) will apply a "." as the abbreviation maker.
+       In a multi-word abbreviations the last word may remain whole. Two letter words are only abbreviated in a multi-word abbreviation.
+     -->
     <p><strong>Examples:</strong><br/>
        <span style="text-decoration: underline;">Single Word</span><br/>
        <span lang="am" style="margin-left:40px;"> ሚኒስትር ⇒ ሚ/ር</span><br/>
@@ -775,9 +782,9 @@
     <div class="issues">
       <p>Issues/Questions:</p>
       <ol>
-        <li>When "." is used as the abbreviation marker, it is sometimes found at the end of the abbreviation.</li>
+        <li>When “.” is used as the abbreviation marker, it is sometimes found at the end of the abbreviation.</li>
         <li>Confirm single word abbreviation rule.</li>
-        <li>Are mixed abbreviation markers appropriate? Some well established abbreviations apply a "." as the marker, for example
+        <li>Are mixed abbreviation markers appropriate? Some well established abbreviations apply a “.” as the marker, for example
             “<span lang="am">አዲስ አበባ ዩኒቨርሲቲ</span>” becomes “<span lang="am">አ.አ.ዩ</span>”.  This may reflect the chosen convention of the institute.</li>
         <li>What symbol is applied for foreign words transcribed into an Ethiopic languages?</li>
         <li>Do copy editors or publishers set a policy for abbreviation, or leave it up to the author to decide?</li>
@@ -818,7 +825,7 @@
 
      <section id="ethiopic_line_breaking">
        <h3>Line Breaking</h3>
-       <p>Word processors and text readers such as web browsers, eBook devices, etc. will automatically format the sentences of a paragraph over a number of lines as allowable by the available width of the viewing area.  These software systems apply formatting rules that govern where how a line may end and a new line begin.  Line breaking rules for Ethiopic are expressed with rules for how a line may start. A line may start with:</p>
+       <p>Word processors and text readers such as web browsers, eBook devices, etc. will automatically format the sentences of a paragraph over a number of lines as allowable by the available width of the viewing area.  These software systems apply formatting rules that govern where and how a line may end and a new line begin.  Line breaking rules for Ethiopic are expressed with rules for how a line may start. A line may start with:</p>
        <ul>
          <li>A letter.</li>
          <li>A number.</li>
@@ -836,7 +843,7 @@
 
      <section id="ethiopic_hyphenation">
        <h3>Hyphenation</h3>
-       <p>In classical Ethiopic writing the wordspace separator symbol (<span lang="am">፡</span>) negated the need for word hyphenation across a line of text. Accordingly, a word could be split over across a line at any position. When wordspace fell out of favor in modern writing the practice of splitting a word across lines of text continued without change.  The reader would know to mentally reconstruct the word by relying on the knowledge of lexicon and context.  The scanned document samples within this report illustrate word splitting across lines both in the presence of wordspace and without.</p>
+       <p>In classical Ethiopic writing the wordspace separator symbol (<span lang="am">፡</span>) negated the need for word hyphenation across a line of text. Accordingly, a word could be split over across a line at any position. When wordspace fell out of favor in modern writing the practice of splitting a word across lines of text continued without change.  The reader would know to mentally reconstruct a word by relying on knowledge of lexicon and context.  The scanned document samples within this report illustrate word splitting across lines both in the presence of wordspace and without.</p>
        <div class="issues">
          <p>Issues/Questions:</p>
          <ol>
@@ -893,7 +900,7 @@
 
     <section id="justification_with_centered_wordspace">
       <h5>Justification with Centered Wordspace and Punctuation</h5>
-      <p>In the second major form of Ethiopic justification  the blank space around word separators is stretched  equally on  both the left and right sides; giving the appearance of the separator being centered between the words  it divides. <a href="#fig_justification_centered"></a> depicts the blank space stretching in both forms of justification using Ethiopic Wordspace as an example,  though the stretching rules apply equally to Ethiopic punctuation as well. </p>
+      <p>In the second major form of Ethiopic justification the blank space around word separators is stretched equally on both the left and right sides; giving the appearance of the separator being centered between the words it divides. <a href="#fig_justification_centered"></a> depicts the "centered wordspace" justification style, which applies equally for other punctuation.</p>
       <figure id="fig_justification_centered"> <img src="images/corpus-samples/Alweledim-Page-87-Cropped.png" alt=" " width="800" height="443" />
         <figcaption>Ethiopic justification in centered style (Gubenya, 1973 (1966 EC)).</figcaption>
       </figure>
@@ -912,7 +919,7 @@
 
     <section id="spacing_threshold_following_full_stop">
       <h5>Spacing Threshold Following Full Stop</h5>
-      <p>In the regular mode of Ethiopic justification (both forms) <span class="uname">U+1362 ETHIOPIC FULL STOP</span> [<span lang="am">።</span>] will be treated equally with all other punctuation symbols.  In a second mode, the Ethiopic full stop will have special spacing rules applied to it whereby more separation space is allowed following the symbol and the start of the next word.  In a sense, the right side space of the full stop is “more elastic” than in the regular mode.  The elasticity rule and the visual effect are similar to that of the final line of a fully justified paragraph in Western text.  When the final line of a paragraph of Latin script crosses a certain horizontal threshold, the line will become fully justified. Below that threshold the line will appear left aligned.  The same rule appears to be applied to the Ethiopic full stop but on any line of the paragraph.  An illustration of this sub-mode is depicted in the following: </p>
+      <p>In the regular mode of Ethiopic justification (both forms), <span class="uname">U+1362 ETHIOPIC FULL STOP</span> [<span lang="am">።</span>], will be treated equally with all other punctuation symbols.  In a second mode, the Ethiopic full stop will have special spacing rules applied to it whereby more separation space is allowed following the symbol and the start of the next word.  In a sense, the right side space of the full stop is “more elastic” than in the regular mode.  The elasticity rule and the visual effect are similar to that of the final line of a fully justified paragraph in Western text.  When the final line of a paragraph of Latin script crosses a certain horizontal threshold, the line will become fully justified. Below that threshold the line will appear left aligned.  The same rule appears to be applied to the Ethiopic full stop but on any line of the paragraph.  An illustration of this sub-mode is depicted in the following: </p>
       <figure id="kwk_metsehafe_sewasew_page_159"> <img src="images/corpus-samples/KWK-Page-159-Cropped.png" alt=" " width="800" height="297" />
         <figcaption>Justification Sample from  Maṣḥafa Sawāsew, Page 159 (Kifle, 1955 (1948 EC))</figcaption>
       </figure>
@@ -1603,7 +1610,8 @@
 
     <section id="inlined_continuation">
       <h4>Inline End of List Continuation</h4>
-      <p>An observed formatting practice is the start of a following paragraph inline with the last list item.
+      <p>An observed formatting practice is to begin a paragraph on the same line with the last item in a list.
+<!-- is the start of a following paragraph inline with the last list item. -->
          The paragraph may flow immediately from the last item, or some indentation may be applied. This practice is illustrated in the following figure:</p>
       <figure id="end_of_list_inlined_paragraph_continuation"> <img src="images/end-of-list-inline-continuation.png"  alt=" " />
         <figcaption>Sample for inlined paragraph continuation at end of list.</figcaption>
@@ -1630,7 +1638,7 @@
       <figure id="tradditional_page_margins"> <img src="images/GeezMargins.png" alt=" "/>
         <figcaption>Page margins in Ge’ez literature.</figcaption>
       </figure>
-      <p>These practices are not well understood by the authors and comprehensive is sought from experts.</p> 
+      <p>These practices are not well understood by the authors and comprehensive input is sought from experts.</p> 
 
       <div class="issues">
         <p>Issues/Questions:</p>
@@ -1654,7 +1662,7 @@
       <figure id="zeneb_ethiopia_metsehafe_chewata_sigawi_page_39"> <img src="images/page-number-in-two-systems.png" alt=" "/>
         <figcaption>Page numbering in two systems from Metsehafe Chewata Sigawi by Zeneb Ethiopia.</figcaption>
       </figure>
-      <p>In Ethiopic book publishing, the first numbered page will generally be seen on the <span lang="am">መቅድም</span> section. When a <span lang="am">መቅድም</span> is not present,
+      <p>In Ethiopic book publishing, the first numbered page will generally be seen on the <span lang="am">መቅድም</span> section. When a <span lang="am">መቅድም</span> section is not present,
          numbering is expected to begin at the <span lang="am">መግቢያ</span>. The prevailing Modern Ethiopic practice is to begin counting pages from the inner cover page (this
          is a matter of perception, by some views the outer cover is the first page and the inner cover, which is generally empty, is not counted). Thus the first printed
          number appearing at either the <span lang="am">መቅድም</span> or <span lang="am">መግቢያ</span> is not "1" (or "<span lang="am">፩</span>") but the physical page count up to
@@ -1782,7 +1790,7 @@
     <section id="ethiopic_footnotes">
       <h4>Footnotes &amp; Superscript</h4>
       <p>Using Microsoft Word as a reference point, Footnote counters are simple superscripted cardinal numbers.  The superscripted text is "top-aligned" with the reference text.  This alignment
-         style works well the letters of the typeface are fixed height, but may not be visually optimal in a variable height writing sytem. We will apply Z-<span lang="am">ን</span> Alignment
+         style works well the letters of the typeface are fixed height, but may not be visually optimal in a variable letter height writing sytem. We will apply Z-<span lang="am">ን</span> Alignment
          to illustrate the difficulty encountered with Ethiopic text.</p>
       <figure id="zn_superscript"> <img src="images/ZN-Superscript.png" alt=" " />
         <figcaption>Superscript Top Alignment.</figcaption>
