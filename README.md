@@ -1,34 +1,26 @@
 #Ethiopic Layout Requirements document#
 
-development version: http://w3c.github.io/elreq/
+###Documents
+- [Editor's copy](https://w3c.github.io/elreq/)
 
+###Feedback
+Please use the [GitHub issue list](https://github.com/w3c/elreq/issues) to send feedback about this document.
 
-This document is being developed by the Ethiopic Layout Task Force and the W3C Internationalization Working Group. Knowledge capture of layout topcics, which will inform the work of the task force, is done in the group [wiki](https://github.com/w3c/elreq/wiki).
+###Following
+To follow the work, you can 'Watch' this repository using the control above, or subscribe to the [public-i18n-ethiopic](https://lists.w3.org/Archives/Public/public-i18n-ethiopic/) mailing list, which is notified once a day about changes to the repo. The [www-international](https://lists.w3.org/Archives/Public/www-international/) list is also notified daily. (Please use github issues rather than the mailing list to send feedback.) Meeting minutes are sent to public-i18n-ethiopic.
 
-Feedback about the content of this document can be submitted via issues or pull request in the GitHub repo. 
+###Contributing
 
-If you prefer, you can also send comments to [public-i18n-ethiopic@w3.org](mailto:public-i18n-ethiopic@w3.org) ([subscribe](mailto:public-i18n-ethiopic@w3.org?subject=subscribe)).
+All contributors should read and agree with [CONTRIBUTING.md](https://github.com/w3c/hlreq/blob/gh-pages/CONTRIBUTING.md).
 
+Task force _members_ are expert contributors who participate actively in producing the work of the group, regularly contributing text and advice to create the outputs, and participating in meetings. For more information about becoming a task force member contact [Richard Ishida](mailto:ishida@w3.org). We welcome participation requests.
 
-##Editorial guidelines:##
+Editors should be familiar with and use the following:
 
-###Markup tips###
+- [Github guidelines for working with i18n documents](http://w3c.github.io/i18n-activity/guidelines/github)
+- [Editorial guidelines for working with i18n documents](http://w3c.github.io/i18n-activity/guidelines/editing)
 
-Ids should go on section elements, not `hx` elements.
-
-```
-<section id="h_my_heading">
-<h2>My heading</h2>
-```
-
-Ids on `dfn` elements should start with `def_`.
-
-Use the following markup for Unicode codepoint names:
-
-```
-<span class="uname">U+3002 IDEOGRAPHIC FULL STOP</span> [。]
-```
-
-For additional ideas about markup and styling in Internationalization Activity documents, especially wrt inline markup conventions, see
-http://www.w3.org/International/docs/styleguide
+###Links
+- [Task Force Home Page](https://w3c.github.io/i18n-activity/elreq/)
+- [Charter](https://www.w3.org/International/groups/ethiopic-layout/charter.html)
 
