@@ -2,6 +2,7 @@
 
 ###Documents
 - [Editor's copy](https://w3c.github.io/elreq/)
+- [FPWD](https://www.w3.org/TR/elreq/)
 
 ###Feedback
 Please use the [GitHub issue list](https://github.com/w3c/elreq/issues) to send feedback about this document.
