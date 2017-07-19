@@ -1,4 +1,4 @@
-# Ethiopic Layout Requirements document#
+# Ethiopic Layout Requirements document
 
 ### Documents
 - [Editor's copy](https://w3c.github.io/elreq/)
@@ -24,4 +24,5 @@ Editors should be familiar with and use the following:
 ### Links
 - [Task Force Home Page](https://w3c.github.io/i18n-activity/elreq/)
 - [Charter](https://www.w3.org/International/groups/ethiopic-layout/charter.html)
+- [Practical tips for task forces](https://w3c.github.io/i18n-activity/guidelines/process.html)
 
