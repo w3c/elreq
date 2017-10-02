@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zaima Styling Use Cases</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="How to use CSS styling to support ruby text for Asian languages." />
+  <link rel="stylesheet" href="zaima.css" type="text/css" />
+  <link rel="stylesheet" href="https://w3c.github.io/i18n-drafts/style/article-2016.css" type="text/css" />
+  <link rel="stylesheet" href="https://w3c.github.io/i18n-drafts/articles/ruby/styling-data/local.css" type="text/css" />
+<script type="text/javascript">
+var f = { }
+
+// AUTHORS should fill in these assignments:
+f.directory = 'articles/zaima'+'/'; // the path to this file, not including /International or the file name
+f.filename = 'styling'; // the file name WITHOUT extensions
+f.authors = 'Daniel Yacob, GFF'; // author(s) and affiliations
+f.previousauthors = ''; // as above
+f.modifiers = ''; // people making substantive changes, and their affiliation
+f.searchString = 'article-zaima-styling'; // blog search string - usually the filename without extensions
+f.firstPubDate = '2016-02-04'; // date of the first publication of the document (after review)
+f.lastSubstUpdate = { date:'2016-02-04', time:'11:23'}  // date and time of latest substantive changes to this document
+f.status = 'draft';  // should be one of draft, review, published, notreviewed or obsolete
+f.path = '../../' // what you need to prepend to a URL to get to the /International directory 
+
+// AUTHORS AND TRANSLATORS should fill in these assignments:
+f.thisVersion = { date:'2017-09-26', time:'11:23'} // date and time of latest edits to this document/translation
+f.contributors = ''; // people providing useful contributions or feedback during review or at other times
+// also make sure that the lang attribute on the html tag is correct!
+
+// TRANSLATORS should fill in these assignments:
+f.translators = 'xxxNAME, ORG'; // translator(s) and their affiliation - a elements allowed, but use double quotes for attributes
+
+f.breadcrumb = 'markup';
+
+f.additionalLinks = ''
+</script>
+<script type="text/javascript" src="styling-data/translations.js"> </script>
+<script type="text/javascript" src="../../javascript/doc-structure/article-dt.js"> </script>
+<script type="text/javascript" src="../../javascript/boilerplate-text/boilerplate-en.js"></script><!--TRANSLATORS must change -en to the subtag for their language!-->
+<script type="text/javascript" src="../../javascript/doc-structure/article.js"> </script>
+<script type="text/javascript" src="../../javascript/articletoc-html5.js"></script>
+<link rel="stylesheet" href="../../style/article-2016.css" type="text/css" />
+<link rel="stylesheet" href="styling-data/local.css" type="text/css" />
+
+<link rel="copyright" href="#copyright"/>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<style>
+.rubyExample { font-size: 50px; font-family: "Abyssinica SIL"; margin: 0; }
+.el { color: #D61B1B; font-size: 100%; font-weight: 400; margin: 0 2px; }
+.nowrap { white-space:nowrap; }
+ruby { font-size: 50px; color: rgb(102, 102, 102); font-family: "ms mincho", stsong, 'lisong pro';  }
+
+.codeExample { margin:0 0 0 7.5%; width: 60%; }
+.codeExample figure { margin:0; }
+.sidebarNote { margin: .5em 1em 0 2em; }
+.sidebarNote aside { margin: 0; float: none; width: 24%; }
+.multipleFigs { display: flex; flex-direction: row; flex-wrap: wrap; }
+.multipleFigs>div { flex:1; text-align:center; }
+h2 {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	}
+td img { vertical-align: bottom; }
+.rubyStart { ruby-align: start; }
+.rubyRight { ruby-align: right; }
+</style>
+<!-- styling for alignment examples:
+ruby { font-size: 55px; font-family: "ms mincho", stsong, 'lisong pro'; color: #333; }
+-->
+<script>
+function highlightCode () {
+	var examples = document.querySelectorAll('figure.example')
+	for (var i=0;i<examples.length;i++) {
+		var re = /&lt;([^&]+)&gt;/
+		var content = examples[i].innerHTML
+		out = content.replace(/&lt;([^&]+)&gt;/g,'<span class="el">&lt;$1&gt;</span>')
+		examples[i].innerHTML = out
+		}
+	}
+</script>
+<style>
+  script { display: block; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+<h1>Tests</h1>
+<h1>Zaima Styling Use Cases &amp; CSS Limitation Exploration</h1>
+<p>
+<span class="leadin"></span>
+</p>
+<section>
+  <div id="audience">
+    <p><span id="intendedAudience" class="leadin">Intended audience:</span> 
+    XHTML/HTML coders (using editors or scripting), script developers (PHP, JSP, etc.), CSS coders, and
+      anyone who wants to know how to use ruby annotations. </p>
+    <div id="updateInfo"></div><script>document.getElementById('updateInfo').innerHTML = g.updated</script>
+    </div>
+</seciton>
+
+    ᎐ ᎓ ᎒ ᎙ ᎑ ᎔ ᎖᎕  ᎗  ᎘<br/>
+<p><br/></p>
+
+
+<h3>Use Case 1, Simple Four Row Example</h3>
+<p><br/></p>
+<p>Features:</p>
+<br/>Selot Kidassie p. 129
+<div class="example">
+<table>
+  <col width="340px" />
+  <col />
+  <tr>
+  <td><img style="display: block; margin-left: auto; margin-right: auto;" src="use-cases/SelotKidasiePage129i2.png"/></td>
+  <td valign="bottom">
+    <div style="position: relative; top: 40px;">
+    <ruby class="row2ex red-miliket"><rb>ሐዋ</rb><rt><span>ሰማ᎓</span></rt><rb>ር</rb><rt></rt><rb>ያት</rb><rt><span>᎒᎖᎒᎓<span class="difat_difat_ex"></span>᎒</span></rt></ruby>
+    <ruby class="row1"><rb>ሐ</rb><rt><span>᎑</span></rt><rb>ዋ</rb><rt><span>ሰማ </span></rt><rb>ር</rb><rt></rt><rb>ያ</rb><rt><span>ደ</span></rt><rb>ት</rb><rt><span>ታት</span></rt></ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+  <ruby class="row2ex red-miliket">
+    <rb>ሐዋ</rb><rt><span>ሰማ᎓</span></rt>
+    <rb>ር</rb><rt></rt>
+    <rb>ያት</rb><rt><span>᎒᎖᎒᎓<span class="difat_difat_ex"></span>᎒</span></rt>
+ </ruby>
+ <ruby class="row1"><rb>ሐ</rb><rt><span>᎑</span></rt>
+   <rb>ዋ</rb><rt><span>ሰማ </span></rt>
+   <rb>ር</rb><rt></rt><rb>ያ</rb><rt><span>ደ</span></rt>
+   <rb>ት</rb><rt><span>ታት</span></rt>
+  </ruby>
+  </script></td>
+  </tr>
+</table>
+<p><strong>Figure 1</strong>
+Selot Kidassie p. 129
+</div>
+
+<h4>Issues</h4>
+<ul>
+  <li>Determine if the bottom row is actually two rows.</li>
+</ul>
+
+<p><br/></p>
+
+
+
+<h3>Use Case 2, Simple Four Row Example</h3>
+
+<p>Features:</p>
+
+
+<table>
+  <col width="250px"/>
+  <col width="180px"/>
+  <col width="500px"/>
+  <tr>
+    <td colspan="2" style="border: 0"></td><th>Alternate Rendering</th>
+  </tr>
+  <tr>
+  <td><img style="display: block; margin-left: auto; margin-right: auto;" src="use-cases/SelotKidasiePage113i1.png"/></td>
+  <td valign="bottom">
+    <div style="position: relative; top: 80px;">
+    <ruby class="row4ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በሮ</rb><rt><span>᎔᎖</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በሮ</rb><rt><span>᎓ሞኂ</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ከ</rb><rt><span>᎖</span></rt>
+      <rb>በሮ</rb><rt><span>ሥቱ</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ከ</rb><rt>᎐</rt>
+      <rb>በ</rb><rt>᎐</rt>
+      <rb>ሮ</rb><rt>ር</rt>
+    </ruby>
+    </div>
+  </td>
+  <td valign="bottom">
+    <div style="position: relative; top: 80px;">
+    <ruby class="row4ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በሮ</rb><rt><span>᎔᎖</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በ</rb><rt><span>᎓</span></rt>
+      <rb>ሮ</rb><rt style="text-align: right;"><span>ሞኂ</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ከ</rb><rt><span>᎖</span></rt>
+      <rb>በ</rb><rt></rt>
+      <rb>ሮ</rb><rt style="text-align: right;"><span>ሥቱ</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ከ</rb><rt>᎐</rt>
+      <rb>በ</rb><rt>᎐</rt>
+      <rb>ሮ</rb><rt style="text-align: right;">ር</rt>
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row4ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በሮ</rb><rt><span>᎔᎖</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በሮ</rb><rt><span>᎓ሞኂ</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ከ</rb><rt><span>᎖</span></rt>
+      <rb>በሮ</rb><rt><span>ሥቱ</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ከ</rb><rt>᎐</rt>
+      <rb>በ</rb><rt>᎐</rt>
+      <rb>ሮ</rb><rt>ር</rt>
+    </ruby>
+  </script></td>
+  <td><script type="text/plain">
+    <ruby class="row4ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በሮ</rb><rt><span>᎔᎖</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በ</rb><rt><span>᎓</span></rt>
+      <rb>ሮ</rb><rt style="text-align: right;"><span>ሞኂ</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ከ</rb><rt><span>᎖</span></rt>
+      <rb>በ</rb><rt></rt>
+      <rb>ሮ</rb><rt style="text-align: right;"><span>ሥቱ</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ከ</rb><rt>᎐</rt>
+      <rb>በ</rb><rt>᎐</rt>
+      <rb>ሮ</rb><rt style="text-align: right;">ር</rt>
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>Had to specify a 2nd column width or the example gets cut off by the table. A rendering engine appears not be calculating cell content width correctly.</li>
+  <li>In the alternative rendering, unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+</ul>
+
+<p><br/></p>
+
+
+<h3>Use Case 3</h3>
+<table>
+  <col width="250px"/>
+  <col width="250px"/>
+  <col width="400px"/>
+  <tr>
+    <td colspan="2" style="border: 0"></td><th>Alternate Rendering</th>
+  </tr>
+  <tr>
+  <td style="vertical-align: baseline;"> <br/><img style="display: block; margin-left: auto; margin-right: auto; vertical-align: bottom;" src="use-cases/MerhaLiqawntPage127i2.png"/></td>
+  <td valign="bottom" height="160px">
+    <div style="position: relative; top: 80px;">
+    <ruby class="row4ex red-miliket">
+      <rb>ወወ</rb><rt><span>᎒ሙላ</span></rt>
+      <rb>ሀ</rb><rt><span>᎐</span></rt>
+      <rb>ብ</rb><rt><span></span></rt>
+      <rb>ከ</rb><rt style="text-align: right;"><span>᎐᎖᎖</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ወ</rb><rt style="text-align: right;"><span>ኢ</span></rt>
+      <rb>ወ</rb><rt><span>ይ</span></rt>
+      <rb>ሀ</rb><rt><span>ኃ</span></rt>
+      <rb>ብ</rb><rt><span></span></rt>
+      <rb>ከ</rb><rt style="text-align: right;"><span>ጐ᎖</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ወ</rb><rt><span>᎖᎓᎔</span></rt>
+      <rb>ወ</rb><rt><span>᎖</span></rt>
+      <rb>ሀብ</rb><rt><span></span></rt>
+      <rb>ከ</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ወ</rb><rt>ቡር</rt>
+      <rb>ወሀብከ</rb><rt></rt>፡
+    </ruby>
+    </div>
+  </td>
+  <td valign="bottom" height="160px">
+    <div style="position: relative; top: 80px;">
+    <ruby class="row4ex red-miliket">
+      <rb>ወወ</rb><rt><span>᎒ሙላ</span></rt>
+      <rb>ሀ</rb><rt><span>᎐</span></rt>
+      <rb>ብ</rb><rt><span></span></rt>
+      <rb>ከ</rb><rt style="text-align: right;"><span>᎐᎖᎖</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ወወ</rb><rt><span>ኢይ</span></rt>
+      <rb>ሀ</rb><rt><span>ኃ</span></rt>
+      <rb>ብ</rb><rt><span></span></rt>
+      <rb>ከ</rb><rt style="text-align: right;"><span>ጐ᎖</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ወ</rb><rt><span>᎖᎓᎔</span></rt>
+      <rb>ወ</rb><rt><span>᎖</span></rt>
+      <rb>ሀብ</rb><rt><span></span></rt>
+      <rb>ከ</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ወ</rb><rt>ቡር</rt>
+      <rb>ወሀብከ</rb><rt></rt>፡
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row4ex red-miliket">
+      <rb>ወወ</rb><rt><span>᎒ሙላ</span></rt>
+      <rb>ሀ</rb><rt><span>᎐</span></rt>
+      <rb>ብ</rb><rt><span></span></rt>
+      <rb>ከ</rb><rt><span>᎐᎖᎖</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ወ</rb><rt><span>ኢ</span></rt>
+      <rb>ወ</rb><rt><span>ይ</span></rt>
+      <rb>ሀ</rb><rt><span>ኃ</span></rt>
+      <rb>ብ</rb><rt><span></span></rt>
+      <rb>ከ</rb><rt><span>ጐ᎖</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ወ</rb><rt><span>᎖᎓᎔</span></rt>
+      <rb>ወ</rb><rt><span>᎖</span></rt>
+      <rb>ሀብ</rb><rt><span></span></rt>
+      <rb>ከ</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ወ</rb><rt>ቡር</rt>
+      <rb>ወሀብከ</rb><rt></rt>፡
+    </ruby>
+  </script></td>
+  <td><script type="text/plain">
+    <ruby class="row4ex red-miliket">
+      <rb>ወወ</rb><rt><span>᎒ሙላ</span></rt>
+      <rb>ሀ</rb><rt><span>᎐</span></rt>
+      <rb>ብ</rb><rt><span></span></rt>
+      <rb>ከ</rb><rt style="text-align: right;"><span>᎐᎖᎖</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ወወ</rb><rt><span>ኢይ</span></rt>
+      <rb>ሀ</rb><rt><span>ኃ</span></rt>
+      <rb>ብ</rb><rt><span></span></rt>
+      <rb>ከ</rb><rt style="text-align: right;"><span>ጐ᎖</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ወ</rb><rt><span>᎖᎓᎔</span></rt>
+      <rb>ወ</rb><rt><span>᎖</span></rt>
+      <rb>ሀብ</rb><rt><span></span></rt>
+      <rb>ከ</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ወ</rb><rt>ቡር</rt>
+      <rb>ወሀብከ</rb><rt></rt>፡
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>Verify ይ or ዶ in row 3</li>
+  <li>Right justify desired for ኢ above ወ on row 3, and for both ጐ᎖ and ᎐᎖᎖ above ከ on rows 3 and 4 respectively</li>
+  <li>፡ would vanish if placed after the closing ruby tag as per:<br/>
+      &nbsp;&nbsp;&lt;rb&gt;ወሀብከ&lt;/rb&gt;&lt;rt&gt;&lt;span&gt;&lt;/span&gt;&lt;/rt&gt;&lt;/ruby&gt;፡<br/>
+     Accordingly it was placed just within the closing ruby tag as per: <br/>
+     &nbsp;&nbsp;&lt;rb&gt;ወሀብከ&lt;/rb&gt;&lt;rt&gt;&lt;span&gt;&lt;/span&gt;&lt;/rt&gt;፡&lt;/ruby&gt;<br/>
+     This may be a browser issue or an issue with the markup approach taken. 
+  </li>
+</ul>
+
+
+<p><br/></p>
+
+
+    ᎐ ᎓ ᎒ ᎙ ᎑ ᎔ ᎖᎕  ᎗  ᎘<br/>
+
+
+<h3>Use Case 4</h3>
+<table>
+  <col width="350px"/>
+  <col width="250px"/>
+  <col width="500px"/>
+  <tr>
+    <td colspan="2" style="border: 0"></td><th>Alternate Rendering</th>
+  </tr>
+  <tr>
+  <td style="vertical-align: baseline;"> <br/><img style="display: block; margin-left: auto; margin-right: auto; vertical-align: bottom;" src="use-cases/MerhaLiqawntPage128.2.png"/></td>
+  <td valign="bottom" height="160px">
+    <div style="position: relative; top: 80px;">
+    <ruby class="row3ex red-miliket">
+      <rb>ባ</rb><rt><span>᎒</span></rt>
+      <rb>ነሕ</rb><rt><span></span></rt>
+      <rb>ራ</rb><rt><span>᎐</span></rt>
+      <rb>ን</rb><rt><span></span></rt>
+      <rb>ኒ</rb><rt><span>᎐᎘</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ባነ</rb><rt><span>አጽነ</span></rt>
+      <rb>ሕራንኒ</rb><rt></rt>
+    </ruby>
+    <ruby class="row1 red-base">
+      <rb>ባ</rb><rt><span class="diret_difat_ex"></span><span class="diret_difat_ex"></span></rt>
+      <rb>ነሕ</rb><rt></rt>
+      <rb>ራ</rb><rt>ነ</rt>
+      <rb>ንኒ</rb><rt>ርእሶ</rt><span style="color: red">፡</span>
+    </ruby>
+    </div>
+  </td>
+  <td valign="bottom" height="160px">
+    <div style="position: relative; top: 80px;">
+    <ruby class="row3ex red-miliket">
+      <rb>ባ</rb><rt><span>᎒</span></rt>
+      <rb>ነሕ</rb><rt><span></span></rt>
+      <rb>ራ</rb><rt><span>᎐</span></rt>
+      <rb>ን</rb><rt><span></span></rt>
+      <rb>ኒ</rb><rt><span>᎐᎘</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ባ</rb><rt><span>አጽነ</span></rt>
+      <rb>ነሕራንኒ</rb><rt></rt>
+    </ruby>
+    <ruby class="row1 red-base">
+      <rb>ባ</rb><rt><span class="diret_difat_ex"></span><span class="diret_difat_ex"></span></rt>
+      <rb>ነሕ</rb><rt></rt>
+      <rb>ራ</rb><rt>ነ</rt>
+      <rb>ንኒ</rb><rt>ርእሶ</rt><span style="color: red">፡</span>
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row3ex red-miliket">
+      <rb>ባ</rb><rt><span>᎒</span></rt>
+      <rb>ነሕ</rb><rt><span></span></rt>
+      <rb>ራ</rb><rt><span>᎐</span></rt>
+      <rb>ን</rb><rt><span></span></rt>
+      <rb>ኒ</rb><rt><span>᎐᎘</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ባነ</rb><rt><span>አጽነ</span></rt>
+      <rb>ሕራንኒ</rb><rt></rt>
+    </ruby>
+    <ruby class="row1 red-base">
+      <rb>ባ</rb><rt><span class="diret_difat_ex"></span
+      ><span class="diret_difat_ex"></span></rt>
+      <rb>ነሕ</rb><rt></rt>
+      <rb>ራ</rb><rt>ነ</rt>
+      <rb>ንኒ</rb><rt>ርእሶ</rt><span style="color: red">፡</span>
+    </ruby>
+  </script></td>
+  <td><script type="text/plain">
+    <ruby class="row3ex red-miliket">
+      <rb>ባ</rb><rt><span>᎒</span></rt>
+      <rb>ነሕ</rb><rt><span></span></rt>
+      <rb>ራ</rb><rt><span>᎐</span></rt>
+      <rb>ን</rb><rt><span></span></rt>
+      <rb>ኒ</rb><rt><span>᎐᎘</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ባ</rb><rt><span>አጽነ</span></rt>
+      <rb>ነሕራንኒ</rb><rt></rt>
+    </ruby>
+    <ruby class="row1 red-base">
+      <rb>ባ</rb><rt><span class="diret_difat_ex"></span
+      ><span class="diret_difat_ex"></span></rt>
+      <rb>ነሕ</rb><rt></rt>
+      <rb>ራ</rb><rt>ነ</rt>
+      <rb>ንኒ</rb><rt>ርእሶ</rt><span style="color: red">፡</span>
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+</ul>
+
+<p><br/></p>
+
+<h3>Use Case 5</h3>
+<table>
+  <col width="350px"/>
+  <col width="400px"/>
+  <tr>
+  <td><img src="use-cases/MerhaLiqawntPage128i1.png"/></td>
+  <td valign="bottom">
+    <div style="position: relative; top: 50px;">
+    <ruby class="row3ex red-miliket">
+      <rb>ሰ</rb><rt><span></span></rt>
+      <rb>ላ</rb><rt><span>&nbsp; ᎒</span></rt>
+      <rb>መ</rb><rt><span></span></rt>
+      <rb>ከ፡</rb><rt><span>᎒ሙ᎘</span></rt>
+      <rb>ን</rb><rt><span></span></rt>
+      <rb>ጸ</rb><rt><span>᎐</span></rt>
+      <rb>ው</rb><rt><span>᎐</span></rt>
+      <rb>ዕ፡</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ሰ</rb><rt><span></span></rt>
+      <rb>ላ</rb><rt><span style="visibility: hidden;">ርኢ</span></rt>
+      <rb>መ</rb><rt><span></span></rt>
+      <rb>ከ፡</rb><rt><span>ከመ</span></rt>
+      <rb>ን</rb><rt style="text-align: right;"><span>ፀ</span></rt>
+      <rb>ጸ</rb><rt><span>ሐ</span></rt>
+      <rb>ው</rb><rt><span>ይ</span></rt>
+      <rb>ዕ፡</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ሰ</rb><rt></rt>
+      <rb>ላ</rb><rt>ርኢ</rt>
+      <rb>መከ፡</rb><rt>ክዎ<span class="diret_difat_ex"></span>᎓᎔</rt>
+      <rb>ን</rb><rt></rt>
+      <rb>ጸ</rb><rt>᎖᎔᎓</rt>
+      <rb>ው</rb><rt>፴</rt>
+      <rb>ዕ፡</rb><rt></rt>
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row3ex red-miliket">
+      <rb>ሰ</rb><rt><span></span></rt>
+      <rb>ላ</rb><rt><span>&nbsp; ᎒</span></rt>
+      <rb>መ</rb><rt><span></span></rt>
+      <rb>ከ፡</rb><rt><span>᎒ሙ᎘</span></rt>
+      <rb>ን</rb><rt><span></span></rt>
+      <rb>ጸ</rb><rt><span>᎐</span></rt>
+      <rb>ው</rb><rt><span>᎐</span></rt>
+      <rb>ዕ፡</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ሰ</rb><rt><span></span></rt>
+      <rb>ላ</rb><rt><span style="visibility: hidden;">ርኢ</span></rt>
+      <rb>መ</rb><rt><span></span></rt>
+      <rb>ከ፡</rb><rt><span>ከመ</span></rt>
+      <rb>ን</rb><rt style="text-align: right;"><span>ፀ</span></rt>
+      <rb>ጸ</rb><rt><span>ሐ</span></rt>
+      <rb>ው</rb><rt><span>ይ</span></rt>
+      <rb>ዕ፡</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ሰ</rb><rt></rt>
+      <rb>ላ</rb><rt>ርኢ</rt>
+      <rb>መከ፡</rb><rt>ክዎ<span class="diret_difat_ex"></span>᎓᎔</rt>
+      <rb>ን</rb><rt></rt>
+      <rb>ጸ</rb><rt>᎖᎔᎓</rt>
+      <rb>ው</rb><rt>፴</rt>
+      <rb>ዕ፡</rb><rt></rt>
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+</ul>
+
+<p><br/></p>
+
+
+<h3>Use Case 6</h3>
+<table>
+  <col width="500px"/>
+  <col width="500px"/>
+  <tr>
+  <td style="vertical-align: baseline;"> <br/><img style="display: block; margin-left: auto; margin-right: auto; vertical-align: bottom;" src="use-cases/MerhaLiqawntPage23i3.png"/></td>
+  <td valign="bottom" height="160px;">
+    <div style="position: relative; top: 80px;">
+    <ruby class="row4ex red-miliket">
+      <rb>ሀገ</rb><rt><span></span></rt>
+      <rb>ረ</rb><rt><span>᎒</span></rt>
+      <rb>ኪ፡ወ</rb><rt><span></span></rt>
+      <rb>ኢት</rb><rt><span>᎒ሙ᎘</span></rt>
+      <rb>ጐ</rb><rt><span>᎐</span></rt>
+      <rb>ንድ</rb><rt><span></span></rt>
+      <rb>ዪ</rb><rt><span>᎐᎘</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ሀገ</rb><rt></rt>
+      <rb>ረ</rb><rt></rt>
+      <rb>ኪ፡ወኢ</rb><rt><span></span></rt>
+      <rb>ት</rb><rt><span>᎖</span></rt>
+      <rb>ጐ</rb><rt><span>᎐᎔</span></rt>
+      <rb>ን</rb><rt><span></span></rt>
+      <rb>ድ</rb><rt><span>᎐</span></rt>
+      <rb>ዪ</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ሀገ</rb><rt></rt>
+      <rb>ረ</rb><rt><span>᎗</span></rt>
+      <rb>ኪ፡ወ</rb><rt></rt>
+      <rb>ኢ</rb><rt><span>ኢ</span></rt>
+      <rb>ትጐ</rb><rt><span>የሱስ</span></rt>
+      <rb>ንድዪ</rb><rt><span>ክርስቶ</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ሀ</rb><rt></rt>
+      <rb>ገረኪ</rb><rt>ርጥቁ</rt>
+      <rb>፡ወ</rb><rt></rt>
+      <rb>ኢ</rb><rt>᎖᎓᎔</rt>
+      <rb>ት</rb><rt></rt>
+      <rb>ጐ</rb><rt></rt>
+      <rb>ን</rb><rt></rt>
+      <rb>ድ</rb><rt></rt>
+      <rb>ዪ</rb><rt></rt>፡
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row4ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በሮ</rb><rt><span>በ᎖</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በ</rb><rt><span>᎓</span></rt>
+      <rb>ሮ</rb><rt><span>ሞኂ</span></rt><!-- rt right align desired -->
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ከ</rb><rt><span>᎖</span></rt>
+      <rb>በ</rb><rt></rt>
+      <rb>ሮ</rb><rt><span>ሥቱ</span></rt><!-- rt right align desired -->
+    </ruby>
+    <ruby class="row1">
+      <rb>ከ</rb><rt><span>᎐</span></rt>
+      <rb>በ</rb><rt><span>᎐</span></rt>
+      <rb>ሮ</rb><rt><span>ር</span></rt><!-- rt right align desired -->
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+</ul>
+
+
+<h3>Use Case 7</h3>
+<table>
+  <col width="300px"/>
+  <col width="250px"/>
+  <tr>
+  <td><img src="use-cases/MerhaLiqawntPages12i1.png"/></td>
+  <td valign="bottom">
+    <div style="position: relative; top: 50px;">
+    <ruby class="row3ex red-miliket">
+      <rb>ጕ</rb><rt><span>᎒ሙ᎘</span></rt>
+      <rb>ር</rb><rt></rt>
+      <rb>ዔ</rb><rt><span>᎐</span></rt>
+      <rb>ሁ</rb><rt><span>ሢ</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ጕ</rb><rt><span>ብር᎖᎓᎔᎓</span></rt>
+      <rb>ርዔሁ</rb><rt></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ጕ</rb><rt>ወሡ </rt>
+      <rb>ር</rb><rt>ራ</rt>
+      <rb>ዔ</rb><rt>ሬ</rt>
+      <rb>ሁ</rb><rt>ሃ</rt>
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row3ex red-miliket">
+      <rb>ጕ</rb><rt><span>᎒ሙ᎘</span></rt>
+      <rb>ር</rb><rt></rt>
+      <rb>ዔ</rb><rt><span>᎐</span></rt>
+      <rb>ሁ</rb><rt><span>ሢ</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ጕ</rb><rt><span>ብር᎖᎓᎔᎓</span></rt>
+      <rb>ርዔሁ</rb><rt></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ጕ</rb><rt>ወሡ </rt>
+      <rb>ር</rb><rt>ራ</rt>
+      <rb>ዔ</rb><rt>ሬ</rt>
+      <rb>ሁ</rb><rt>ሃ</rt>
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+</ul>
+
+
+<h3>Use Case 8</h3>
+<table>
+  <tr>
+  <td><img src="use-cases/SelotKidasiePage103i1.png"/></td>
+  <td width="50%" valign="bottom">
+    <div style="position: relative; top: 80px;">
+    <ruby class="row4ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በሮ</rb><rt><span>በ᎖</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በ</rb><rt><span>᎓</span></rt>
+      <rb>ሮ</rb><rt><span>ሞኂ</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ከ</rb><rt><span>᎖</span></rt>
+      <rb>በ</rb><rt></rt>
+      <rb>ሮ</rb><rt><span>ሥቱ</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ከ</rb><rt><span>᎐</span></rt>
+      <rb>በ</rb><rt><span>᎐</span></rt>
+      <rb>ሮ</rb><rt><span>ር</span></rt>
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row4ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በሮ</rb><rt><span>በ᎖</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በ</rb><rt><span>᎓</span></rt>
+      <rb>ሮ</rb><rt><span>ሞኂ</span></rt><!-- rt right align desired -->
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ከ</rb><rt><span>᎖</span></rt>
+      <rb>በ</rb><rt></rt>
+      <rb>ሮ</rb><rt><span>ሥቱ</span></rt><!-- rt right align desired -->
+    </ruby>
+    <ruby class="row1">
+      <rb>ከ</rb><rt><span>᎐</span></rt>
+      <rb>በ</rb><rt><span>᎐</span></rt>
+      <rb>ሮ</rb><rt><span>ር</span></rt><!-- rt right align desired -->
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+</ul>
+
+
+
+
+
+
+
+<h3>Use Case 9</h3>
+<table>
+  <col width="350px"/>
+  <col width="280px"/>
+  <col width="350px"/>
+  <tr>
+    <td colspan="2" style="border: 0"></td><th>Alternate Rendering</th>
+  </tr>
+  <tr>
+  <td style="vertical-align: baseline;"> <br/><img style="display: block; margin-left: auto; margin-right: auto; vertical-align: bottom;" src="use-cases/SelotKidasiePage145i1.png"/></td>
+  <td valign="bottom" height="160px">
+    <div style="position: relative; top: 80px;">
+    <ruby class="row3ex red-miliket">
+      <rb>ወ</rb><rt><span></span></rt>
+      <rb>ዕ</rb><rt><span></span></rt>
+      <rb>ለት</rb><rt><span>ለ᎖᎓</span></rt>
+      <rb>፡</rb><rt><span></span></rt>
+      <rb>ኵነ</rb><rt><span>᎖᎓</span></rt>
+      <rb>ኔ</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ወ</rb><rt><span>᎑</span></rt>
+      <rb>ዕ</rb><rt><span>᎓</span></rt>
+      <rb>ለት</rb><rt><span>ለገ</span></rt>
+      <rb>፡</rb><rt><span></span></rt>
+      <rb>ኵ</rb><rt><span>᎑</span></rt>
+      <rb>ነ</rb><rt><span>᎑</span></rt>
+      <rb>ኔ</rb><rt><span>ቃ</span><span style="color: red;">ር</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ወ</rb><rt><span style="color: red;">᎗</span></rt>
+      <rb>ዕ</rb><rt></rt>
+      <rb>ለት</rb><rt>ቀጽ</rt>
+      <rb>፡</rb><rt></rt>
+      <rb>ኵ</rb><rt>᎑</rt>
+      <rb>ነኔ</rb><rt><span style="color: red;">᎖</span>ጾመ</rt>፡
+    </ruby>
+    </div>
+  </td>
+  <td valign="bottom">
+    <div style="position: relative; top: 80px;">
+    <ruby class="row4ex red-miliket">
+      <rb>ወ</rb><rt><span></span></rt>
+      <rb>ዕ</rb><rt><span></span></rt>
+      <rb>ለት</rb><rt><span>ለ᎖᎓</span></rt>
+      <rb>፡</rb><rt><span></span></rt>
+      <rb>ኵነ</rb><rt><span>᎖᎓</span></rt>
+      <rb>ኔ</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ወ</rb><rt><span>᎑</span></rt>
+      <rb>ዕ</rb><rt><span>᎓</span></rt>
+      <rb>ለት</rb><rt><span>ለገ</span></rt>
+      <rb>፡</rb><rt><span></span></rt>
+      <rb>ኵ</rb><rt><span>᎑</span></rt>
+      <rb>ነ</rb><rt><span>᎑</span></rt>
+      <rb>ኔ</rb><rt><span>ቃ</span></rt>
+    </ruby>
+    <ruby class="row2ex red-miliket">
+      <rb>ወ</rb><rt><span>᎗</span></rt>
+      <rb>ዕ</rb><rt><span></span></rt>
+      <rb>ለት</rb><rt><span></span></rt>
+      <rb>፡</rb><rt><span></span></rt>
+      <rb>ኵነ</rb><rt><span>᎖</span></rt>
+      <rb>ኔ</rb><rt><span>ር</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ወ</rb><rt></rt>
+      <rb>ዕ</rb><rt></rt>
+      <rb>ለት</rb><rt>ቀጽ</rt>
+      <rb>፡</rb><rt></rt>
+      <rb>ኵ</rb><rt>᎑</rt>
+      <rb>ነኔ</rb><rt>ጾመ</rt>፡
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row3ex red-miliket">
+      <rb>ወ</rb><rt><span></span></rt>
+      <rb>ዕ</rb><rt><span></span></rt>
+      <rb>ለት</rb><rt><span>ለ᎖᎓</span></rt>
+      <rb>፡</rb><rt><span></span></rt>
+      <rb>ኵነ</rb><rt><span>᎖᎓</span></rt>
+      <rb>ኔ</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ወ</rb><rt><span>᎑</span></rt>
+      <rb>ዕ</rb><rt><span>᎓</span></rt>
+      <rb>ለት</rb><rt><span>ለገ</span></rt>
+      <rb>፡</rb><rt><span></span></rt>
+      <rb>ኵ</rb><rt><span>᎑</span></rt>
+      <rb>ነ</rb><rt><span>᎑</span></rt>
+      <rb>ኔ</rb><rt><span>ቃ</span><span style="color: red;">ር</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ወ</rb><rt><span style="color: red;">᎗</span></rt>
+      <rb>ዕ</rb><rt></rt>
+      <rb>ለት</rb><rt>ቀጽ</rt>
+      <rb>፡</rb><rt></rt>
+      <rb>ኵ</rb><rt>᎑</rt>
+      <rb>ነኔ</rb><rt><span style="color: red;">᎖</span>ጾመ</rt>፡
+    </ruby>
+  </script></td>
+  <td><script type="text/plain">
+    <ruby class="row4ex red-miliket">
+      <rb>ወ</rb><rt><span></span></rt>
+      <rb>ዕ</rb><rt><span></span></rt>
+      <rb>ለት</rb><rt><span>ለ᎖᎓</span></rt>
+      <rb>፡</rb><rt><span></span></rt>
+      <rb>ኵነ</rb><rt><span>᎖᎓</span></rt>
+      <rb>ኔ</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ወ</rb><rt><span>᎑</span></rt>
+      <rb>ዕ</rb><rt><span>᎓</span></rt>
+      <rb>ለት</rb><rt><span>ለገ</span></rt>
+      <rb>፡</rb><rt><span></span></rt>
+      <rb>ኵ</rb><rt><span>᎑</span></rt>
+      <rb>ነ</rb><rt><span>᎑</span></rt>
+      <rb>ኔ</rb><rt><span>ቃ</span></rt>
+    </ruby>
+    <ruby class="row2ex red-miliket">
+      <rb>ወ</rb><rt><span>᎗</span></rt>
+      <rb>ዕ</rb><rt><span></span></rt>
+      <rb>ለት</rb><rt><span></span></rt>
+      <rb>፡</rb><rt><span></span></rt>
+      <rb>ኵነ</rb><rt><span>᎖</span></rt>
+      <rb>ኔ</rb><rt><span>ር</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ወ</rb><rt></rt>
+      <rb>ዕ</rb><rt></rt>
+      <rb>ለት</rb><rt>ቀጽ</rt>
+      <rb>፡</rb><rt></rt>
+      <rb>ኵ</rb><rt>᎑</rt>
+      <rb>ነኔ</rb><rt>ጾመ</rt>፡
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+</ul>
+
+
+<h3>Use Case 10</h3>
+<table>
+  <tr>
+  <td><img src="use-cases/SelotKidasiePage189i1.png"/></td>
+  <td width="50%" valign="bottom">
+    <div style="position: relative; top: 80px;">
+    <ruby class="row4ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በሮ</rb><rt><span>በ᎖</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በ</rb><rt><span>᎓</span></rt>
+      <rb>ሮ</rb><rt><span>ሞኂ</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ከ</rb><rt><span>᎖</span></rt>
+      <rb>በ</rb><rt></rt>
+      <rb>ሮ</rb><rt><span>ሥቱ</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ከ</rb><rt><span>᎐</span></rt>
+      <rb>በ</rb><rt><span>᎐</span></rt>
+      <rb>ሮ</rb><rt><span>ር</span></rt>
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row4ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በሮ</rb><rt><span>በ᎖</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በ</rb><rt><span>᎓</span></rt>
+      <rb>ሮ</rb><rt><span>ሞኂ</span></rt><!-- rt right align desired -->
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ከ</rb><rt><span>᎖</span></rt>
+      <rb>በ</rb><rt></rt>
+      <rb>ሮ</rb><rt><span>ሥቱ</span></rt><!-- rt right align desired -->
+    </ruby>
+    <ruby class="row1">
+      <rb>ከ</rb><rt><span>᎐</span></rt>
+      <rb>በ</rb><rt><span>᎐</span></rt>
+      <rb>ሮ</rb><rt><span>ር</span></rt><!-- rt right align desired -->
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+</ul>
+
+
+
+
+
+<h3>Use Case 11</h3>
+<table>
+  <col width="330px"/>
+  <col width="180px"/>
+  <col width="480px"/>
+  <tr>
+    <td colspan="2" style="border: 0"></td><th>Alternate Rendering</th>
+  </tr>
+  <tr>
+  <td><img src="use-cases/SelotKidasiePage213i1.png"/></td>
+  <td valign="bottom">
+    <div style="position: relative; top: 80px;">
+    <ruby class="row4ex">
+      <rb>ምሕ</rb><rt></rt>
+      <rb>ረ</rb><rt><span>በእ</span></rt>
+      <rb>ት</rb><rt></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ምሕ</rb><rt></rt>
+      <rb>ረ</rb><rt><span>ቡበ</span></rt>
+      <rb>ት</rb><rt></rt>
+    </ruby>
+    <ruby class="row2ex red-miliket">
+      <rb>ምሕ</rb><rt></rt>
+      <rb>ረ</rb><rt><span>ገጸ</span></rt>
+      <rb>ት</rb><rt></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ምሕ</rb><rt></rt>
+      <rb>ረ</rb><rt>በእ</rt>
+      <rb>ት</rb><rt></rt>
+    </ruby>
+    </div>
+  </td>
+  <td>
+    <div style="position: relative; top: 80px;">
+    <ruby class="row4ex">
+      <rb>ምሕ</rb><rt></rt>
+      <rb>ረ</rb><rt><span>በእ</span></rt>
+      <rb>ት</rb><rt></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ምሕ</rb><rt></rt>
+      <rb>ረ</rb><rt><span>ቡበ</span></rt>
+      <rb>ት</rb><rt></rt>
+    </ruby>
+    <ruby class="row2ex red-miliket">
+      <rb>ም</rb></rb><rt></rt>
+      <rb>ሕ</rb><rt style="text-align: right;"><span>ገ</span></rt>
+      <rb>ረ</rb><rt></rt>
+      <rb>ት</rb><rt style="text-align: left;"><span>ጸ</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ምሕ</rb><rt></rt>
+      <rb>ረ</rb><rt>በእ</rt>
+      <rb>ት</rb><rt></rt>
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row4ex">
+      <rb>ምሕ</rb><rt></rt>
+      <rb>ረ</rb><rt><span>በእ</span></rt>
+      <rb>ት</rb><rt></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ምሕ</rb><rt></rt>
+      <rb>ረ</rb><rt><span>ቡበ</span></rt>
+      <rb>ት</rb><rt></rt>
+    </ruby>
+    <ruby class="row2ex red-miliket">
+      <rb>ምሕ</rb><rt></rt>
+      <rb>ረ</rb><rt><span>ገጸ</span></rt>
+      <rb>ት</rb><rt></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ምሕ</rb><rt></rt>
+      <rb>ረ</rb><rt>በእ</rt>
+      <rb>ት</rb><rt></rt>
+    </ruby>
+  </script></td>
+  <td><script type="text/plain">
+    <ruby class="row4ex">
+      <rb>ምሕ</rb><rt></rt>
+      <rb>ረ</rb><rt><span>በእ</span></rt>
+      <rb>ት</rb><rt></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ምሕ</rb><rt></rt>
+      <rb>ረ</rb><rt><span>ቡበ</span></rt>
+      <rb>ት</rb><rt></rt>
+    </ruby>
+    <ruby class="row2ex red-miliket">
+      <rb>ም</rb></rb><rt></rt>
+      <rb>ሕ</rb><rt style="text-align: right;"><span>ገ</span></rt>
+      <rb>ረ</rb><rt></rt>
+      <rb>ት</rb><rt style="text-align: left;"><span>ጸ</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ምሕ</rb><rt></rt>
+      <rb>ረ</rb><rt>በእ</rt>
+      <rb>ት</rb><rt></rt>
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+</ul>
+
+
+<h3>Use Case 12</h3>
+<table>
+  <tr>
+  <td><img src="use-cases/SelotKidasiePage253i1.png"/></td>
+  <td width="50%" valign="bottom">
+    <div style="position: relative; top: 80px;">
+    <ruby class="row4ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በሮ</rb><rt><span>በ᎖</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በ</rb><rt><span>᎓</span></rt>
+      <rb>ሮ</rb><rt><span>ሞኂ</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ከ</rb><rt><span>᎖</span></rt>
+      <rb>በ</rb><rt></rt>
+      <rb>ሮ</rb><rt><span>ሥቱ</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ከ</rb><rt><span>᎐</span></rt>
+      <rb>በ</rb><rt><span>᎐</span></rt>
+      <rb>ሮ</rb><rt><span>ር</span></rt>
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row4ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በሮ</rb><rt><span>በ᎖</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በ</rb><rt><span>᎓</span></rt>
+      <rb>ሮ</rb><rt><span>ሞኂ</span></rt><!-- rt right align desired -->
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ከ</rb><rt><span>᎖</span></rt>
+      <rb>በ</rb><rt></rt>
+      <rb>ሮ</rb><rt><span>ሥቱ</span></rt><!-- rt right align desired -->
+    </ruby>
+    <ruby class="row1">
+      <rb>ከ</rb><rt><span>᎐</span></rt>
+      <rb>በ</rb><rt><span>᎐</span></rt>
+      <rb>ሮ</rb><rt><span>ር</span></rt><!-- rt right align desired -->
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+</ul>
+
+
+
+<h3>Use Case 13</h3>
+<table>
+  <col width="350px"/>
+  <col width="250px"/>
+  <tr>
+  <td><img src="use-cases/SelotKidasiePage83i2.png"/></td>
+  <td valign="bottom">
+    <div style="position: relative; top: 50px;">
+    <ruby class="row3ex red-miliket">
+      <rb>ገብ</rb><rt></rt>
+      <rb>ር</rb><rt><span>᎐</span></rt>
+      <rb>ኤ</rb><rt></rt>
+      <rb>ል፡</rb><rt><span> ᎒ሙ᎘</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ገብርኤ</rb><rt></rt>
+      <rb>ል፡</rb><rt style="text-align: right;"><span> ሌሊ</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ገብ</rb><rt style="text-align: left;">᎖ ዮ</rt>
+      <rb>ር</rb><rt>ሐ</rt>
+      <rb>ኤ</rb><rt></rt>
+      <rb>ል፡</rb><rt>ንስ᎖᎔᎖᎔</rt>
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row3ex red-miliket">
+      <rb>ገብ</rb><rt></rt>
+      <rb>ር</rb><rt></rt>ኤ
+      <rb>ል፡</rb><rt><span> ᎒ሙ᎘</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ገብርኤ</rb><rt></rt>
+      <rb>ል፡</rb><rt><span>ሌሊ</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ገብ</rb><rt style="ruby-align: start">᎖ዮ</rt>
+      <rb>ር</rb><rt>ሐ</rt>
+      <rb>ኤ</rb><rt></rt>
+      <rb>ል፡</rb><rt>ንስ᎖᎔᎖᎔</rt>
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+</ul>
+
+
+
+<h3>Use Case 14</h3>
+<table>
+  <col width="350px"/>
+  <col width="230px"/>
+  <col width="600px"/>
+  <tr>
+    <td colspan="2" style="border: 0"></td><th>Alternate Rendering</th>
+  </tr>
+  <tr>
+  <td><img src="use-cases/ZimarieWemewasitPage68i4-600dpi.png"/></td>
+  <td valign="bottom">
+    <div style="position: relative; top: 80px;">
+    <ruby class="row2ex">
+      <rb>ወኮ</rb><rt><span></span></rt>
+      <rb>ነ፡፩</rb><rt><span>᎖᎓᎓<span class="difat_diret_ex"></span>᎓᎖</span></rt>
+      <rb>ደ</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ወ</rb><rt>᎔᎓</rt>
+      <rb>ኮነ፡፩</rb><rt>ንሴ᎒<span class="difat_diret_ex">᎖᎒᎒᎒<span class="difat_difat_ex"></span>᎐᎖</span></rt>
+      <rb>ደ</rb><rt>᎐</rt>፡
+    </ruby>
+    </div>
+  </td>
+  <td valign="bottom">
+    <div style="position: relative; top: 80px;">
+    <ruby class="row2ex">
+      <rb>ወኮ</rb><rt><span></span></rt>
+      <rb>ነ፡፩</rb><rt><span>᎖᎓᎓<span class="difat_diret_ex"></span>᎓᎖</span></rt>
+      <rb>ደ</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ወ</rb><rt>᎔᎓</rt>
+      <rb>ኮነ፡፩</rb><rt>ንሴ᎒<span class="difat_diret_ex">᎖<em>᎒᎒᎒<span class="difat_difat_ex"></span></em>᎐᎖</span></rt>
+      <rb>ደ</rb><rt>᎐</rt>፡
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row2ex">
+      <rb>ወኮ</rb><rt><span></span></rt>
+      <rb>ነ፡፩</rb><rt><span>᎖᎓᎓<span class="difat_diret_ex"></span>᎓᎖</span></rt>
+      <rb>ደ</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ወ</rb><rt>᎔᎓</rt>
+      <rb>ኮነ፡፩</rb><rt>ንሴ᎒<span class="difat_diret_ex">᎖᎒᎒᎒<span class="difat_difat_ex"></span>᎐᎖</span></rt>
+      <rb>ደ</rb><rt>᎐</rt>፡
+    </ruby>
+  </script></td>
+  <td><script type="text/plain">
+    <ruby class="row2ex">
+      <rb>ወኮ</rb><rt><span></span></rt>
+      <rb>ነ፡፩</rb><rt><span>᎖᎓᎓<span class="difat_diret_ex"></span>᎓᎖</span></rt>
+      <rb>ደ</rb><rt><span></span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ወ</rb><rt>᎔᎓</rt>
+      <rb>ኮነ፡፩</rb><rt>ንሴ᎒<span class="difat_diret_ex">᎖<em>᎒᎒᎒<span class="difat_difat_ex"></span></em>᎐᎖</span></rt>
+      <rb>ደ</rb><rt>᎐</rt>፡
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+</ul>
+
+ 
+
+<h3>Use Case 15</h3>
+<table>
+  <col width="400px"/>
+  <col width="330px"/>
+  <tr>
+  <td><img src="use-cases/ZimarieWemewasitPageSecondHalf34i1-600dpi.png"/></td>
+  <td valign="bottom">
+    <div style="position: relative; top: 120px;">
+    <ruby class="row4ex">
+      <rb>ሊ</rb><rt><span></span></rt>
+      <rb>ባ</rb><rt><span></span></rt>
+      <rb>ኖ</rb><rt><span></span></rt>
+      <rb>ስ</rb><rt><span></span></rt>
+      <rb>፡ክቡ</rb><rt style="text-align: center;"><span>&nbsp;᎑ <span class="diret_difat_ex"></span>᎓᎔</span></rt>
+      <rb>ር</rb><rt><span>᎖᎓᎔</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ሊ</rb><rt style="text-align: left;"><span>᎔</span></rt>
+      <rb>ባ</rb><rt><span></span></rt>
+      <rb>ኖ</rb><rt><span>ኑሆ᎓</span></rt>
+      <rb>ስ</rb><rt><span>᎗</span></rt>
+      <rb>፡ክቡ</rb><rt><span><span class="difat_diret_ex"></span>ምጽ</span></rt>
+      <rb>ር</rb><rt><span>᎖᎓᎔</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ሊ</rb><rt style="text-align: left;"><span>᎑</span></rt>
+      <rb>ባ</rb><rt><span></span></rt>
+      <rb>ኖ</rb><rt><span>ው</span></rt>
+      <rb>ስ</rb><rt>᎗</rt>
+      <rb>፡</rb><rt><span></span></rt>
+      <rb>ክ</rb><rt><span>ተዒ</span></rt>
+      <rb>ቡ</rb><rt style="text-align: left;"><span><span style="font-size: 25%;">&nbsp;</span>᎖</span></rt>
+      <rb>ር</rb><rt><span>᎖᎓᎔</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ሊባ</rb><rt></rt>
+      <rb>ኖ</rb><rt>ጸጋ</rt>
+      <rb>ስ</rb><rt>᎗</rt>
+      <rb>፡</rb><rt></rt>
+      <rb>ክ</rb><rt></rt>
+      <rb>ቡ</rb><rt>᎔</rt>
+      <rb>ር</rb><rt>᎑</rt>፡
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row4ex">
+      <rb>ሊ</rb><rt><span></span></rt>
+      <rb>ባ</rb><rt><span></span></rt>
+      <rb>ኖ</rb><rt><span></span></rt>
+      <rb>ስ</rb><rt><span></span></rt>
+      <rb>፡ክቡ</rb><rt style="text-align: center;"><span>&nbsp;᎑ <span class="diret_difat_ex"></span>᎓᎔</span></rt>
+      <rb>ር</rb><rt><span>᎖᎓᎔</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ሊ</rb><rt style="text-align: left;"><span>᎔</span></rt>
+      <rb>ባ</rb><rt><span></span></rt>
+      <rb>ኖ</rb><rt><span>ኑሆ᎓</span></rt>
+      <rb>ስ</rb><rt><span>᎗</span></rt>
+      <rb>፡ክቡ</rb><rt><span><span class="difat_diret_ex"></span>ምጽ</span></rt>
+      <rb>ር</rb><rt><span>᎖᎓᎔</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ሊ</rb><rt style="text-align: left;"><span>᎑</span></rt>
+      <rb>ባ</rb><rt><span></span></rt>
+      <rb>ኖ</rb><rt><span>ው</span></rt>
+      <rb>ስ</rb><rt>᎗</rt>
+      <rb>፡</rb><rt><span></span></rt>
+      <rb>ክ</rb><rt><span>ተዒ</span></rt>
+      <rb>ቡ</rb><rt style="text-align: left;"><span><span style="font-size: 25%;">&nbsp;</span>᎖</span></rt>
+      <rb>ር</rb><rt><span>᎖᎓᎔</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ሊባ</rb><rt></rt>
+      <rb>ኖ</rb><rt>ጸጋ</rt>
+      <rb>ስ</rb><rt>᎗</rt>
+      <rb>፡</rb><rt></rt>
+      <rb>ክ</rb><rt></rt>
+      <rb>ቡ</rb><rt>᎔</rt>
+      <rb>ር</rb><rt>᎑</rt>፡
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>Could not center ᎖ over ቡ in Row 2 because charcter width included the "u" diacritic mark.  Desired "center" location was
+      in the midline of the base glyph በ.  Instead, "text-align: left;" is used with a right side space padding before the
+      ᎖ where the space used for padding is at a 25% scale.</li>
+</ul>
+
+
+<h3>Use Case 16</h3>
+<table>
+  <col width="500px"/>
+  <col width="360px"/>
+  <tr>
+  <td><img src="use-cases/ZimarieWemewasitPageSecondHalf34i2-600dpi.png"/></td>
+  <td valign="bottom">
+    <div style="position: relative; top: 120px;">
+    <ruby class="row5ex">
+      <rb>ሊባ</rb><rt><span></span></rt>
+      <rb>ኖ</rb><rt><span>᎒</span></rt>
+      <rb>ስሃ፡ና</rb><rt><span></span></rt>
+      <rb>ክብ</rb><rt><span>&nbsp;  &nbsp; &nbsp;</span></rt>
+      <rb>ር</rb><rt style="text-align: right;"><span>ር</span></rt>
+    </ruby>
+    <ruby class="row4ex">
+      <rb>ሊ</rb><rt><span></span></rt>
+      <rb>ባኖ</rb><rt><span>᎖᎔</span></rt>
+      <rb>ስሃ፡ና</rb><rt><span></span></rt>
+      <rb>ክብ</rb><rt><span>&nbsp;  &nbsp; &nbsp;</span></rt>
+      <rb>ር</rb><rt span style="text-align: right;"><span>ር</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ሊ</rb><rt><span>᎑&nbsp;</span></rt>
+      <rb>ባኖስ</rb><rt><span>᎖መን</span></rt>
+      <rb>ሃ</rb><rt><span>᎐</span></rt>
+      <rb>፡ናክብ</rb><rt><span></span></rt>
+      <rb>ር</rb><rt span style="text-align: right;"><span>ር</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ሊ</rb><rt><span>᎐&nbsp;</span></rt>
+      <rb>ባኖስ</rb><rt><span>᎑ደረ᎓᎔᎖᎖</span></rt>
+      <rb>ሃ</rb><rt><span>᎖᎖</span></rt>
+      <rb>፡</rb><rt></rt>
+      <rb>ና</rb><rt><span>᎐</span></rt>
+      <rb>ክብ</rb><rt></rt>
+      <rb>ር</rb><rt span style="text-align: right;"><span>ር</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ሊ</rb><rt></rt>
+      <rb>ባኖስ</rb><rt>᎑ደረ᎓᎔᎖᎖</rt>
+      <rb>ሃ</rb><rt>᎖᎖</rt>
+      <rb>፡</rb><rt></rt>
+      <rb>ና</rb><rt>᎐</rt>
+      <rb>ክብ</rb><rt></rt>
+      <rb>ር</rb><rt span style="text-align: right;"><span>ር</span></rt>
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row5ex">
+      <rb>ሊባ</rb><rt><span></span></rt>
+      <rb>ኖ</rb><rt><span>᎒</span></rt>
+      <rb>ስሃ፡ና</rb><rt><span></span></rt>
+      <rb>ክብ</rb><rt><span>&nbsp;  &nbsp; &nbsp;</span></rt>
+      <rb>ር</rb><rt span style="text-align: right;"><span>ር</span></rt>
+    </ruby>
+    <ruby class="row4ex">
+      <rb>ሊ</rb><rt><span></span></rt>
+      <rb>ባኖ</rb><rt><span>᎖᎔</span></rt>
+      <rb>ስሃ፡ና</rb><rt><span></span></rt>
+      <rb>ክብ</rb><rt><span>&nbsp;  &nbsp; &nbsp;</span></rt>
+      <rb>ር</rb><rt span style="text-align: right;"><span>ር</span></rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ሊ</rb><rt><span>᎑&nbsp;</span></rt>
+      <rb>ባኖስ</rb><rt><span>᎖መን</span></rt>
+      <rb>ሃ</rb><rt><span>᎐</span></rt>
+      <rb>፡ናክብ</rb><rt><span></span></rt>
+      <rb>ር</rb><rt span style="text-align: right;"><span>ር</span></rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ሊ</rb><rt><span>᎐&nbsp;</span></rt>
+      <rb>ባኖስ</rb><rt><span>᎑ደረ᎓᎔᎖᎖</span></rt>
+      <rb>ሃ</rb><rt><span>᎖᎖</span></rt>
+      <rb>፡</rb><rt></rt>
+      <rb>ና</rb><rt><span>᎐</span></rt>
+      <rb>ክብ</rb><rt></rt>
+      <rb>ር</rb><rt span style="text-align: right;"><span>ር</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ሊ</rb><rt></rt>
+      <rb>ባኖስ</rb><rt>᎑ደረ᎓᎔᎖᎖</rt>
+      <rb>ሃ</rb><rt>᎖᎖</rt>
+      <rb>፡</rb><rt></rt>
+      <rb>ና</rb><rt>᎐</rt>
+      <rb>ክብ</rb><rt></rt>
+      <rb>ር</rb><rt span style="text-align: right;"><span>ር</span></rt>፡
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+</ul>
+
+
+<h3>Use Case 17</h3>
+<table>
+  <col width="260px"/>
+  <col width="200px"/>
+  <tr>
+  <td><img src="use-cases/MerhaLiqawntPage84i6.png"/></td>
+  <td valign="bottom">
+    <div style="position: relative; top: 40px;">
+    <ruby class="row2ex red-miliket">
+      <rb>ዘኮ</rb><rt><span>᎐ ᎙ ᎙</span></rt>
+      <rb>ነ፡</rb><rt><span>᎙ሙ᎘</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ዘኮ&nbsp;</rb><rt style="text-align: left;">ወኮ᎖᎓᎔᎓᎖</rt>
+      <rb>ነ፡</rb><rt>᎖᎔᎖᎔</rt>
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li></li>
+</ul>
+
+
+
+<h3>Use Case 18</h3>
+<table>
+  <col width="450px"/>
+  <col width="260px"/>
+  <tr>
+  <td><img src="use-cases/MerhaLiqawntPage84i3.png"/></td>
+  <td valign="bottom">
+    <div style="position: relative; top: 60px;">
+    <ruby class="row2ex red-miliket">
+      <rb>ኪ</rb><rt></rt>
+      <rb>ያ</rb><rt><span>᎙</span></rt>
+      <rb>ከ</rb><rt></rt>
+      <rb>፡ኦ</rb><rt style="text-align: left;"><span>&nbsp; ᎙&nbsp;᎙&nbsp;᎙</span></rt>
+      <rb>ግ</rb><rt></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ኪ</rb><rt></rt>
+      <rb>ያ</rb><rt>ጽን</rt>
+      <rb>ከ</rb><rt></rt>
+      <rb>፡ኦ &nbsp;</rb><rt style="text-align: left;">&nbsp;ቡበ᎖᎓᎔᎖᎓᎔᎓᎔</rt>
+      <rb>ግ</rb><rt>መ</rt>
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row2ex red-miliket">
+      <rb>ኪ</rb><rt></rt>
+      <rb>ያ</rb><rt><span>᎙</span></rt>
+      <rb>ከ</rb><rt></rt>
+      <rb>፡ኦ &nbsp;</rb><rt style="text-align: left;"><span>&nbsp; ᎙&nbsp;᎙&nbsp;᎙</span></rt>
+      <rb>ግ</rb><rt></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ኪ</rb><rt></rt>
+      <rb>ያ</rb><rt>ጽን</rt>
+      <rb>ከ</rb><rt></rt>
+      <rb>፡ኦ &nbsp;</rb><rt style="text-align: left;">&nbsp;ቡበ᎖᎓᎔᎖᎓᎔᎓᎔</rt>
+      <rb>ግ</rb><rt>መ</rt>
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li>"text-align: left;" of ቡበ᎖᎓᎔᎖᎓᎔᎓᎔ in the rt over ፡ኦ had no effect, until an " &amp;nbsp;" was added in the rb.</li>
+  <li>An " &amp;nbsp;" was added to after ፡ኦ to force alignment of ቡ over ፡ and not the white space before it. This forced space between ፡ and ኦ. </li>
+</ul>
+
+
+<h3>Use Case 19</h3>
+<table>
+  <col width="400px"/>
+  <col width="220px"/>
+  <tr>
+  <td><img src="use-cases/MerhaLiqawntPage66i1.png"/></td>
+  <td valign="bottom">
+    <div style="position: relative; top: 60px;">
+    <ruby class="row2ex red-miliket">
+      <rb>መ፡</rb><rt><span>&nbsp;᎙ &nbsp;᎙ ᎙</span></rt>
+      <rb>ከ</rb><rt><span></span></rt>
+      <rb>መ</rb><rt><span>&nbsp;᎐</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>መ፡</rb><rt>&nbsp;ዩ᎖᎓᎔᎖᎓᎔᎓᎔</rt>
+      <rb>ከመ</rb><rt>ወተ</rt>፡
+    </ruby>
+    </div>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2"><script type="text/plain">
+    <ruby class="row2ex red-miliket">
+      <rb>መ፡</rb><rt><span>&nbsp;᎙ &nbsp;᎙ ᎙</span></rt>
+      <rb>ከ</rb><rt><span></span></rt>
+      <rb>መ</rb><rt><span>&nbsp;᎐</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>መ፡</rb><rt>&nbsp;ዩ᎖᎓᎔᎖᎓᎔᎓᎔</rt>
+      <rb>ከመ</rb><rt>ወተ</rt>፡
+    </ruby>
+  </script></td>
+  </tr>
+</table>
+
+<h4>Issues</h4>
+<ul>
+  <li></li>
+</ul>
+
+<section>
+  <h2 id="browsers"><a href="#browsers">Browser support</a></h2>
+  <p>The article describes behavior for the following browser versions. We will try to update the article as behavior changes.</p>
+  <table border="0" summary="Table lists browsers and engines whose behavior is represented in the article.">
+      <tbody>
+        <tr>
+          <th scope="col">Browser</th>
+          <th scope="col">Version</th>
+          <th scope="col">Engine</th>
+          <th scope="col">Other browsers using that engine</th>
+        </tr>
+        <tr>
+          <td><img src="../../icons/firefox_16x16.png" width="16" height="16" alt="Firefox" title="Firefox"/> Firefox</td>
+          <td>51.0.1</td>
+          <td>Gecko</td>
+          <td>Conkeror, etc.</td>
+        </tr>
+        <tr>
+          <td><img src="../../icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome"/> Chrome</td>
+          <td>56.0.2924.87</td>
+          <td>Blink</td>
+          <td>Opera, Vivaldi, etc.</td>
+        </tr>
+        <tr>
+          <td><img src="../../icons/safari_16x16.png" width="16" height="16" alt="Safari" title="Safari"/> Safari</td>
+          <td>10.0.3</td>
+          <td>Webkit</td>
+          <td>iOS-based browsers, Yandex, UC Browser, etc.</td>
+        </tr>
+        <tr>
+          <td><img src="../../icons/edge_16x16.png" width="16" height="16" alt="Edge" title="Edge"/> Edge</td>
+          <td>38.14393</td>
+          <td>EdgeHTML</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><img src="../../icons/internet-explorer_16x16.png" width="16" height="16" alt="Edge" title="Edge"/> Internet Explorer</td>
+          <td>11.0</td>
+          <td>Trident</td>
+          <td>&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+</section>
+
+<section>
+<h3>Normative References</h3>
+<dl>
+  <dd>Tu’um Lisan Kasa, ያሬድና ዜማው Yared Zeimaw, Tinsaie Zegubaie Matemiya Beit, Addis Ababa, 1981EC/1988</dd>
+  <dd>YeTinsaie YeMetsahft Mastemiya Dirjit, የዜማ አርዕስት ምልክት YeZaima Arist Milikt, Addis Ababa, 1983EC/1990</dd>
+  <dd>Birhanu Gesesse, Merigeta Dimtse, Priest and Zaima teacher at Urael Orthodox Church, Addis Ababa, 1999</dd>
+  <dd>Tinsaie Zegubaie Matamiya Beit, የቅዱስ ያሬድ ታሪክና የዜማ ምልክቶች YeKidus Yared Tarikna YeZaima Milketoc, Tinsaie Zegubaie Matemiya Beit, Addis Ababa, 1959EC/1966</dd>
+</dl>
+<h3>Informative References</h3>
+<dl>
+  <dd>Afewerk Ambaw, Memhir, ቍመተ አርያም K’wumete Aryam,  Bahir Dar Matemiya Beit Tateme, Bahir Dar, 1990EC/1998</dd>
+  <dd>Biete Kahne, መጽሐፍ ቅዳሴ ጕልሕ - በግእዝና በአማርኛ ከነምልክቱ Metsehaf Kidasie Gwulih - BeGe'ezna BeAmarigna Kenemilketu, Addis Ababa, 1991EC/1999</dd>
+  <dd>Gebre-Amanuel, Like Kahnat Berhanu, ed., ጸሎት ቅዳሴ - የሕዝብ ተስጥዎ Selot Kidasie - YeHezb Tesetwo, Berhanina Selam Matemiya Dirjit, Addis Ababa, 1989EC/1997</dd>
+  <dd>Gebre-Amanuel, Like Kahnat Berhanu, ed., መጽሐፈ ድጓ - ዘቅዱስ ያሬድ Metsehaf Degua - ZeKedus Yared, Nigid Matemiya Dirjit, Addis Ababa, 1988EC/1995</dd>
+  <dd>Gebre-Amanuel, Like Kahnat Berhanu, ed., ዝማሬ ወመዋሥዕት Zimarie WeMewas'et, Berhanina Selam Matemiya Dirjit, Addis Ababa, 1986EC/1993</dd>
+  <dd>Gebre-Sellasie, Tesfa, ዝማሬ - ዘደረስ ቅዱስ ያሬድ Zimarie - Zederese Kidus Yared, Tesfa Gebre-Sellasie Matemiya Biet, Addis Ababa, 1976EC/1983</dd>
+  <dd>Habte-Mariam, Memhir Enbakom, መርሐ ሊቃውንት Merha Likawunt, Nigid Matemiya Dirjit, Addis Ababa, 1991EC/1999</dd>
+  <dd>Kessis Kefyalew Merahi, The Most Versative Ethiopian Scholar, St. Yared and His Outstanding Works, Commercial Printing Enterprises, Addis Ababa, April 11, 2004</p>
+  <dd>Kenfe Mikael Muchei, Merigeita, አንቀጽ፡ዘድጓ፡ወዘጸዋትወ፡ዜማ፡ዘቤተልሔም Ankets Zedgwa WeZetsewatwe Zeima ZeBeitlheim, YeTinsaie YeMetsahft Mastemiya Dirjit, 1995 EC/2003</dd>
+  <dd>Tesema Habte Mikael Gisew, የአማርኛ መዝገበ ቃላት YeAmarigna Mezgebe Kalat Addis Ababa, 1951EC/1958</dd>
+  <dd>Tinsaie Zegubaie Matamiya Beit, ሥርዓት ቅዳሴ - የሕዝብ ተሠጥዎ Sirat Kidasie – YeHezb Tesetwo, Addis Ababa, 1979EC/1986</dd>
+  <dd>Woube Kassaye, Liturgical Music of Ethiopia, LISSAN: Journal of African Languages and Linguistics, Volume XIX Number 2, Addis Ababa, 2005</dd>
+  <dd>YeTinsaie YeMetsahft Mastemiya Dirjit, መዝሙር ዳዊት Mezmur Dawit, YeTinsaie YeMetsahft Mastemiya Dirjit, Addis Ababa, 1986EC/1993</dd>
+  <dd>YeTinsaie YeMetsahft Mastemiya Dirjit, መጽሐፈ፡ቅዳሴ፥ (መዝገበ፡ቅዳሴ፡ዘደብረ፡ዓባይ) Metsihafe Kidasei (Mezigebe Kidasei ZeDebre Abay), YeTinsaie YeMetsahft Mastemiya Dirjit, Addis Ababa, 1984 EC/1991</dd>
+  <dd>YeTinsaie YeMetsahft Mastemiya Dirjit, መጽሐፈ፡ዚቅ፡ወመዝሙር Metsihaf Zik WeMezmur, YeTinsaie YeMetsahft Mastemiya Dirjit, Addis Ababa, 1979EC/1986</dd>
+  <dd>YeTinsaie YeMetsahft Mastemiya Dirjit, ምዕራፍ ዘቅዱስ ያሬድ Me’eraf ZeKidus Yareid, Comercial Publishing Enterprise, Addis Ababa, 1987</dd>
+</dl>
+</section>
+
+</body>
+</html>

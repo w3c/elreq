@@ -1,0 +1,527 @@
+﻿<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zaima Playpen for CSS Development &amp; Browser Testing</title>
+<style>
+h3 { text-decoration: underline; }
+button { margin-bottom: 2px; }
+ruby.row1 {
+    position: absolute;
+    z-index:1;
+}
+ruby.row1 rt {
+  color: red;
+}
+ruby.row1 rt span {
+  position: relative;
+  bottom: 0px;
+}
+ruby.row2 {
+    position: absolute;
+    z-index:2;
+}
+ruby.row2 rb { visibility: hidden; }
+ruby.row2 rt {
+  color: black;
+}
+ruby.row2 rt span {
+  position: relative;
+  bottom: 8px;
+}
+ruby.row3 {
+    position: absolute;
+    z-index:3;
+}
+ruby.row3 rb { visibility: hidden; }
+ruby.row3 rt {
+  color: red;
+}
+ruby.row3 rt span {
+  position: relative;
+  bottom: 16px;
+}
+ruby.row4 {
+    position: absolute;
+    z-index:4;
+}
+ruby.row4 rb { visibility: hidden; }
+ruby.row4 rt {
+  color: black;
+}
+ruby.row4 rt span {
+  position: relative;
+  bottom: 24px;
+}
+.large { font-size: 50px; font-family: "Abyssinica SIL"; margin: 0; }
+ruby.row1ex {
+    position: absolute;
+    z-index:1;
+}
+ruby.row1ex rt {
+  color: red;
+}
+ruby.row1ex rt span {
+  position: relative;
+  bottom: 0px; 
+}
+ruby.row2ex {
+    position: absolute;
+    z-index:2;
+}
+ruby.row2ex rb { visibility: hidden; }
+ruby.row2ex rt {
+  color: black;
+}
+ruby.row2ex rt span {
+  position: relative;
+  bottom: 25px; 
+}
+ruby.row3ex {
+    position: absolute;
+    z-index:3;
+}
+ruby.row3ex rb { visibility: hidden; }
+ruby.row3ex rt {
+  color: red;
+}
+ruby.row3ex rt span {
+  position: relative;
+  bottom: 50px;
+}
+ruby.row4ex {
+    position: absolute;
+    z-index:4;
+}
+ruby.row4ex rb { visibility: hidden; }
+ruby.row4ex rt {
+  color: black;
+}
+ruby.row4ex rt span {
+  position: relative;
+  bottom: 75px;
+}
+p { text-align: justify; }
+</style>
+<script>
+
+var zaimaSheetIndex = 0;
+var zaimaSheet;
+(function(){
+  for( var i in document.styleSheets ) {
+      zaimaSheet = document.styleSheets[zaimaSheetIndex]; 
+  }
+})();
+var styleButtons = [ "buttonStripe", "buttonOutline", "buttonBorder", "buttonBorderLower", "buttonItalic", "buttonUnderline" ];
+var zaimaRows = [ "ruby.row1 rt span", "ruby.row2 rt span", "ruby.row3 rt span", "ruby.row4 rt span" ];
+var zaimaRowsLarge = [ "ruby.row1ex rt span", "ruby.row2ex rt span", "ruby.row3ex rt span", "ruby.row4ex rt span" ];
+var backgroundColors = [ "#b3ff99", "#ffff99", "#99ffff", "#ff9999" ];
+var outlineStyles = [ "double", "dotted", "solid", "dashed"];
+var outlineColors = [ "red", "black", "red", "black" ];
+var numRows = zaimaRows.length;
+var rowPositions = [ "0px", "8px", "16px", "24px" ];
+var rowPositionsLarge = [ "0px", "25px", "50px", "75px" ];
+
+function getCSSRule(ruleName) {               // Return requested style obejct
+   ruleName=ruleName.toLowerCase();                       // Convert test string to lower case.
+   var cssRule=false;                               // Initialize cssRule. 
+    for( var i=0; i<= zaimaSheet.rules.length; i++ ) {
+      if (zaimaSheet.cssRules) {                    // Browser uses cssRules?
+         cssRule = zaimaSheet.cssRules[i];         // Yes --Mozilla Style
+      } else {                                      // Browser usses rules?
+         cssRule = zaimaSheet.rules[i];            // Yes IE style. 
+      }                                             // End IE check.
+      if (cssRule)  {                               // If we found a rule...
+         if (cssRule.selectorText.toLowerCase()==ruleName) { //  match ruleName?
+               return cssRule;                      // return the style object.
+         }                                          // End found rule name
+      }                                             // end found cssRule
+   }
+   return false;                                          // we found NOTHING!
+}   
+
+function showHide(showRow) {
+    var rowSizesList = [ zaimaRows, zaimaRowsLarge ];
+    var rowPositionsList = [ rowPositions, rowPositionsLarge ];
+    var freeze = document.getElementById("freezeRows").checked;
+
+    for( var r in rowSizesList ) {
+	var rows =  rowSizesList[r];
+	var positions =  rowPositionsList[r];
+	var row = getCSSRule( rows[showRow-1] );
+	if( row.style.visibility == "hidden" ) {
+		row.style.visibility = "inherit";
+	}
+	else {
+		row.style.visibility = "hidden";
+		// row.style.display = "none";
+	}
+	if( !freeze ) {
+		var pos = 0;
+		for( var i=0; i< numRows; i++ ) {
+			var row = getCSSRule( rows[i] );
+			if( row.style.visibility != "hidden" ) {
+				row.style.bottom = positions[pos];
+				pos++;
+			}
+		}
+    	}
+    }
+    return true;
+}
+
+function stripeAll() {
+	for( var i=1; i<=numRows ; i++ ) {
+		stripe(i);
+	}    
+	return true;
+}
+function stripe(rowNumber) {
+    var stripe = true; 
+    var buttonID = "buttonStripe";
+    if( rowNumber ) buttonID += rowNumber ;
+
+    var button = document.getElementById( buttonID );
+    if ( button.style["border-style"] == "inset" ) {
+   	button.style["border-style"] = null;
+	stripe = false;
+    }
+    else {
+   	button.style["border-style"] = "inset";
+    }
+
+    var row = getCSSRule( zaimaRows[rowNumber-1] );
+    var rowLarge = getCSSRule( zaimaRowsLarge[rowNumber-1] );
+    if ( stripe ) {
+       	row.style['background-color'] = backgroundColors[rowNumber-1];
+       	rowLarge.style['background-color'] = backgroundColors[rowNumber-1];
+    }
+    else {
+       	row.style['background-color'] = null;
+       	rowLarge.style['background-color'] = null;
+    }
+
+    return false;
+}
+
+function outlineAll() {
+	for( var i=1; i<=numRows ; i++ ) {
+		outline(i);
+	}    
+	return true;
+}
+function outline(rowNumber) {
+    var outline = true; 
+    var buttonID = "buttonOutline";
+    if( rowNumber ) buttonID += rowNumber ;
+
+    var button = document.getElementById( buttonID );
+    if ( button.style["border-style"] == "inset" ) {
+   	button.style["border-style"] = null;
+	outline = false;
+    }
+    else {
+   	button.style["border-style"] = "inset";
+    }
+
+   var row = getCSSRule( zaimaRows[rowNumber-1] );
+   var rowLarge = getCSSRule( zaimaRowsLarge[rowNumber-1] );
+   if ( outline ) {
+   	row.style['outline-style'] = outlineStyles[rowNumber-1];
+   	row.style['outline-color'] = outlineColors[rowNumber-1];
+   	rowLarge.style['outline-style'] = outlineStyles[rowNumber-1];
+   	rowLarge.style['outline-color'] = outlineColors[rowNumber-1];
+   }
+   else {
+   	row.style['outline-style'] = 'none';
+   	row.style['outline-color'] = 'none';
+   	rowLarge.style['outline-style'] = 'none';
+   	rowLarge.style['outline-color'] = 'none';
+    }
+
+    return false;
+}
+
+function borderAll() {
+	for( var i=1; i<=numRows ; i++ ) {
+		border(i);
+	}    
+	return true;
+}
+function border(rowNumber) {
+    var border = true; 
+    var buttonID = "buttonBorder";
+    if( rowNumber ) buttonID += rowNumber ;
+
+    var button = document.getElementById( buttonID );
+    if ( button.style["border-style"] == "inset" ) {
+   	button.style["border-style"] = null;
+	border = false;
+    }
+    else {
+   	button.style["border-style"] = "inset";
+    }
+
+   var row = getCSSRule( zaimaRows[rowNumber-1] );
+   var rowLarge = getCSSRule( zaimaRowsLarge[rowNumber-1] );
+   if ( border ) {
+   	row.style['border-style'] = outlineStyles[rowNumber-1];
+   	row.style['border-color'] = outlineColors[rowNumber-1];
+   	rowLarge.style['border-style'] = outlineStyles[rowNumber-1];
+   	rowLarge.style['border-color'] = outlineColors[rowNumber-1];
+   }
+  else {
+   	row.style['border-style'] = 'none';
+   	row.style['border-color'] = 'none';
+   	rowLarge.style['border-style'] = 'none';
+   	rowLarge.style['border-color'] = 'none';
+   }
+   return false;
+}
+
+function lowerBorderAll() {
+	for( var i=1; i<=numRows ; i++ ) {
+		lowerBorder(i);
+	}    
+	return true;
+}
+function lowerBorder(rowNumber) {
+    var border = true; 
+    var buttonID = "buttonLowerBorder";
+    if( rowNumber ) buttonID += rowNumber ;
+
+    var button = document.getElementById( buttonID );
+    if ( button.style["border-style"] == "inset" ) {
+   	button.style["border-style"] = null;
+	border = false;
+    }
+    else {
+   	button.style["border-style"] = "inset";
+    }
+
+   var row = getCSSRule( zaimaRows[rowNumber-1] );
+   var rowLarge = getCSSRule( zaimaRowsLarge[rowNumber-1] );
+   if ( border ) {
+   	rowLarge.style['border-color'] = null;
+   	rowLarge.style['border-color'] = null;
+ 	row.style['border-bottom'] = "1px dashed #666";
+   	rowLarge.style['border-bottom'] = "1px dashed #666";
+   }
+  else {
+   	row.style['border-style'] = 'none';
+   	row.style['border-color'] = 'none';
+   	rowLarge.style['border-style'] = 'none';
+   	rowLarge.style['border-color'] = 'none';
+   }
+   return false;
+}
+
+function italicAll() {
+	for( var i=1; i<=numRows ; i++ ) {
+    		document.getElementById( "buttonItalic" + i ).checked = !(document.getElementById( "buttonItalic" + i ).checked);
+		italic(i);
+	}    
+	return true;
+}
+function italic(rowNumber) {
+    var buttonID = "buttonItalic";
+    if( rowNumber ) buttonID += rowNumber ;
+    var italic = document.getElementById( buttonID ).checked;
+
+    var row = getCSSRule( zaimaRows[rowNumber-1] );
+    var rowLarge = getCSSRule( zaimaRowsLarge[rowNumber-1] );
+    if ( italic ) {
+       	row.style['font-style'] = "italic";
+       	rowLarge.style['font-style'] = "italic";
+    }
+    else {
+       	row.style['font-style'] = null;
+       	rowLarge.style['font-style'] = null;
+    }
+
+    return true;
+}
+
+function underlineAll() {
+	for( var i=1; i<=numRows ; i++ ) {
+    		document.getElementById( "buttonUnderline" + i ).checked = !(document.getElementById( "buttonUnderline" + i ).checked) 
+		underline(i);
+	}    
+	return true;
+}
+function underline(rowNumber) {
+    var buttonID = "buttonUnderline";
+    if( rowNumber ) buttonID += rowNumber ;
+    var underline = document.getElementById( buttonID ).checked;
+
+    var row = getCSSRule( zaimaRows[rowNumber-1] );
+    var rowLarge = getCSSRule( zaimaRowsLarge[rowNumber-1] );
+    if ( underline ) {
+	row.style['text-decoration'] = "underline";
+	rowLarge.style['text-decoration'] =  "underline";
+    }
+    else {
+       	row.style['text-decoration'] = null;
+       	rowLarge.style['text-decoration'] = null;
+    }
+
+    return true;
+}
+
+function reset() {
+    var rowSizesList = [ zaimaRows, zaimaRowsLarge ];
+    var rowPositionsList = [ rowPositions, rowPositionsLarge ];
+
+	for( var r in rowSizesList ) {
+		var rows =  rowSizesList[r];
+		var positions =  rowPositionsList[r];
+
+		for( var i=0; i<numRows; i++ ) {
+			var row = getCSSRule( rows[i] );
+       		   	row.style['border-style'] = 'none';
+   			row.style['border-color'] = 'none';
+   			row.style['outline-style'] = 'none';
+   			row.style['outline-color'] = 'none';
+			row.style.bottom = positions[i];
+			row.style.visibility = "inherit";
+       			row.style['background-color'] = null;
+       			row.style['font-style'] = null
+       			row.style['text-decoration'] = null
+       			row.style['border-bottom'] = null
+
+		}
+	}
+	for( var i=0; i<numRows; i++ ) {
+		document.getElementById( "button" + (i+1)).checked = true;
+		for( j=0; j<styleButtons.length; j++ ) {
+			var button = document.getElementById( styleButtons[j] + (i+1) );
+			if( button.type == "checkbox" ) {
+				button.checked = false;
+			}
+			else {
+				button.style["border-style"] = null;
+			}
+		}
+	}
+	document.getElementById("freezeRows").checked = false;
+	return true;
+}
+</script>
+</head>
+<body>
+<h1>Zaima Playpen for CSS Development &amp; Browser Testing</h1>
+<p>This page is both exploratory and demonstrative of CSS capabilities in positioning and styling Zaima under <a href="https://www.w3.org/International/articles/ruby/markup">Ruby Markup</a>.
+Ruby markup and style properties are applied to Zaima samples to evaluate their suitability in presenting Zaima under user expectations in digital documents.
+A goal of the page is to identify and note any short comings in the ability of markup and style languages to support Zaima requirements, 
+uncover browser limitations in rendering, 
+and ultimately to determine if Zaima presentation requirements necessitate their own markup model and standards additions.
+</p>
+
+<h3>Decoration Control Panel</h3>
+<div style="margin-left: 20px; border: solid 1px #666; width: 430px; height: 200px;">
+  <div style="float: left; width: 330px; height: 200px;">
+  <form>
+    <input type="checkbox" id="button4" onclick="showHide(4);" checked="chedked"/>Row 4<br/>
+      &nbsp;&nbsp;<button id="buttonStripe4" onclick="return stripe(4);">Stripe</button>
+      <button id="buttonOutline4" onclick="return outline(4);">Outline</button>
+      <button id="buttonBorder4" onclick="return border(4);">Border</button>
+      <button id="buttonLowerBorder4" onclick="return lowerBorder(4);">Lower Border</button>
+      <input type="checkbox" id="buttonItalic4" onclick="italic(4);"/><i>I</i> 
+      <input type="checkbox" id="buttonUnderline4" onclick="underline(4);"/><u>U</u><br/>
+    <input type="checkbox" id="button3" onclick="showHide(3);" checked="chedked"/>Row 3<br/>
+      &nbsp;&nbsp;<button id="buttonStripe3" onclick="return stripe(3);">Stripe</button>
+      <button id="buttonOutline3" onclick="return outline(3);">Outline</button>
+      <button id="buttonBorder3" onclick="return border(3);">Border</button>
+      <button id="buttonLowerBorder3" onclick="return lowerBorder(3);">Lower Border</button>
+      <input type="checkbox" id="buttonItalic3" onclick="italic(3);"/><i>I</i> 
+      <input type="checkbox" id="buttonUnderline3" onclick="underline(3);"/><u>U</u><br/>
+    <input type="checkbox" id="button2" onclick="showHide(2);" checked="chedked"/>Row 2<br/>
+      &nbsp;&nbsp;<button id="buttonStripe2" onclick="return stripe(2);">Stripe</button>
+      <button id="buttonOutline2" onclick="return outline(2);">Outline</button>
+      <button id="buttonBorder2" onclick="return border(2);">Border</button>
+      <button id="buttonLowerBorder2" onclick="return lowerBorder(2);">Lower Border</button>
+      <input type="checkbox" id="buttonItalic2" onclick="italic(2);"/><i>I</i> 
+      <input type="checkbox" id="buttonUnderline2" onclick="underline(2);"/><u>U</u><br/>
+    <input type="checkbox" id="button1" onclick="showHide(1);" checked="chedked"/>Row 1<br/>
+      &nbsp;&nbsp;<button id="buttonStripe1" onclick="return stripe(1);">Stripe</button>
+      <button id="buttonOutline1" onclick="return outline(1);">Outline</button>
+      <button id="buttonBorder1" onclick="return border(1);">Border</button>
+      <button id="buttonLowerBorder1" onclick="return lowerBorder(1);">Lower Border</button>
+      <input type="checkbox" id="buttonItalic1" onclick="italic(1);"/><i>I</i> 
+      <input type="checkbox" id="buttonUnderline1" onclick="underline(1);"/><u>U</u><br/>
+    <input type="checkbox" id="freezeRows"/> Freeze Rows<br/>
+  </form>
+  </div>
+  <div>
+    <strong>All Rows</strong>
+    <button id="buttonStripe" onclick="stripeAll();">Stripe</button><br/>
+    <button id="buttonOutline" onclick="outlineAll();">Outline</button><br/>
+    <button id="buttonBorder" onclick="borderAll();">Border</button><br/>
+    <button id="buttonLowerBorder" onclick="lowerBorderAll();">Lower Border</button><br/>
+    <button id="buttonItalic" onclick="italicAll();">Italic</button><br/>
+    <button id="buttonUnderline" onclick="underlineAll();">Underline</button><br/>
+    <button id="buttonReset" onclick="reset();">Reset</button>
+  </div>
+</div>
+
+<p><br/> <br/></p>
+
+<h3>Default Font Size</h3>
+<ul>
+  <li>Font Family: Abyssinica SIL</li>
+  <li>Font Size: unspecified (default)</li>
+  <li>Row 1 rt span bottom: 0px</li>
+  <li>Row 2 rt span bottom: 8px</li>
+  <li>Row 3 rt span bottom: 16px</li>
+  <li>Row 4 rt span bottom: 24px</li>
+</ul>
+<div style="margin-left: 20px; border: solid 1px #666; width: 720px; height: 200px;">
+  <p><br/> <br/> <br/></p>
+  <div style="float: left; width: 350px; height: 200px;">
+    <ruby class="row4"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
+    <ruby class="row3"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
+    <ruby class="row2"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
+    <ruby class="row1"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
+  </div>
+
+
+  <div>
+    <ruby class="row4"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+    <ruby class="row3"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+    <ruby class="row2"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+    <ruby class="row1"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+  </div>
+</div>
+
+
+<p><br/> <br/> <br/> </p><!-- if the last br is removed, the following h3 becomes centered -->
+
+<h3>Large Font Size</h3>
+<ul>
+  <li>Font Family: Abyssinica SIL</li>
+  <li>Font Size: 50px</li>
+  <li>Row 1 rt span bottom: 0px</li>
+  <li>Row 2 rt span bottom: 25</li>
+  <li>Row 3 rt span bottom: 50px</li>
+  <li>Row 4 rt span bottom: 75px</li>
+</ul>
+<div style="margin-left: 20px; border: solid 1px #666; width: 1150px; height: 400px;">
+  <div style="border-bottom: solid 1px #666;  width: 1150px; height: 200px;">
+    <p><br/> <br/> <br/> <br/></p>
+    <ruby class="large row4ex"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
+    <ruby class="large row3ex"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
+    <ruby class="large row2ex"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
+    <ruby class="large row1ex"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
+  </div>
+
+
+  <div>
+    <p><br/> <br/> <br/> <br/></p>
+    <ruby class="large row4ex"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+    <ruby class="large row3ex"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+    <ruby class="large row2ex"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+    <ruby class="large row1ex"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+  </div>
+</div>
+
+</body>
+</html>
