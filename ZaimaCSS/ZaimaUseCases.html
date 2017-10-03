@@ -80,32 +80,56 @@ function highlightCode () {
 </script>
 <style>
   script { display: block; white-space: pre-wrap; }
+  .figure-wide { margin-right: 10%; }
 </style>
 </head>
 <body>
-<h1>Tests</h1>
-<h1>Zaima Styling Use Cases &amp; CSS Limitation Exploration</h1>
 <p>
 <span class="leadin"></span>
 </p>
 <section>
+<h1>Zaima Styling Use Cases &amp; CSS Limitation Exploration</h1>
   <div id="audience">
     <p><span id="intendedAudience" class="leadin">Intended audience:</span> 
-    XHTML/HTML coders (using editors or scripting), script developers (PHP, JSP, etc.), CSS coders, and
-      anyone who wants to know how to use ruby annotations. </p>
-    <div id="updateInfo"></div><script>document.getElementById('updateInfo').innerHTML = g.updated</script>
+    W3C reviewers familiar with the <a href="https://www.w3.org/International/articles/ruby/markup">Ruby Markup</a> and the <a href="https://drafts.csswg.org/css-ruby-1/">CSS Ruby Layout Module Level 1</a> who can suggest refinements and styling techniques.
+    Specialists in the Yaredic Zaima practice who can review the use cases and suggest others.</p> 
     </div>
-</seciton>
 
-    ᎐ ᎓ ᎒ ᎙ ᎑ ᎔ ᎖᎕  ᎗  ᎘<br/>
+<p>Zaima is the name given to the small cantillation annotations in the Ge'ez language hymnary that are rendered in one or more rows above base text.
+In this article the markup and CSS styling elements developed for rendering Ruby content are applied to Zaima samples that represent the most
+challenging use cases. The goal is to discover from application any limitations in markup and styling fascilities to support the requirements of
+Zaima presentation and thus derive a complete model for Zaima representation.
+</p>
+
+<p>An equally important goal in developing digitally rendered samples is determining with practitioners what characteristics of the calligraphic
+tradition must be preserved in electronic media.  Stylistic features in Zaima presentation may be idiosyncratic to a scribe, artifacts of the
+scribal process and tools, and need not be rendered in electronic documents. Other features may convey meaning that is critical to the practice
+and must be rendered in the same way electronically.
+</p>
+</section>
+
+
+<!-- ᎐ ᎓ ᎒ ᎙ ᎑ ᎔ ᎖᎕  ᎗  ᎘ -->
+
+<section>
+<h2>Use Cases</h2>
+<p>Use cases are selected that represent particular challenges in presentation beyond the regular Ruby use cases. Use cases are borrowed from
+a previous survey in a, now depreciated, article on <a href="http://yacob.org/ethio-ruby/">Zaima Annotation</a> which in turn provides the full
+page sources of the samples appearing here.</p>
+
+
+<h3>Use Case 1</h3>
 <p><br/></p>
+<h4>Features:</h4>
+<ul>
+  <li>Fairly simple.</li>
+  <li>Presence of the chord <span class="difat_difat"></span> which must render inline with a row.
+  <li>The ᎒᎖᎒᎓<span class="difat_difat"></span>᎒ sequence spans 2 or possibly 3 letters along a render line rising at a slight angle to
+      the right.</li>
+  <li><em>TBD: Add a context note.</em></li>
+</ul>
 
-
-<h3>Use Case 1, Simple Four Row Example</h3>
-<p><br/></p>
-<p>Features:</p>
-<br/>Selot Kidassie p. 129
-<div class="example">
+<figure class="example">
 <table>
   <col width="340px" />
   <col />
@@ -113,44 +137,58 @@ function highlightCode () {
   <td><img style="display: block; margin-left: auto; margin-right: auto;" src="use-cases/SelotKidasiePage129i2.png"/></td>
   <td valign="bottom">
     <div style="position: relative; top: 40px;">
-    <ruby class="row2ex red-miliket"><rb>ሐዋ</rb><rt><span>ሰማ᎓</span></rt><rb>ር</rb><rt></rt><rb>ያት</rb><rt><span>᎒᎖᎒᎓<span class="difat_difat_ex"></span>᎒</span></rt></ruby>
-    <ruby class="row1"><rb>ሐ</rb><rt><span>᎑</span></rt><rb>ዋ</rb><rt><span>ሰማ </span></rt><rb>ር</rb><rt></rt><rb>ያ</rb><rt><span>ደ</span></rt><rb>ት</rb><rt><span>ታት</span></rt></ruby>
+    <ruby class="row2ex red-miliket">
+      <rb>ሐዋ</rb><rt><span>ሰማ᎓</span></rt>
+      <rb>ር</rb><rt></rt>
+      <rb>ያት</rb><rt style="text-align: left; rotate(5deg);"><span>᎒᎖᎒᎓<span class="difat_difat_ex"></span> ᎒</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ሐ</rb><rt>᎑</rt>
+      <rb>ዋ</rb><rt>ሰማ</rt>
+      <rb>ር</rb><rt></rt>
+      <rb>ያ</rb><rt>ደ</rt>
+      <rb>ት</rb><rt>ታት</rt>፡
+    </ruby>
     </div>
   </td>
   </tr>
   <tr>
   <td colspan="2"><script type="text/plain">
-  <ruby class="row2ex red-miliket">
-    <rb>ሐዋ</rb><rt><span>ሰማ᎓</span></rt>
-    <rb>ር</rb><rt></rt>
-    <rb>ያት</rb><rt><span>᎒᎖᎒᎓<span class="difat_difat_ex"></span>᎒</span></rt>
- </ruby>
- <ruby class="row1"><rb>ሐ</rb><rt><span>᎑</span></rt>
-   <rb>ዋ</rb><rt><span>ሰማ </span></rt>
-   <rb>ር</rb><rt></rt><rb>ያ</rb><rt><span>ደ</span></rt>
-   <rb>ት</rb><rt><span>ታት</span></rt>
-  </ruby>
+    <ruby class="row2ex red-miliket">
+      <rb>ሐዋ</rb><rt><span>ሰማ᎓</span></rt>
+      <rb>ር</rb><rt></rt>
+      <rb>ያት</rb><rt style="text-align: left; rotate(5deg);"><span>᎒᎖᎒᎓<span class="difat_difat_ex"></span> ᎒</span></rt>
+    </ruby>
+    <ruby class="row1">
+      <rb>ሐ</rb><rt>᎑</rt>
+      <rb>ዋ</rb><rt>ሰማ</rt>
+      <rb>ር</rb><rt></rt>
+      <rb>ያ</rb><rt>ደ</rt>
+      <rb>ት</rb><rt>ታት</rt>፡
+    </ruby>
   </script></td>
   </tr>
 </table>
-<p><strong>Figure 1</strong>
-Selot Kidassie p. 129
-</div>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
+  <li>Unable to use "ruby-align: space-between;" to distribute <span>᎒᎖᎒᎓<span class="difat_difat"></span> ᎒</span> over ርያት.</li>
   <li>Determine if the bottom row is actually two rows.</li>
+  <li>Determine if ደ above ያ might actually be ይ.</li>
 </ul>
 
 <p><br/></p>
 
 
 
-<h3>Use Case 2, Simple Four Row Example</h3>
+<h3>Use Case 2</h3>
 
 <p>Features:</p>
 
 
+<figure class="example">
 <table>
   <col width="250px"/>
   <col width="180px"/>
@@ -248,8 +286,10 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 2</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>Had to specify a 2nd column width or the example gets cut off by the table. A rendering engine appears not be calculating cell content width correctly.</li>
   <li>In the alternative rendering, unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
@@ -259,6 +299,8 @@ Selot Kidassie p. 129
 
 
 <h3>Use Case 3</h3>
+
+<figure class="example">
 <table>
   <col width="250px"/>
   <col width="250px"/>
@@ -374,8 +416,10 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 3</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>Verify ይ or ዶ in row 3</li>
   <li>Right justify desired for ኢ above ወ on row 3, and for both ጐ᎖ and ᎐᎖᎖ above ከ on rows 3 and 4 respectively</li>
@@ -395,6 +439,8 @@ Selot Kidassie p. 129
 
 
 <h3>Use Case 4</h3>
+
+<figure class="example">
 <table>
   <col width="350px"/>
   <col width="250px"/>
@@ -490,8 +536,10 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
@@ -499,6 +547,8 @@ Selot Kidassie p. 129
 <p><br/></p>
 
 <h3>Use Case 5</h3>
+
+<figure class="example">
 <table>
   <col width="350px"/>
   <col width="400px"/>
@@ -508,7 +558,7 @@ Selot Kidassie p. 129
     <div style="position: relative; top: 50px;">
     <ruby class="row3ex red-miliket">
       <rb>ሰ</rb><rt><span></span></rt>
-      <rb>ላ</rb><rt><span>&nbsp; ᎒</span></rt>
+      <rb>ላ</rb><rt><span>᎒</span></rt>
       <rb>መ</rb><rt><span></span></rt>
       <rb>ከ፡</rb><rt><span>᎒ሙ᎘</span></rt>
       <rb>ን</rb><rt><span></span></rt>
@@ -542,7 +592,7 @@ Selot Kidassie p. 129
   <td colspan="2"><script type="text/plain">
     <ruby class="row3ex red-miliket">
       <rb>ሰ</rb><rt><span></span></rt>
-      <rb>ላ</rb><rt><span>&nbsp; ᎒</span></rt>
+      <rb>ላ</rb><rt><span>᎒</span></rt>
       <rb>መ</rb><rt><span></span></rt>
       <rb>ከ፡</rb><rt><span>᎒ሙ᎘</span></rt>
       <rb>ን</rb><rt><span></span></rt>
@@ -572,8 +622,10 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
@@ -582,6 +634,8 @@ Selot Kidassie p. 129
 
 
 <h3>Use Case 6</h3>
+
+<figure class="example figure-wide">
 <table>
   <col width="500px"/>
   <col width="500px"/>
@@ -673,14 +727,18 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
 
 
 <h3>Use Case 7</h3>
+
+<figure class="example">
 <table>
   <col width="300px"/>
   <col width="230px"/>
@@ -728,13 +786,17 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
 
 <h3>Use Case 8</h3>
+
+<figure class="example figure-wide">
 <table>
   <col width="900px"/>
   <col width="580px"/>
@@ -850,8 +912,10 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
@@ -863,6 +927,8 @@ Selot Kidassie p. 129
 
 
 <h3>Use Case 9</h3>
+
+<figure class="example">
 <table>
   <col width="350px"/>
   <col width="280px"/>
@@ -1004,8 +1070,10 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
@@ -1013,6 +1081,8 @@ Selot Kidassie p. 129
     ᎐ ᎓ ᎒ ᎙ ᎑ ᎔ ᎖᎕  ᎗  ᎘<br/>
 
 <h3>Use Case 10</h3>
+
+<figure class="example figure-wide">
 <table>
   <col width="935px"/>
   <col width="680px"/>
@@ -1132,8 +1202,10 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
@@ -1143,6 +1215,8 @@ Selot Kidassie p. 129
 
 
 <h3>Use Case 11</h3>
+
+<figure class="example">
 <table>
   <col width="330px"/>
   <col width="180px"/>
@@ -1250,14 +1324,18 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
 
 
 <h3>Use Case 12</h3>
+
+<figure class="example figure-wide">
 <table>
   <tr>
   <col width="835px"/>
@@ -1387,8 +1465,10 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
@@ -1396,6 +1476,8 @@ Selot Kidassie p. 129
 
 
 <h3>Use Case 13</h3>
+
+<figure class="example">
 <table>
   <col width="350px"/>
   <col width="250px"/>
@@ -1442,8 +1524,10 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
@@ -1451,10 +1535,12 @@ Selot Kidassie p. 129
 
 
 <h3>Use Case 14</h3>
+
+<figure class="example figure-wide">
 <table>
   <col width="350px"/>
-  <col width="230px"/>
-  <col width="600px"/>
+  <col width="260px"/>
+  <col width="800px"/>
   <tr>
     <td colspan="2" style="border: 0"></td><th>Alternate Rendering</th>
   </tr>
@@ -1469,7 +1555,8 @@ Selot Kidassie p. 129
     </ruby>
     <ruby class="row1">
       <rb>ወ</rb><rt>᎔᎓</rt>
-      <rb>ኮነ፡፩</rb><rt>ንሴ᎒<span class="difat_diret_ex">᎖᎒᎒᎒<span class="difat_difat_ex"></span>᎐᎖</span></rt>
+      <rb>ኮነ፡፩</rb>
+      <rt>ንሴ᎒<span class="difat_diret_ex">᎖᎒᎒᎒<span class="difat_difat_ex"></span>᎐᎖</span></rt>
       <rb>ደ</rb><rt>᎐</rt>፡
     </ruby>
     </div>
@@ -1483,7 +1570,8 @@ Selot Kidassie p. 129
     </ruby>
     <ruby class="row1">
       <rb>ወ</rb><rt>᎔᎓</rt>
-      <rb>ኮነ፡፩</rb><rt>ንሴ᎒<span class="difat_diret_ex">᎖<em>᎒᎒᎒<span class="difat_difat_ex"></span></em>᎐᎖</span></rt>
+      <rb>ኮነ፡፩</rb>
+      <rt>ንሴ᎒<span class="difat_diret_ex">᎖<em>᎒᎒᎒<span class="difat_difat_ex"></span></em>᎐᎖</span></rt>
       <rb>ደ</rb><rt>᎐</rt>፡
     </ruby>
     </div>
@@ -1498,7 +1586,8 @@ Selot Kidassie p. 129
     </ruby>
     <ruby class="row1">
       <rb>ወ</rb><rt>᎔᎓</rt>
-      <rb>ኮነ፡፩</rb><rt>ንሴ᎒<span class="difat_diret_ex">᎖᎒᎒᎒<span class="difat_difat_ex"></span>᎐᎖</span></rt>
+      <rb>ኮነ፡፩</rb>
+      <rt>ንሴ᎒<span class="difat_diret_ex">᎖᎒᎒᎒<span class="difat_difat_ex"></span>᎐᎖</span></rt>
       <rb>ደ</rb><rt>᎐</rt>፡
     </ruby>
   </script></td>
@@ -1510,14 +1599,17 @@ Selot Kidassie p. 129
     </ruby>
     <ruby class="row1">
       <rb>ወ</rb><rt>᎔᎓</rt>
-      <rb>ኮነ፡፩</rb><rt>ንሴ᎒<span class="difat_diret_ex">᎖<em>᎒᎒᎒<span class="difat_difat_ex"></span></em>᎐᎖</span></rt>
+      <rb>ኮነ፡፩</rb>
+      <rt>ንሴ᎒<span class="difat_diret_ex">᎖<em>᎒᎒᎒<span class="difat_difat_ex"></span></em>᎐᎖</span></rt>
       <rb>ደ</rb><rt>᎐</rt>፡
     </ruby>
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
@@ -1525,6 +1617,8 @@ Selot Kidassie p. 129
  
 
 <h3>Use Case 15</h3>
+
+<figure class="example">
 <table>
   <col width="400px"/>
   <col width="330px"/>
@@ -1610,8 +1704,10 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>Could not center ᎖ over ቡ in Row 2 because charcter width included the "u" diacritic mark.  Desired "center" location was
       in the midline of the base glyph በ.  Instead, "text-align: left;" is used with a right side space padding before the
@@ -1620,6 +1716,8 @@ Selot Kidassie p. 129
 
 
 <h3>Use Case 16</h3>
+
+<figure class="example">
 <table>
   <col width="500px"/>
   <col width="340px"/>
@@ -1713,14 +1811,18 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
 
 
 <h3>Use Case 17</h3>
+
+<figure class="example">
 <table>
   <col width="260px"/>
   <col width="320px"/>
@@ -1752,8 +1854,10 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li></li>
 </ul>
@@ -1761,6 +1865,8 @@ Selot Kidassie p. 129
 
 
 <h3>Use Case 18</h3>
+
+<figure class="example">
 <table>
   <col width="450px"/>
   <col width="260px"/>
@@ -1804,8 +1910,10 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li>"text-align: left;" of ቡበ᎖᎓᎔᎖᎓᎔᎓᎔ in the rt over ፡ኦ had no effect, until an " &amp;nbsp;" was added in the rb.</li>
   <li>An " &amp;nbsp;" was added to after ፡ኦ to force alignment of ቡ over ፡ and not the white space before it. This forced space between ፡ and ኦ. </li>
@@ -1813,6 +1921,8 @@ Selot Kidassie p. 129
 
 
 <h3>Use Case 19</h3>
+
+<figure class="example">
 <table>
   <col width="400px"/>
   <col width="220px"/>
@@ -1846,11 +1956,14 @@ Selot Kidassie p. 129
   </script></td>
   </tr>
 </table>
+<p><strong>Figure 1</strong> Selot Kidassie p. 129</p>
+</figure>
 
-<h4>Issues</h4>
+<h4>Issues:</h4>
 <ul>
   <li></li>
 </ul>
+</section>
 
 <section>
   <h2 id="browsers"><a href="#browsers">Browser support</a></h2>
@@ -1926,25 +2039,6 @@ Selot Kidassie p. 129
 </dl>
 </section>
 
-ይዲ፤ነጽር።
-ይካ፤ቅድሳት፡ለቅዱሳን፤
-
-ራቀ
-ቡ
-ልየ
-ጽራ
-ኃ
-ሁ
-ዑ
-
-
-ንቅረብ፡ለመድኃኒት፡ሕይወት፡
-ደስ ቅጹ
-ጥም
-ጽ
-ዊ
-ጺ
-ጥሮ
 
 </body>
 </html>
