@@ -116,6 +116,8 @@ and must be rendered in the same way electronically.
 <p>Use cases are selected that represent particular challenges in presentation beyond the regular Ruby use cases. Use cases are borrowed from
 a previous survey in a, now depreciated, article on <a href="http://yacob.org/ethio-ruby/">Zaima Annotation</a> which in turn provides the full
 page sources of the samples appearing here.</p>
+<p>The samples here present focused layout requirements in isolation from their larger context.  Larger samples will be produced to help access
+the overall readibility of electronically laid out Zaima in general, and to evaluate the layout choices made here.</p>
 
 
 <h3>Use Case 1</h3>
@@ -126,7 +128,7 @@ page sources of the samples appearing here.</p>
   <li>Presence of the chord <span class="difat_difat"></span> which must render inline with a row.
   <li>The ᎒᎖᎒᎓<span class="difat_difat"></span>᎒ sequence spans 2 or possibly 3 letters along a render line rising at a slight angle to
       the right.</li>
-  <li><em>TBD: Add a context note.</em></li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
 </ul>
 
 <figure class="example">
@@ -177,6 +179,7 @@ page sources of the samples appearing here.</p>
   <li>Unable to use "ruby-align: space-between;" to distribute <span>᎒᎖᎒᎓<span class="difat_difat"></span> ᎒</span> over ርያት.</li>
   <li>Determine if the bottom row is actually two rows.</li>
   <li>Determine if ደ above ያ might actually be ይ.</li>
+  <li>Is anything lost when the rising qirts marks are arranged fully horizontal and not rising?  Can the Zaima be reproduced vocally in the same way?</li>
 </ul>
 
 <p><br/></p>
@@ -186,6 +189,13 @@ page sources of the samples appearing here.</p>
 <h3>Use Case 2</h3>
 
 <p>Features:</p>
+<ul>
+  <li>Fairly simple.</li>
+  <li>Clear left align of ᎖ over ከ in 2nd row.  Question: Is this positioning important vs a default center alignment?</li>
+  <li>Spanning and centered miliket on 2<sup>nd</sup>, 3<sup>rd</sup> and 4<sup>th</sup> rows over the last two letters.
+      The spanning-centered layout may or may not be important.</li>
+  <li>Use Case Question: What is the correct positioning of the annotation in all rows?</li>
+</ul>
 
 
 <figure class="example figure-wide">
@@ -292,7 +302,9 @@ page sources of the samples appearing here.</p>
 <h4>Issues:</h4>
 <ul>
   <li>Had to specify a 2nd column width or the example gets cut off by the table. A rendering engine appears not be calculating cell content width correctly.</li>
-  <li>In the alternative rendering, unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+  <li>In the alternative rendering, unable to right align ruby-text over the final base character on rows 1, 2 and 3 using "ruby-align: right".</li> 
+  <li>ቱ and ኂ on rows 2 and 3 respectively appear to overhang the right side of ሮ unexpectedly. ር on row one aligns with the
+      right side of ሮ as expected.  This may be attributable to the font and not the layout engine.</li>
 </ul>
 
 <p><br/></p>
@@ -1966,6 +1978,13 @@ page sources of the samples appearing here.</p>
 
 
 <h3>Use Case 20</h3>
+<p><br/></p>
+<h4>Features:</h4>
+<ul>
+  <li>The ᎒᎓᎒᎖᎒ sequence spans 2 letters along a render line rising at a slight angle to the right.</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
+  <li></li>
+</ul>
 
 <figure class="example">
 <table>
@@ -2007,7 +2026,7 @@ page sources of the samples appearing here.</p>
 <h4>Issues:</h4>
 <ul>
   <li>Unable to use "ruby-align: space-between;" to distribute ᎒᎓᎒᎖᎒ over ያን.</li>
-  <li></li>
+  <li>Is anything lost when the rising qirts marks are arranged fully horizontal and not rising?  Can the Zaima be reproduced vocally in the same way?</li>
 </ul>
 </section>
 
