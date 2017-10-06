@@ -89,11 +89,20 @@ function highlightCode () {
 </p>
 <section>
 <h1>Zaima Styling Use Cases &amp; CSS Limitation Exploration</h1>
-  <div id="audience">
-    <p><span id="intendedAudience" class="leadin">Intended audience:</span> 
-    W3C reviewers familiar with the <a href="https://www.w3.org/International/articles/ruby/markup">Ruby Markup</a> and the <a href="https://drafts.csswg.org/css-ruby-1/">CSS Ruby Layout Module Level 1</a> who can suggest refinements and styling techniques.
-    Specialists in the Yaredic Zaima practice who can review the use cases and suggest others.</p> 
-    </div>
+<div id="audience">
+<p style="text-align: justify;"><span id="intendedAudience" class="leadin">Intended audience:</span> 
+W3C reviewers familiar with the <a href="https://www.w3.org/International/articles/ruby/markup">Ruby Markup</a> and the <a href="https://drafts.csswg.org/css-ruby-1/">CSS Ruby Layout Module Level 1</a> who can suggest refinements and styling techniques.
+Specialists in the Yaredic Zaima practice who can review the use cases and suggest others.</p> 
+</div>
+<div id="status">
+<p style="text-align: justify;"><span id="status" class="leadin">Viewing Note:</span> 
+The correct arrangement and styling of Zaima in this document is highly sensistive to browser version and typeface choices.
+This content has been optimized for viewing in the Chrome 60 web browser
+with the <a href="https://software.sil.org/abyssinica/">Abyssinica SIL</a> font used for Ethiopic script samples.
+The content displays acceptably in Safari 11.  Layout is entirely broken under Chrome 61, and mostly broken under Firefox 55.
+A <a href="ZaimaStylingUseCases-20171006.pdf">PDF version</a> of this page is offered as a reference for what correct layout presentation
+should appear like.</p>
+</div>
 
 <p>Zaima is the name given to the small cantillation annotations in the Ge'ez language hymnary that are rendered in one or more rows above base text.
 In this article the markup and CSS styling elements developed for rendering Ruby content are applied to Zaima samples that represent the most
@@ -134,9 +143,12 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example figure-wide">
 <table>
-  <col width="230px"/>
-  <col width="230px"/>
-  <col width="500px"/>
+  <colgroup>
+    <col width="230px"/>
+    <col width="230px"/>
+    <col width="500px"/>
+  </colgroup>
+  <tbody>
   <tr>
     <td colspan="2" style="border: 0"></td><th>Alternate Rendering</th>
   </tr>
@@ -229,6 +241,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 1</strong> Selot Kidassie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage113.png">p. 113</a></p>
 </figure>
@@ -250,8 +263,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example">
 <table>
-  <col width="400px"/>
-  <col width="330px"/>
+  <colgroup>
+    <col width="400px"/>
+    <col width="330px"/>
+  </colgroup>
+  <tbody>
   <tr>
   <td><img src="use-cases/ZimarieWemewasitPageSecondHalf34i1-600dpi.png"/></td>
   <td valign="bottom">
@@ -333,6 +349,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 2</strong> Zimarie Wemewasit <a href="http://yacob.org/ethio-ruby/use-cases/ZimarieWemewasit/Pages/ZimarieWemewasitSecondHalfPage34.png">p. 34</a></p>
 </figure>
@@ -352,8 +369,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example">
 <table>
-  <col width="500px"/>
-  <col width="340px"/>
+  <colgroup>
+    <col width="500px"/>
+    <col width="340px"/>
+  </colgroup>
+  <tbody>
   <tr>
   <td><img src="use-cases/ZimarieWemewasitPageSecondHalf34i2-600dpi.png"/></td>
   <td valign="bottom">
@@ -443,6 +463,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 3</strong> Zimarie Wemewasit <a href="http://yacob.org/ethio-ruby/use-cases/ZimarieWemewasit/Pages/ZimarieWemewasitSecondHalfPage34.png">p. 34</a></p>
 </figure>
@@ -460,9 +481,12 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example figure-wide">
 <table>
-  <col width="350px"/>
-  <col width="260px"/>
-  <col width="800px"/>
+  <colgroup>
+    <col width="350px"/>
+    <col width="260px"/>
+    <col width="800px"/>
+  </colgroup>
+  <tbody>
   <tr>
     <td colspan="2" style="border: 0"></td><th>Alternate Rendering</th>
   </tr>
@@ -527,6 +551,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 4</strong> Zimarie Wemewasit <a href="http://yacob.org/ethio-ruby/use-cases/ZimarieWemewasit/Pages/ZimarieWemewasitPage68.png">p. 68</a></p>
 </figure>
@@ -545,9 +570,12 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example">
 <table>
-  <col width="250px"/>
-  <col width="250px"/>
-  <col width="500px"/>
+  <colgroup>
+    <col width="250px"/>
+    <col width="250px"/>
+    <col width="500px"/>
+  </colgroup>
+  <tbody>
   <tr>
     <td colspan="2" style="border: 0"></td><th>Alternate Rendering</th>
   </tr>
@@ -658,6 +686,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 5</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage127.png">p. 127</a></p>
 </figure>
@@ -686,9 +715,12 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example">
 <table>
-  <col width="350px"/>
-  <col width="250px"/>
-  <col width="500px"/>
+  <colgroup>
+    <col width="350px"/>
+    <col width="250px"/>
+    <col width="500px"/>
+  </colgroup>
+  <tbody>
   <tr>
     <td colspan="2" style="border: 0"></td><th>Alternate Rendering</th>
   </tr>
@@ -779,6 +811,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 6</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage128.png">p. 128</a></p>
 </figure>
@@ -797,8 +830,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example">
 <table>
-  <col width="350px"/>
-  <col width="400px"/>
+  <colgroup>
+    <col width="350px"/>
+    <col width="400px"/>
+  </colgroup>
+  <tbody>
   <tr>
   <td><img src="use-cases/MerhaLiqawntPage128i1.png"/></td>
   <td valign="bottom">
@@ -868,6 +904,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 7</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage128.png">p. 128</a></p>
 </figure>
@@ -885,8 +922,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example figure-wide">
 <table>
-  <col width="500px"/>
-  <col width="500px"/>
+  <colgroup>
+    <col width="500px"/>
+    <col width="500px"/>
+  </colgroup>
+  <tbody>
   <tr>
   <td style="vertical-align: baseline;"> <br/><img style="display: block; margin-left: auto; margin-right: auto; vertical-align: bottom;" src="use-cases/MerhaLiqawntPage23i3.png"/></td>
   <td valign="bottom" height="160px;">
@@ -974,6 +1014,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 8</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage23.png">p. 23</a></p>
 </figure>
@@ -998,9 +1039,12 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example">
 <table>
-  <col width="200px"/>
-  <col width="150px"/>
-  <col width="300px"/>
+  <colgroup>
+    <col width="200px"/>
+    <col width="150px"/>
+    <col width="300px"/>
+  </colgroup>
+  <tbody>
   <tr>
     <td colspan="2" style="border: 0"></td><th>Alternate Rendering</th>
   </tr>
@@ -1059,6 +1103,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 9</strong> Selot Kidasie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage9.png">p. 9</a></p>
 </figure>
@@ -1087,8 +1132,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example">
 <table>
-  <col width="340px" />
-  <col />
+  <colgroup>
+    <col width="340px" />
+    <col />
+  </colgroup>
+  <tbody>
   <tr>
   <td><img style="display: block; margin-left: auto; margin-right: auto;" src="use-cases/SelotKidasiePage129i2.png"/></td>
   <td valign="bottom">
@@ -1124,6 +1172,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 10</strong> Selot Kidassie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage129.png">p. 129</a></p>
 </figure>
@@ -1149,8 +1198,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example">
 <table>
-  <col width="350px"/>
-  <col width="250px"/>
+  <colgroup>
+    <col width="350px"/>
+    <col width="250px"/>
+  </colgroup>
+  <tbody>
   <tr>
   <td><img src="use-cases/SelotKidasiePage83i2.png"/></td>
   <td valign="bottom">
@@ -1193,6 +1245,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 11</strong> Selot Kidasie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage83.png">p. 83</a></p>
 </figure>
@@ -1215,8 +1268,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example">
 <table>
-  <col width="400px"/>
-  <col width="220px"/>
+  <colgroup>
+    <col width="400px"/>
+    <col width="220px"/>
+  </colgroup>
+  <tbody>
   <tr>
   <td><img src="use-cases/MerhaLiqawntPage66i1.png"/></td>
   <td valign="bottom">
@@ -1246,6 +1302,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 12</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage66.png">p. 66</a></p>
 </figure>
@@ -1268,8 +1325,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example">
 <table>
-  <col width="260px"/>
-  <col width="320px"/>
+  <colgroup>
+    <col width="260px"/>
+    <col width="320px"/>
+  </colgroup>
+  <tbody>
   <tr>
   <td><img src="use-cases/MerhaLiqawntPage84i6.png"/></td>
   <td valign="bottom">
@@ -1297,6 +1357,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 13</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage84.png">p. 84</a></p>
 </figure>
@@ -1319,8 +1380,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example">
 <table>
-  <col width="450px"/>
-  <col width="260px"/>
+  <colgroup>
+    <col width="450px"/>
+    <col width="260px"/>
+  </colgroup>
+  <tbody>
   <tr>
   <td><img src="use-cases/MerhaLiqawntPage84i3.png"/></td>
   <td valign="bottom">
@@ -1360,6 +1424,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 14</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage84.png">p. 84</a></p>
 </figure>
@@ -1383,8 +1448,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example">
 <table>
-  <col width="300px"/>
-  <col width="230px"/>
+  <colgroup>
+    <col width="300px"/>
+    <col width="230px"/>
+  </colgroup>
+  <tbody>
   <tr>
   <td><img src="use-cases/MerhaLiqawntPages12i1.png"/></td>
   <td valign="bottom">
@@ -1428,6 +1496,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 15</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage21.png">p. 21</a></p>
 </figure>
@@ -1447,9 +1516,12 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example">
 <table>
-  <col width="330px"/>
-  <col width="180px"/>
-  <col width="480px"/>
+  <colgroup>
+    <col width="330px"/>
+    <col width="180px"/>
+    <col width="480px"/>
+  </colgroup>
+  <tbody>
   <tr>
     <td colspan="2" style="border: 0"></td><th>Alternate Rendering</th>
   </tr>
@@ -1552,6 +1624,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 16</strong> Selot Kidasie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage213.png">p. 213</a></p>
 </figure>
@@ -1570,8 +1643,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example figure-wide">
 <table>
-  <col width="900px"/>
-  <col width="580px"/>
+  <colgroup>
+    <col width="900px"/>
+    <col width="580px"/>
+  </colgroup>
+  <tbody>
   <tr>
   <td><img src="use-cases/SelotKidasiePage103i1.png"/></td>
   <td valign="bottom">
@@ -1683,6 +1759,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 17</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage103.png">p. 103</a></p>
 </figure>
@@ -1700,9 +1777,12 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example">
 <table>
-  <col width="350px"/>
-  <col width="280px"/>
-  <col width="350px"/>
+  <colgroup>
+    <col width="350px"/>
+    <col width="280px"/>
+    <col width="350px"/>
+  </colgroup>
+  <tbody>
   <tr>
     <td colspan="2" style="border: 0"></td><th>Alternate Rendering</th>
   </tr>
@@ -1839,6 +1919,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 18</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage145.png">p. 145</a></p>
 </figure>
@@ -1858,8 +1939,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example figure-wide">
 <table>
-  <col width="935px"/>
-  <col width="680px"/>
+  <colgroup>
+    <col width="935px"/>
+    <col width="680px"/>
+  </colgroup>
+  <tbody>
   <tr>
   <td style="vertical-align: baseline;"> <br/><img style="display: block; margin-left: auto; margin-right: auto; vertical-align: bottom;" src="use-cases/SelotKidasiePage189i1.png"/></td>
   <td height="170" valign="bottom">
@@ -1975,6 +2059,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 19</strong> Selot Kidasie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage189.png">p. 189</a></p>
 </figure>
@@ -1995,9 +2080,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <figure class="example figure-wide">
 <table>
-  <tr>
-  <col width="835px"/>
-  <col width="500px"/>
+  <colgroup>
+    <col width="835px"/>
+    <col width="500px"/>
+  </colgroup>
+  <tbody>
   <tr>
   <td style="vertical-align: baseline;"> <br/><img style="display: block; margin-left: auto; margin-right: auto; vertical-align: bottom;" src="use-cases/SelotKidasiePage253i1.png"/></td>
   <td valign="bottom">
@@ -2122,6 +2209,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
     </ruby>
   </script></td>
   </tr>
+  </tbody>
 </table>
 <p><strong>Figure 20</strong> Selot Kidasie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage253.png">p. 253</a></p>
 </figure>
@@ -2148,10 +2236,16 @@ the overall readibility of electronically laid out Zaima in general, and to eval
           <th scope="col">Other browsers using that engine</th>
         </tr>
         <tr>
-          <td><img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome"/> Chrome</td>
+          <td><img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome" style="vertical-align: middle;"/> Chrome</td>
           <td>60.0.3112.113</td>
           <td>Blink</td>
           <td>Opera, Vivaldi, etc.</td>
+        </tr>
+        <tr>
+          <td><img src="https://w3c.github.io/i18n-drafts/icons/safari_16x16.png" width="16" height="16" alt="Safari" title="Safari" style="vertical-align: middle;"/> Safari</td>
+          <td>Version 11.0 (11604.1.38.1.7)</td>
+          <td>Webkit</td>
+          <td>iOS-based browsers, Yandex, UC Browser, etc.</td>
         </tr>
       </tbody>
     </table>
