@@ -128,7 +128,7 @@ ruby.row4ex {
     position: absolute;
     z-index:4;
 }
-ruby.row4ex rb { visibility: visible; }
+ruby.row4ex rb { visibility: hidden; }
 ruby.row4ex rt {
   color: black;
 }
