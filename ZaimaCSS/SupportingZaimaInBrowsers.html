@@ -1,0 +1,275 @@
+﻿<html>
+<head>
+  <meta charset="UTF-8">
+<link rel="stylesheet" href="https://w3c.github.io/i18n-drafts/style/article-2016.css" type="text/css" />
+<link rel="stylesheet" href="https://w3c.github.io/i18n-drafts/articles/ruby/styling-data/local.css" type="text/css" />
+<style>
+div { position: relative; }
+h3 { text-decoration: underline; }
+
+.sample { margin-left: 10%; }
+.hidden { visibility: hidden; }
+
+.layer1, .layer2, .layer3, .layer4 { position: absolute; }
+.layer1 { z-index:1; }
+.layer2 { z-index:2; }
+.layer3 { z-index:3; }
+.layer4 { z-index:4; }
+
+/* Original work for Chrome 59 and 60 */
+.chrome60row1, .chrome60row2, .chrome60row3, .chrome60row4 {  left: 0px; position: absolute; }
+.chrome60row1 { z-index: 1; }
+.chrome60row2 { z-index: 2; }
+.chrome60row3 { z-index: 3; }
+.chrome60row4 { z-index: 4; }
+
+.chrome60row1 rt span, .chrome60row2 rt span, .chrome60row3 rt span, .chrome60row4 rt span { position: relative; }
+.chrome60row2 rb, .chrome60row3 rb, .chrome60row4 rb { visibility: hidden; }
+.chrome60row2 rt, .chrome60row4 rt { color: red; }
+
+.chrome60row2 rt span { bottom: 8px; }
+.chrome60row3 rt span { bottom: 16px; }
+.chrome60row4 rt span { bottom: 24px; }
+
+/* Revisions to support Chrome 61+ Policies */
+.chrome61row1, .chrome61row2, .chrome61row3, .chrome61row4 { left: 0px; position: absolute; }
+/*
+.chrome61row1 { z-index: 1;  top: 24px; }
+.chrome61row2 { z-index: 2;  top: 16px; }
+.chrome61row3 { z-index: 3;  top:  8px; }
+.chrome61row4 { z-index: 4;  top:  0px; }
+*/
+.chrome61row1 { z-index: 1;  bottom:  0px; }
+.chrome61row2 { z-index: 2;  bottom:  8px; }
+.chrome61row3 { z-index: 3;  bottom: 16px; }
+.chrome61row4 { z-index: 4;  bottom: 24px; }
+
+
+.chrome61row2 rb, .chrome61row3 rb, .chrome61row4 rb { visibility: hidden; }
+.chrome61row2 rt, .chrome61row4 rt { color: red; }
+
+
+</style>
+<body>
+
+<section>
+<h1>Supporting Multiple Ruby Annotation Rows With Markup and CSS</h1>
+<p>This page present an incremental development of an approach to supporting multiple rows of annotations with Ruby markup and
+CSS styling properties. The page also serves to test the level browser support for the approach taken.</p>
+
+<p>While some browser do support the nesting of Ruby markup to present multiple rows of annotation; nesting is not an option
+when the positioning and decoration of annotation text at one level does not occur fully within the boundaries of the other.  For example,
+the upper annotation level may begin midway within the boundaries of the lower level annotation, and extend beyond the termination of the
+lower level's annotation.  Handling these scenarios leads us into the <a href="https://en.wikipedia.org/wiki/Overlapping_markup">overlapping markup</a>
+problem which presently does not have a solution supported by W3C standards.</p>
+
+<p>The approach taken here handles multiple rows of annotation by duplicating the base text and formatting each copy with a single row
+of Ruby annotation independently.  These independently annotated copies of the base text are then overlayed on top of one
+another so that the base text is superimposed precisely and only a single copy of the base text remains visible. The position of the
+Ruby annotation text is then raised to successively higher levels on each copy, creating the effect of multiple rows of overlapping
+annotation.</p>
+
+<p>A solution for multiple rows of independently bound and formatted annotation is needed to support the 
+<a href="ZaimaUseCases.html">Ethiopic Zaima practice</a>, which is fully described in the developing model
+document [TBD].</p>
+
+</section>
+
+<section>
+<h2>Baseline</h2>
+<h3>Reference Lines As Undecorated Text</h3>
+<p>The sample text that we will be working with:</p>
+<p class="sample">ABCDEFGHIJKLMNOPQURSTUVWXYZ</p>
+<p class="sample">ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</p>
+
+<h3>Four Overlays Without Rubies</h3>
+<p>We will rely on CSS layers set with the <code class="kw">z-index</code> property to overlay independent Ruby annotations
+on top of one another (with offsets) to create the Zaima rows. Establish here that layers work as expected. Text may appear
+bolder:</p>
+
+<div>
+<p class="sample">
+<span class="layer4">ABCDEFGHIJKLMNOPQURSTUVWXYZ</span>
+<span class="layer3">ABCDEFGHIJKLMNOPQURSTUVWXYZ</span>
+<span class="layer2">ABCDEFGHIJKLMNOPQURSTUVWXYZ</span>
+<span class="layer1">ABCDEFGHIJKLMNOPQURSTUVWXYZ</span>
+</p>
+</div>
+
+<p><br/></p>
+
+<div>
+<p class="sample">
+<span class="layer4">ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span>
+<span class="layer3">ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span>
+<span class="layer2">ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span>
+<span class="layer1">ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span>
+</p>
+</div>
+
+<p><br/></p>
+<p>Repeat with <code class="kw">visibility: hidden;</code> in <code class="kw">z-index</code> layers 2-4 to reduce bolding:</p>
+
+<div>
+<p class="sample">
+<span class="layer4 hidden">ABCDEFGHIJKLMNOPQURSTUVWXYZ</span>
+<span class="layer3 hidden">ABCDEFGHIJKLMNOPQURSTUVWXYZ</span>
+<span class="layer2 hidden">ABCDEFGHIJKLMNOPQURSTUVWXYZ</span>
+<span class="layer1">ABCDEFGHIJKLMNOPQURSTUVWXYZ</span>
+</p>
+</div>
+
+<p><br/></p>
+
+<div>
+<p class="sample">
+<span class="layer4 hidden">ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span>
+<span class="layer3 hidden">ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span>
+<span class="layer2 hidden">ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span>
+<span class="layer1">ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span>
+</p>
+</div>
+
+<p><br/></p>
+
+<h3>Ruby Support for Non-Asian Scripts</h3>
+<p>We review here how well is Ruby markup supported for simple cases. We need to determine if Ruby layout supported for non-Asian writing systems.</p>
+
+<h4>Regular Japanese Ruby Sample (Katana over Kanji)</h4>
+<p class="sample";>これは<ruby><rb>日</rb><rt>に</rt><rb>本</rb><rt>ほん</rt><rb>語</rb><rt>ご</rt></ruby>です。
+<img src="https://w3c.github.io/i18n-drafts/icons/firefox_16x16.png" width="16" height="16" alt="Firefox" title="Firefox"/> <img src="https://w3c.github.io/i18n-drafts/icons/edge_16x16.png" width="16" height="16" alt="Edge" title="Edge"/> <img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome"/> <img src="https://w3c.github.io/i18n-drafts/icons/safari_16x16.png" width="16" height="16" alt="Safari" title="Safari"/><img src="https://w3c.github.io/i18n-drafts/icons/ok.png" alt="OK" style="margin-left: 0.5em;"/></p>
+
+<h4>Mized Ruby Sample (Latin over Kanji)</h4>
+<p class="sample";>これは<ruby><rb>日</rb><rt>に</rt><rb>本</rb><rt>BC</rt><rb>語</rb><rt>ご</rt></ruby>です。
+<img src="https://w3c.github.io/i18n-drafts/icons/firefox_16x16.png" width="16" height="16" alt="Firefox" title="Firefox"/> <img src="https://w3c.github.io/i18n-drafts/icons/edge_16x16.png" width="16" height="16" alt="Edge" title="Edge"/> <img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome"/> <img src="https://w3c.github.io/i18n-drafts/icons/safari_16x16.png" width="16" height="16" alt="Safari" title="Safari"/><img src="https://w3c.github.io/i18n-drafts/icons/ok.png" alt="OK" style="margin-left: 0.5em;"/></p>
+
+<h4>Mized Ruby Sample (Katana over Latin)</h4>
+<p class="sample";>これは<ruby><rb>日</rb><rt>に</rt><rb>BC</rb><rt>ほん</rt><rb>語</rb><rt>ご</rt></ruby>です。
+<img src="https://w3c.github.io/i18n-drafts/icons/firefox_16x16.png" width="16" height="16" alt="Firefox" title="Firefox"/> <img src="https://w3c.github.io/i18n-drafts/icons/edge_16x16.png" width="16" height="16" alt="Edge" title="Edge"/> <img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome"/> <img src="https://w3c.github.io/i18n-drafts/icons/safari_16x16.png" width="16" height="16" alt="Safari" title="Safari"/><img src="https://w3c.github.io/i18n-drafts/icons/ok.png" alt="OK" style="margin-left: 0.5em;"/></p>
+
+<h4>Mized Ruby Sample (Latin over Latin)</h4>
+<p class="sample";>これは<ruby><rb>日</rb><rt>に</rt><rb>BC</rb><rt>BC</rt><rb>語</rb><rt>ご</rt></ruby>です。
+<img src="https://w3c.github.io/i18n-drafts/icons/firefox_16x16.png" width="16" height="16" alt="Firefox" title="Firefox"/><img src="https://w3c.github.io/i18n-drafts/icons/fail.png" width="16" height="16" alt="Fail" style="margin-left: 0.5em;"/><img src="https://w3c.github.io/i18n-drafts/icons/edge_16x16.png" width="16" height="16" alt="Edge" title="Edge"/> <img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome"/> <img src="https://w3c.github.io/i18n-drafts/icons/safari_16x16.png" width="16" height="16" alt="Safari" title="Safari"/><img src="https://w3c.github.io/i18n-drafts/icons/ok.png" alt="OK" style="margin-left: 0.5em;"/></p>
+
+<h4>Zaima Ruby Sample (Ethiopic over Ethiopic)</h4>
+<p class="sample";><ruby><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
+<img src="https://w3c.github.io/i18n-drafts/icons/firefox_16x16.png" width="16" height="16" alt="Firefox" title="Firefox"/><img src="https://w3c.github.io/i18n-drafts/icons/fail.png" width="16" height="16" alt="Fail" style="margin-left: 0.5em;"/><img src="https://w3c.github.io/i18n-drafts/icons/edge_16x16.png" width="16" height="16" alt="Edge" title="Edge"/> <img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome"/> <img src="https://w3c.github.io/i18n-drafts/icons/safari_16x16.png" width="16" height="16" alt="Safari" title="Safari"/><img src="https://w3c.github.io/i18n-drafts/icons/ok.png" alt="OK" style="margin-left: 0.5em;"/></p>
+
+<h3>Four Overlays with Rubies</h3>
+
+<div>
+<p class="sample">
+<ruby class="layer4 hidden"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
+<ruby class="layer3 hidden"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
+<ruby class="layer2 hidden"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
+<ruby class="layer1"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
+</p>
+<div class="sidenoteGroup">
+    <aside class="implnote">
+<p><img src="https://w3c.github.io/i18n-drafts/icons/firefox_16x16.png" width="16" height="16" alt="Firefox" title="Firefox"/><img src="https://w3c.github.io/i18n-drafts/icons/fail.png" width="16" height="16" alt="Fail" style="margin-left: 0.5em;"/><img src="https://w3c.github.io/i18n-drafts/icons/edge_16x16.png" width="16" height="16" alt="Edge" title="Edge"/> <img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome"/> <img src="https://w3c.github.io/i18n-drafts/icons/safari_16x16.png" width="16" height="16" alt="Safari" title="Safari"/><img src="https://w3c.github.io/i18n-drafts/icons/ok.png" alt="OK" style="margin-left: 0.5em;"/></p>
+    </aside>
+</div>
+</div>
+
+<p><br/> <br/></p>
+
+<div style="position: relative;">
+<p class="sample">
+<ruby class="layer4 hidden"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
+<ruby class="layer3 hidden"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
+<ruby class="layer2 hidden"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
+<ruby class="layer1"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
+</p>
+<div class="sidenoteGroup">
+    <aside class="implnote">
+<p><img src="https://w3c.github.io/i18n-drafts/icons/firefox_16x16.png" width="16" height="16" alt="Firefox" title="Firefox"/><img src="https://w3c.github.io/i18n-drafts/icons/fail.png" width="16" height="16" alt="Fail" style="margin-left: 0.5em;"/><img src="https://w3c.github.io/i18n-drafts/icons/edge_16x16.png" width="16" height="16" alt="Edge" title="Edge"/> <img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome"/> <img src="https://w3c.github.io/i18n-drafts/icons/safari_16x16.png" width="16" height="16" alt="Safari" title="Safari"/><img src="https://w3c.github.io/i18n-drafts/icons/ok.png" alt="OK" style="margin-left: 0.5em;"/></p>
+    </aside>
+</div>
+</div>
+</section>
+
+<p><br/> <br/></p>
+
+<section>
+<h2>Adding Annotation Rows</h2>
+
+<p><br/> <br/></p>
+
+<div class="sample">
+<ruby class="chrome60row4"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>4ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+<ruby class="chrome60row3"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>3ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+<ruby class="chrome60row2"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>2ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+<ruby class="chrome60row1"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>1ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+<div class="sidenoteGroup">
+    <aside class="implnote">
+<p><img src="https://w3c.github.io/i18n-drafts/icons/firefox_16x16.png" width="16" height="16" alt="Firefox" title="Firefox"/><img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome"/><sup>61+</sup><img src="https://w3c.github.io/i18n-drafts/icons/fail.png" width="16" height="16" alt="Fail" style="margin-left: 0.5em;"/><img src="https://w3c.github.io/i18n-drafts/icons/edge_16x16.png" width="16" height="16" alt="Edge" title="Edge"/> <img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome"/><sup>60-</sup><img src="https://w3c.github.io/i18n-drafts/icons/safari_16x16.png" width="16" height="16" alt="Safari" title="Safari"/>
+<img src="https://w3c.github.io/i18n-drafts/icons/ok.png" alt="OK" style="margin-left: 0.5em;"/></p>
+    </aside>
+</div>
+</div>
+
+<p><br/> <br/></p>
+
+<h4>Chrome 61 Solution:</h4>
+<p>Unfortunately layout policies appear to have changed under Chrome 61 and the positioning of Ruby text (via <code class="kw">bottom:<em>n</em>px</code>)
+also impacts the position of the base text. Ruby text can no longer be raised indepently of the base text by the approach used previously. Until a better
+solution is found, a work around is to simply ignore the raising of the base text along with the annotation text.  This approach appears to work by
+virtue of the base text being hidden from view but may have other consequences on layout.</p>
+<p><br/> <br/></p>
+
+<div class="sample">
+<ruby class="chrome61row4"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>4ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
+<ruby class="chrome61row3"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>3ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
+<ruby class="chrome61row2"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>2ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
+<ruby class="chrome61row1"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>1ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
+<div class="sidenoteGroup">
+    <aside class="implnote">
+<p><img src="https://w3c.github.io/i18n-drafts/icons/firefox_16x16.png" width="16" height="16" alt="Firefox" title="Firefox"/><img src="https://w3c.github.io/i18n-drafts/icons/fail.png" width="16" height="16" alt="Fail" style="margin-left: 0.5em;"/><img src="https://w3c.github.io/i18n-drafts/icons/edge_16x16.png" width="16" height="16" alt="Edge" title="Edge"/> <img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome"/> <img src="https://w3c.github.io/i18n-drafts/icons/safari_16x16.png" width="16" height="16" alt="Safari" title="Safari"/>
+<img src="https://w3c.github.io/i18n-drafts/icons/ok.png" alt="OK" style="margin-left: 0.5em;"/></p>
+    </aside>
+</div>
+</div>
+
+<h3>Repeat Approaches with &ltrb style="visibility: visible"&gt;</h3>
+<p>Exposing the base text again to reveal their position with respect to the anchor (base text of first row) and
+to help understand any layout side effects (numeric indexes are added to the base text for clarity):</p>
+
+
+<p><br/> <br/></p>
+
+<div class="sample">
+<ruby class="chrome60row4"><rb style="visibility: visible;">4ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>4ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+<ruby class="chrome60row3"><rb style="visibility: visible;">3ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>3ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+<ruby class="chrome60row2"><rb style="visibility: visible;">2ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>2ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+<ruby class="chrome60row1"><rb style="visibility: visible;">1ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>1ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+<div class="sidenoteGroup">
+    <aside class="implnote">
+<p><img src="https://w3c.github.io/i18n-drafts/icons/firefox_16x16.png" width="16" height="16" alt="Firefox" title="Firefox"/><img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome"/><sup>61+</sup><img src="https://w3c.github.io/i18n-drafts/icons/fail.png" width="16" height="16" alt="Fail" style="margin-left: 0.5em;"/><img src="https://w3c.github.io/i18n-drafts/icons/edge_16x16.png" width="16" height="16" alt="Edge" title="Edge"/> <img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome"/><sup>60-</sup><img src="https://w3c.github.io/i18n-drafts/icons/safari_16x16.png" width="16" height="16" alt="Safari" title="Safari"/>
+<img src="https://w3c.github.io/i18n-drafts/icons/ok.png" alt="OK" style="margin-left: 0.5em;"/></p>
+    </aside>
+</div>
+</div>
+
+<p><br/> <br/></p>
+
+<h4>Chrome 61 Solution:</h4>
+<p>The raised based text along with the Ruby text is now exposed in the Chrome 61 solution:</p>
+
+<p><br/> <br/></p>
+
+<div class="sample">
+<ruby class="chrome61row4"><rb style="visibility: visible;">4ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>4ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
+<ruby class="chrome61row3"><rb style="visibility: visible;">3ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>3ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
+<ruby class="chrome61row2"><rb style="visibility: visible;">2ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>2ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
+<ruby class="chrome61row1"><rb style="visibility: visible;">1ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>1ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
+<div class="sidenoteGroup">
+    <aside class="implnote">
+<p><img src="https://w3c.github.io/i18n-drafts/icons/firefox_16x16.png" width="16" height="16" alt="Firefox" title="Firefox"/><img src="https://w3c.github.io/i18n-drafts/icons/fail.png" width="16" height="16" alt="Fail" style="margin-left: 0.5em;"/><img src="https://w3c.github.io/i18n-drafts/icons/edge_16x16.png" width="16" height="16" alt="Edge" title="Edge"/> <img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome"/> <img src="https://w3c.github.io/i18n-drafts/icons/safari_16x16.png" width="16" height="16" alt="Safari" title="Safari"/>
+<img src="https://w3c.github.io/i18n-drafts/icons/ok.png" alt="OK" style="margin-left: 0.5em;"/></p>
+    </aside>
+</div>
+</div>
+</section>
+
+</body>
+</html>
