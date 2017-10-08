@@ -74,13 +74,13 @@ ruby.row6 rt span {
   top: 0px;
 }
 .difat_diret:before {
-  content: "᎔";
+  content: "᎑";
 }
 .difat_diret:after { 
   position: absolute;;
   bottom: 3px;
   left:  0px;
-  content: "᎑";
+  content: "᎔";
 }
 .difat_difat {
   position: relative;
@@ -94,6 +94,19 @@ ruby.row6 rt span {
   bottom: 2px;
   left:  0px;
   content: "᎔";
+}
+.diret_difat {
+  position: relative;
+  top: 0px;
+}
+.diret_difat:before {
+  content: "᎔";
+}
+.diret_difat:after { 
+  position: absolute;;
+  bottom: 2px;
+  left:  0px;
+  content: "᎑";
 }
 .black-miliket rt span { color: black;}
 .red-miliket rt span { color: red;}

@@ -132,14 +132,17 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <h3>Use Case 1</h3>
 
-<p>Features:</p>
+<p><strong>Features:</strong>
 <ul>
+  <li>Four rows of annotation.</li>
   <li>Fairly simple.</li>
   <li>Clear left align of ᎖ over ከ in 2nd row.  Question: Is this positioning important vs a default center alignment?</li>
   <li>Spanning and centered miliket on 2<sup>nd</sup>, 3<sup>rd</sup> and 4<sup>th</sup> rows over the last two letters.
       The spanning-centered layout may or may not be important.</li>
   <li>Use Case Question: What is the correct positioning of the annotation in all rows?</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
 </ul>
+</p>
 
 
 <figure class="example figure-wide">
@@ -247,7 +250,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 1</strong> Selot Kidassie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage113.png">p. 113</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>Had to specify a 2nd column width or the example gets cut off by the table. A rendering engine appears not be calculating cell content width correctly.</li>
   <li>In the alternative rendering, unable to right align ruby-text over the final base character on rows 1, 2 and 3 using "ruby-align: right".</li> 
@@ -255,12 +258,21 @@ the overall readibility of electronically laid out Zaima in general, and to eval
       right side of ሮ as expected.  This may be attributable to the font and not the layout engine.</li>
   <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
 </ul>
+</p>
 
 
 <p><br/></p>
 
 
 <h3>Use Case 2</h3>
+
+<p><strong>Features:</strong>
+<ul>
+  <li>Four rows of annotation.</li>
+  <li>Apparent rise rise to the right of some rows up to ክ then a descent to ር which may mirror a vocal rise and fall.</li>
+  <li>Presence of the chords <span class="difat_diret"></span> and <span class="diret_difat"></span> which must render inline with a row.
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
+</ul>
 
 <figure class="example">
 <table>
@@ -355,18 +367,27 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 2</strong> Zimarie Wemewasit <a href="http://yacob.org/ethio-ruby/use-cases/ZimarieWemewasit/Pages/ZimarieWemewasitSecondHalfPage34.png">p. 34</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
-  <li>Could not center ᎖ over ቡ in Row 2 because charcter width included the "u" diacritic mark.  Desired "center" location was
+  <li>Could not center ᎖ over ቡ in Row 2 because character width included the "u" diacritic mark.  Desired "center" location was
       in the midline of the base glyph በ.  Instead, "text-align: left;" is used with a right side space padding before the
       ᎖ where the space used for padding is at a 25% scale.</li>
 </ul>
+</p>
 
 
 <p><br/></p>
 
 
 <h3>Use Case 3</h3>
+
+<p><strong>Features:</strong>
+<ul>
+  <li>Five rows of annotation.</li>
+  <li>Apparent descent on first and second rows from ኖ to ሃ (which also appears to be a contiguous sequence).</li>
+  <li>Clear disribution between letters ኖ and ስ on first and second rows.</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
+</ul>
 
 <figure class="example">
 <table>
@@ -469,10 +490,14 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 3</strong> Zimarie Wemewasit <a href="http://yacob.org/ethio-ruby/use-cases/ZimarieWemewasit/Pages/ZimarieWemewasitSecondHalfPage34.png">p. 34</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
-  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+  <li>Verify the</li>
+  <li>Determine if ደረ is actually ይረ.</li>
+  <li>Determine if the first and second rows sequence from ኖ to ሃ is indeed contiguous.</li>
+  <li>Determine if the marks in the space inbetween ኖ and ስ is essential.</li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -557,11 +582,12 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 4</strong> Zimarie Wemewasit <a href="http://yacob.org/ethio-ruby/use-cases/ZimarieWemewasit/Pages/ZimarieWemewasitPage68.png">p. 68</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
   <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -692,7 +718,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 5</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage127.png">p. 127</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>Verify ይ or ዶ in row 3</li>
   <li>Right justify desired for ኢ above ወ on row 3, and for both ጐ᎖ and ᎐᎖᎖ above ከ on rows 3 and 4 respectively</li>
@@ -704,6 +730,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
   </li>
   <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -817,11 +844,12 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 6</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage128.png">p. 128</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
   <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -910,10 +938,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 7</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage128.png">p. 128</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -1020,10 +1049,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 8</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage23.png">p. 23</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -1031,12 +1061,13 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <h3>Use Case 9</h3>
 
-<h4>Features:</h4>
+<p><strong>Features:</strong>
 <ul>
   <li>The ᎒᎓᎒᎖᎒ sequence spans 2 letters along a render line rising at a slight angle to the right.</li>
   <li>The alternate rendering divides the ᎒᎓᎒᎖᎒ sequence over ያ and ን seprately.</li>
   <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
 </ul>
+</p>
 
 <figure class="example">
 <table>
@@ -1109,12 +1140,13 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 9</strong> Selot Kidasie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage9.png">p. 9</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>Unable to use "ruby-align: space-between;" to distribute ᎒᎓᎒᎖᎒ over ያን.</li>
   <li>Is anything lost when the rising qirts marks are arranged fully horizontal and not rising?  Can the Zaima be reproduced vocally in the same way?</li>
   <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -1122,7 +1154,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <h3>Use Case 10</h3>
 
-<h4>Features:</h4>
+<p><strong>Features:</strong>
 <ul>
   <li>Fairly simple.</li>
   <li>Presence of the chord <span class="difat_difat"></span> which must render inline with a row.
@@ -1130,6 +1162,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
       the right.</li>
   <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
 </ul>
+</p>
 
 <figure class="example">
 <table>
@@ -1178,13 +1211,14 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 10</strong> Selot Kidassie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage129.png">p. 129</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>Unable to use "ruby-align: space-between;" to distribute <span>᎒᎖᎒᎓<span class="difat_difat"></span> ᎒</span> over ርያት.</li>
   <li>Determine if the bottom row is actually two rows.</li>
   <li>Determine if ደ above ያ might actually be ይ.</li>
   <li>Is anything lost when the rising qirts marks are arranged fully horizontal and not rising?  Can the Zaima be reproduced vocally in the same way?</li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -1192,10 +1226,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <h3>Use Case 11</h3>
 
-<h4>Features:</h4>
+<p><strong>Features:</strong>
 <ul>
   <li>Right side overhang, rising.</li>
 </ul>
+</p>
 
 <figure class="example">
 <table>
@@ -1251,10 +1286,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 11</strong> Selot Kidasie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage83.png">p. 83</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -1262,10 +1298,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <h3>Use Case 12</h3>
 
-<h4>Features:</h4>
+<p><strong>Features:</strong>
 <ul>
   <li>Right side overhang, rising.</li>
 </ul>
+</p>
 
 <figure class="example">
 <table>
@@ -1308,10 +1345,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 12</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage66.png">p. 66</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li></li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -1319,10 +1357,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <h3>Use Case 13</h3>
 
-<h4>Features:</h4>
+<p><strong>Features:</strong>
 <ul>
   <li>Inner overhang, falling.</li>
 </ul>
+</p>
 
 <figure class="example">
 <table>
@@ -1363,10 +1402,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 13</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage84.png">p. 84</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li></li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -1374,10 +1414,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <h3>Use Case 14</h3>
 
-<h4>Features:</h4>
+<p><strong>Features:</strong>
 <ul>
   <li>Inner overhang.</li>
 </ul>
+</p>
 
 <figure class="example">
 <table>
@@ -1430,11 +1471,12 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 14</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage84.png">p. 84</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>"text-align: left;" of ቡበ᎖᎓᎔᎖᎓᎔᎓᎔ in the rt over ፡ኦ had no effect, until an " &amp;nbsp;" was added in the rb.</li>
   <li>An " &amp;nbsp;" was added to after ፡ኦ to force alignment of ቡ over ፡ and not the white space before it. This forced space between ፡ and ኦ. </li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -1442,10 +1484,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <h3>Use Case 15</h3>
 
-<h4>Features:</h4>
+<p><strong>Features:</strong>
 <ul>
   <li>Left side overhang.</li>
 </ul>
+</p>
 
 <figure class="example">
 <table>
@@ -1502,10 +1545,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 15</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/MerhaLiqawnt/Pages/MerhaLiqawntPage21.png">p. 21</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -1630,11 +1674,12 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 16</strong> Selot Kidasie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage213.png">p. 213</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
   <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -1765,10 +1810,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 17</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage103.png">p. 103</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -1925,10 +1971,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 18</strong> Merha Liqawnt <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage145.png">p. 145</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
+</p>
 
 <!--    ᎐ ᎓ ᎒ ᎙ ᎑ ᎔ ᎖᎕  ᎗  ᎘<br/> -->
 
@@ -2065,11 +2112,12 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 19</strong> Selot Kidasie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage189.png">p. 189</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
   <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
 </ul>
+</p>
 
 
 <p><br/></p>
@@ -2215,13 +2263,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Figure 20</strong> Selot Kidasie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage253.png">p. 253</a></p>
 </figure>
 
-<h4>Issues:</h4>
+<p><strong>Issues:</strong>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
 </ul>
-
-
-
+</p>
 
 </section>
 
