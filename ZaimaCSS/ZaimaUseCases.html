@@ -118,8 +118,6 @@ and must be rendered in the same way electronically.
 </section>
 
 
-<!-- ᎐ ᎓ ᎒ ᎙ ᎑ ᎔ ᎖᎕  ᎗  ᎘ -->
-
 <section>
 <h2>Use Cases</h2>
 <p>Use cases are selected that represent particular challenges in presentation beyond the regular Ruby use cases. Use cases are borrowed from
@@ -252,10 +250,10 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Issues:</strong>
 <ul>
   <li>Had to specify a 2nd column width or the example gets cut off by the table. A rendering engine appears not be calculating cell content width correctly.</li>
-  <li>In the alternative rendering, unable to right align ruby-text over the final base character on rows 1, 2 and 3 using "ruby-align: right".</li> 
+  <li>In the alternative rendering, unable to right align ruby-text over the final base character on rows 1, 2 and 3 using <code>"ruby-align: right"</code>.</li> 
   <li>ቱ and ኂ on rows 2 and 3 respectively appear to overhang the right side of ሮ unexpectedly. ር on row one aligns with the
       right side of ሮ as expected.  This may be attributable to the font and not the layout engine.</li>
-  <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
+  <li>Is the first or second redendering preferable? Does the difference impact vocalization?</li>
 </ul>
 </p>
 
@@ -736,9 +734,9 @@ the overall readibility of electronically laid out Zaima in general, and to eval
   <li>Look up the miliket for ኢ ይ ኃ to determine if these are 1, 2 or 3 miliket and if they should be written contiguously.</li>
   <li>Right justify desired for ኢ above ወ on row 3, and for both ጐ᎖ and ᎐᎖᎖ above ከ on rows 3 and 4 respectively</li>
   <li>፡ would vanish if placed after the closing ruby tag as per:<br/>
-      &nbsp;&nbsp;&lt;rb&gt;ወሀብከ&lt;/rb&gt;&lt;rt&gt;&lt;span&gt;&lt;/span&gt;&lt;/rt&gt;&lt;/ruby&gt;፡<br/>
+      <code>&nbsp;&nbsp;&lt;rb&gt;ወሀብከ&lt;/rb&gt;&lt;rt&gt;&lt;span&gt;&lt;/span&gt;&lt;/rt&gt;&lt;/ruby&gt;፡</code><br/>
      Accordingly it was placed just within the closing ruby tag as per: <br/>
-     &nbsp;&nbsp;&lt;rb&gt;ወሀብከ&lt;/rb&gt;&lt;rt&gt;&lt;span&gt;&lt;/span&gt;&lt;/rt&gt;፡&lt;/ruby&gt;<br/>
+     <code>&nbsp;&nbsp;&lt;rb&gt;ወሀብከ&lt;/rb&gt;&lt;rt&gt;&lt;span&gt;&lt;/span&gt;&lt;/rt&gt;፡&lt;/ruby&gt;</code><br/>
      This may be a browser issue or an issue with the markup approach taken. 
   </li>
   <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
@@ -1175,7 +1173,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to use "ruby-align: space-between;" to distribute ᎒᎓᎒᎖᎒ over ያን.</li>
+  <li>Unable to use <code>"ruby-align: space-between;"</code> to distribute ᎒᎓᎒᎖᎒ over ያን.</li>
   <li>Is anything lost when the rising qirts marks are arranged fully horizontal and not rising?  Can the Zaima be reproduced vocally in the same way?</li>
   <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
 </ul>
@@ -1246,8 +1244,9 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to use "ruby-align: space-between;" to distribute <span>᎒᎖᎒᎓<span class="difat_difat"></span> ᎒</span> over ርያት.</li>
   <li>Determine if the bottom row is actually two rows.</li>
+  <li>Unable to use <code>"ruby-align: space-between;"</code> to distribute <span>᎒᎖᎒᎓<span class="difat_difat"></span> ᎒</span> over ርያት.</li>
+  <li><code>rotate(5deg)</code> has no effect, determine if misused.</li>
   <li>Determine if ደ above ያ might actually be ይ.</li>
   <li>Is anything lost when the rising qirts marks are arranged fully horizontal and not rising?  Can the Zaima be reproduced vocally in the same way?</li>
 </ul>
@@ -1528,6 +1527,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Features:</strong>
 <ul>
   <li>Left side overhang.</li>
+  <li>Use Case Question: How critical is it to reproduce the overhang as seen?</li>
 </ul>
 </p>
 
@@ -1549,7 +1549,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
       <rb>ሁ</rb><rt><span>ሢ</span></rt>
     </ruby>
     <ruby class="row2ex">
-      <rb>ጕ</rb><rt style="text-align: right;"><span>ብር᎖᎓᎔᎓</span></rt>
+      <rb>ጕ</rb><rt style="text-align: right;"><span>ቡር᎖᎓᎔᎓</span></rt>
       <rb>ርዔሁ</rb><rt></rt>
     </ruby>
     <ruby class="row1">
@@ -1570,7 +1570,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
       <rb>ሁ</rb><rt><span>ሢ</span></rt>
     </ruby>
     <ruby class="row2ex">
-      <rb>ጕ</rb><rt style="text-align: right;"><span>ብር᎖᎓᎔᎓</span></rt>
+      <rb>ጕ</rb><rt style="text-align: right;"><span>ቡር᎖᎓᎔᎓</span></rt>
       <rb>ርዔሁ</rb><rt></rt>
     </ruby>
     <ruby class="row1">
@@ -1588,7 +1588,10 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+  <li>Difficulty with positioning the first letter of each row to the left of ጕ -is the left overhang critical.</li>
+  <li>The calligraphic sample depicts no overhang from ጕ to ር -is the digital form acceptable?</li>
+  <li>Validate that ሢ is the correct symbol.</li>
+  <li>Positioning of ሢ should align the diacrtic symbol with the diacritic with ሁ.</li>
 </ul>
 </p>
 
@@ -1599,6 +1602,13 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 
 <h3>Use Case 16</h3>
+
+<p><strong>Features:</strong>
+<ul>
+  <li>Overlapping row position -row 2 overlaps rows 1 and 3.</li>
+  <li>Use Case Question: How critical is it to reproduce the low overlap as seen?</li>
+</ul>
+</p>
 
 <figure class="example">
 <table>
@@ -1717,8 +1727,9 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
-  <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
+  <li>Is the first or second redendering preferable? Does the difference impact vocalization?</li>
+  <li>Verify spelling of ገጸ.</li>
+  <li>Rows 1 and 4 appear redundant, check the broader context of the line of text line.</li>
 </ul>
 </p>
 
@@ -2156,7 +2167,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Issues:</strong>
 <ul>
   <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
-  <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
+  <li>Is the first or second redendering preferable? Does the difference impact vocalization?</li>
 </ul>
 </p>
 
