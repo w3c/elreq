@@ -1,0 +1,203 @@
+ruby.row1 {
+    position: absolute;
+    z-index:1;
+}
+ruby.row1 rt {
+  color: black;
+}
+ruby.row1 rt span {
+  position: relative;
+}
+ruby.row2 {
+    position: absolute;
+    z-index:2;
+}
+ruby.row2 rb { visibility: hidden; }
+ruby.row2 rt {
+  color: black;
+}
+ruby.row2 rt span {
+  position: relative;
+  bottom: 8px;
+}
+ruby.row3 {
+    position: absolute;
+    z-index:3;
+}
+ruby.row3 rb { visibility: hidden; }
+ruby.row3 rt {
+  color: black;
+}
+ruby.row3 rt span {
+  position: relative;
+  bottom: 16px;
+}
+ruby.row4 {
+    position: absolute;
+    z-index:4;
+}
+ruby.row4 rb { visibility: hidden; }
+ruby.row4 rt {
+  color: black;
+}
+ruby.row4 rt span {
+  position: relative;
+  bottom: 24px;
+}
+ruby.row5 {
+    position: absolute;
+    z-index:5;
+}
+ruby.row5 rb { visibility: hidden; }
+ruby.row5 rt {
+  color: black;
+}
+ruby.row5 rt span {
+  position: relative;
+  bottom: 32px;
+}
+ruby.row6 {
+    position: absolute;
+    z-index:6;
+}
+ruby.row6 rb { visibility: hidden; }
+ruby.row6 rt {
+  color: black;
+}
+ruby.row6 rt span {
+  position: relative;
+  bottom: 40px;
+}
+
+.difat_diret {
+  position: relative;
+  top: 0px;
+}
+.difat_diret:before {
+  content: "᎑";
+}
+.difat_diret:after { 
+  position: absolute;;
+  bottom: 3px;
+  left:  0px;
+  content: "᎔";
+}
+.difat_difat {
+  position: relative;
+  top: 0px;
+}
+.difat_difat:before {
+  content: "᎔";
+}
+.difat_difat:after { 
+  position: absolute;;
+  bottom: 2px;
+  left:  0px;
+  content: "᎔";
+}
+.diret_difat {
+  position: relative;
+  top: 0px;
+}
+.diret_difat:before {
+  content: "᎔";
+}
+.diret_difat:after { 
+  position: absolute;;
+  bottom: 2px;
+  left:  0px;
+  content: "᎑";
+}
+.black-miliket rt span { color: black;}
+.red-miliket rt span { color: red;}
+.red-base rb { color: red;}
+
+/* the following are optimized for font-size: 50px */
+ruby.row2ex {
+    position: absolute;
+    z-index:2;
+}
+ruby.row2ex rb { visibility: hidden; }
+ruby.row2ex rt {
+  color: black;
+}
+ruby.row2ex rt span {
+  position: relative;
+  bottom: 25px; 
+}
+ruby.row3ex {
+    position: absolute;
+    z-index:3;
+}
+ruby.row3ex rb { visibility: hidden; }
+ruby.row3ex rt {
+  color: black;
+}
+ruby.row3ex rt span {
+  position: relative;
+  bottom: 50px;
+}
+ruby.row4ex {
+    position: absolute;
+    z-index:4;
+}
+ruby.row4ex rb { visibility: hidden; }
+ruby.row4ex rt {
+  color: black;
+}
+ruby.row4ex rt span {
+  position: relative;
+  bottom: 75px;
+}
+ruby.row5ex {
+    position: absolute;
+    z-index:5;
+}
+ruby.row5ex rb { visibility: hidden; }
+ruby.row5ex rt {
+  color: black;
+}
+ruby.row5ex rt span {
+  position: relative;
+  bottom: 100px;
+}
+
+.difat_difat_ex {
+  position: relative;
+  top: 0px;
+}
+.difat_difat_ex:before {
+  content: "᎔";
+}
+.difat_difat_ex:after { 
+  position: absolute;;
+  bottom: 5px;
+  left:  0px;
+  content: "᎔";
+}
+.diret_difat_ex {
+  position: relative;
+  top: 0px;
+}
+.diret_difat_ex:before {
+  content: "᎔";
+}
+.diret_difat_ex:after { 
+  position: absolute;;
+  bottom: 5px;
+  left:  0px;
+  content: "᎑";
+}
+.difat_diret_ex {
+  position: relative;
+  top: 0px;
+}
+.difat_diret_ex:before {
+  content: "᎑";
+}
+.difat_diret_ex:after { 
+  position: absolute;;
+  bottom: 5px;
+  left:  0px;
+  content: "᎔";
+}
