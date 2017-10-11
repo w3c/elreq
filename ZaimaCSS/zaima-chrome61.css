@@ -108,13 +108,13 @@ ruby.row6 rt span {
   left:  0px;
   content: "᎑";
 }
-.black-miliket rt span { color: black;}
-.red-miliket rt span { color: red;}
+.black-miliket rt { color: black;}
+.red-miliket rt { color: red;}
 .red-base rb { color: red;}
 
 /* the following are optimized for font-size: 50px */
-.row1ex, .row2ex, .row3ex, .row4ex, .row4ex { left: 0px; position: absolute; }
-.row2ex rb, .row3ex rb, .row4ex rb, .row5ex { visibility: hidden; }
+.row1ex, .row2ex, .row3ex, .row4ex, .row4ex, .row5ex { left: 0px; position: absolute; }
+.row2ex rb, .row3ex rb, .row4ex rb, .row5ex rb { visibility: hidden; }
 .row1ex { z-index: 1;  bottom:   0px; }
 .row2ex { z-index: 2;  bottom:  25px; }
 .row3ex { z-index: 3;  bottom:  50px; }
