@@ -118,8 +118,6 @@ and must be rendered in the same way electronically.
 </section>
 
 
-<!-- ᎐ ᎓ ᎒ ᎙ ᎑ ᎔ ᎖᎕  ᎗  ᎘ -->
-
 <section>
 <h2>Use Cases</h2>
 <p>Use cases are selected that represent particular challenges in presentation beyond the regular Ruby use cases. Use cases are borrowed from
@@ -130,7 +128,6 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 
 <h3>Use Case 1</h3>
-
 
 <p><strong>Features:</strong>
 <ul>
@@ -257,10 +254,10 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Issues:</strong>
 <ul>
   <li>Had to specify a 2nd column width or the example gets cut off by the table. A rendering engine appears not be calculating cell content width correctly.</li>
-  <li>In the alternative rendering, unable to right align ruby-text over the final base character on rows 1, 2 and 3 using "ruby-align: right".</li> 
+  <li>In the alternative rendering, unable to right align ruby-text over the final base character on rows 1, 2 and 3 using <code>"ruby-align: right"</code>.</li> 
   <li>ቱ and ኂ on rows 2 and 3 respectively appear to overhang the right side of ሮ unexpectedly. ር on row one aligns with the
       right side of ሮ as expected.  This may be attributable to the font and not the layout engine.</li>
-  <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
+  <li>Is the first or second redendering preferable? Does the difference impact vocalization?</li>
 </ul>
 </p>
 
@@ -496,7 +493,6 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Verify the</li>
   <li>Determine if ደረ is actually ይረ.</li>
   <li>Determine if the first and second rows sequence from ኖ to ሃ is indeed contiguous.</li>
   <li>Determine if the marks in the space inbetween ኖ and ስ is essential.</li>
@@ -508,6 +504,14 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 
 <h3>Use Case 4</h3>
+
+<p><strong>Features:</strong>
+<ul>
+  <li>Three rows of annotation.</li>
+  <li>Slanted qirts in first row after ነ and following.</li>
+  <li>Spanning of annotations in both rows across the word boundary ፡ marker over the sequence ነ፡፩.</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
+</ul>
 
 <figure class="example figure-wide">
 <table>
@@ -588,8 +592,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
-  <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
+  <li>The beginning of the ᎒᎒᎒ sequence does not begin over ነ but the overall start and end of the annotation between ኮ and ፩ seems ok. Review with an expert-practioner.</li>
 </ul>
 </p>
 
@@ -598,6 +601,12 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 
 <h3>Use Case 5</h3>
+
+<p><strong>Features:</strong>
+<ul>
+  <li>Four rows of annotation -verify that the apparent lower rows are independent.</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
+</ul>
 
 <figure class="example">
 <table>
@@ -724,12 +733,13 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Verify ይ or ዶ in row 3</li>
+  <li>Verify ይ or ዶ in row 3.</li>
+  <li>Look up the miliket for ኢ ይ ኃ to determine if these are 1, 2 or 3 miliket and if they should be written contiguously.</li>
   <li>Right justify desired for ኢ above ወ on row 3, and for both ጐ᎖ and ᎐᎖᎖ above ከ on rows 3 and 4 respectively</li>
   <li>፡ would vanish if placed after the closing ruby tag as per:<br/>
-      &nbsp;&nbsp;&lt;rb&gt;ወሀብከ&lt;/rb&gt;&lt;rt&gt;&lt;span&gt;&lt;/span&gt;&lt;/rt&gt;&lt;/ruby&gt;፡<br/>
+      <code>&nbsp;&nbsp;&lt;rb&gt;ወሀብከ&lt;/rb&gt;&lt;rt&gt;&lt;span&gt;&lt;/span&gt;&lt;/rt&gt;&lt;/ruby&gt;፡</code><br/>
      Accordingly it was placed just within the closing ruby tag as per: <br/>
-     &nbsp;&nbsp;&lt;rb&gt;ወሀብከ&lt;/rb&gt;&lt;rt&gt;&lt;span&gt;&lt;/span&gt;&lt;/rt&gt;፡&lt;/ruby&gt;<br/>
+     <code>&nbsp;&nbsp;&lt;rb&gt;ወሀብከ&lt;/rb&gt;&lt;rt&gt;&lt;span&gt;&lt;/span&gt;&lt;/rt&gt;፡&lt;/ruby&gt;</code><br/>
      This may be a browser issue or an issue with the markup approach taken. 
   </li>
   <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
@@ -741,6 +751,12 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 
 <h3>Use Case 6</h3>
+
+<p><strong>Features:</strong>
+<ul>
+  <li>Three rows of annotation -verify that the apparent lower rows are independent.</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
+</ul>
 
 <figure class="example">
 <table>
@@ -849,7 +865,8 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+  <li>Determine if ርእሶ is one or two (ርእ &amp; ሶ) miliket and space as needed.</li>
+  <li>Determine if it is OK for አጽነ to extend over ነ.</li>
   <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
 </ul>
 </p>
@@ -859,6 +876,14 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 
 <h3>Use Case 7</h3>
+
+<p><strong>Features:</strong>
+<ul>
+  <li>Three rows of annotation.</li>
+  <li>Apparent overhang of <span class="diret_difat"></span>᎓᎔ from ከ.</li>
+  <li>Example of ፴ with omitted lower bar.</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
+</ul>
 
 <figure class="example">
 <table>
@@ -943,7 +968,8 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+  <li>Top alignment of ሙ᎘ beside ᎒ likely just due to the arrival of ከመ in the 2nd row and is not meaningful.</li>
+  <li>ከመ  ፀሐይ in the 2<sup>nd</sup> row is curious. Determine if this is miliket or another type of annotation.</li>
 </ul>
 </p>
 
@@ -952,6 +978,13 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 
 <h3>Use Case 8</h3>
+
+<p><strong>Features:</strong>
+<ul>
+  <li>Four rows of annotation -verify that the apparent lower rows are independent.</li>
+  <li>Hidet above ርጥቁ may is possibly a case of a nested Ruby (annotation with annotation as per serayu). May also be an example of joining Hidet.</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
+</ul>
 
 <figure class="example figure-wide">
 <table>
@@ -1054,7 +1087,8 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+  <li>ኢየሱስ ክርስቶ in the 2<sup>nd</sup> row is curious. Determine if this is miliket or another type of annotation.</li>
+  <li>The Hidet alignment appears off in Safari, review in other browsers.</li>
 </ul>
 </p>
 
@@ -1145,7 +1179,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to use "ruby-align: space-between;" to distribute ᎒᎓᎒᎖᎒ over ያን.</li>
+  <li>Unable to use <code>"ruby-align: space-between;"</code> to distribute ᎒᎓᎒᎖᎒ over ያን.</li>
   <li>Is anything lost when the rising qirts marks are arranged fully horizontal and not rising?  Can the Zaima be reproduced vocally in the same way?</li>
   <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
 </ul>
@@ -1216,8 +1250,9 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to use "ruby-align: space-between;" to distribute <span>᎒᎖᎒᎓<span class="difat_difat"></span> ᎒</span> over ርያት.</li>
   <li>Determine if the bottom row is actually two rows.</li>
+  <li>Unable to use <code>"ruby-align: space-between;"</code> to distribute <span>᎒᎖᎒᎓<span class="difat_difat"></span> ᎒</span> over ርያት.</li>
+  <li><code>rotate(5deg)</code> has no effect, determine if misused.</li>
   <li>Determine if ደ above ያ might actually be ይ.</li>
   <li>Is anything lost when the rising qirts marks are arranged fully horizontal and not rising?  Can the Zaima be reproduced vocally in the same way?</li>
 </ul>
@@ -1232,6 +1267,9 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Features:</strong>
 <ul>
   <li>Right side overhang, rising.</li>
+  <li>Three part distribution of ዮሐንስ.</li>
+  <li>Use Case Question: How critical is it to reproduce the overhang as seen?</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
 </ul>
 </p>
 
@@ -1291,7 +1329,9 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+  <li>The extent of overhang of the annotation is visually very diferent as a consquence of the typeface properties -does this matter?</li>
+  <li>Top alignment of ሙ᎘ beside ᎒ likely just due to the arrival of the ሌሊ in the 2nd row and not meaningful.</li>
+  <li>Is ᎖ left aligned with ገ important, or may it be centered (default)?</li>
 </ul>
 </p>
 
@@ -1304,6 +1344,8 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Features:</strong>
 <ul>
   <li>Right side overhang, rising.</li>
+  <li>Use Case Question: How critical is it to reproduce the overhang as seen?</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
 </ul>
 </p>
 
@@ -1352,7 +1394,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li></li>
+  <li>The vertical red strokes are either a form of ᎒ or  ᎙, check with an expert-practioner.</li>
 </ul>
 </p>
 
@@ -1365,6 +1407,8 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Features:</strong>
 <ul>
   <li>Inner overhang, falling.</li>
+  <li>Use Case Question: How critical is it to reproduce the overhang as seen?</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
 </ul>
 </p>
 
@@ -1411,7 +1455,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li></li>
+  <li>The vertical red strokes are either a form of ᎒ or  ᎙, check with an expert-practioner.</li>
 </ul>
 </p>
 
@@ -1424,6 +1468,8 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Features:</strong>
 <ul>
   <li>Inner overhang.</li>
+  <li>Use Case Question: How critical is it to reproduce the overhang as seen?</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
 </ul>
 </p>
 
@@ -1484,6 +1530,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <ul>
   <li>"text-align: left;" of ቡበ᎖᎓᎔᎖᎓᎔᎓᎔ in the rt over ፡ኦ had no effect, until an " &amp;nbsp;" was added in the rb.</li>
   <li>An " &amp;nbsp;" was added to after ፡ኦ to force alignment of ቡ over ፡ and not the white space before it. This forced space between ፡ and ኦ. </li>
+  <li>The vertical red strokes are either a form of ᎒ or  ᎙, check with an expert-practioner.</li>
 </ul>
 </p>
 
@@ -1496,6 +1543,8 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><strong>Features:</strong>
 <ul>
   <li>Left side overhang.</li>
+  <li>Use Case Question: How critical is it to reproduce the overhang as seen?</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
 </ul>
 </p>
 
@@ -1558,7 +1607,10 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+  <li>Difficulty with positioning the first letter of each row to the left of ጕ -is the left overhang critical.</li>
+  <li>The calligraphic sample depicts no overhang from ጕ to ር -is the digital form acceptable?</li>
+  <li>Validate that ሢ is the correct symbol.</li>
+  <li>Positioning of ሢ should align the diacrtic symbol with the diacritic with ሁ.</li>
 </ul>
 </p>
 
@@ -1566,9 +1618,15 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><br/></p>
 
 
-
-
 <h3>Use Case 16</h3>
+
+<p><strong>Features:</strong>
+<ul>
+  <li>Overlapping row position -row 2 overlaps rows 1 and 3.</li>
+  <li>Use Case Question: How critical is it to reproduce the low overlap as seen?</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
+</ul>
+</p>
 
 <figure class="example">
 <table>
@@ -1691,8 +1749,11 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
-  <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
+  <li>Is the first or second redendering preferable? Does the difference impact vocalization?</li>
+  <li>Verify spelling of ገጸ.</li>
+  <li>If laying out ገጸ on its own row is appropriate, is using the default annotation alignment (centered) also appropriate or should
+      the original be preserved?</li>
+  <li>Rows 1 and 4 appear redundant in our isolated example, check the broader context of the line of text line.</li>
 </ul>
 </p>
 
@@ -1701,6 +1762,14 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 
 <h3>Use Case 17</h3>
+
+<p><strong>Features:</strong>
+<ul>
+  <li>Two or three rows of annotation.</li>
+  <li>Apparent row overlap above ንሴብሕ.</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
+</ul>
+</p>
 
 <figure class="example figure-wide">
 <table>
@@ -1829,7 +1898,9 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+  <li>Determine if two or three rows are present above ንሴብሕ.  If two rows, what is the context of the red annotation in the first row?</li>
+  <li>Some 2<sup>nd</sup> row annotation appear very close to the first row, as if shadowing it, is this spacing required in digital form?</li>
+  <li>If the first row red annotation above ሴ ,ብ &amp; ሕ belong in their own row, is using the default annotation alignment (centered) also appropriate or should the original be preserved?</li>
 </ul>
 </p>
 
@@ -1838,6 +1909,14 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 
 <h3>Use Case 18</h3>
+
+<p><strong>Features:</strong>
+<ul>
+  <li>Three or four rows of annotation.</li>
+  <li>Second row (red) appears to collapse into the first row in several places.</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
+</ul>
+</p>
 
 <figure class="example">
 <table>
@@ -1990,17 +2069,23 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+  <li>Determine if three or four rows are present.  If three rows, what is the context of the red annotation in the first row?</li>
 </ul>
 </p>
-
-<!--    ᎐ ᎓ ᎒ ᎙ ᎑ ᎔ ᎖᎕  ᎗  ᎘<br/> -->
 
 
 <p><br/></p>
 
 
 <h3>Use Case 19</h3>
+
+<p><strong>Features:</strong>
+<ul>
+  <li>Three to five rows of annotation.</li>
+  <li>As with use cases 16-18, some red annotations may or may not represent separate rows.</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
+</ul>
+</p>
 
 <figure class="example figure-wide">
 <table>
@@ -2131,8 +2216,10 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
-  <li>Is the first or second redendering preferable? Does the diference impact vocalization?</li>
+  <li>Determine if three, four or five rows are present.  If three rows, what is the context of the red annotation in the lower rows?</li>
+  <li>Some 2<sup>nd</sup> row annotation appear very close to the first row, as if shadowing it, is this spacing required in digital form?</li>
+  <li>If the first row red annotation above ሴ ,ብ &amp; ሕ belong in their own row, is using the default annotation alignment (centered) also appropriate or should the original be preserved?</li>
+  <li>As with similar occurences in Use Cases 16 &amp; 17, is the repositioning of ᎒ጽ above ብ appropriate?</li>
 </ul>
 </p>
 
@@ -2140,9 +2227,15 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 <p><br/></p>
 
 
-
-
 <h3>Use Case 20</h3>
+
+<p><strong>Features:</strong>
+<ul>
+  <li>Three or four rows of annotation.</li>
+  <li>As with use cases 16-19, some red annotations may or may not represent separate rows.</li>
+  <li><em>TBD: Add a context note (modes, ceremonies).</em></li>
+</ul>
+</p>
 
 <figure class="example figure-wide">
 <table>
@@ -2284,7 +2377,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
 
 <p><strong>Issues:</strong>
 <ul>
-  <li>Unable to right align ruby-text over the final base character on rows 1, 2 and 3. Attempts were made with variations on:  style="float: right; text-align: right; white-space: nowrap;"</li>
+  <li>As with similar occurences in Use Cases 16-19, is the repositioning of ቡ above ት appropriate?</li>
 </ul>
 </p>
 
@@ -2303,7 +2396,7 @@ the overall readibility of electronically laid out Zaima in general, and to eval
         </tr>
         <tr>
           <td><img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome" style="vertical-align: middle;"/> Chrome</td>
-          <td>60.0.3112.113</td>
+          <td>61.0.3163.100</td>
           <td>Blink</td>
           <td>Opera, Vivaldi, etc.</td>
         </tr>
