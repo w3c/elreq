@@ -90,8 +90,9 @@ function showHide(showRow) {
 	if( !freeze ) {
 		var pos = 0;
 		for( var i=0; i< numRows; i++ ) {
-			var row = getCSSRule( rows[i] );
-			if( row.style.visibility != "hidden" ) {
+			var rowRT = getCSSRule( rows[i] );  // unfortunate change needed for Chrome 61
+			var row = getCSSRule( rows[i].replace(" rt", "") );
+			if( rowRT.style.visibility != "hidden" ) {
 				row.style.bottom = positions[pos];
 				pos++;
 			}
@@ -384,7 +385,7 @@ and ultimately to determine if Zaima presentation requirements necessitate their
   <!-- /form -->
   </div>
   <div style="float: left; width: 150px; height: 200px;">
-    <strong>All Rows</strong>
+    <strong>All Rows</strong><br/>
     <button id="buttonStripe" onclick="stripeAll();">Stripe</button><br/>
     <button id="buttonOutline" onclick="outlineAll();">Outline</button><br/>
     <button id="buttonBorder" onclick="borderAll();">Border</button><br/>
