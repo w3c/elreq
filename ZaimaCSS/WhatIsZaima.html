@@ -66,26 +66,87 @@ f.additionalLinks = ''
 
 
 <section id="nutshell">
-    <h2 id="quickanswer"><a href="#quickanswer">Quick answer</a></h2>
-<p><dfn id="def_ruby">Zaima</dfn> is a name for small annotations that are rendered alongside base text. This is especially useful for Japanese and other East Asian
-    content (ruby may be called <i class="foreign">furigana</i> in Japanese).</p>
+  <h2 id="quickanswer"><a href="#quickanswer">Quick answer</a></h2>
+<p><dfn id="def_zaima">Zaima</dfn> is the name for Ge&rsquo;ez language chant hymns that are rendered with one or more independent interlinear lines of chant notation.
+    Though different in purpose, Zaima presentation shares much in common with <a href="https://www.w3.org/International/questions/qa-ruby">Ruby</a> annotation.
   <p>The HTML5 specification provides a way to mark up ruby text, and 
-    CSS can be used to fine tune of the positioning of ruby text.</p>
+    CSS can be used to fine tune of the positioning of ruby text. To a large extent the support for ruby text can also be applied to layout zaima text.</p>
 </section>
 
 
 <section>
   <h2 id="detail"><a href="#detail">Details</a></h2>
+  <p>&ldquo;Zaima&rdquo; is an English transcription for the Ge&rsquo;ez word ዜማ  (also transcribed as <em>Zeima</em> and <em>Zema</em>) which is the name
+  given to a tradition of Ethiopian and Eritrean Orthodox Christian hymns sung in chant. Zaima recitation relies on a sophisticated system of chant notation
+  marks similar in principal to other chanting traditions such as Znamenny, Syric, Byzantine and Hebrew cantillation.</p>
+  <p>Zaima notation comprises separate systems of Qirts (ቅርጽ) and Miliket (ምልክት) which are used together and written at half scale above the hymn text.
+  The systems are used together to denote the vocal inflection of base text hymn that they appear over.</p>
+  <p>Zaima often features more than one interlinear line of notation  that are fully independent and never vocalized together. The
+  notation lines may present a different &ldquo;mode&rdquo; (ስልት) of chant appropriate for a given occassion such as a celebration or memorial. A line may
+  also present a different melody for the verse when it is repeated.</p>
 </section>
 
 <section>
-<h2 id="types"><a href="#types">Zaima types</a></h2>
+  <h2 id="types"><a href="#types">Components of Zaima</a></h2>
+  <p>A full exposition on zaima that would explore its historic context, inventory the notation, and musicology aspects is beyond the scope of the
+  review made here.  The following reviews the major visual components of zaima that are subject to delineation in markup languages and have layout
+  and styling requirements in electronic documents.</p>
   <section>
-  <h3 id="jukugo"><a href="#jukugo">Qirts</a></h3>
+  <h3 id="selt"><a href="#selt">Modes (ስልት)</a></h3>
+  <p>Every line of Zaima notation embodies one of three modes of melodic vocalization. The three modes are Ge'ez (ግዕዝ ) characterized by 
+  . Ezil (ዕዝል) 
+   Araray (ዓራራይ).  By convention, Ezil notation will be rendered in red.
+   The mode is sometimes indicated in the hymn text or in a margin note (left side) but generally not as the pracitioner is expected to
+   know the appropriate mode by virtue of his training or by inspection of the <a href=""></a>
+  </p>
   </section>
   <section>
-  <h3 id="jukugo"><a href="#jukugo">Miliket</a></h3>
+  <h3 id="qirts"><a href="#qirts">Qirts (ቅርጽ)</a></h3>
+  <p>Qirts, or YeFidel Qirts, are notation marks used soley to denote voice inflection in zaima and are rendered in the interlinear notation lines.
+  They may be combined into chords for emphasis or modulation.
+  Though some authors will apply a broad definition for <dfn>neumes<dfn> that include qirts marks, the qirts are generally not classified as such.
+  Unlike typical neumes, qirts shapes do not reflect vocalization and their position does not indicate pitch. A subject of debate by purists,
+  two special letters from the syllabary will be recognized as qirts.  These two are &lsquo;ር&rsquo;, short for &ldquo;አንብር&rsquo; (Anber) and
+  &lsquo;ስ&rsquo; short for &ldquo;ደርስ&rdquo; (Dires). Anber and Dires are a special case of an abbreviation that is not grounded by a
+  <a href="#sereyu">Sereyu</a> as are the <a href="#miliket">Miliket</a> which make them more akin to the atomic qirts.</p>
   </section>
+  <section>
+  <h3 id="miliket"><a href="#miliket">Miliket (ምልክት)</a></h3>
+  <p>Miliket are rendered on the interlinear notation lines and make up the bulk of zaima notation. Miliket number in the many hundrends and are
+  abbreviations of a single word or of a few words. Like qirts the miliket define vocalization for the letters or word that they are positioned
+  over. Miliket are specified by a context where the miliket itself was a word or phrase sung in the base text hymn and may have had qirts or
+  other miliket applied to it. The context that grounds a miliket is known as its <a href="#sereyu">Sereyu</a>. Unlike qirts which will be
+  used universally, many miliket are applicable only to a single volume of hymns.</p>
+  </section>
+  <section>
+  <h3 id="sereyu"><a href="#sereyu">Sereyu (ሥረዩ)</a></h3>
+  <p>Sereyu marks a word in the base hymn as a reference point to define the vocalization of a miliket. The Sereyu point is marked with the
+abbreviation &ldquo;ረዩ&rdquo; or &lsquo;ዩ&rsquo; and appears in the interlinear notation along with miliket and qirts but is never vocalized.</p>
+  </section>
+  <section>
+  <h3 id="beit"><a href="#beit">Beit (ቤት)</a></h3>
+  <p>Literally meaning &ldquo;house&rdquo; the beit are abbreviations similar to the miliket that appear in left side margin notes that indicate
+  a <a href="#selt">mode (ስልት)</a> subcategory or &ldquo;family&rdquo; that the zaima's chant melody belongs to at a particular section.
+  In some hymns, the beit category may change every few verses. Beit markers are very often rendered with the upper and lower enclosing bars
+  from Ethiopic numerals which in turn may be rubricized in red while the abbreviation letters may be either red or black.</p>
+  </section>
+  <section>
+  <h3 id="megdam"><a href="#megdam">Medgam (መድጋም)</a></h3>
+  <p>Medgam are Ethiopic numerals that appear in left side margin notes and signal that the line they are written adjacent to should be repeated
+     (in accordance with the numeral's value). When a medgam number is present, the verse it applies to is first performed in vocal chant
+     only following the lowest line of notation (this is known as <dfn>Qome Zaima</dfn>.  Incremental passes will follow successive lines upward
+     and will likely be accompanied by the instruments sistrum and drum.  Unlike Beit, the medgam number may be rendered in a smaller point size
+     (50% regular height as with the miliket).</p>
+  </section>
+  <section>
+  <h3 id="haleita"><a href="#haleita">Halleluya Numbers (ሃሌታ)</a></h3>
+  <p>Haleita or &ldquo;halleluya numbers&rdquo; are rendered in the hymn line and are another system of reference to an entry in a
+   &lduo;haleita table&rdquo; which indicates how the halleluya melody should be sung. The system is similar to miliket referencing and
+   is grounded in a <a href="#beit">beit</a> context.
+  </p>
+  </section>
+
+<p><em>[TBD: Add an full sample depicting all components]</em></p>
 </section>
 
 
