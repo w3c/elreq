@@ -3,33 +3,103 @@
   <meta charset="UTF-8">
   <title>Zaima Playpen for CSS Development &amp; Browser Testing</title>
 <style>
-div { position:relative; }
 h3 { text-decoration: underline; }
 button { margin-bottom: 2px; }
+ruby.row1 {
+    position: absolute;
+    z-index:1;
+}
+ruby.row1 rt {
+  color: red;
+}
+ruby.row1 rt span {
+  position: relative;
+  bottom: 0px;
+}
+ruby.row2 {
+    position: absolute;
+    z-index:2;
+}
+ruby.row2 rb { visibility: hidden; }
+ruby.row2 rt {
+  color: black;
+}
+ruby.row2 rt span {
+  position: relative;
+  bottom: 8px;
+}
+ruby.row3 {
+    position: absolute;
+    z-index:3;
+}
+ruby.row3 rb { visibility: hidden; }
+ruby.row3 rt {
+  color: red;
+}
+ruby.row3 rt span {
+  position: relative;
+  bottom: 16px;
+}
+ruby.row4 {
+    position: absolute;
+    z-index:4;
+}
+ruby.row4 rb { visibility: hidden; }
+ruby.row4 rt {
+  color: black;
+}
+ruby.row4 rt span {
+  position: relative;
+  bottom: 24px;
+}
 .large { font-size: 50px; font-family: "Abyssinica SIL"; margin: 0; }
-.row1 rt { color: red; } 
-.row3 rt { color: red; } 
-.row2 rt { color: black; }
-.row4 rt { color: black; }
-.row1, .row2, .row3, .row4 { position: absolute; }
-.row2 rb, .row3 rb, .row4 rb { visibility: hidden; }
-
-.row1 { z-index:1; bottom: 0px; }
-.row2 { z-index:2; bottom: 8px; }
-.row3 { z-index:3; bottom: 16px; }
-.row4 { z-index:4; bottom: 24px; }
-
-.row1ex rt { color: red; } 
-.row3ex rt { color: red; } 
-.row2ex rt { color: black; }
-.row4ex rt { color: black; }
-.row1ex, .row2ex, .row3ex, .row4ex, .row4ex { position: absolute; }
-.row2ex rb, .row3ex rb, .row4ex rb { visibility: hidden; }
-.row1ex { z-index: 1;  bottom:   0px; }
-.row2ex { z-index: 2;  bottom:  25px; }
-.row3ex { z-index: 3;  bottom:  50px; }
-.row4ex { z-index: 4;  bottom:  75px; }
-
+ruby.row1ex {
+    position: absolute;
+    z-index:1;
+}
+ruby.row1ex rt {
+  color: red;
+}
+ruby.row1ex rt span {
+  position: relative;
+  bottom: 0px; 
+}
+ruby.row2ex {
+    position: absolute;
+    z-index:2;
+}
+ruby.row2ex rb { visibility: hidden; }
+ruby.row2ex rt {
+  color: black;
+}
+ruby.row2ex rt span {
+  position: relative;
+  bottom: 25px; 
+}
+ruby.row3ex {
+    position: absolute;
+    z-index:3;
+}
+ruby.row3ex rb { visibility: hidden; }
+ruby.row3ex rt {
+  color: red;
+}
+ruby.row3ex rt span {
+  position: relative;
+  bottom: 50px;
+}
+ruby.row4ex {
+    position: absolute;
+    z-index:4;
+}
+ruby.row4ex rb { visibility: hidden; }
+ruby.row4ex rt {
+  color: black;
+}
+ruby.row4ex rt span {
+  position: relative;
+  bottom: 75px;
+}
 p { text-align: justify; }
 </style>
 <script>
@@ -42,10 +112,8 @@ var zaimaSheet;
   }
 })();
 var styleButtons = [ "buttonStripe", "buttonOutline", "buttonBorder", "buttonBorderLower", "buttonItalic", "buttonUnderline" ];
-// var zaimaRows = [ "ruby.row1 rt span", "ruby.row2 rt span", "ruby.row3 rt span", "ruby.row4 rt span" ];
-// var zaimaRowsLarge = [ "ruby.row1ex rt span", "ruby.row2ex rt span", "ruby.row3ex rt span", "ruby.row4ex rt span" ];
-var zaimaRows = [ ".row1 rt", ".row2 rt", ".row3 rt", ".row4 rt" ];
-var zaimaRowsLarge = [ ".row1ex rt", ".row2ex rt", ".row3ex rt", ".row4ex rt" ];
+var zaimaRows = [ "ruby.row1 rt span", "ruby.row2 rt span", "ruby.row3 rt span", "ruby.row4 rt span" ];
+var zaimaRowsLarge = [ "ruby.row1ex rt span", "ruby.row2ex rt span", "ruby.row3ex rt span", "ruby.row4ex rt span" ];
 var backgroundColors = [ "#b3ff99", "#ffff99", "#99ffff", "#ff9999" ];
 var outlineStyles = [ "double", "dotted", "solid", "dashed"];
 var outlineColors = [ "red", "black", "red", "black" ];
@@ -90,9 +158,8 @@ function showHide(showRow) {
 	if( !freeze ) {
 		var pos = 0;
 		for( var i=0; i< numRows; i++ ) {
-			var rowRT = getCSSRule( rows[i] );  // unfortunate change needed for Chrome 61
-			var row = getCSSRule( rows[i].replace(" rt", "") );
-			if( rowRT.style.visibility != "hidden" ) {
+			var row = getCSSRule( rows[i] );
+			if( row.style.visibility != "hidden" ) {
 				row.style.bottom = positions[pos];
 				pos++;
 			}
@@ -350,9 +417,9 @@ and ultimately to determine if Zaima presentation requirements necessitate their
 </p>
 
 <h3>Decoration Control Panel</h3>
-<div style="margin-left: 20px; border: solid 1px #666; width: 530px; height: 200px;">
-  <div style="float: left; width: 380px; height: 200px;">
-  <!-- form -->
+<div style="margin-left: 20px; border: solid 1px #666; width: 430px; height: 200px;">
+  <div style="float: left; width: 330px; height: 200px;">
+  <form>
     <input type="checkbox" id="button4" onclick="showHide(4);" checked="chedked"/>Row 4<br/>
       &nbsp;&nbsp;<button id="buttonStripe4" onclick="return stripe(4);">Stripe</button>
       <button id="buttonOutline4" onclick="return outline(4);">Outline</button>
@@ -382,10 +449,10 @@ and ultimately to determine if Zaima presentation requirements necessitate their
       <input type="checkbox" id="buttonItalic1" onclick="italic(1);"/><i>I</i> 
       <input type="checkbox" id="buttonUnderline1" onclick="underline(1);"/><u>U</u><br/>
     <input type="checkbox" id="freezeRows"/> Freeze Rows<br/>
-  <!-- /form -->
+  </form>
   </div>
-  <div style="float: left; width: 150px; height: 200px;">
-    <strong>All Rows</strong><br/>
+  <div>
+    <strong>All Rows</strong>
     <button id="buttonStripe" onclick="stripeAll();">Stripe</button><br/>
     <button id="buttonOutline" onclick="outlineAll();">Outline</button><br/>
     <button id="buttonBorder" onclick="borderAll();">Border</button><br/>
@@ -407,19 +474,21 @@ and ultimately to determine if Zaima presentation requirements necessitate their
   <li>Row 3 rt span bottom: 16px</li>
   <li>Row 4 rt span bottom: 24px</li>
 </ul>
-<div style="margin-left: 20px; border: solid 1px #666; width: 800px; height: 140px;">
-  <div style="float: left; width: 350px; height: 100px; left: 10px; bottom: 10px;">
-    <ruby class="row4"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
-    <ruby class="row3"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
-    <ruby class="row2"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
-    <ruby class="row1"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
+<div style="margin-left: 20px; border: solid 1px #666; width: 720px; height: 200px;">
+  <p><br/> <br/> <br/></p>
+  <div style="float: left; width: 350px; height: 200px;">
+    <ruby class="row4"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
+    <ruby class="row3"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
+    <ruby class="row2"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
+    <ruby class="row1"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
   </div>
 
-  <div style="float: left; width: 320px; height: 100px; bottom: 10px;">
-    <ruby class="row4"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
-    <ruby class="row3"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
-    <ruby class="row2"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
-    <ruby class="row1"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
+
+  <div>
+    <ruby class="row4"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+    <ruby class="row3"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+    <ruby class="row2"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+    <ruby class="row1"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
   </div>
 </div>
 
@@ -435,20 +504,22 @@ and ultimately to determine if Zaima presentation requirements necessitate their
   <li>Row 3 rt span bottom: 50px</li>
   <li>Row 4 rt span bottom: 75px</li>
 </ul>
-
 <div style="margin-left: 20px; border: solid 1px #666; width: 1150px; height: 400px;">
-  <div style="border-bottom: solid 1px #666;  width: 1150px; height: 200px; top: 0px; top: -20px;">
-    <ruby class="large row4ex"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
-    <ruby class="large row3ex"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
-    <ruby class="large row2ex"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
-    <ruby class="large row1ex"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
+  <div style="border-bottom: solid 1px #666;  width: 1150px; height: 200px;">
+    <p><br/> <br/> <br/> <br/></p>
+    <ruby class="large row4ex"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
+    <ruby class="large row3ex"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
+    <ruby class="large row2ex"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
+    <ruby class="large row1ex"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt><span>ABCDEFGHIJKLMNOPQURSTUVWXYZ</span></rt></ruby>
   </div>
 
-  <div style="top: 180px;">
-    <ruby class="large row4ex"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
-    <ruby class="large row3ex"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
-    <ruby class="large row2ex"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
-    <ruby class="large row1ex"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
+
+  <div>
+    <p><br/> <br/> <br/> <br/></p>
+    <ruby class="large row4ex"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+    <ruby class="large row3ex"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+    <ruby class="large row2ex"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
+    <ruby class="large row1ex"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt><span>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</span></rt></ruby>
   </div>
 </div>
 
