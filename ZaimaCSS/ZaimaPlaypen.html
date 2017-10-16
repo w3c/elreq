@@ -2,6 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Zaima Playpen for CSS Development &amp; Browser Testing</title>
+  <link rel="stylesheet" href="https://www.w3.org/International/style/article-2016.css" type="text/css" />
 <style>
 div { position:relative; }
 h3 { text-decoration: underline; }
@@ -34,12 +35,15 @@ p { text-align: justify; }
 </style>
 <script>
 
-var zaimaSheetIndex = 0;
+var zaimaSheetIndex = 1;
 var zaimaSheet;
 (function(){
+      zaimaSheet = document.styleSheets[zaimaSheetIndex]; 
+/*
   for( var i in document.styleSheets ) {
       zaimaSheet = document.styleSheets[zaimaSheetIndex]; 
   }
+*/
 })();
 var styleButtons = [ "buttonStripe", "buttonOutline", "buttonBorder", "buttonBorderLower", "buttonItalic", "buttonUnderline" ];
 // var zaimaRows = [ "ruby.row1 rt span", "ruby.row2 rt span", "ruby.row3 rt span", "ruby.row4 rt span" ];
@@ -341,17 +345,49 @@ function reset() {
 </script>
 </head>
 <body>
+<section>
 <h1>Zaima Playpen for CSS Development &amp; Browser Testing</h1>
-<p>This page is both exploratory and demonstrative of CSS capabilities in positioning and styling Zaima under <a href="https://www.w3.org/International/articles/ruby/markup">Ruby Markup</a>.
-Ruby markup and style properties are applied to Zaima samples to evaluate their suitability in presenting Zaima under user expectations in digital documents.
-A goal of the page is to identify and note any short comings in the ability of markup and style languages to support Zaima requirements, 
-uncover browser limitations in rendering, 
-and ultimately to determine if Zaima presentation requirements necessitate their own markup model and standards additions.
-</p>
+<p>This page is both exploratory and demonstrative of CSS capabilities in positioning and styling of the
+interlinear notation of Zaima under <a href="https://www.w3.org/International/articles/ruby/markup">Ruby Markup</a>.
+Ruby markup and style properties are applied to Zaima samples to evaluate their suitability in presenting Zaima under
+user expectations in digital documents.  A goal of the page is to identify and note any short comings in the ability
+of markup and style languages to support Zaima requirements, uncover browser limitations in rendering, 
+and ultimately to determine if Zaima presentation requirements necessitate their own markup model and standards additions.</p>
+</section>
 
+
+<section>
+  <h2 id="browsers">Browser support</h2>
+  <p>The article describes behavior for the following browser versions. We will try to update the article as behavior changes.</p>
+  <table border="0" summary="Table lists browsers and engines whose behavior is represented in the article.">
+      <tbody>
+        <tr>
+          <th scope="col">Browser</th>
+          <th scope="col">Version</th>
+          <th scope="col">Engine</th>
+          <th scope="col">Other browsers using that engine</th>
+        </tr>
+        <tr>
+          <td><img src="https://w3c.github.io/i18n-drafts/icons/chrome_16x16.png" width="16" height="16" alt="Chrome" title="Chrome" style="vertical-align: middle;"/> Chrome</td>
+          <td>61.0.3163.100</td>
+          <td>Blink</td>
+          <td>Opera, Vivaldi, etc.</td>
+        </tr>
+        <tr>
+          <td><img src="https://w3c.github.io/i18n-drafts/icons/safari_16x16.png" width="16" height="16" alt="Safari" title="Safari" style="vertical-align: middle;"/> Safari</td>
+          <td>Version 11.0 (11604.1.38.1.7)</td>
+          <td>Webkit</td>
+          <td>iOS-based browsers, Yandex, UC Browser, etc.</td>
+        </tr>
+      </tbody>
+    </table>
+</section>
+
+<section>
+<h2 id="tests">Decoration Tests</h2>
 <h3>Decoration Control Panel</h3>
-<div style="margin-left: 20px; border: solid 1px #666; width: 530px; height: 200px;">
-  <div style="float: left; width: 380px; height: 200px;">
+<div style="margin-left: 7.5%; border: solid 1px #666; width: 530px; height: 250px;">
+  <div style="float: left; width: 380px; height: 250px;">
   <!-- form -->
     <input type="checkbox" id="button4" onclick="showHide(4);" checked="chedked"/>Row 4<br/>
       &nbsp;&nbsp;<button id="buttonStripe4" onclick="return stripe(4);">Stripe</button>
@@ -360,7 +396,7 @@ and ultimately to determine if Zaima presentation requirements necessitate their
       <button id="buttonLowerBorder4" onclick="return lowerBorder(4);">Lower Border</button>
       <input type="checkbox" id="buttonItalic4" onclick="italic(4);"/><i>I</i> 
       <input type="checkbox" id="buttonUnderline4" onclick="underline(4);"/><u>U</u><br/>
-    <input type="checkbox" id="button3" onclick="showHide(3);" checked="chedked"/>Row 3<br/>
+    <input type="checkbox" id="button3" onclick="showHide(3);" checked="chedked"/><span style="color: red;">Row 3</span><br/>
       &nbsp;&nbsp;<button id="buttonStripe3" onclick="return stripe(3);">Stripe</button>
       <button id="buttonOutline3" onclick="return outline(3);">Outline</button>
       <button id="buttonBorder3" onclick="return border(3);">Border</button>
@@ -374,7 +410,7 @@ and ultimately to determine if Zaima presentation requirements necessitate their
       <button id="buttonLowerBorder2" onclick="return lowerBorder(2);">Lower Border</button>
       <input type="checkbox" id="buttonItalic2" onclick="italic(2);"/><i>I</i> 
       <input type="checkbox" id="buttonUnderline2" onclick="underline(2);"/><u>U</u><br/>
-    <input type="checkbox" id="button1" onclick="showHide(1);" checked="chedked"/>Row 1<br/>
+    <input type="checkbox" id="button1" onclick="showHide(1);" checked="chedked"/><span style="color: red;">Row 1</span><br/>
       &nbsp;&nbsp;<button id="buttonStripe1" onclick="return stripe(1);">Stripe</button>
       <button id="buttonOutline1" onclick="return outline(1);">Outline</button>
       <button id="buttonBorder1" onclick="return border(1);">Border</button>
@@ -396,7 +432,7 @@ and ultimately to determine if Zaima presentation requirements necessitate their
   </div>
 </div>
 
-<p><br/> <br/></p>
+<p><br/></p>
 
 <h3>Default Font Size</h3>
 <ul>
@@ -407,7 +443,7 @@ and ultimately to determine if Zaima presentation requirements necessitate their
   <li>Row 3 rt span bottom: 16px</li>
   <li>Row 4 rt span bottom: 24px</li>
 </ul>
-<div style="margin-left: 20px; border: solid 1px #666; width: 800px; height: 140px;">
+<div style="margin-left: 7.5%; border: solid 1px #666; width: 800px; height: 140px;">
   <div style="float: left; width: 350px; height: 100px; left: 10px; bottom: 10px;">
     <ruby class="row4"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
     <ruby class="row3"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
@@ -424,7 +460,7 @@ and ultimately to determine if Zaima presentation requirements necessitate their
 </div>
 
 
-<p><br/> <br/> <br/> </p><!-- if the last br is removed, the following h3 becomes centered -->
+<p><br/></p><!-- if the last br is removed, the following h3 becomes centered -->
 
 <h3>Large Font Size</h3>
 <ul>
@@ -436,7 +472,7 @@ and ultimately to determine if Zaima presentation requirements necessitate their
   <li>Row 4 rt span bottom: 75px</li>
 </ul>
 
-<div style="margin-left: 20px; border: solid 1px #666; width: 1150px; height: 400px;">
+<div style="margin-left: 7.5%; border: solid 1px #666; width: 1150px; height: 400px;">
   <div style="border-bottom: solid 1px #666;  width: 1150px; height: 200px; top: 0px; top: -20px;">
     <ruby class="large row4ex"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
     <ruby class="large row3ex"><rb>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rb><rt>ABCDEFGHIJKLMNOPQURSTUVWXYZ</rt></ruby>
@@ -451,6 +487,7 @@ and ultimately to determine if Zaima presentation requirements necessitate their
     <ruby class="large row1ex"><rb>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rb><rt>ሀለሐመሠረሰሸቀቐበቨተቸኀነኘአከኸወዐዘዠየደጀገጠጨጰጸፀፈፐ</rt></ruby>
   </div>
 </div>
+</section>
 
 </body>
 </html>
