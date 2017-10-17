@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Document Model for Zaima Chant</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="How to use CSS styling to support ruby text for Asian languages." />
+<script type="text/javascript">
+var f = { }
+
+// AUTHORS should fill in these assignments:
+f.directory = 'articles/zaima'+'/'; // the path to this file, not including /International or the file name
+f.filename = 'styling'; // the file name WITHOUT extensions
+f.authors = 'Daniel Yacob, GFF'; // author(s) and affiliations
+f.previousauthors = ''; // as above
+f.modifiers = ''; // people making substantive changes, and their affiliation
+f.searchString = 'article-zaima-styling'; // blog search string - usually the filename without extensions
+f.firstPubDate = '2017-10-01'; // date of the first publication of the document (after review)
+f.lastSubstUpdate = { date:'2017-10-10', time:'11:23'}  // date and time of latest substantive changes to this document
+f.status = 'draft';  // should be one of draft, review, published, notreviewed or obsolete
+f.path = '../../' // what you need to prepend to a URL to get to the /International directory 
+
+// AUTHORS AND TRANSLATORS should fill in these assignments:
+f.thisVersion = { date:'2017-10-07', time:'11:23'} // date and time of latest edits to this document/translation
+f.contributors = ''; // people providing useful contributions or feedback during review or at other times
+// also make sure that the lang attribute on the html tag is correct!
+
+// TRANSLATORS should fill in these assignments:
+f.translators = 'xxxNAME, ORG'; // translator(s) and their affiliation - a elements allowed, but use double quotes for attributes
+
+f.breadcrumb = 'markup';
+
+f.additionalLinks = ''
+</script>
+<style>
+  .figure-wide { margin-right: 10%; }
+ruby { font-size: 50px; color: rgb(102, 102, 102); font-family: "ms mincho", stsong, 'lisong pro';  }
+.diret_difat {
+  position: relative;
+  top: 0px;
+}
+.diret_difat:before {
+  content: "᎔";
+}
+.diret_difat:after { 
+  position: absolute;;
+  bottom: 2px;
+  left:  0px;
+  content: "᎑";
+}
+  script { display: inline-block; white-space: pre-wrap; }
+</style>
+<link rel="stylesheet" href="zaima-chrome61.css" type="text/css" />
+<script type="text/javascript" src="https://www.w3.org/International/questions/qa-ruby-data/translations.js"> </script>
+<script type="text/javascript" src="https://www.w3.org/International/javascript/doc-structure/article-dt.js"> </script>
+<script type="text/javascript" src="https://www.w3.org/International/javascript/boilerplate-text/boilerplate-en.js"></script><!--TRANSLATORS must change -en to the subtag for their language!-->
+<script type="text/javascript" src="https://www.w3.org/International/javascript/doc-structure/article.js"> </script>
+<script type="text/javascript" src="https://www.w3.org/International/javascript/articletoc-html5.js"></script>
+<link rel="stylesheet" href="https://www.w3.org/International/style/article-2016.css" type="text/css" />
+<!-- remove the following local css declaration if there is nothing to add -->
+<link rel="stylesheet" href="https://www.w3.org/International/questions/qa-ruby-data/local.css" type="text/css" />
+<link rel="copyright" href="#copyright"/>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+<section>
+<h1>A Document Model for Zaima Chant</h1>
+<p>This article assumes a strong familiarity with W3C markup and styling of Ruby annotation. 
+</p>
+
+<section>
+<h2>A Pragmatic Model Using Existing Standards</h2>
+<p>This section presents a model for Zaima interlinear notation that is compatible with existing W3C standards developed for the
+requirements of Ruby annotation. While the objectives for Ruby annotations are entirely different from Zaima chant notations,
+the two share common interlinear positioning and alignment needs.  Quite naturally, many requirements for Ruby annotation are not necessary
+for Zaima.  Conversely, a number of Zaima layout requirements are not encountered for Ruby annotation.
+The following focuses on exploiting Ruby markup, and CSS facilities, to meet the interlinear presentation requirements of Zaima chant.
+<section>
+<h3>A Pragmatic Model Using Existing Standards</h3>
+<p>Ruby and Zaima both share a requirement for the layout of half-scale interlinear text bound to one ore more letters in a line of base text.
+A distinctive feature of Zaima notation that immediately distinguishes it from Ruby annotation is the regular occurence of multiple interlinear
+lines, or &ldquo;rows&rdquo;, of text. No upper limit is set on the number of rows a line of base Zaima may have, eight rows however have
+been observed in corpus (<cite>አቋቋም፡ዘወርኃ፡በዓላት። Page 113</cite>).</p>
+
+<div class="figWrap">
+  <figure>
+   <p><img style="vertical-align:top;" src="images/ZaimaModel3Rows.png" width="500px"></p>
+   <figcaption>Typical Zaima notation in three rows.</figcaption>
+  </figure>
+</div>
+
+<p>Multiple levels or Ruby annotation are possible but irregular.  Nested Ruby markup can be used to display additional annotation levels, this
+approach assumes some implicit association between the levels.  In Zaima notation, the interlinear rows are fully independent from one another
+and the positioning and alignment between the base text and a given row cannot be a function of any other interlinear row. Attempting to apply
+the nested Ruby technique to format Zaima notation very shortly leads to complications with <a href="https://en.wikipedia.org/wiki/Overlapping_markup">overlapping markup</a>.</p>
+
+<div class="figWrap">
+  <figure>
+   <p><img style="vertical-align:top;" src="images/SeparateLayers.png" width="700px"></p>
+   <figcaption>Separation of notation rows.</figcaption>
+  </figure>
+</div>
+
+<p>A model for Zaima notation that is able to avoid the overlap problem treats rows as residing on separate document &ldquo;layers&rdquo;.
+Each layer will contain the same base text and marked up with the notation of a single interlinear row. The notation line offset from the base text
+is incremented in each layer.  When the layers are viewed together in a projection, the base text of each layer is superimposed upon itself and
+the notations appear in successive &ldquo;rows&rdquo;.</p>
+
+<div class="figWrap">
+  <figure>
+<table>
+  <colgroup>
+    <col width="500px"/>
+    <col width="400px"/>
+  </colgroup>
+  <tbody>
+<tr>
+  <td rowspan="4"><img style="vertical-align:top;" src="images/ProjectedLayers.png" width="500px"></td>
+  <td height="180px"><strong>Row 3:</strong><br/>
+    <pre>
+    &lt;ruby&gt;
+      &lt;rb&gt;አጽ&lt;/rb&gt;&lt;rt&gt;&lt;/rt&gt;
+      &lt;rb&gt;ነ&lt;/rb&gt;&lt;rt style="color: red;"&gt;᎒&lt;/rt&gt;
+      &lt;rb&gt;ነ&lt;/rb&gt;&lt;rt style="color: red;"&gt;᎐&lt;/rt&gt;
+    &lt;/ruby&gt;
+  </pre></td>
+</tr>
+<tr>
+  <td height="170px"><strong>Row 3:</strong><br/>
+    <pre>
+    &lt;ruby&gt;
+      &lt;rb&gt;አ&lt;/rb&gt;&lt;rt&gt;&lt;/rt&gt;
+      &lt;rb&gt;ጽነነ&lt;/rb&gt;&lt;rt&gt;ባሕራ&lt;/rt&gt;
+    &lt;/ruby&gt;
+  </pre></td>
+</tr>
+<tr>
+  <td height="160px"><strong>Row 3:</strong><br/>
+    <pre>
+    &lt;ruby&gt;
+      &lt;rb&gt;አ&lt;/rb&gt;&lt;rt&gt;ቡበ&lt;/rt&gt;
+      &lt;rb&gt;ጽነ&lt;/rb&gt;&lt;rt style="text-align: right;"&gt;<span class="diret_difat"></span><span class="diret_difat"></span>&lt;/rt&gt;
+      &lt;rb&gt;ነ&lt;/rb&gt;&lt;rt&gt;᎓&lt;/rt&gt;
+    &lt;/ruby&gt;
+  </pre></td>
+</tr>
+<tr><td></td></tr>
+</tbody>
+</table>
+   <figcaption>Projection of Zaima notation layers.</figcaption>
+  </figure>
+</div>
+
+
+<p>The <a href="https://www.w3.org/Style/CSS/Overview.en.html">W3C Cascading Style Sheets</a> standard provides the means to specify and
+position layers. An example applicataion appears in Figure 5:</p>
+
+<figure class="example figure-wide">
+<table>
+  <colgroup>
+    <col width="200px"/>
+    <col width="900px"/>
+  </colgroup>
+  <tbody>
+  <tr>
+  <td valign="bottom" height="160px">
+    <div style="position: relative; top: 300px; margin-left: 40px;">
+    <ruby class="row3ex red-miliket">
+      <rb>አጽ</rb><rt></rt>
+      <rb>ነ</rb><rt>᎒</rt>
+      <rb>ነ</rb><rt>᎐</rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>አ</rb><rt></rt>
+      <rb>ጽነነ</rb><rt>&nbsp;ባሕራ</rt>
+    </ruby>
+    <ruby class="row1ex">
+      <rb>አ</rb><rt>ቡበ</rt>
+      <rb>ጽነ</rb><rt style="text-align: right;"><span class="diret_difat"></span><span class="diret_difat"></span></rt>
+      <rb>ነ</rb><rt>᎓</rt>
+    </ruby>
+    </div>
+  </td>
+  <td><script type="text/plain">
+    <div style="position: relative; top: 300px; margin-left: 40px;">
+    <ruby style="z-index: 3; bottom: 50px; position: absoute;">
+      <rb style="visibility: hidden;">አጽ</rb><rt></rt>
+      <rb style="visibility: hidden;">ነ</rb><rt>᎒</rt>
+      <rb style="visibility: hidden;">ነ</rb><rt>᎐</rt>
+    </ruby>
+    <ruby style="z-index: 2; bottom: 25px; position: absoute;">
+      <rb style="visibility: hidden;">አ</rb><rt></rt>
+      <rb style="visibility: hidden;">ጽነነ</rb><rt>&nbsp;ባሕራ</rt>
+    </ruby>
+    <ruby style="z-index: 1; bottom:  0px; position: absoute;">
+      <rb>አ</rb><rt>ቡበ</rt>
+      <rb>ጽነ</rb><rt style="text-align: right;"><span class="diret_difat"></span><span class="diret_difat"></span></rt>
+      <rb>ነ</rb><rt>᎓</rt>
+    </ruby>
+    </div>
+  </script></td>
+  </tr>
+  </tbody>
+</table>
+   <figcaption>Three layers of Zaima notation projected onto a multi-row realization.</figcaption>
+</figure>
+</section>
+
+</section>
+
+<section>
+<h2>An Independent Model Zaima Chant</h2>
+<p><em>[TBD: produce a full complete example with all components as targeted for the What is Zaima? page.
+<ul>
+  <li>zaimaGroup (markup) ...</li>
+  <li>zaima (markup) ...</li>
+  <li>zb (markup) ...</li>
+  <li>zt (markup) ...</li>
+  <li>medgam (attribute) ...</li>
+  <li>beit (attribute) ...</li>
+  <li>sereyu (markup) ...</li>
+  <li>haleita (markup) ...</li>
+</ul>
+</em></p>
+<p>
+  <script type="text/plain">
+    <zaimaGroup medgam="፬" beit="ፌ">
+      <zaima row="3" rubricized="true">
+        <zb>አጽ</rb><zt></zt>
+        <zb>ነ</rb><zt>᎒</zt>
+        <zb>ነ</rb><zt>᎐</zt>
+      </zaima>
+      <zaima row="2">
+        አ<zb>ጽነነ</zb><zt>ባሕራ</zt>
+      </zaima>
+      <zaima row="1">
+        <zb>አ</zb><zt>ቡበ</zt>
+        <zb>ጽነ</zb><zt style="text-align: right;"><span class="diret_difat"></span><span class="diret_difat"></span></zt>
+        <zb>ነ</zb><rt>᎓</zt>
+      </zaima>
+    </zaimaGroup>
+  </script>
+</p>
+</section>
+
+</section>
+
+</body>
+</html>
