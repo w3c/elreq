@@ -205,11 +205,13 @@ position layers. An example applicataion appears in Figure 4:</p>
    <figcaption>Three layers of Zaima notation projected onto a multi-row realization.</figcaption>
 </figure>
 
-<p>Technical note on Figure 4: the markup sample raises the notation by shifting the ruby base <code>bottom</code> position.  This moves 
-both the base text and notation. A more desirable approach is to change only the <code>bottom</code> position of the notation text
-(<code>&lt;rt&gt;</code>).  Moving only the notation  text is supported in Safari v11 and Chrome version 60 and earlier but required <code>&lt;span&gt;</code>
-markup within the <code>&lt;rt&gt;</code> markup to apply the <code>bottom</code> style to. Both appraoches have been applied in use case
-documents (<a href="ZaimaUseCases-Chrome60.html">apply <code>bottom</code> to notation line only</a> , <a href="ZaimaUseCases.html">apply <code>bottom</code> to base</a>).</p>
+<p>Technical note on Figure 4: the markup sample raises the notation by shifting the ruby base <code>bottom</code> position and ruby text
+along with it.  A more desirable approach is to change only the <code>bottom</code> position of the notation text
+(<code>&lt;rt&gt;</code>).  Moving only the notation  text is supported in Safari v11 and Chrome version 60 and earlier but requires <code>&lt;span&gt;</code>
+tags within the <code>&lt;rt&gt;</code> tags to apply the <code>bottom</code> property style to (applying <code>bottom</code> to the <code>&lt;rt&gt;</code> is
+ignored, thus the need for the inner <code>&lt;span&gt;</code>). Both appraoches have been applied in use case
+documents (<a href="ZaimaUseCases-Chrome60.html">apply <code>bottom</code> property to notation line only</a> , 
+<a href="ZaimaUseCases.html">apply <code>bottom</code> property to base</a>). Recommendations for CSS experts are needed here.</p>
 </section>
 
 </section>
