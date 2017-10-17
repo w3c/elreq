@@ -78,7 +78,7 @@ The following focuses on exploiting Ruby markup, and CSS facilities, to meet the
 <section>
 <h3>A Pragmatic Model Using Existing Standards</h3>
 <p>Ruby and Zaima both share a requirement for the layout of half-scale interlinear text bound to one ore more letters in a line of base text.
-A distinctive feature of Zaima notation that immediately distinguishes it from Ruby annotation is the regular occurence of multiple interlinear
+A distinctive feature of Zaima notation that immediately distinguishes it from Ruby annotation is the regular occurrence of multiple interlinear
 lines, or &ldquo;rows&rdquo;, of text. No upper limit is set on the number of rows a line of base Zaima may have, eight rows however have
 been observed in corpus (<cite>አቋቋም፡ዘወርኃ፡በዓላት። Page 113</cite>).</p>
 
@@ -153,7 +153,7 @@ the notations appear in successive &ldquo;rows&rdquo;.</p>
 
 
 <p>The <a href="https://www.w3.org/Style/CSS/Overview.en.html">W3C Cascading Style Sheets</a> standard provides the means to specify and
-position layers. An example applicataion appears in Figure 5:</p>
+position layers. An example applicataion appears in Figure 4:</p>
 
 <figure class="example figure-wide">
 <table>
@@ -204,13 +204,19 @@ position layers. An example applicataion appears in Figure 5:</p>
 </table>
    <figcaption>Three layers of Zaima notation projected onto a multi-row realization.</figcaption>
 </figure>
+
+<p>Technical note on Figure 4: the markup sample raises the notation by shifting the ruby base <code>bottom</code> position.  This moves 
+both the base text and notation. A more desirable approach is to change only the <code>bottom</code> position of the notation text
+(<code>&lt;rt&gt;</code>).  Moving only the notation  text is supported in Safari v11 and Chrome version 60 and earlier but required <code>&lt;span&gt;</code>
+markup within the <code>&lt;rt&gt;</code> markup to apply the <code>bottom</code> style to. Both appraoches have been applied in use case
+documents (<a href="ZaimaUseCases-Chrome60.html">apply <code>bottom</code> to notation line only</a> , <a href="ZaimaUseCases.html">apply <code>bottom</code> to base</a>).</p>
 </section>
 
 </section>
 
 <section>
 <h2>An Independent Model Zaima Chant</h2>
-<p><em>[TBD: produce a full complete example with all components as targeted for the What is Zaima? page.
+<p><em>[TBD: produce a full, complete example with all components as targeted for the What is Zaima? page.
 <ul>
   <li>zaimaGroup (markup) ...</li>
   <li>zaima (markup) ...</li>
