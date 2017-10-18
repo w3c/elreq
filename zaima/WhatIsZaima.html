@@ -44,6 +44,8 @@ f.additionalLinks = ''
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <style>
 div.beit { float: left; margin-left: -80px; border-top: solid 4px red; border-bottom: solid 4px red; line-height: 80%; bottom: -10px; position: relative; }
+.beit:hover + .beitscope { background-color: #c0c0c0; }
+.beit:hover + .beitscope rt { background-color: #c0c0c0; }
 div.medgam { float: left; margin-left: -40px; text-align: right; font-size: 70%;  bottom: -5px;  position:relative;}
 .row1md, .row2md { position: absolute; }
 .row2md rb { visibility: hidden; }
@@ -59,7 +61,7 @@ div.medgam { float: left; margin-left: -40px; text-align: right; font-size: 70%;
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 140px;
     background-color: white;
     color: #005a9c;
     text-align: center;
@@ -76,7 +78,8 @@ div.medgam { float: left; margin-left: -40px; text-align: right; font-size: 70%;
     visibility: visible;
 }
 div.haleita { display: inline; }
-div.serayu:hover { border: solid 2px black; border-radius: 2px; background: #EEE8AA; display:inline-block; }
+div.sereyu:hover { border: solid 2px black; border-radius: 6px; background: #EEE8AA; display:inline-block; }
+rt.sereyu { color: #daa520; }
 </style>
 </style>
 </head>
@@ -181,12 +184,12 @@ abbreviation &ldquo;ረዩ&rdquo; or &lsquo;ዩ&rsquo; and appears in the interl
   <section>
   <h3 id="haleita"><a href="#haleita">Halleluya Numbers (ሃሌታ)</a></h3>
   <p><em>Haleita</em> or &ldquo;halleluya numbers&rdquo; are rendered in the hymn line and are another system of reference to an entry in a
-   &ldquo;haleita table&rdquo; which indicates how the halleluya melody should be sung. The system is similar to miliket referencing and
-   is grounded in a <a href="#beit">Beit</a> context.
+   &ldquo;haleita table&rdquo; (<em>አንቀጸ፡ሃሌታ፡</em>) which indicates how the halleluya melody should be sung (and in turn may include one or more notaion rows).
+   The system is similar to miliket referencing and is grounded in a <a href="#beit">Beit</a> context.
   </p>
   </section>
 
-<p><em>[TBD: Dereference data in tooltips ]</em></p>
+<p><em>[TBD: Finish dereferencing data in tooltips ]</em></p>
 
 <div>
 <div style="margin-left: 80px; margin-right: 160px; float:left; height: 800px">
@@ -197,21 +200,22 @@ abbreviation &ldquo;ረዩ&rdquo; or &lsquo;ዩ&rsquo; and appears in the interl
 </div>
 <div style="width: 960px; margin: 0 auto; background: white; padding: 20px 0;">
 <div style="margin: 0 auto; font-size:30px; font-family: Abyssinica SIL;">
-<div class="beit tooltip">ዑ<span class="tooltiptext">Beit<br/>(ቤት)</span></div><div class="haleita tooltip">በ<span style="color: red;">፬</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div><ruby><rb>ወ</rb><rt>᎑</rt></ruby>ነ<ruby><rb>ገረ</rb><rt>ወቃ</rt></ruby>፡ስም<ruby><rb>የ</rb><rt>᎐</rt></ruby>፡ዮሐን<ruby><rb>ስ</rb><rt style="text-align: right;">ር</rt></ruby>፡ወይ<ruby><rb>ቢ</rb><rt>ሊ</rt></ruby>፡<ruby><rb>ር</rb><rt>ሀየ</rt>ኢ</ruby><br/>
+<div class="beit tooltip">ዑ<span class="tooltiptext"><em>TBD: identify ዑ</em><br/>Beit (ቤት)</span></div><span class="beitscope"><div class="haleita tooltip">በ<span style="color: red;">፬</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div><ruby><rb>ወ</rb><rt>᎑</rt></ruby>ነ<ruby><rb>ገረ</rb><rt>ወቃ</rt></ruby>፡ስም<ruby><rb>የ</rb><rt>᎐</rt></ruby>፡ዮሐን<ruby><rb>ስ</rb><rt style="text-align: right;">ር</rt></ruby>፡ወይ<ruby><rb>ቢ</rb><rt>ሊ</rt></ruby>፡<ruby><rb>ር</rb><rt>ሀየ</rt>ኢ</ruby><br/>
 <div class="medgam tooltip">፪<span class="tooltiptext">Medgam<br/>(መድጋም)</span></div><ruby><rb>ኩ</rb><rt>ዋ᎙</rt></ruby>፡መን<ruby><rb>ፈ</rb><rt>ሊ</rt></ruby>ስ፡ቅ<ruby><rb>ዱ</rb><rt>᎖</rt><rb>ስ</rb><rt>ነቢ</rt></ruby
 >፡<div style="display: inline-block; position:relative; width: 50px; vertical-align:bottom;"><ruby class="row2md"><rb>ከ</rb><rt>᎑</rt><rb>መ</rb><rt>፡</rt></ruby><ruby class="row1md"><rb>ከ</rb><rt>ቡር</rt><rb>መ</rb><rt>᎖᎔</rt></ruby></div>፡<ruby><rb>ር</rb><rt>᎔</rt></ruby>ግብ፡<ruby><rb>ወ</rb><rt>᎑</rt></ruby>ረ<ruby><rb>ደ</rb><rt>ሉ᎙</rt></ruby>፡ክ<br/>
 ማ<ruby><rb>ሁ</rb><rt>ወቃ</rt></ruby>፡ኮ<ruby><rb>ነ</rb><rt>᎐</rt></ruby>፡በቢታን<ruby><rb>ያ</rb><rt>ር</rt></ruby>፡ደ<ruby><rb>ጋ</rb><rt>ሊ</rt></ruby>፡ወ<ruby><rb>ድ</rb><rt>ሊ </rt></ruby>ድቅ<ruby><rb>ስ</rb><rt>ዋ᎙</rt></ruby>፡ዘፈ<br/>
-የ<ruby><rb>ሱ</rb><rt>᎓</rt><rb>ስ</rb><rt>ሠ</rt></ruby>፡ክርስ<ruby><rb>ቶ</rb><rt>ሊ </rt></ruby>ስ፡<ruby><rb>ኮ</rb><rt>᎖</rt><rb>ነ</rb><rt>ነቢ </rt></ruby>፡እስ<ruby><rb>መ</rb><rt>ከመ</rt></ruby>፡እም<ruby><rb>ተ</rb><rt>᎖</rt><rb>ረ</rb><rt>᎘</rt></ruby>ፈ፡<br/>
-<div class="beit tooltip">ሮ<span class="tooltiptext">Beit<br/>(ቤት)</span></div>ዚአ<ruby><rb>ሁ</rb><rt>ዓለ᎙</rt></ruby>፡ነ<ruby><rb>ሣ</rb><rt>᎑</rt></ruby>እ<ruby><rb>ነ</rb><rt>ቃ</rt></ruby>፡<ruby><rb>ደ</rb><rt>᎑</rt><rb>ጋ</rb><rt>ብራ</rt></ruby>፡በ<ruby><rb>ዲ</rb><rt>᎐</rt><rb>በ</rb><rt>᎖</rt></ruby>፡ደ<ruby><rb>ጋ</rb><rt>ረየ</rt></ruby>፡<div class="haleita tooltip">በ<span style="color: red;">፪</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div>ካ<ruby><rb>ህ</rb><rt>ቡር</rt></ruby>ን፡<ruby><rb>ወ</rb><rt>ዘቦ</rt></ruby><br/>
-ነቢ<ruby><rb>ይ</rb><rt>ሰ</rt></ruby>፡ወን<ruby><rb>ጌ</rb><rt>᎑</rt></ruby>ላ<ruby><rb>ዊ</rb><rt>ው</rt></ruby>፡<ruby><rb>መ</rb><rt></rt></ruby>ጥምቅ፡<ruby><rb>ቃ</rb><rt>፴</rt></ruby>ለ፡<div class="serayu tooltip">ዓዋ<ruby><rb>ዲ</rb><rt>ረዩ</rt></ruby><span class="tooltiptext">Sereyu<br/>(ሥረዩ)</span></div>፡<br/>
+የ<ruby><rb>ሱ</rb><rt>᎓</rt><rb>ስ</rb><rt>ሠ</rt></ruby>፡ክርስ<ruby><rb>ቶ</rb><rt>ሊ </rt></ruby>ስ፡<ruby><rb>ኮ</rb><rt>᎖</rt><rb>ነ</rb><rt>ነቢ </rt></ruby>፡እስ<ruby><rb>መ</rb><rt>ከመ</rt></ruby>፡እም<ruby><rb>ተ</rb><rt>᎖</rt><rb>ረ</rb><rt>᎘</rt></ruby>ፈ፡<br/></span>
+<div class="beit tooltip">ሮ<span class="tooltiptext">አፍቂሮ፡<br/>Beit (ቤት)</span></div><div class="beitscope">ዚአ<ruby><rb>ሁ</rb><rt>ዓለ᎙</rt></ruby>፡ነ<ruby><rb>ሣ</rb><rt>᎑</rt></ruby>እ<ruby><rb>ነ</rb><rt>ቃ</rt></ruby>፡<ruby><rb>ደ</rb><rt>᎑</rt><rb>ጋ</rb><rt>ብራ</rt></ruby>፡በ<ruby><rb>ዲ</rb><rt>᎐</rt><rb>በ</rb><rt>᎖</rt></ruby>፡ደ<ruby><rb>ጋ</rb><rt>ረየ</rt></ruby>፡<div class="haleita tooltip">በ<span style="color: red;">፪</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div>ካ<ruby><rb>ህ</rb><rt>ቡር</rt></ruby>ን፡<ruby><rb>ወ</rb><rt>ዘቦ</rt></ruby><br/>
+ነቢ<ruby><rb>ይ</rb><rt>ሰ</rt></ruby>፡ወን<ruby><rb>ጌ</rb><rt>᎑</rt></ruby>ላ<ruby><rb>ዊ</rb><rt>ው</rt></ruby>፡<ruby><rb>መ</rb><rt></rt></ruby>ጥምቅ፡<div class="sereyu tooltip"><ruby><rb>ቃ</rb><rt>፴</rt></ruby>ለ፡ዓዋ<ruby><rb>ዲ</rb><rt class="sereyu">ረዩ</rt></ruby><span class="tooltiptext">ቃለ&#x22ef;ዋዲ<br/>Sereyu (ሥረዩ)</span></div>፡<br/>
 ዘይ<ruby><rb>ሰ</rb><rt>ይ</rt></ruby>ብክ፡በ<ruby><rb>ገ</rb><rt>᎐</rt></ruby>ደ<ruby><rb>ም</rb><rt>ር</rt></ruby>፡<div class="haleita tooltip">በ<span style="color: red;">፪</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div>ካ<ruby><rb>ህ</rb><rt>᎑</rt><rb>ን</rb><rt>ባኡ᎙</rt></ruby>፡ወነ<ruby><rb>ቢ</rb><rt>᎖</rt>ይ</rb><rt>ጸል</rt></ruby>፡<br/>
-ወን<ruby><rb>ጌ</rb><rt>ቡር</rt></ruby>ላ<ruby><rb>ዊ</rb><rt>ነነ</rt></ruby>፡<ruby><rb>መ</rb><rt>᎐</rt></ruby>ጥም<ruby><rb>ቀ</rb><rt>ሉ᎙</rt></ruby>፡ቃ<ruby><rb>ለ</rb><rt>᎐</rt></ruby>፡ዓዋ<ruby><rb>ዲ</rb><rt>ዚና</rt></ruby>፡ዘይስ<br/>
-<div class="beit tooltip">ዘዮ<span class="tooltiptext">Beit<br/>(ቤት)</span></div><ruby><rb>ብ</rb><rt>᎐</rt></ruby>ክ፡በንደ<ruby><rb>ም</rb><rt>ር</rt></ruby>፡<div class="haleita tooltip">በ<span style="color: red;">፪</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div><ruby><rb>ካ</rb><rt>᎑</rt><rb>ህን</rb><rt>ብራ</rt></ruby>፡<ruby><rb>ወ</rb><rt>᎐</rt><rb>ነ</rb><rt>᎖</rt></ruby>ቢይ</rb><rt>ነየ</rt></ruby>፡ወን<ruby><rb>ጌ</rb><rt>᎑</rt></ruby><br/>
-ላ<ruby><rb>ዊ</rb><rt>ው</rt></ruby>፡<ruby><rb>መ</rb><rt>᎑</rt></ruby>ጥም<ruby><rb>ቀ</rb><rt>ው</rt></ruby>፡<ruby><rb>ቃ</rb><rt>ከመ </rt></ruby>ለ፡<ruby><rb>ዓ</rb><rt>᎖</rt></ruby>ዋ<ruby><rb>ዲ</rb><rt>ንጋ</rt></ruby>፡ዘይ<ruby><rb>ሰ</rb><rt>ብራ</rt></ruby>ብክ፡<ruby><rb>በ</rb><rt>᎐</rt></ruby>ገ<br/>
-<div class="beit tooltip">ጣ<span class="tooltiptext">Beit<br/>(ቤት)</span></div>ደ<ruby><rb>ም</rb><rt>ኔሃ</rt></ruby>፡<div class="haleita tooltip">በ<span style="color: red;">፪</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div>ዮ<ruby><rb>ሐን</rb><rt>ይሠ </rt></ruby>ስ፡<ruby><rb>ክ</rb><rt>᎓</rt><rb>ቡር</rb><rt style="text-align: right;">ንከ᎖</rt></ruby>፡አር<ruby><rb>ኩ</rb><rt>ነዋ</rt></ruby>፡ሰመር<br/>
+ወን<ruby><rb>ጌ</rb><rt>ቡር</rt></ruby>ላ<ruby><rb>ዊ</rb><rt>ነነ</rt></ruby>፡<ruby><rb>መ</rb><rt>᎐</rt></ruby>ጥም<ruby><rb>ቀ</rb><rt>ሉ᎙</rt></ruby>፡ቃ<ruby><rb>ለ</rb><rt>᎐</rt></ruby>፡ዓዋ<ruby><rb>ዲ</rb><rt>ዚና</rt></ruby>፡ዘይስ<br/></div>
+<div class="beit tooltip">ዘዮ<span class="tooltiptext">ዘዮም፡መስቀል፡<br/>Beit (ቤት)</span></div><div class="beitscope"><ruby><rb>ብ</rb><rt>᎐</rt></ruby>ክ፡በንደ<ruby><rb>ም</rb><rt>ር</rt></ruby>፡<div class="haleita tooltip">በ<span style="color: red;">፪</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div><ruby><rb>ካ</rb><rt>᎑</rt><rb>ህን</rb><rt>ብራ</rt></ruby>፡<ruby><rb>ወ</rb><rt>᎐</rt><rb>ነ</rb><rt>᎖</rt></ruby>ቢይ</rb><rt>ነየ</rt></ruby>፡ወን<ruby><rb>ጌ</rb><rt>᎑</rt></ruby><br/>
+ላ<ruby><rb>ዊ</rb><rt>ው</rt></ruby>፡<ruby><rb>መ</rb><rt>᎑</rt></ruby>ጥም<ruby><rb>ቀ</rb><rt>ው</rt></ruby>፡<ruby><rb>ቃ</rb><rt>ከመ </rt></ruby>ለ፡<ruby><rb>ዓ</rb><rt>᎖</rt></ruby>ዋ<ruby><rb>ዲ</rb><rt>ንጋ</rt></ruby>፡ዘይ<ruby><rb>ሰ</rb><rt>ብራ</rt></ruby>ብክ፡<ruby><rb>በ</rb><rt>᎐</rt></ruby>ገ<br/></div>
+<div class="beit tooltip">ጣ<span class="tooltiptext">ዕጣነ፡ሞገር፡ወደሞ፡ክቡረ፡<br/>Beit (ቤት)</span></div><div class="beitscope">ደ<ruby><rb>ም</rb><rt>ኔሃ</rt></ruby>፡<div class="haleita tooltip">በ<span style="color: red;">፪</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div>ዮ<ruby><rb>ሐን</rb><rt>ይሠ </rt></ruby>ስ፡<ruby><rb>ክ</rb><rt>᎓</rt><rb>ቡር</rb><rt style="text-align: right;">ንከ᎖</rt></ruby>፡አር<ruby><rb>ኩ</rb><rt>ነዋ</rt></ruby>፡ሰመር<br/>
 <ruby><rb>ዓ</rb><rt>᎐</rt><rb>ዊ</rb><rt>ግዑ </rt></ruby>፡ዮ<ruby><rb>ሐ</rb><rt>᎔</rt></ruby>ን<ruby><rb>ስ</rb><rt>ርሡ </rt></ruby>፡ብእ<ruby><rb>ሲ</rb><rt>᎔</rt></ruby>፡ወንጌላ<ruby><rb>ዊ</rb><rt>ር</rt></ruby>፡<ruby><rb>ዮ</rb><rt>᎑</rt><rb>ሐን</rb><rt>አጻ</rt></ruby>ስ፡<br/>
 ወአዝ<ruby><rb>ማ</rb><rt>᎑</rt><rb>ዱ</rb><rt>፴</rt></ruby>፡ዘሥ<ruby><rb>ጋ</rb><rt>᎖</rt></ruby>፡ተስም<ruby><rb>የ</rb><rt>ሰን </rt></ruby>፡ዮ<ruby><rb>ሐ</rb><rt>ይሠ</rt></ruby>ንስ፡<ruby><rb>አ</rb><rt>᎐</rt></ruby><br/>
 ጥመ<ruby><rb>ቶ</rb><rt>ዚኦ </rt></ruby>፡ዮ<ruby><rb>ሐ</rb><rt>᎑</rt><rb>ን</rb><rt>᎒</rt></ruby>ስ፡ለ<ruby><rb>ኢ</rb><rt>᎐</rt></ruby>የሱ<ruby><rb>ስ</rb><rt>ዑ</rt></ruby>፡ዮ<ruby><rb>ሐ</rb><rt>ፒር</rt><rb>ንስ</rb><rt>ርሡ</rt></ruby>፡ወ
+</div>
 </div>
 </div>
 </div>
