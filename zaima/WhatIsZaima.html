@@ -43,7 +43,10 @@ f.additionalLinks = ''
 <link rel="copyright" href="#copyright"/>
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <style>
-div.beit { float: left; margin-left: -80px; border-top: solid 4px red; border-bottom: solid 4px red; line-height: 80%; bottom: -10px; position: relative; }
+// the block-size property changes everywhere by small amounts when this file is viewed via a server vs offline.
+// the small amounts accumulate and eventuall impact the div.beit presentation where the lower border is in contact
+// with the letter.  Offline the block-size comes out as 24px, but need not be set.
+div.beit { float: left; margin-left: -80px; border-top: solid 4px red; border-bottom: solid 4px red; line-height: 80%; bottom: -10px; position: relative; block-size: 26px; }
 .beit:hover + .beitscope { background-color: #c0c0c0; }
 .beit:hover + .beitscope rt { background-color: #c0c0c0; }
 div.medgam { float: left; margin-left: -40px; text-align: right; font-size: 70%;  bottom: -5px;  position:relative;}
