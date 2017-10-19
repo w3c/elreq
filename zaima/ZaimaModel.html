@@ -218,40 +218,63 @@ documents (<a href="ZaimaUseCases-Chrome60.html">apply <code>bottom</code> prope
 
 <section>
 <h2>An Independent Model Zaima Chant</h2>
-<p><em>[TBD: produce a full, complete example with all components as targeted for the What is Zaima? page.
-<ul>
-  <li>zaimaGroup (markup) ...</li>
-  <li>zaima (markup) ...</li>
-  <li>zb (markup) ...</li>
-  <li>zt (markup) ...</li>
-  <li>silt (attribute) ...</li>
-  <li>medgam (attribute) ...</li>
-  <li>beit (attribute) ...</li>
-  <li>sereyu (markup) ...</li>
-  <li>haleita (markup) ...</li>
-</ul>
+<p><em>[TBD: Present a highlevel structural overview  (component breakdown) that is compatible with DOM tree.]</em></p>
+
+<div class="figWrap">
+  <figure>
+   <figcaption>Component view of a Zaima document.</figcaption>
+  </figure>
+</div>
+
+<p><em>[TBD: From here review the markup requirements for each component individually. 
+Suggest a general approach where Zaima may overlap with other chant traditions.
+The principle proposed here is to use common tag terminally for the common notional subset,
+then specific tags where needed for a given practice.]</em></p>
+<em>
+<section>
+<h3>&lt;chant&gt;</h3>
+<p>"chant" is suggested over a more specific, ruby-like, "zaima" to keep the tag general purpose for chant</p>
+<section>
+<h4>context - attribute</h4>
+<p> arbitrary text value, but needs to be easily selectable in css, js, etc.</p>
+</section>
+</section>
+
+<section>
+<h3>&lt;base&gt;</h3>
+<p>"base" is suggested over a more specific, ruby-like, "zb" to keep the tag general purpose for chant</p>
+</section>
+
+<section>
+<h3>&lt;notation&gt;</h3>
+<p>"notation" is suggested over a more specific, ruby-like, "zt" to keep the tag general purpose for chant
+(&lt;text&gt; may work as well but seems too general).</p>
+</section>
+
+<section>
+<h3>&lt;beit&gt;</h3>
+<p>beit as a stylized reference marker -has scope, needs boundary markers similar to &lt;section&gt;</p>
+</section>
+
+<section>
+<h3>&lt;medgam&gt;</h3>
+<p>medgam as a stylized reference marker -has complex scope, needs subtags to mark boundaries</p>
+</section>
+
+<section>
+<h3>&lt;sereyu&gt;</h3>
+<p>sereyu as a definition marker, like &lt;dfn&gt; -has complex scope, needs subtags to mark boundaries</p>
+</section>
+
+<section>
+<h3>&lt;haleita&gt;</h3>
+<p>haleita as a stylized reference marker -is &lt;a href="" ... &gt; suitable?</p>
+</section>
 </em>
-</p>
-<p>DOM child index indicates row level:</p>
-<p>
-  <script type="text/plain">
-    <zaimaGroup medgam="፬" beit="ፌ">
-      <zaima silt="ezil" rubricized="true"> // a rule should state rubricized="true" is the default for ezil, but allows setting to "false"
-        <zb>አጽ</rb><zt></zt>
-        <zb>ነ</rb><zt>᎒</zt>
-        <zb>ነ</rb><zt>᎐</zt>
-      </zaima>
-      <zaima silt="araray">
-        አ<zb>ጽነነ</zb><zt>ባሕራ</zt>
-      </zaima>
-      <zaima silt="geez">
-        <zb>አ</zb><zt>ቡበ</zt>
-        <zb>ጽነ</zb><zt style="text-align: right;"><span class="diret_difat"></span><span class="diret_difat"></span></zt>
-        <zb>ነ</zb><rt>᎓</zt>
-      </zaima>
-    </zaimaGroup>
-  </script>
-</p>
+
+<section>
+<h3>Sample</h3>
+<p><em>[TBD: Markup the "What is Zaima?" sample here.]</em></p>
 </section>
 
 </section>
