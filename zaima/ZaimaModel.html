@@ -217,7 +217,7 @@ documents (<a href="ZaimaUseCases-Chrome60.html">apply <code>bottom</code> prope
 </section>
 
 <section>
-<h2>An Independent Model Zaima Chant</h2>
+<h2>An Independent Model for Zaima Chant</h2>
 <p><em>[TBD: Present a highlevel structural overview  (component breakdown) that is compatible with DOM tree.]</em></p>
 
 <div class="figWrap">
@@ -229,11 +229,14 @@ documents (<a href="ZaimaUseCases-Chrome60.html">apply <code>bottom</code> prope
 <p><em>[TBD: From here review the markup requirements for each component individually. 
 Suggest a general approach where Zaima may overlap with other chant traditions.
 The principle proposed here is to use common tag terminally for the common notional subset,
-then specific tags where needed for a given practice.]</em></p>
+then specific tags where needed for a given practice. Thus we have a small "Chant Markup Language"
+where extension tags produce dialects that support requirements of a specific practice.  Consider
+a schema.org extension approach.  Determine what will be the most ammenable to HTML maintainers.
+]</em></p>
 <em>
 <section>
 <h3>&lt;chant&gt;</h3>
-<p>"chant" is suggested over a more specific, ruby-like, "zaima" to keep the tag general purpose for chant</p>
+<p>"chant" is suggested over a more specific, ruby-like, "zaima" tag to keep the tag general purpose for chant</p>
 <section>
 <h4>class - attribute</h4>
 <p> taken from Ruby markup. arbitrary text value, but needs to be easily selectable in css, js, etc.</p>
