@@ -48,6 +48,47 @@ ruby { font-size: 50px; color: rgb(102, 102, 102); font-family: "Abyssinica SIL"
   content: "᎑";
 }
   script { display: inline-block; white-space: pre-wrap; }
+code {
+    color: #D93B00;
+}
+code a:link, code a:visited {
+    color: inherit;
+}
+[data-link-type=element]::before {
+    content: "<";
+}
+[data-link-type=element]::after {
+    content: ">";
+}
+a[href] {
+    color: #034575;
+    text-decoration: none;
+    border-bottom: 1px solid #707070;
+    padding: 0 1px 0;
+    margin: 0 -1px 0;
+}
+a:visited {
+    border-bottom-color: #BBB;
+}
+.element {
+    background: none repeat scroll 0 0 #EEEEFF;
+    border-left: 0.25em solid #9999FF;
+    color: black;
+    margin: 0 0 1em 0.15em;
+    padding: 0 1em 0.25em 0.75em;
+    position: relative;
+    z-index: 1;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: normal;
+    margin-left: 7.5%;
+}
+h3.element-header {
+  color: #005A9C; 
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: normal;
+}
 </style>
 <link rel="stylesheet" href="zaima-chrome61.css" type="text/css" />
 <script type="text/javascript" src="https://www.w3.org/International/questions/qa-ruby-data/translations.js"> </script>
@@ -218,13 +259,15 @@ documents (<a href="ZaimaUseCases-Chrome60.html">apply <code>bottom</code> prope
 
 <section>
 <h2>An Independent Model for Zaima Chant</h2>
-<p><em>[TBD: Present a highlevel structural overview  (component breakdown) that is compatible with DOM tree.]</em></p>
+<p><em>[TBD: Present a high level structural overview  (component breakdown) that is compatible with DOM tree.]</em></p>
 
 <div class="figWrap">
   <figure>
    <figcaption>Component view of a Zaima document.</figcaption>
   </figure>
 </div>
+
+<section>
 
 <p><em>[TBD: From here review the markup requirements for each component individually. 
 Suggest a general approach where Zaima may overlap with other chant traditions.
@@ -233,51 +276,125 @@ then specific tags where needed for a given practice. Thus we have a small "Chan
 where extension tags produce dialects that support requirements of a specific practice.  Consider
 a schema.org extension approach.  Determine what will be the most ammenable to HTML maintainers.
 ]</em></p>
-<em>
-<section>
-<h3>&lt;chant&gt;</h3>
-<p>"chant" is suggested over a more specific, ruby-like, "zaima" tag to keep the tag general purpose for chant</p>
-<section>
-<h4>class - attribute</h4>
-<p> taken from Ruby markup. arbitrary text value, but needs to be easily selectable in css, js, etc.</p>
-</section>
+
+<h3 class="element-header">The <dfn><code>chant</code></dfn> element</h3>
+<dl class="element">
+  <dt><span>Categories:</span></dt>
+  <dd><span>Flow content</span></dd>
+  <dd><span>Phrasing content</span></dd>
+  <dd><span>Palpable content.</span></dd>
+  <dt><span>Contexts in which this element can be used:</span></dt>
+  <dd><span>Where phrasing content is expected.</span></dd>
+  <dt><span>Content model:</span></dt>
+  <dd><span>See prose.</span></dd>
+  <dt><span>Content attributes:</span></dt>
+  <dd><span>Global attributes</span></dd>
+  <dt><span>DOM interface:</span></dt>
+  <dd>Uses <code>HTMLElement</code>.</dd>
+</dl>
+<p>The <code><a data-link-type="element" href="elementdef-chant" id="ref-for-elementdef-chant-1">chant</a></code> element allows one or more spans of phrasing content to be marked with chant
+  notations. Chant notations are short runs of text (symbols or letters representing notes) presented over base text,
+  primarily used to score hymns before the advent of staff lines. Staffless chant scoring is practiced
+  in a number of traditions, notably Byzantine, Gregorian (older form), Hebrew, Znamenny, Ge&rsquo;ez, Syrian and others.
+     <p>The content model of <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-2">chant</a></code> elements consists of one or more of the following sequences:</p>
+     <ol>
+      <li data-md="">
+       <p>One or more <a data-link-type="dfn" href="dom.html#phrasing-content" id="ref-for-phrasing-content-50">phrasing content</a> nodes.</li>
+      </li><li data-md="">
+      One or more elements whose semantics are defined only as children of <code>chant</code>:
+      <ul>
+        <li data="md">
+          <p>Universal chant elements:
+          <code><a data-link-type="element" href="#elementdef-cbase" id="ref-for-elementdef-cbase-1">cbase</a></code>,
+          <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-1">notation</a></code> or
+          <code><a data-link-type="element" href="#elementdef-notationGroup" id="ref-for-elementdef-notationGroup-1">notationGroup</a></code>.</p></li>
+        <li data="md">
+          <p>Zaima chant specific elements:
+          <code><a data-link-type="element" href="#elementdef-beit" id="ref-for-elementdef-beit-1">beit</a></code>,
+          <code><a data-link-type="element" href="#elementdef-medgam" id="ref-for-elementdef-medgam-1">medgam</a></code>,
+          <code><a data-link-type="element" href="#elementdef-sereyu" id="ref-for-elementdef-sereyu-1">sereyu</a></code> or
+          <code><a data-link-type="element" href="#elementdef-haleita" id="ref-for-elementdef-haleita-1">haleita</a></code></p>.</li>
+      </ul></ol>
+
+<p>The <code>chant</code> element is somewhat analagous to <code>ruby</code> but with a different context for interlinear text.</p>
 </section>
 
 <section>
-<h3>&lt;cbase&gt;</h3>
-<p>"cbase" for "chant base" (&lt;base&gt; is defined for another context in HTML) is suggested over a more specific, ruby-like, "zb" to keep the tag general purpose for chant</p>
+
+<h3 class="element-header" id="the-cbase-element">The <dfn><code>cbase</code></dfn> element</h3>
+<dl class="element">
+  <dt><span>Categories:</span></dt>
+  <dd><span>None.</span></dd>
+  <dt><span>Contexts in which this element can be used:</span></dt>
+  <dd><span>As a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-3">chant</a></code> element.</span></dd>
+  <dt><span>Content model:</span></dt>
+  <dd><span>Phrasing content</span></dd>
+  <dt><span>Content attributes:</span></dt>
+  <dd><span>Global attributes</span></dd>
+  <dt><span>DOM interface:</span></dt>
+  <dd>Uses <code>HTMLElement</code>.</dd>
+</dl>
+<p>The <code><a data-link-type="element" href="#elementdef-cbase" id="ref-for-elementdef-cbase-2">cbase</a></code> element marks the base text component of a chant notation. When it is
+the child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-4">chant</a></code> element, it does not <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-1">represent</a> anything itself, but its parent <code>chant</code> element uses it as part of determining what <em>it</em> <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-2">represents</a>.</p>
+<p>An <code><a data-link-type="element" href="#elementdef-cbase" id="ref-for-elementdef-cbase-3">cbase</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-5">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
+<p>The <code>cbase</code> element is short for "chant base" (the simpler <code>base</code> is an element with other semantics in HTML) has the same role as the <code>rb</code> element in Ruby annotation.</p>
 </section>
 
 <section>
-<h3>&lt;notation&gt;</h3>
-<p>"notation" is suggested over a more specific, ruby-like, "zt" to keep the tag general purpose for chant
-(&lt;text&gt; may work as well but seems too general).</p>
+<h3 class="element-header" id="the-notation-element">The <dfn><code>notation</code></dfn> element</h3>
+<dl class="element">
+  <dt><span>Categories:</span></dt>
+  <dd><span>None.</span></dd>
+  <dt><span>Contexts in which this element can be used:</span></dt>
+  <dd><span>As a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-6">chant</a></code> or a
+      <code><a data-link-type="element" href="#elementdef-group" id="ref-for-elementdef-group-1">group</a></code> element.</span></dd>
+  <dt><span>Content model:</span></dt>
+  <dd><span>Phrasing content</span></dd>
+  <dt><span>Content attributes:</span></dt>
+  <dd><span>Global attributes</span></dd>
+  <dt><span>DOM interface:</span></dt>
+  <dd>Uses <code>HTMLElement</code>.</dd>
+</dl>
+<p>The <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-2">notation</a></code> element marks the notation line component of a chant notation. When it is
+the descendant of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-7">chant</a></code> element,
+it does not <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-4">represent</a> anything itself, but its ancestor <code>chant</code> element uses it as part of determining what <em>it</em> <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-5">represents</a>.</p>
+<p>An <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-3">notation</a></code> element that is not a descendant of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-9">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-6">represents</a> the same thing as its children.</p>
+
+<p>The <code>notation</code> element has the same role as the <code>rt</code> element in Ruby annotation.</p>
 </section>
 
 <section>
-<h3>&lt;beit&gt;</h3>
+<h3 class="element-header" id="the-notationGroup-element">The <dfn><code>notationGroup</code></dfn> element</h3>
+</section>
+
+<section>
+<h3 class="element-header" id="the-group-element">The <dfn><code>group</code></dfn> element</h3>
+</section>
+
+<section>
+<h3 class="element-header" id="the-ntation-beit">The <dfn><code>beit</code></dfn> element</h3>
 <p>beit as a stylized reference marker -has scope, needs boundary markers similar to &lt;section&gt;</p>
 </section>
 
 <section>
-<h3>&lt;medgam&gt;</h3>
+<h3 class="element-header" id="the-ntation-medgam">The <dfn><code>medgam</code></dfn> element</h3>
 <p>medgam as a stylized reference marker -has complex scope, needs subtags to mark boundaries</p>
 </section>
 
 <section>
-<h3>&lt;sereyu&gt;</h3>
+<h3 class="element-header" id="the-ntation-sereyu">The <dfn><code>sereyu</code></dfn> element</h3>
 <p>sereyu as a definition marker, like &lt;dfn&gt; -has complex scope, needs subtags to mark boundaries</p>
 </section>
 
 <section>
-<h3>&lt;haleita&gt;</h3>
+<h3 class="element-header" id="the-ntation-haleita">The <dfn><code>haleita</code></dfn> element</h3>
 <p>haleita as a stylized reference marker -is &lt;a href="" ... &gt; suitable?</p>
 </section>
 </em>
 
 <section>
 <h3>Sample</h3>
-<div style="margin-left: 7.5%;">
+<div>
   <figure>
    <p style="border: 1px solid black; width: 500px;">
    <img style="vertical-align:top;" src="images/DiguaPage5-Sample.jpg" width="500px" style="border: black 1px solid;">
@@ -285,7 +402,7 @@ a schema.org extension approach.  Determine what will be the most ammenable to H
    <figcaption>Digua Page 5 Sample.</figcaption>
   </figure>
 </div>
-<div style="margin: 7.5%;">
+<div style="margin-left: 7.5%;">
 <script type="text/plain">
 <style>
 .rubricate { color: #8a0707; }
