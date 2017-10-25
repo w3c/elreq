@@ -417,10 +417,10 @@ it does not <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#
 of the <em>Beit (ቤት)</em> context of a portion of Zaima chant. The Zaima Beit context is given with an identifier that is the abbreviation
 of a full name of the Beit.  The identifier will appear in the left side margin of the chant text adjacent to the first line where the context
 begins. The abbreviation text may be stylized and will appear within the required
-<code><a data-link-type="element" href="#elementdef-beit" id="ref-for-elementdef-marker-1">marker</a></code> child element. The full name of
+<code><a data-link-type="element" href="#elementdef-marker" id="ref-for-elementdef-marker-1">marker</a></code> child element. The full name of
 the beit will then be given in the optional child
 <code><a data-link-type="element" href="#elementdef-dfn" id="ref-for-elementdef-dfn-1">dfn</a></code> 
-element which should not appear in the document (<code>display: none</code>). The web author is left to decide how to display the full name of
+element which should not appear in the document bt default (<code>display: none</code>). The web author is left to decide how to display the full name of
 the beit.</p>
 <p>A <code><a data-link-type="element" href="#elementdef-beit" id="ref-for-elementdef-beit-3">beit</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-10">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
 </section>
@@ -479,7 +479,7 @@ the beit.</p>
   <dd>Uses <code>HTMLElement</code>.</dd>
 </dl>
 <p>sereyu as a definition marker, like &lt;dfn&gt; -has complex scope, needs subtags to mark boundaries</p>
-<p>An <code><a data-link-type="element" href="#elementdef-sereyu" id="ref-for-elementdef-sereyu-2">sereyu</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-14">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
+<p>A <code><a data-link-type="element" href="#elementdef-sereyu" id="ref-for-elementdef-sereyu-2">sereyu</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-14">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
 </section>
 
 <section>
@@ -496,8 +496,15 @@ the beit.</p>
   <dt><span>DOM interface:</span></dt>
   <dd>Uses <code>HTMLElement</code>.</dd>
 </dl>
-<p>haleita as a stylized reference marker -is &lt;a href="" ... &gt; suitable?</p>
-<p>An <code><a data-link-type="element" href="#elementdef-haleita" id="ref-for-elementdef-haleita-2">haleita</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-16">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
+<p>The <code><a data-link-type="element" href="#elementdef-haleita" id="ref-for-elementdef-haleita-3">haleita</a></code> element marks up
+the <em>Haleita (ሃሌታ)</em> shorthand which is keyed from the Halleluya Number, Beit and Silt. The Halleluya Number will be marked up in the 
+required <code><a data-link-type="element" href="#elementdef-marker" id="ref-for-elementdef-marker-3">marker</a></code> child element which
+is expected to be stylized. The fully expanded haleita may then appear in the optional
+<code><a data-link-type="element" href="#elementdef-dfn" id="ref-for-elementdef-dfn-1">dfn</a></code> 
+element which should not appear in the document bt default (<code>display: none</code>). The web author is left to decide how to display the 
+expanded from of the <code>haleita</code> .</p>
+<!-- haleita as a stylized reference marker -is &lt;a href="" ... &gt; suitable? -->
+<p>A <code><a data-link-type="element" href="#elementdef-haleita" id="ref-for-elementdef-haleita-2">haleita</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-beit" id="ref-for-elementdef-chant-16">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
 </section>
 </em>
 
@@ -522,7 +529,7 @@ the beit.</p>
 <div id="left-margin" style="float: right; width: 800px;">
 <chant class="geez">  <!-- all notation will be in Ge'ez mode, setting class to something else in a notation tag would override the value here -->
   <beit>
-    <marker>ዑ</marker><dfn>TBD</dfn>
+    <marker>ዑ</marker><dfn>ስምዑ</dfn>
     <haleita><marker>በ<span class="rubricate">፬</span></marker><dfn>TBD</dfn></haleita>
     <cbase>ወ</cbase><notation>᎑</notation>ነ<cbase>ገረ</cbase><notation>ወቃ</notation>፡ስም<cbase>የ</cbase><notation>᎐</notation>፡ዮሐን<cbase>ስ</cbase><notation style="text-align: right;">ር</notation>፡ወይ<cbase>ቢ</cbase><notation>ሊ</notation>፡<cbase>ር</cbase><notation>ሀየ</notation>ኢ<br/>
     <medgam href="#ng1"><marker>፪</marker><cbase>ኩ</cbase><notation>ዋ᎙</notation>፡መን<cbase>ፈ</cbase><notation>ሊ</notation>ስ፡ቅ<cbase>ዱ</cbase><notation>᎖</notation><cbase>ስ</cbase><notation>ነቢ</notation>፡
