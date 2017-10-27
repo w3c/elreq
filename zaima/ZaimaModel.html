@@ -420,7 +420,7 @@ begins. The abbreviation text may be stylized and will appear within the require
 <code><a data-link-type="element" href="#elementdef-marker" id="ref-for-elementdef-marker-1">marker</a></code> child element. The full name of
 the beit will then be given in the optional child
 <code><a data-link-type="element" href="#elementdef-dfn" id="ref-for-elementdef-dfn-1">dfn</a></code> 
-element which should not appear in the document bt default (<code>display: none</code>). The web author is left to decide how to display the full name of
+element which should not appear in the document by default (<code>display: none</code>). The web author is left to decide how to display the full name of
 the beit.</p>
 <p>A <code><a data-link-type="element" href="#elementdef-beit" id="ref-for-elementdef-beit-3">beit</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-10">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
 </section>
@@ -460,8 +460,22 @@ the beit.</p>
   <dt><span>DOM interface:</span></dt>
   <dd>Uses <code>HTMLElement</code>.</dd>
 </dl>
-<p>medgam as a stylized reference marker -has complex scope, needs subtags to mark boundaries</p>
-<p>A <code><a data-link-type="element" href="#elementdef-medgam" id="ref-for-elementdef-medgam-3">medgam</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-12">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
+<p>The <code><a data-link-type="element" href="#elementdef-medgam" id="ref-for-elementdef-medgam-3">medgam</a></code> element is used to
+set the <em>Medgam (መድጋም)</em> counter for a line of chant. The counter is placed in the
+required <code><a data-link-type="element" href="#elementdef-marker" id="ref-for-elementdef-marker-3">marker</a></code> child element which
+may also be stylized (typically set to a smaller font-size value). 
+<p>The <code><a data-link-type="element" href="#elementdef-medgam" id="ref-for-elementdef-medgam-4">medgam</a></code> scope applies to
+two or more interlinear lines of notation which may be fewer than the total number of interlinear lines above a chant line.
+The <code><a data-link-type="element" href="#elementdef-medgam" id="ref-for-elementdef-medgam-5">medgam</a></code> scope will also be disjoint from
+its open and closing elements. The suggested convention for binding the <code>medgam</code> to its scope is to give a <code>medgam</code> element 
+an <code>id</code> attribute and apply the <code>id</code> value to the <code>class</code> attributes of
+the <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-4">notation</a></code>
+and <code><a data-link-type="element" href="#elementdef-notationGroup" id="ref-for-elementdef-notationGroup-5">notationGroup</a></code> elements
+that collectively form the scope of the <code>medgam</code>.</p>
+
+<p>A <code><a data-link-type="element" href="#elementdef-medgam" id="ref-for-elementdef-medgam-5">medgam</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-12">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
+
+<p><em>[TBD: Add an example here that presents 3 rows with only 2 rows in the medgam scope.]</em></p>
 </section>
 
 <section>
@@ -499,9 +513,9 @@ the beit.</p>
 <p>The <code><a data-link-type="element" href="#elementdef-haleita" id="ref-for-elementdef-haleita-3">haleita</a></code> element marks up
 the <em>Haleita (ሃሌታ)</em> shorthand which is keyed from the Halleluya Number, Beit and Silt. The Halleluya Number will be marked up in the 
 required <code><a data-link-type="element" href="#elementdef-marker" id="ref-for-elementdef-marker-3">marker</a></code> child element which
-is expected to be stylized. The fully expanded haleita may then appear in the optional
+is also expected to be stylized. The fully expanded haleita may then appear in the optional
 <code><a data-link-type="element" href="#elementdef-dfn" id="ref-for-elementdef-dfn-1">dfn</a></code> 
-element which should not appear in the document bt default (<code>display: none</code>). The web author is left to decide how to display the 
+element which should not appear in the document by default (<code>display: none</code>). The web author is left to decide how to display the 
 expanded from of the <code>haleita</code> .</p>
 <!-- haleita as a stylized reference marker -is &lt;a href="" ... &gt; suitable? -->
 <p>A <code><a data-link-type="element" href="#elementdef-haleita" id="ref-for-elementdef-haleita-2">haleita</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-beit" id="ref-for-elementdef-chant-16">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
