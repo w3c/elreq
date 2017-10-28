@@ -31,7 +31,39 @@ f.breadcrumb = 'markup';
 
 f.additionalLinks = ''
 </script>
+<script type="text/javascript">
+function highlightMedgam(medgam) {
+	medgam.style.backgroundColor = 'yellow';
+	var all = document.getElementsByClassName(  medgam.id );
+	for (var i = 0; i < all.length; i++) {
+		var children = all[i].childNodes;
+		for (var j = 0; j < children.length; j++) {
+			if( children[j].tagName == "RT" ) {
+				children[j].style.backgroundColor = 'yellow';
+			}
+		}
+
+	}
+	return true;
+}
+function unhighlightMedgam(medgam) {
+	medgam.style.backgroundColor = null
+	var all = document.getElementsByClassName(  medgam.id );
+	for (var i = 0; i < all.length; i++) {
+		var children = all[i].childNodes;
+		for (var j = 0; j < children.length; j++) {
+			if( children[j].tagName == "RT" ) {
+				children[j].style.backgroundColor = null
+			}
+		}
+
+	}
+	return true;
+}
+</script>
 <style>
+  .medgam-example{}
+  .rubricate { color: #8a0707; }
   .figure-wide { margin-right: 10%; }
 ruby { font-size: 50px; color: rgb(102, 102, 102); font-family: "Abyssinica SIL", "ms mincho", stsong, 'lisong pro';  }
 .diret_difat {
@@ -88,6 +120,29 @@ h3.element-header {
     font-family: sans-serif;
     font-weight: normal;
     line-height: normal;
+}
+div.example-title {
+    min-width: 7.5em;
+    color: #b9ab2d;
+}
+div.example-title span {
+    text-transform: uppercase;   
+}
+aside.example, div.example {
+    padding: .5em;
+    border-left-width: .5em;
+    border-left-style: solid;
+    border-color: #e0cb52;
+    background: #fcfaee;    
+}
+
+aside.example div.example {
+    border-left-width: .1em;
+    border-color: #999;
+    background: #fff;
+}
+aside.example div.example div.example-title {
+    color: #999;
 }
 </style>
 <link rel="stylesheet" href="zaima-chrome61.css" type="text/css" />
@@ -469,13 +524,109 @@ two or more interlinear lines of notation which may be fewer than the total numb
 The <code><a data-link-type="element" href="#elementdef-medgam" id="ref-for-elementdef-medgam-5">medgam</a></code> scope will also be disjoint from
 its open and closing elements. The suggested convention for binding the <code>medgam</code> to its scope is to give a <code>medgam</code> element 
 an <code>id</code> attribute and apply the <code>id</code> value to the <code>class</code> attributes of
-the <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-4">notation</a></code>
+the <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-4">notation</a></code>,
+<code><a data-link-type="element" href="#elementdef-group" id="ref-for-elementdef-group-4">group</a></code>,
 and <code><a data-link-type="element" href="#elementdef-notationGroup" id="ref-for-elementdef-notationGroup-5">notationGroup</a></code> elements
 that collectively form the scope of the <code>medgam</code>.</p>
 
 <p>A <code><a data-link-type="element" href="#elementdef-medgam" id="ref-for-elementdef-medgam-5">medgam</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-12">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
-
-<p><em>[TBD: Add an example here that presents 3 rows with only 2 rows in the medgam scope.]</em></p>
+ 
+<div class="example"><div class="example-title"><span>Example 1</span></div>
+<table>
+  <colgroup>
+    <col width="1000px"/>
+  </colgroup>
+  <tbody>
+  <tr>
+  <td valign="bottom" height="140px">
+    <div style="position: relative; top: 75px;">
+    <span id="medgam-example" onmouseover="highlightMedgam(this);" onmouseout="unhighlightMedgam(this);" style="font-size: 30px; color: red;">፪</span>
+    </div>
+    <div style="position: relative; top: 100px; margin-left: 40px;">
+    <ruby class="row3ex red-miliket medgam-example">
+      <rb>ዘዕሩይ፡ምስለ፡አብ፡</rb><rt></rt>
+      <rb>በ</rb><rt>᎑᎓</rt>
+      <rb>መ</rb><rt>᎔</rt>
+      <rb>ለ</rb><rt>᎖᎖ ᎖᎓</rt>
+      <rb>ኮ</rb><rt>&nbsp;</rt>
+      <rb>ቱ</rb><rt>ኢያ</rt>
+    </ruby>
+    <ruby class="row2ex red-miliket medgam-example">
+      <rb>ዘ</rb><rt></rt>
+      <rb>ዕ</rb><rt>᎑</rt>
+      <rb>ሩ</rb><rt>&nbsp;</rt>
+      <rb>ይ</rb><rt>ቢ</rt>
+      <rb>፡ምስለ፡</rb><rt></rt>
+      <rb>አ</rb><rt>᎓</rt>
+      <rb>ብ፡</rb><rt style="text-align: left;">ኒ</rt>
+      <rb>በ</rb><rt><span class="difat_difat_ex"></span></rt>
+      <rb>መ</rb><rt>&nbsp;</rt>
+      <rb>ለ</rb><rt>᎖</rt>
+      <rb>ኮ</rb><rt>&nbsp;</rt>
+      <rb>ቱ</rb><rt>ለሉዝ</rt>
+    </ruby>
+    <ruby class="row1ex">
+      <rb>ዘ</rb><rt></rt>
+      <rb>ዕ</rb><rt>᎑</rt>
+      <rb>ሩ</rb><rt></rt>
+      <rb>ይ</rb><rt>ቃ</rt>
+      <rb>፡ምስለ፡</rb><rt></rt>
+      <rb>አብ</rb><rt style="text-align: left;">መን</rt>
+      <rb>፡በ</rb><rt></rt>
+      <rb>መ</rb><rt>᎐</rt>
+      <rb>ለኮ</rb><rt></rt>
+      <rb>ቱ</rb><rt>ር</rt>።
+    </ruby>
+    </div>
+    <p><br/> <br/></p><span style="margin-left: 40px;">Hover mouse pointer over <span style="color: red;">፪</span> above.</span>
+  </td>
+  </tr><tr>
+  <td><script type="text/plain">
+    <chant>
+    <medgam id="medgam-ezil"><marker>፪</marker></medgam>
+      ዘ
+      <notationGroup>
+        <group class="medgam-ezil"><cbase>ዕ</cbase><notation>᎑</notation>ሩ<cbase>ይ</cbase><notation>ቢ</notation></group>
+        <group><cbase>ዕ</cbase><notation>᎑</notation>ሩ<cbase>ይ</cbase><notation>ቃ</notation></group>
+      </notationGroup>
+      ይ፡ምስለ፡
+      <notationGroup>
+        <group class="medgam-ezil"><cbase>አ</cbase><notation>᎓</notation><cbase>ብ</cbase><notation>ኒ</notation></group>
+        <group><cbase>አብ</cbase><notation style="text-align:left;">መን</notation></group>
+      </notationGroup>
+      ፡
+      <notationGroup>
+        <group class="medgam-ezil"><cbase>በ</cbase><notation>᎑᎓</notation></group>
+        <group class="medgam-ezil"><cbase>በ</cbase><notation><span class="difat_difat_ex"></span></notation></group>
+        <group/>
+      </notationGroup>
+      <notationGroup>
+        <group class="medgam-ezil"><cbase>መ</cbase><notation>᎔</notation></group>
+        <group/>
+        <group><cbase>መ</cbase><notation>᎐</notation></group>
+      </notationGroup>
+      <notationGroup>
+        <notationGroup class="medgam-ezil">
+          <group><cbase>ለ</cbase><notation>᎖᎖ ᎖᎓</notation></group>
+          <group><cbase>ለ</cbase><notation>᎖</notation></group>
+        </notationGroup>
+        <group/>
+      </notationGroup>
+      ኮ
+      <notationGroup>
+        <notationGroup class="medgam-ezil">
+          <group>ቱ<cbase></cbase><notation>ኢያ</notation></group>
+          <group>ቱ<cbase></cbase><notation>ለሉዝ</notation></group>
+        </notationGroup>
+        <group>ቱ<cbase></cbase><notation>ር</notation></group>
+      </notationGroup>
+      ።
+    </chant>
+  </script></td>
+  </tr>
+  </tbody>
+</table>
+</div>
 </section>
 
 <section>
