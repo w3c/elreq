@@ -418,6 +418,8 @@ the descendant of a <code><a data-link-type="element" href="#elementdef-chant" i
 it does not <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-4">represent</a> anything itself, but its ancestor <code>chant</code> element uses it as part of determining what <em>it</em> <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-5">represents</a>.</p>
 <p>An <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-3">notation</a></code> element that is not a descendant of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-8">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-6">represents</a> the same thing as its children.</p>
 
+<p><em>[TBD: Mention that a notation element should be allow for the "bottom" property to be set.]</em></p>
+
 <p>The <code>notation</code> element has the same role as the <code>rt</code> element in Ruby annotation.</p>
 </section>
 
@@ -435,6 +437,7 @@ it does not <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#
   <dt><span>DOM interface:</span></dt>
   <dd>Uses <code>HTMLElement</code>.</dd>
 </dl>
+<p><em>[TBD: discuss notationGroup as a child of another notationGroup, and the related nesting use case]</em></p>
 <p>An <code><a data-link-type="element" href="#elementdef-notationGroup" id="ref-for-elementdef-notationGroup-3">notationGroup</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-19">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
 </section>
 
@@ -452,6 +455,7 @@ it does not <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#
   <dt><span>DOM interface:</span></dt>
   <dd>Uses <code>HTMLElement</code>.</dd>
 </dl>
+<p><em>[TBD: Mention that a group element should be allow for the "bottom" property to be set, acting on notation only.  Is a notation-bottom: property needed?]</em></p>
 <p>An <code><a data-link-type="element" href="#elementdef-group" id="ref-for-elementdef-group-2">group</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-notationGroup" id="ref-for-elementdef-notationGroup-4">notationGroup</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
 </section>
 
@@ -530,7 +534,9 @@ an <code>id</code> attribute and apply the <code>id</code> value to the <code>cl
 the <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-4">notation</a></code>,
 <code><a data-link-type="element" href="#elementdef-group" id="ref-for-elementdef-group-4">group</a></code>,
 and <code><a data-link-type="element" href="#elementdef-notationGroup" id="ref-for-elementdef-notationGroup-5">notationGroup</a></code> elements
-that collectively form the scope of the <code>medgam</code>.</p>
+that collectively form the scope of the <code>medgam</code>. It is left to the author to determine if the <code>medgam</code> should apply to just
+additional notation line <em>only</em>, or also include the primary notation line. Example 2 demonstrates the later case where the primary
+notation line of the mode (silt) is included for clarity since a notation line in another mode is also present.</p>
 
 <p>A <code><a data-link-type="element" href="#elementdef-medgam" id="ref-for-elementdef-medgam-5">medgam</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-12">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
  
@@ -646,8 +652,11 @@ that collectively form the scope of the <code>medgam</code>.</p>
   <dt><span>DOM interface:</span></dt>
   <dd>Uses <code>HTMLElement</code>.</dd>
 </dl>
+<p>The </p>
 <p>sereyu as a definition marker, like &lt;dfn&gt; -has complex scope, needs subtags to mark boundaries</p>
 <p>A <code><a data-link-type="element" href="#elementdef-sereyu" id="ref-for-elementdef-sereyu-2">sereyu</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-14">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
+
+<p><em>[TBD: 2 examples needed for miliket-sereyu and beit-sereyu use cases]</em></p>
 </section>
 
 <section>

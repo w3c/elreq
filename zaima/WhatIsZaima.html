@@ -32,6 +32,36 @@ f.breadcrumb = 'markup'
 
 f.additionalLinks = ''
 </script>
+<script type="text/javascript">
+function highlightMedgam(medgam) {
+	medgam.style.backgroundColor = 'yellow';
+	var all = document.getElementsByClassName(  medgam.id );
+	for (var i = 0; i < all.length; i++) {
+		var children = all[i].childNodes;
+		for (var j = 0; j < children.length; j++) {
+			if( children[j].tagName == "RT" ) {
+				children[j].style.backgroundColor = 'yellow';
+			}
+		}
+
+	}
+	return true;
+}
+function unhighlightMedgam(medgam) {
+	medgam.style.backgroundColor = null
+	var all = document.getElementsByClassName(  medgam.id );
+	for (var i = 0; i < all.length; i++) {
+		var children = all[i].childNodes;
+		for (var j = 0; j < children.length; j++) {
+			if( children[j].tagName == "RT" ) {
+				children[j].style.backgroundColor = null
+			}
+		}
+
+	}
+	return true;
+}
+</script>
 <script type="text/javascript" src="https://www.w3.org/International/questions/qa-ruby-data/translations.js"> </script>
 <script type="text/javascript" src="https://www.w3.org/International/javascript/doc-structure/article-dt.js"> </script>
 <script type="text/javascript" src="https://www.w3.org/International/javascript/boilerplate-text/boilerplate-en.js"></script><!--TRANSLATORS must change -en to the subtag for their language!-->
@@ -73,6 +103,8 @@ div.medgam { float: left; margin-left: -40px; text-align: right; font-size: 70%;
     border-radius: 6px;
     border: 1px solid black;
     padding: 2px 0;
+    margin-left: 3px;
+    margin-top: 5px;
 
     /* Position the tooltip */
     position: absolute;
@@ -85,7 +117,6 @@ div.medgam { float: left; margin-left: -40px; text-align: right; font-size: 70%;
 div.haleita { display: inline; }
 div.sereyu:hover { border: solid 2px black; border-radius: 6px; background: #EEE8AA; display:inline-block; }
 rt.sereyu { color: #daa520; }
-</style>
 </style>
 </head>
 
@@ -180,7 +211,7 @@ rt.sereyu { color: #daa520; }
      (in accordance with the numeral&rsquo;s value). When a medgam number is present, the verse it applies to is first performed in vocal chant
      only following the lowest line of notation (this is known as <dfn>Qome Zaima</dfn>).  Incremental passes will follow successive lines upward
      and will likely be accompanied by the instruments sistrum and drum.  Unlike Beit, the medgam number may be rendered in a smaller point size
-     (50-70% regular height as with the miliket). [<em>Vet this, medgam may also, or primarily, represent alternative vocalizations</em>] More than
+     (50-70% regular height as with the miliket). [<em>TBD: Vet this, medgam may also, or primarily, represent alternative vocalizations</em>] More than
      one medgam may apply to a line of chant, which each medgam applies to separate groupings of interlinear lines but all within the same <a href="#selt">mode.</a></p>
   </section>
   <section>
@@ -200,7 +231,7 @@ rt.sereyu { color: #daa520; }
   <section>
   <h3 id="components-sample"><a href="#components-sample">Sample from The Digua (ድጓ)</a></h3>
   <p>The components of zaima are depicted in the following exert from The Digua</p>
-  <p><em>[TBD: Finish dereferencing data in tooltips ]</em></p>
+  <p><em>[TBD: Finish dereferencing data in haleita tooltips ]</em></p>
 
 <!-- use the technique here to present te haleita in a popup: https://jsfiddle.net/hwsamuel/fsp5pgqw/ -->
 
@@ -216,8 +247,8 @@ rt.sereyu { color: #daa520; }
 <div style="width: 960px; margin: 0 auto; background: white; padding: 20px 0;">
 <div style="margin: 0 auto; font-size:30px; font-family: Abyssinica SIL;">
 <div class="beit tooltip">ዑ<span class="tooltiptext">ስምዑ<br/>Beit (ቤት)</span></div><span class="beitscope"><div class="haleita tooltip">በ<span style="color: red;">፬</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div><ruby><rb>ወ</rb><rt>᎑</rt></ruby>ነ<ruby><rb>ገረ</rb><rt>ወቃ</rt></ruby>፡ስም<ruby><rb>የ</rb><rt>᎐</rt></ruby>፡ዮሐን<ruby><rb>ስ</rb><rt style="text-align: right;">ር</rt></ruby>፡ወይ<ruby><rb>ቢ</rb><rt>ሊ</rt></ruby>፡<ruby><rb>ር</rb><rt>ሀየ</rt>ኢ</ruby><br/>
-<div class="medgam tooltip">፪<span class="tooltiptext">Medgam<br/>(መድጋም)</span></div><ruby><rb>ኩ</rb><rt>ዋ᎙</rt></ruby>፡መን<ruby><rb>ፈ</rb><rt>ሊ</rt></ruby>ስ፡ቅ<ruby><rb>ዱ</rb><rt>᎖</rt><rb>ስ</rb><rt>ነቢ</rt></ruby
->፡<div style="display: inline-block; position:relative; width: 50px; vertical-align:bottom;"><ruby class="row2md"><rb>ከ</rb><rt>᎑</rt><rb>መ</rb><rt>፡</rt></ruby><ruby class="row1md"><rb>ከ</rb><rt>ቡር</rt><rb>መ</rb><rt>᎖᎔</rt></ruby></div>፡<ruby><rb>ር</rb><rt>᎔</rt></ruby>ግብ፡<ruby><rb>ወ</rb><rt>᎑</rt></ruby>ረ<ruby><rb>ደ</rb><rt>ሉ᎙</rt></ruby>፡ክ<br/>
+<div class="medgam tooltip" id="medgam-geez" onmouseover="highlightMedgam(this);" onmouseout="unhighlightMedgam(this);">፪<span class="tooltiptext">Medgam<br/>(መድጋም)</span></div><ruby><rb>ኩ</rb><rt>ዋ᎙</rt></ruby>፡መን<ruby><rb>ፈ</rb><rt>ሊ</rt></ruby>ስ፡ቅ<ruby><rb>ዱ</rb><rt>᎖</rt><rb>ስ</rb><rt>ነቢ</rt></ruby
+>፡<div style="display: inline-block; position:relative; width: 50px; vertical-align:bottom;"><ruby class="row2md medgam-geez"><rb>ከ</rb><rt>᎑</rt><rb>መ</rb><rt>፡</rt></ruby><ruby class="row1md"><rb>ከ</rb><rt>ቡር</rt><rb>መ</rb><rt>᎖᎔</rt></ruby></div>፡<ruby><rb>ር</rb><rt>᎔</rt></ruby>ግብ፡<ruby><rb>ወ</rb><rt>᎑</rt></ruby>ረ<ruby><rb>ደ</rb><rt>ሉ᎙</rt></ruby>፡ክ<br/>
 ማ<ruby><rb>ሁ</rb><rt>ወቃ</rt></ruby>፡ኮ<ruby><rb>ነ</rb><rt>᎐</rt></ruby>፡በቢታን<ruby><rb>ያ</rb><rt>ር</rt></ruby>፡ደ<ruby><rb>ጋ</rb><rt>ሊ</rt></ruby>፡ወ<ruby><rb>ድ</rb><rt>ሊ </rt></ruby>ድቅ<ruby><rb>ስ</rb><rt>ዋ᎙</rt></ruby>፡ዘፈ<br/>
 የ<ruby><rb>ሱ</rb><rt>᎓</rt><rb>ስ</rb><rt>ሠ</rt></ruby>፡ክርስ<ruby><rb>ቶ</rb><rt>ሊ </rt></ruby>ስ፡<ruby><rb>ኮ</rb><rt>᎖</rt><rb>ነ</rb><rt>ነቢ </rt></ruby>፡እስ<ruby><rb>መ</rb><rt>ከመ</rt></ruby>፡እም<ruby><rb>ተ</rb><rt>᎖</rt><rb>ረ</rb><rt>᎘</rt></ruby>ፈ፡<br/></span>
 <div class="beit tooltip">ሮ<span class="tooltiptext">አፍቂሮ፡<br/>Beit (ቤት)</span></div><div class="beitscope">ዚአ<ruby><rb>ሁ</rb><rt>ዓለ᎙</rt></ruby>፡ነ<ruby><rb>ሣ</rb><rt>᎑</rt></ruby>እ<ruby><rb>ነ</rb><rt>ቃ</rt></ruby>፡<ruby><rb>ደ</rb><rt>᎑</rt><rb>ጋ</rb><rt>ብራ</rt></ruby>፡በ<ruby><rb>ዲ</rb><rt>᎐</rt><rb>በ</rb><rt>᎖</rt></ruby>፡ደ<ruby><rb>ጋ</rb><rt>ረየ</rt></ruby>፡<div class="haleita tooltip">በ<span style="color: red;">፪</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div>ካ<ruby><rb>ህ</rb><rt>ቡር</rt></ruby>ን፡<ruby><rb>ወ</rb><rt>ዘቦ</rt></ruby><br/>
