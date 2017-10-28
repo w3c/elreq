@@ -33,6 +33,26 @@ f.breadcrumb = 'markup'
 f.additionalLinks = ''
 </script>
 <script type="text/javascript">
+function underlineSereyuAbbr(sereyu) {
+	var all = document.getElementsByClassName(  sereyu.id );
+	for (var i = 0; i < all.length; i++) {
+			if( (all[i].tagName == "RB") || (all[i].tagName == "SPAN") ) {
+				all[i].style.textDecoration = 'underline';
+			}
+	}
+
+	return true;
+}
+function noUnderlineSereyuAbbr(sereyu) {
+	var all = document.getElementsByClassName(  sereyu.id );
+	for (var i = 0; i < all.length; i++) {
+			if( (all[i].tagName == "RB") || (all[i].tagName == "SPAN") ) {
+				all[i].style.textDecoration = null;
+			}
+	}
+
+	return true;
+}
 function highlightMedgam(medgam) {
 	medgam.style.backgroundColor = 'yellow';
 	var all = document.getElementsByClassName(  medgam.id );
@@ -252,7 +272,7 @@ rt.sereyu { color: #daa520; }
 ማ<ruby><rb>ሁ</rb><rt>ወቃ</rt></ruby>፡ኮ<ruby><rb>ነ</rb><rt>᎐</rt></ruby>፡በቢታን<ruby><rb>ያ</rb><rt>ር</rt></ruby>፡ደ<ruby><rb>ጋ</rb><rt>ሊ</rt></ruby>፡ወ<ruby><rb>ድ</rb><rt>ሊ </rt></ruby>ድቅ<ruby><rb>ስ</rb><rt>ዋ᎙</rt></ruby>፡ዘፈ<br/>
 የ<ruby><rb>ሱ</rb><rt>᎓</rt><rb>ስ</rb><rt>ሠ</rt></ruby>፡ክርስ<ruby><rb>ቶ</rb><rt>ሊ </rt></ruby>ስ፡<ruby><rb>ኮ</rb><rt>᎖</rt><rb>ነ</rb><rt>ነቢ </rt></ruby>፡እስ<ruby><rb>መ</rb><rt>ከመ</rt></ruby>፡እም<ruby><rb>ተ</rb><rt>᎖</rt><rb>ረ</rb><rt>᎘</rt></ruby>ፈ፡<br/></span>
 <div class="beit tooltip">ሮ<span class="tooltiptext">አፍቂሮ፡<br/>Beit (ቤት)</span></div><div class="beitscope">ዚአ<ruby><rb>ሁ</rb><rt>ዓለ᎙</rt></ruby>፡ነ<ruby><rb>ሣ</rb><rt>᎑</rt></ruby>እ<ruby><rb>ነ</rb><rt>ቃ</rt></ruby>፡<ruby><rb>ደ</rb><rt>᎑</rt><rb>ጋ</rb><rt>ብራ</rt></ruby>፡በ<ruby><rb>ዲ</rb><rt>᎐</rt><rb>በ</rb><rt>᎖</rt></ruby>፡ደ<ruby><rb>ጋ</rb><rt>ረየ</rt></ruby>፡<div class="haleita tooltip">በ<span style="color: red;">፪</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div>ካ<ruby><rb>ህ</rb><rt>ቡር</rt></ruby>ን፡<ruby><rb>ወ</rb><rt>ዘቦ</rt></ruby><br/>
-ነቢ<ruby><rb>ይ</rb><rt>ሰ</rt></ruby>፡ወን<ruby><rb>ጌ</rb><rt>᎑</rt></ruby>ላ<ruby><rb>ዊ</rb><rt>ው</rt></ruby>፡<ruby><rb>መ</rb><rt></rt></ruby>ጥምቅ፡<div class="sereyu tooltip"><ruby><rb>ቃ</rb><rt>፴</rt></ruby>ለ፡ዓዋ<ruby><rb>ዲ</rb><rt class="sereyu">ረዩ</rt></ruby><span class="tooltiptext">ቃለ&#x22ef;ዋዲ<br/>Sereyu (ሥረዩ)</span></div>፡<br/>
+ነቢ<ruby><rb>ይ</rb><rt>ሰ</rt></ruby>፡ወን<ruby><rb>ጌ</rb><rt>᎑</rt></ruby>ላ<ruby><rb>ዊ</rb><rt>ው</rt></ruby>፡<ruby><rb>መ</rb><rt></rt></ruby>ጥምቅ፡<div id="sereyu" class="sereyu tooltip" onmouseover="underlineSereyuAbbr(this);" onmouseout="noUnderlineSereyuAbbr(this);"><ruby><rb class="sereyu">ቃ</rb><rt>፴</rt></ruby><span class="sereyu">ለ</span>፡ዓ<span class="sereyu">ዋ</span><ruby><rb class="sereyu">ዲ</rb><rt class="sereyu">ረዩ</rt></ruby><span class="tooltiptext">ቃለ&#x22ef;ዋዲ<br/>Sereyu (ሥረዩ)</span></div>፡<br/>
 ዘይ<ruby><rb>ሰ</rb><rt>ይ</rt></ruby>ብክ፡በ<ruby><rb>ገ</rb><rt>᎐</rt></ruby>ደ<ruby><rb>ም</rb><rt>ር</rt></ruby>፡<div class="haleita tooltip">በ<span style="color: red;">፪</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div>ካ<ruby><rb>ህ</rb><rt>᎑</rt><rb>ን</rb><rt>ባኡ᎙</rt></ruby>፡ወነ<ruby><rb>ቢ</rb><rt>᎖</rt>ይ</rb><rt>ጸል</rt></ruby>፡<br/>
 ወን<ruby><rb>ጌ</rb><rt>ቡር</rt></ruby>ላ<ruby><rb>ዊ</rb><rt>ነነ</rt></ruby>፡<ruby><rb>መ</rb><rt>᎐</rt></ruby>ጥም<ruby><rb>ቀ</rb><rt>ሉ᎙</rt></ruby>፡ቃ<ruby><rb>ለ</rb><rt>᎐</rt></ruby>፡ዓዋ<ruby><rb>ዲ</rb><rt>ዚና</rt></ruby>፡ዘይስ<br/></div>
 <div class="beit tooltip">ዘዮ<span class="tooltiptext">ዘዮም፡መስቀል፡<br/>Beit (ቤት)</span></div><div class="beitscope"><ruby><rb>ብ</rb><rt>᎐</rt></ruby>ክ፡በንደ<ruby><rb>ም</rb><rt>ር</rt></ruby>፡<div class="haleita tooltip">በ<span style="color: red;">፪</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div><ruby><rb>ካ</rb><rt>᎑</rt><rb>ህን</rb><rt>ብራ</rt></ruby>፡<ruby><rb>ወ</rb><rt>᎐</rt><rb>ነ</rb><rt>᎖</rt></ruby>ቢይ</rb><rt>ነየ</rt></ruby>፡ወን<ruby><rb>ጌ</rb><rt>᎑</rt></ruby><br/>
