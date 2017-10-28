@@ -251,7 +251,9 @@ the notations appear in successive &ldquo;rows&rdquo;.</p>
 <p>The <a href="https://www.w3.org/Style/CSS/Overview.en.html">W3C Cascading Style Sheets</a> standard provides the means to specify and
 position layers. An example applicataion appears in Figure 4:</p>
 
-<figure class="example figure-wide">
+<div class="example"><div class="example-title"><span>Example 1</span></div>
+<!-- figure class="example figure-wide" -->
+<figure style="margin-right: 5%; margin-left: 5%;">
 <table>
   <colgroup>
     <col width="200px"/>
@@ -300,6 +302,7 @@ position layers. An example applicataion appears in Figure 4:</p>
 </table>
    <figcaption>Three layers of Zaima notation projected onto a multi-row realization.</figcaption>
 </figure>
+</div>
 
 <p>Technical note on Figure 4: the markup sample raises the notation by shifting the ruby base <code>bottom</code> position and ruby text
 along with it.  A more desirable approach is to change only the <code>bottom</code> position of the notation text
@@ -531,7 +534,7 @@ that collectively form the scope of the <code>medgam</code>.</p>
 
 <p>A <code><a data-link-type="element" href="#elementdef-medgam" id="ref-for-elementdef-medgam-5">medgam</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-12">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
  
-<div class="example"><div class="example-title"><span>Example 1</span></div>
+<div class="example"><div class="example-title"><span>Example 2</span></div>
 <table>
   <colgroup>
     <col width="1000px"/>
@@ -674,7 +677,8 @@ expanded from of the <code>haleita</code> .</p>
 </em>
 
 <section>
-<h3>Sample</h3>
+<h3>Digua Sample Applying Many Elements</h3>
+<div class="example"><div class="example-title"><span>Example 3</span></div>
 <div>
   <figure>
    <p style="border: 1px solid black; width: 500px;">
@@ -683,7 +687,8 @@ expanded from of the <code>haleita</code> .</p>
    <figcaption>Digua Page 5 Sample.</figcaption>
   </figure>
 </div>
-<div style="margin-left: 7.5%;">
+
+<!-- div style="margin-left: 7.5%;" -->
 <script type="text/plain">
 <style>
 .rubricate { color: #8a0707; }
@@ -697,8 +702,8 @@ expanded from of the <code>haleita</code> .</p>
     <marker>ዑ</marker><dfn>ስምዑ</dfn>
     <haleita><marker>በ<span class="rubricate">፬</span></marker><dfn>TBD</dfn></haleita>
     <cbase>ወ</cbase><notation>᎑</notation>ነ<cbase>ገረ</cbase><notation>ወቃ</notation>፡ስም<cbase>የ</cbase><notation>᎐</notation>፡ዮሐን<cbase>ስ</cbase><notation style="text-align: right;">ር</notation>፡ወይ<cbase>ቢ</cbase><notation>ሊ</notation>፡<cbase>ር</cbase><notation>ሀየ</notation>ኢ<br/>
-    <medgam href="#ng1"><marker>፪</marker><cbase>ኩ</cbase><notation>ዋ᎙</notation>፡መን<cbase>ፈ</cbase><notation>ሊ</notation>ስ፡ቅ<cbase>ዱ</cbase><notation>᎖</notation><cbase>ስ</cbase><notation>ነቢ</notation>፡
-  <notationGroup id="ng1">
+    <medgam id="ng1"><marker>፪</marker><cbase>ኩ</cbase><notation>ዋ᎙</notation>፡መን<cbase>ፈ</cbase><notation>ሊ</notation>ስ፡ቅ<cbase>ዱ</cbase><notation>᎖</notation><cbase>ስ</cbase><notation>ነቢ</notation>፡
+  <notationGroup class="ng1">
     <group><cbase>ከ</cbase><notation>᎑</notation><cbase>መ</cbase><notation>፡</notation></group>
     <group><cbase>ከ</cbase><notation>ቡር</notation><cbase>መ</cbase><notation>᎖᎔</notation></group>
   </notationGroup>
