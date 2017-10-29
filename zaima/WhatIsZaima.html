@@ -162,6 +162,7 @@ div.medgam { float: left; margin-left: -40px; text-align: right; font-size: 70%;
     border: 1px solid black;
     background: #ffffff;
     font-size: 30px ;
+    z-index: 4;
 }
 div.haleita { display: inline; }
 div.sereyu:hover { border: solid 2px black; border-radius: 6px; background: #EEE8AA; display:inline-block; }
@@ -295,7 +296,7 @@ rt.sereyu { color: #daa520; }
 </div>
 <div style="width: 960px; margin: 0 auto; background: white; padding: 20px 0;">
 <div style="margin: 0 auto; font-size:30px; font-family: Abyssinica SIL;">
-<div class="beit tooltip">ዑ<span class="tooltiptext">ስምዑ፡ዘንተ፡<br/>Beit (ቤት)</span></div><span class="beitscope"><div class="haleita tooltip">በ<span style="color: red;">፬</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div><ruby><rb>ወ</rb><rt>᎑</rt></ruby>ነ<ruby><rb>ገረ</rb><rt>ወቃ</rt></ruby>፡ስም<ruby><rb>የ</rb><rt>᎐</rt></ruby>፡ዮሐን<ruby><rb>ስ</rb><rt style="text-align: right;">ር</rt></ruby>፡ወይ<ruby><rb>ቢ</rb><rt>ሊ</rt></ruby>፡<ruby><rb>ር</rb><rt>ሀየ</rt>ኢ</ruby><br/>
+<div class="beit tooltip">ዑ<span class="tooltiptext">ስምዑ፡ዘንተ፡<br/>Beit (ቤት)</span></div><span class="beitscope"><div id="ስምዑ_ዘንተ" onmouseover="openMessage(this);" onmouseout="closeMessage(this);" class="haleita tooltip">በ<span style="color: red;">፬</span><span class="tooltiptext">Halleluya Number<br/>(ሃሌታ)</span></div><ruby><rb>ወ</rb><rt>᎑</rt></ruby>ነ<ruby><rb>ገረ</rb><rt>ወቃ</rt></ruby>፡ስም<ruby><rb>የ</rb><rt>᎐</rt></ruby>፡ዮሐን<ruby><rb>ስ</rb><rt style="text-align: right;">ር</rt></ruby>፡ወይ<ruby><rb>ቢ</rb><rt>ሊ</rt></ruby>፡<ruby><rb>ር</rb><rt>ሀየ</rt>ኢ</ruby><br/>
 <div class="medgam tooltip" id="medgam-geez" onmouseover="highlightMedgam(this);" onmouseout="unhighlightMedgam(this);">፪<span class="tooltiptext">Medgam<br/>(መድጋም)</span></div><ruby><rb>ኩ</rb><rt>ዋ᎙</rt></ruby>፡መን<ruby><rb>ፈ</rb><rt>ሊ</rt></ruby>ስ፡ቅ<ruby><rb>ዱ</rb><rt>᎖</rt><rb>ስ</rb><rt>ነቢ</rt></ruby
 >፡<div style="display: inline-block; position:relative; width: 50px; vertical-align:bottom;"><ruby class="row2md medgam-geez"><rb>ከ</rb><rt>᎑</rt><rb>መ</rb><rt>፡</rt></ruby><ruby class="row1md"><rb>ከ</rb><rt>ቡር</rt><rb>መ</rb><rt>᎖᎔</rt></ruby></div>፡<ruby><rb>ር</rb><rt>᎔</rt></ruby>ግብ፡<ruby><rb>ወ</rb><rt>᎑</rt></ruby>ረ<ruby><rb>ደ</rb><rt>ሉ᎙</rt></ruby>፡ክ<br/>
 ማ<ruby><rb>ሁ</rb><rt>ወቃ</rt></ruby>፡ኮ<ruby><rb>ነ</rb><rt>᎐</rt></ruby>፡በቢታን<ruby><rb>ያ</rb><rt>ር</rt></ruby>፡ደ<ruby><rb>ጋ</rb><rt>ሊ</rt></ruby>፡ወ<ruby><rb>ድ</rb><rt>ሊ </rt></ruby>ድቅ<ruby><rb>ስ</rb><rt>ዋ᎙</rt></ruby>፡ዘፈ<br/>
@@ -316,11 +317,25 @@ rt.sereyu { color: #daa520; }
 </div>
 </section>
 <div class="ዘተናገሮ haleita-message" style="display:none;">
-<ruby><rb>ሃ</rb><rt></rt><rb>ሌ</rb><rt>ጸ</rt><rb>፡ሃ</rb><rt></rt><rb>ሌ</rb><rt>ው</rt><rb>፡ሉ</rb><rt></rt><rb>ያ</rb><rt>ቡር</rt><rb>፡ዘ</rb><rt></rt><rb>ተ</rb><rt></rt><rb>ናገ</rb><rt></rt><rb style="text-decoration: underline;">ሮ</rb><rt>ዘበ</rt>፡</ruby>
+  <ruby>
+    <rb>ሃ</rb><rt></rt><rb>ሌ</rb><rt>ጸ</rt><rb>፡ሃ</rb><rt></rt><rb>ሌ</rb><rt>ው</rt><rb>፡ሉ</rb><rt></rt><rb>ያ</rb><rt>ቡር</rt>
+    <rb>፡ዘ</rb><rt></rt><rb>ተ</rb><rt></rt><rb>ናገ</rb><rt></rt><rb style="text-decoration: underline;">ሮ</rb><rt>ዘበ</rt>፡
+  </ruby>
 </div>
 <div class="ዘዮም_መስቀል haleita-message" style="display:none;">
-<ruby><rb>ሃ</rb><rt>᎔</rt><rb>ሌ</rb><rt>፡</rt><rb>፡ሃ</rb><rt></rt><rb>ሌ</rb><rt>᎐</rt><rb>፡ሉ</rb><rt></rt><rb>ያ</rb><rt>ነነ᎐</rt><rb>፡</rb><rt></rt><rb style="text-decoration: underline;">ዘ</rb><rt></rt><rb style="text-decoration: underline;">ዮ</rb><rt>᎖</rt><rb>ም፡</rb><rt></rt><rb>መ</rb><rt>መን</rt></ruby>ስቀል፡
+  <ruby>
+    <rb>ሃ</rb><rt>᎔</rt><rb>ሌ</rb><rt>፡</rt><rb>፡ሃ</rb><rt></rt><rb>ሌ</rb><rt>᎐</rt><rb>፡ሉ</rb><rt></rt>
+    <rb>ያ</rb><rt>ነነ᎐</rt><rb>፡</rb><rt></rt><rb style="text-decoration: underline;">ዘ</rb><rt></rt><rb style="text-decoration: underline;">ዮ</rb><rt>᎖</rt><rb>ም፡</rb><rt></rt><rb>መ</rb><rt>መን</rt>
+  </ruby>ስቀል፡
 </div>
+<div class="ስምዑ_ዘንተ haleita-message" style="display:none;">
+  <ruby>
+    <rb>ሃ</rb><rt>ፈ᎖</rt><rb>ሌ</rb><rt></rt><rb>ሉ</rb><rt></rt><rb>ያ</rb><rt>ም᎐</rt><rb>፡</rb><rt></rt>
+    <rb>ሃ</rb><rt>᎖</rt><rb>ሌ</rb><rt>ሮ</rt><rb>፡ሉ</rb><rt>᎖</rt><rb>ያ</rb><rt>ነቢ </rt><rb>፡</rb><rt></rt>
+    <rb>ሃ</rb><rt></rt><rb>ሌ</rb><rt>በጸ</rt><rb>ሉ</rb><rt></rt><rb>ያ</rb><rt>ብር </rt><rb>፡</rb><rt></rt>
+    <rb>ሃ</rb><rt></rt><rb>ሌ</rb><rt>᎑</rt><rb>ሉያ</rb><rt>ዩ᎙</rt><rb>፡</rb><rt></rt>
+    <rb>ስ</rb><rt></rt><rb>ም</rb><rt>᎐</rt><rb style="text-decoration: underline;">ዑ</rb><rt>ዑ</rt>፡ዘን<rb>ተ</rb><rt>᎐</rt></ruby>፡
+  </div>
 </section>
 
 
