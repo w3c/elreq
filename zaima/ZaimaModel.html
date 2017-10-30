@@ -413,12 +413,13 @@ the child of a <code><a data-link-type="element" href="#elementdef-chant" id="re
   <dt><span>DOM interface:</span></dt>
   <dd>Uses <code>HTMLElement</code>.</dd>
 </dl>
-<p>The <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-2">notation</a></code> element marks the notation line component of a chant notation. When it is
+<p>The <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-2">notation</a></code> element marks the notation line component of a chant notation. The element should display as a <code>block</code> type (?) and permit the position of its text contents 
+to be positioned with the <code>bottom</code> and <code>top</code> properties.</p>
+
+<p>When <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-2">notation</a></code> is
 the descendant of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-7">chant</a></code> element,
 it does not <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-4">represent</a> anything itself, but its ancestor <code>chant</code> element uses it as part of determining what <em>it</em> <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-5">represents</a>.</p>
 <p>An <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-3">notation</a></code> element that is not a descendant of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-8">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-6">represents</a> the same thing as its children.</p>
-
-<p><em>[TBD: Mention that a notation element should be allow for the "bottom" property to be set.]</em></p>
 
 <p>The <code>notation</code> element has the same role as the <code>rt</code> element in Ruby annotation.</p>
 </section>
@@ -437,7 +438,8 @@ it does not <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#
   <dt><span>DOM interface:</span></dt>
   <dd>Uses <code>HTMLElement</code>.</dd>
 </dl>
-<p><em>[TBD: discuss notationGroup as a child of another notationGroup, and the related nesting use case]</em></p>
+<p><em>[TBD: discuss notationGroup as a child of another notationGroup, and the related nesting use case. The group's child index indicates its
+row position starting from the top downward.]</em></p>
 <p>An <code><a data-link-type="element" href="#elementdef-notationGroup" id="ref-for-elementdef-notationGroup-3">notationGroup</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-19">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
 </section>
 
@@ -455,8 +457,15 @@ it does not <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#
   <dt><span>DOM interface:</span></dt>
   <dd>Uses <code>HTMLElement</code>.</dd>
 </dl>
-<p><em>[TBD: Mention that a group element should be allow for the "bottom" property to be set, acting on notation only.  Is a notation-bottom: property needed?]</em></p>
-<p>An <code><a data-link-type="element" href="#elementdef-group" id="ref-for-elementdef-group-2">group</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-notationGroup" id="ref-for-elementdef-notationGroup-4">notationGroup</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
+<p>The <code><a data-link-type="element" href="#elementdef-group" id="ref-for-elementdef-group-2">group</a></code> element encompasses a collection
+of <code>cbase</code> and <code>notation</code> representing a single interlinear line of chant notation. A <code>group</code> element may be empty
+which indicates that no text should be presented at its row index position.
+The <code>group</code> element should display as a <code>block</code> type (?) and permit the position of its text contents 
+to be positioned with the <code>bottom</code> and <code>top</code> properties.</p>
+<p><em>[Issue: <code>bottom</code> or <code>top</code> as a style attribute of <code>group</code> should only apply to the contents of the
+<code>notation</code> element.  Should a <code>notation-bottom</code> element be added (top seems non-essential)]?</em></p>
+
+<p>An <code><a data-link-type="element" href="#elementdef-group" id="ref-for-elementdef-group-3">group</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-notationGroup" id="ref-for-elementdef-notationGroup-4">notationGroup</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
 </section>
 
 <section>
@@ -477,7 +486,7 @@ it does not <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#
 </dl>
 <p>The <code><a data-link-type="element" href="#elementdef-beit" id="ref-for-elementdef-beit-2">beit</a></code> element marks the scope
 of the <em>Beit (ቤት)</em> context of a portion of Zaima chant. The Zaima Beit context is given with an identifier that is the abbreviation
-of a full name of the Beit.  The identifier will appear in the left side margin of the chant text adjacent to the first line where the context
+of the full name of the Beit.  The identifier will appear in the left side margin of the chant text adjacent to the first line where the context
 begins. The abbreviation text may be stylized and will appear within the required
 <code><a data-link-type="element" href="#elementdef-marker" id="ref-for-elementdef-marker-1">marker</a></code> child element. The full name of
 the beit will then be given in the optional child
@@ -504,8 +513,10 @@ the beit.</p>
   <dt><span>DOM interface:</span></dt>
   <dd>Uses <code>HTMLElement</code>.</dd>
 </dl>
-<p>medgam as a stylized reference marker -has complex scope, needs subtags to mark boundaries</p>
-<p>A <code><a data-link-type="element" href="#elementdef-marker" id="ref-for-elementdef-marker-2">marker</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-12">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
+<p>The <code><a data-link-type="element" href="#elementdef-marker" id="ref-for-elementdef-marker-2">marker</a></code> element identifies a
+mnemonic &ldquo;key&rdquo; that is the referent to the definition value of its parent element.</p>
+
+<p>A <code><a data-link-type="element" href="#elementdef-marker" id="ref-for-elementdef-marker-3">marker</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-12">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
 </section>
 
 <section>
@@ -652,11 +663,25 @@ notation line of the mode (silt) is included for clarity since a notation line i
   <dt><span>DOM interface:</span></dt>
   <dd>Uses <code>HTMLElement</code>.</dd>
 </dl>
-<p>The </p>
+<p>The <code><a data-link-type="element" href="#elementdef-sereyu" id="ref-for-elementdef-sereyu-2">sereyu</a></code> element is very similar to the
+<code>medgam</code> element in that it has a disjoint scope that will again be referenced applying its element <code>id</code> as a <code>class</code>
+type.
+required child <code>marker</code> element and a disjoint scope. The <code>sereyu</code> is used
+that 
+
+that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-14">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
 <p>sereyu as a definition marker, like &lt;dfn&gt; -has complex scope, needs subtags to mark boundaries</p>
 <p>A <code><a data-link-type="element" href="#elementdef-sereyu" id="ref-for-elementdef-sereyu-2">sereyu</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-14">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
 
 <p><em>[TBD: 2 examples needed for miliket-sereyu and beit-sereyu use cases]</em></p>
+
+<div class="example"><div class="example-title"><span>Example 3</span></div>
+  <p>Miliket-Sereyu Example</p>
+</div>
+<div class="example"><div class="example-title"><span>Example 4</span></div>
+  <p>Beit-Sereyu Example</p>
+</div>
+
 </section>
 
 <section>
@@ -687,7 +712,7 @@ expanded from of the <code>haleita</code> .</p>
 
 <section>
 <h3>Digua Sample Applying Many Elements</h3>
-<div class="example"><div class="example-title"><span>Example 3</span></div>
+<div class="example"><div class="example-title"><span>Example 5</span></div>
 <div>
   <figure>
    <p style="border: 1px solid black; width: 500px;">
