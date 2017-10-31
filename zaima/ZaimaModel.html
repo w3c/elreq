@@ -413,7 +413,7 @@ the child of a <code><a data-link-type="element" href="#elementdef-chant" id="re
   <dt><span>DOM interface:</span></dt>
   <dd>Uses <code>HTMLElement</code>.</dd>
 </dl>
-<p>The <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-2">notation</a></code> element marks the notation line component of a chant notation. The element should display as a <code>block</code> type (?) and permit the position of its text contents 
+<p>The <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-2">notation</a></code> element marks the notation line component of a chant notation that will be laid out with respect to text within a preceeding <code>cbase</code> element. The element should display as a <code>block</code> type (?) and permit the position of its text contents 
 to be positioned with the <code>bottom</code> and <code>top</code> properties.</p>
 
 <p>When <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-2">notation</a></code> is
@@ -421,7 +421,9 @@ the descendant of a <code><a data-link-type="element" href="#elementdef-chant" i
 it does not <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-4">represent</a> anything itself, but its ancestor <code>chant</code> element uses it as part of determining what <em>it</em> <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-5">represents</a>.</p>
 <p>An <code><a data-link-type="element" href="#elementdef-notation" id="ref-for-elementdef-notation-3">notation</a></code> element that is not a descendant of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-8">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-6">represents</a> the same thing as its children.</p>
 
-<p>The <code>notation</code> element has the same role as the <code>rt</code> element in Ruby annotation.</p>
+<p>The <code>notation</code> element has the same role as the <code>rt</code> element in Ruby annotation. By default the
+<code>notation</code> text font size will be 50% the size of the <code>cbase</code> text but may be set to another size at the
+discression of the content author.</p>
 </section>
 
 <section>
@@ -438,9 +440,17 @@ it does not <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#
   <dt><span>DOM interface:</span></dt>
   <dd>Uses <code>HTMLElement</code>.</dd>
 </dl>
-<p><em>[TBD: discuss notationGroup as a child of another notationGroup, and the related nesting use case. The group's child index indicates its
-row position starting from the top downward.]</em></p>
-<p>An <code><a data-link-type="element" href="#elementdef-notationGroup" id="ref-for-elementdef-notationGroup-3">notationGroup</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-19">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
+<p><em>[TBD: discuss notationGroup as a child of another notationGroup, and the related nesting use case. ]</em></p>
+<p>The <code><a data-link-type="element" href="#elementdef-notationGroup" id="ref-for-elementdef-notationGroup-3">notationGroup</a></code> element associates two or more lines of chant notation against common base text.  The individual lines of chant notation will be contained with separate <code>group</code> elements.  Each <code>group</code> elements are children of a <code>notationGroup</code> and <em>must</em> contain identical sequences of chant base text. The base text within each <code>group</code> will later be superimposed so as to appear as a single base line.  The <code>cbase</code> and <code>notation</code> pairings within a <code>group</code> is expected to be different for each <code>group</code>. With the chant base text with a <code>group</code> overlaid, the <code>notation</code> text will appear in the interlinear space between the base text and the preceding text line. The <code>notation</code> text within a <code>notationGroup</code> does not superimpose line the base text, but stacks in successive rows above the base. The layout of two <code>group</code> children of a <code>notationGroup</code> would be identical to nested rubies where the inner ruby text appears at the higher level (the position of the first <code>group</code> child of the <code>notationGroup</code>).</p>
+
+<p>The child node index of the <code>group</code> children of <code>notationGroup</code> indicates its interlinear row position counted from
+top to bottom (e.g. first child appears at the top position, last child at the bottom). The interlinear spacing rules will follow the regular line spacing rules that would be applied to text at the <code>notation</code> font size (by default 50% of base text size).</p>
+
+<p>A <code>notationGroup</code> element may also be a child of another <code>notationGroup</code>.  This is useful for identifying the inner <code>notationGroup</code> element as providing the scope of a 
+<code><a data-link-type="element" href="#elementdef-medgam" id="ref-for-elementdef-medgam-6">medgam</a></code> element.</p> 
+
+
+<p>An <code><a data-link-type="element" href="#elementdef-notationGroup" id="ref-for-elementdef-notationGroup-4">notationGroup</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-19">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
 </section>
 
 <section>
