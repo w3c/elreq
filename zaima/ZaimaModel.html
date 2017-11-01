@@ -64,10 +64,15 @@ function unhighlightMedgam(medgam) {
 <style>
   .medgam-example{}
   .rubricate { color: #8a0707; }
-  rt.sereyu { color: #daa520; }
+rt.sereyu { color: #daa520; }
   .figure-wide { margin-right: 10%; }
 ruby { font-size: 50px; color: rgb(102, 102, 102); font-family: "Abyssinica SIL", "ms mincho", stsong, 'lisong pro';  }
 ruby.regular { font-size: 16px; color: rgb(102, 102, 102); font-family: "Abyssinica SIL", "ms mincho", stsong, 'lisong pro';  }
+ruby.row2 {
+    position: absolute;
+    z-index:2;
+    bottom: -24px;
+}
 .diret_difat {
   position: relative;
   top: 0px;
@@ -81,7 +86,7 @@ ruby.regular { font-size: 16px; color: rgb(102, 102, 102); font-family: "Abyssin
   left:  0px;
   content: "᎑";
 }
-  script { display: inline-block; white-space: pre-wrap; }
+script { display: inline-block; white-space: pre-wrap; }
 code {
     color: #D93B00;
 }
@@ -145,7 +150,9 @@ aside.example div.example {
 }
 aside.example div.example div.example-title {
     color: #999;
-}
+} 
+div.beit { float: left; margin-left: -60px; border-top: solid 2px red; border-bottom: solid 2px red; line-height: 80%; bottom: -5px; position: relative; block-size: 14px; }
+div.medgam { float: left; margin-left: -40px; line-height: 80%; bottom: -10px; position: relative; block-size: 10px; font-size: 80%; }
 </style>
 <link rel="stylesheet" href="zaima-chrome61.css" type="text/css" />
 <script type="text/javascript" src="https://www.w3.org/International/questions/qa-ruby-data/translations.js"> </script>
@@ -687,10 +694,11 @@ that is not a child of a <code><a data-link-type="element" href="#elementdef-cha
 <p>sereyu as a definition marker, like &lt;dfn&gt; -has complex scope, needs subtags to mark boundaries</p>
 <p>A <code><a data-link-type="element" href="#elementdef-sereyu" id="ref-for-elementdef-sereyu-2">sereyu</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-14">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
 
-<p><em>[TBD: 2 examples needed for miliket-sereyu and beit-sereyu use cases]</em></p>
-
+<p>In the following example <code>sereyu</code> elements encompass the full names of the ለሔዋን and ተፈሥሒ. milikets, identify the letters that form
+their respective abbreviations, place the contiguous abbreviation in <code>dfn</code> tags and position the ረዩ marker following in the expected
+location.  The marker itself is not notation, but by default should be positioned as if it were. However any notation text that may be present
+will have to flow around the marker -left, right or above [TBD: review rules for marker positioning.]</p>
 <div class="example" style="width:1000px"><div class="example-title"><span>Example 3</span></div>
-<table>
 <table>
   <colgroup>
     <col width="1000px"/>
@@ -720,12 +728,49 @@ that is not a child of a <code><a data-link-type="element" href="#elementdef-cha
 </chant>
 </script>
 </td></tr>
+</tbody>
 </table>
 </div>
 <p><br/></p>
 
+<p>The following example applies the <code>sereyue</code> tags to a haleita exemplar...</p>
 <div class="example"><div class="example-title"><span>Example 4</span></div>
-  <p>Beit-Sereyu Example</p>
+<table>
+  <colgroup>
+    <col width="1000px"/>
+  </colgroup>
+  <tbody>
+<tr><td>
+<div class="beit">ዩ</div> <div class="medgam">፪</div>
+<div style="float: left;">
+ በ<span style="color:red">፫</span>፡ሃ<ruby class="regular"><rb>ሌ</rb><rt>፴</rt><rb>፡ሉ</rb><rt></rt><rb>ያ</rb><rt>ጺ</rt><rb>፡</rb><rt></rt><rb>ሃ</rb><rt>፴</rt><rb>ሌ፡</rb><rt></rt><rb>ሃ</rb><rt>᎓</rt></ruby>ሌ፡ሉ<ruby class="regular"><rb>ያ</rb><rt>በበ</rt><rb>፡</rb><rt></rt></ruby>
+</div>
+<div style="position: relative;">
+<ruby class="row2 regular"><rb>ዖደ</rb><rt>᎖᎑</rt></ruby>
+<ruby class="row1 regular"><rb>ዖ</rb><rt>᎑</rt><rb>ደ</rb><rt>ዑ</rt><rb>፡አድ</rb><rt></rt><rb>ያ</rb><rt>᎑</rt><rb>መ</rb><rt>ፔ</rt><rb>፡</rb><rt></rt><rb>ዮ</rb><rt>᎑</rt></ruby>
+</div>
+<!--
+<ruby class="regular">፡አድ<rb>ያ</rb><rt>᎑</rt><rb>መ</rb><rt>ፔ</rt><rb>፡</rb><rt></rt><rb>ዮ</rb><rt>᎑</rt></ruby>
+-->
+</td></tr>
+<tr><td>
+<script type="text/plain">
+<chant>
+<medgam id="medgam-araray"><marker>፪</marker></medgam>
+<sereyu>
+<marker>ዩ</marker>
+<dfn>በ<span style="color:red">፫</span>፡</dfn>ሃ
+<cbase>ሌ</cbase><notation>፴</notation>፡ሉ<cbase>ያ</cbase><notation>ጺ</notation>፡<cbase>ሃ</cbase><notation>፴</notation>ሌ፡<cbase>ሃ</cbase><notation>᎓</notation>ሌ፡ሉ<cbase>ያ</cbase><notation>በበ</notation>፡
+<notationGroup>
+  <group class="medgam-araray"><abbr><cbase>ዖደ</cbase><notation>᎖᎑</notation></group>
+  <group><abbr><cbase>ዖ</cbase><notation>᎑</notation><cbase>ደ</cbase><notation>ዑ</notation></abbr></group>
+</notationGroup>
+፡አድ<cbase>ያ</cbase><notation>᎑</notation><cbase>መ</cbase><notation>ፔ</notation>፡</sereyu><cbase>ዮ</cbase><notation>᎑</notation>
+</chant>
+</script>
+</td></tr>
+  </tbody>
+</table>
 </div>
 
 </section>
