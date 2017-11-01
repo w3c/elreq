@@ -151,8 +151,9 @@ aside.example div.example {
 aside.example div.example div.example-title {
     color: #999;
 } 
-div.beit { float: left; margin-left: -60px; border-top: solid 2px red; border-bottom: solid 2px red; line-height: 80%; bottom: -5px; position: relative; block-size: 14px; }
-div.medgam { float: left; margin-left: -40px; line-height: 80%; bottom: -10px; position: relative; block-size: 10px; font-size: 80%; }
+/* div.beit { float: left; margin-left: -60px; border-top: solid 2px red; border-bottom: solid 2px red; line-height: 80%; bottom: -5px; position: relative; block-size: 14px; } */
+div.beit { float: left; margin-left: -100px; border-top: solid 4px red; border-bottom: solid 4px red; line-height: 80%; bottom: -20px; position: relative; block-size: 44px; }
+div.medgam { float: left; margin-left: -50px; line-height: 80%; bottom: -30px; position: relative; block-size: 20px; font-size: 80%; }
 </style>
 <link rel="stylesheet" href="zaima-chrome61.css" type="text/css" />
 <script type="text/javascript" src="https://www.w3.org/International/questions/qa-ruby-data/translations.js"> </script>
@@ -686,17 +687,17 @@ notation line of the mode (silt) is included for clarity since a notation line i
 </dl>
 <p>The <code><a data-link-type="element" href="#elementdef-sereyu" id="ref-for-elementdef-sereyu-2">sereyu</a></code> element is very similar to the
 <code>medgam</code> element in that it has a disjoint scope that will again be referenced by applying its element <code>id</code> as a <code>class</code>
-type.
-required child <code>marker</code> element and a disjoint scope. The <code>sereyu</code> is used
-that 
+type.  The <code>sereyu</code> element also has a required child <code>marker</code> element. By default the <code>sereyu</code> body specifies
+the components of a miliket abbreviation and definition.  A <code>sereyu</code> may also be used to define elements for later reference and mark the point
+of definition as an exemplar. Presently, only the <code>haleita</code> element requires defintion in this style (See Example 3).
 
-that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-14">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
 <p>A <code><a data-link-type="element" href="#elementdef-sereyu" id="ref-for-elementdef-sereyu-2">sereyu</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-chant" id="ref-for-elementdef-chant-14">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
 
 <p>In the following example <code>sereyu</code> elements encompass the full names of the ለሔዋን and ተፈሥሒ. milikets, identify the letters that form
 their respective abbreviations, place the contiguous abbreviation in <code>dfn</code> tags and position the ረዩ marker following in the expected
 location.  The marker itself is not notation, but by default should be positioned as if it were. However any notation text that may be present
 will have to flow around the marker -left, right or above [TBD: review rules for marker positioning.]</p>
+
 <div class="example" style="width:1000px"><div class="example-title"><span>Example 3</span></div>
 <table>
   <colgroup>
@@ -735,6 +736,7 @@ will have to flow around the marker -left, right or above [TBD: review rules for
 <p>The following example applies the <code>sereyu</code> tags to define a haleita reference from an exemplar. The <code>haleita</code> would later be
 inserted into a document through an <code>idref</code> type attribute.  For example <code>&lt;haleita idref="ዖደ"/&gt;</code> in a document would
 display the only the marker part inline, an event would be used to display the definition.</p>
+<!--
 <p><em>Isssue: This needs a rethink, we want sereyu to define either a miliket or haleita.  However, a haleita definition appears to require one
 additional component than a miliket.
 <ul>
@@ -743,20 +745,24 @@ additional component than a miliket.
   <li><code>abbr</code>: the part to display as the code identifier.</li>
   <li>the sereyu body is the full definition of the code (in <code>abbr</code>).</li>
 </ul></em></p>
+-->
+
 <div class="example"><div class="example-title"><span>Example 4</span></div>
 <table>
   <colgroup>
     <col width="1000px"/>
   </colgroup>
   <tbody>
-<tr><td>
+<tr><td height="100px">
+<div style="position: relative; top: 20px; font-size: 50px;">
 <div class="beit">ዩ</div> <div class="medgam">፪</div>
 <div style="float: left;">
- በ<span style="color:red">፫</span>፡ሃ<ruby class="regular"><rb>ሌ</rb><rt>፴</rt><rb>፡</rb><rt></rt><rb>ሉ</rb><rt>᎐</rt><rb>ያ</rb><rt>ጺ</rt><rb>፡</rb><rt></rt><rb>ሃ</rb><rt>፴</rt><rb>ሌ፡</rb><rt></rt><rb>ሃ</rb><rt>᎓</rt></ruby>ሌ፡ሉ<ruby class="regular"><rb>ያ</rb><rt>በበ</rt><rb>፡</rb><rt></rt></ruby>
+ በ<span style="color:red">፫</span>፡ሃ<ruby class="regularx"><rb>ሌ</rb><rt>፴</rt><rb>፡</rb><rt></rt><rb>ሉ</rb><rt>᎐</rt><rb>ያ</rb><rt>ጺ</rt><rb>፡</rb><rt></rt><rb>ሃ</rb><rt>፴</rt><rb>ሌ፡</rb><rt></rt><rb>ሃ</rb><rt>᎓</rt></ruby>ሌ፡ሉ<ruby class="regularx"><rb>ያ</rb><rt>በበ</rt><rb>፡</rb><rt></rt></ruby>
 </div>
-<div style="position: relative;">
-<ruby class="row2 regular"><rb>ዖ</rb><rt>᎖᎑</rt><rb>ደ</rb><rt>ዑ</rt></ruby>
-<ruby class="row1 regular"><rb>ዖ</rb><rt>᎑</rt><rb>ደ</rb><rt>ዑ</rt><rb>፡አድ</rb><rt></rt><rb>ያ</rb><rt>᎑</rt><rb>መ</rb><rt>ፔ</rt><rb>፡</rb><rt></rt><rb>ዮ</rb><rt>᎑</rt></ruby>
+</div>
+<div style="position: relative; top:120px">
+<ruby class="row2ex"><rb>ዖ</rb><rt>᎖᎑</rt><rb>ደ</rb><rt>ዑ</rt></ruby>
+<ruby class="row1ex"><rb>ዖ</rb><rt>᎑</rt><rb>ደ</rb><rt>ዑ</rt><rb>፡አድ</rb><rt></rt><rb>ያ</rb><rt>᎑</rt><rb>መ</rb><rt>ፔ</rt><rb>፡</rb><rt></rt><rb>ዮ</rb><rt>᎑</rt></ruby>
 </div>
 <!--
 <ruby class="regular">፡አድ<rb>ያ</rb><rt>᎑</rt><rb>መ</rb><rt>ፔ</rt><rb>፡</rb><rt></rt><rb>ዮ</rb><rt>᎑</rt></ruby>
@@ -766,15 +772,16 @@ additional component than a miliket.
 <script type="text/plain">
 <chant>
 <medgam id="medgam-araray"><marker>፪</marker></medgam>
-<sereyu id="ዖደ">
+<sereyu>
 <marker>ዩ</marker>
+<haleita id="ዖደ">
 <dfn>በ<span class="rubricate">፫</span>፡</dfn>ሃ
 <cbase>ሌ</cbase><notation>፴</notation>፡<cbase>ሉ</cbase><notation>᎐</notation><cbase>ያ</cbase><notation>ጺ</notation>፡<cbase>ሃ</cbase><notation>፴</notation>ሌ፡<cbase>ሃ</cbase><notation>᎓</notation>ሌ፡ሉ<cbase>ያ</cbase><notation>በበ</notation>፡
 <notationGroup>
   <group class="medgam-araray"><abbr><cbase>ዖ</cbase><notation>᎖᎑</notation>ደ</cbase><notation>ዑ</notation></group>
   <group><abbr><cbase>ዖ</cbase><notation>᎑</notation><cbase>ደ</cbase><notation>ዑ</notation></abbr></group>
 </notationGroup>
-፡አድ<cbase>ያ</cbase><notation>᎑</notation><cbase>መ</cbase><notation>ፔ</notation>፡</sereyu><cbase>ዮ</cbase><notation>᎑</notation>
+፡አድ<cbase>ያ</cbase><notation>᎑</notation><cbase>መ</cbase><notation>ፔ</notation>፡</haleita></sereyu><cbase>ዮ</cbase><notation>᎑</notation>
 </chant>
 </script>
 </td></tr>
@@ -804,7 +811,10 @@ required <code><a data-link-type="element" href="#elementdef-marker" id="ref-for
 is also expected to be stylized. The fully expanded haleita may then appear in the optional
 <code><a data-link-type="element" href="#elementdef-dfn" id="ref-for-elementdef-dfn-1">dfn</a></code> 
 element which should not appear in the document by default (<code>display: none</code>). The web author is left to decide how to display the 
-expanded from of the <code>haleita</code> .</p>
+expanded from of the <code>haleita</code>.  
+In practice the <code>dfn</code> child element is not expected to be used since the content within would be complex and desirable for
+reuse.  Rather, <code>haleita</code> content would be displayed via an <code>idref</code> type attribute to the definition created with
+a <code>sereyu</code>.</p>
 
 <!-- haleita as a stylized reference marker -is &lt;a href="" ... &gt; suitable? -->
 <p>A <code><a data-link-type="element" href="#elementdef-haleita" id="ref-for-elementdef-haleita-2">haleita</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-beit" id="ref-for-elementdef-chant-16">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
