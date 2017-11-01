@@ -733,7 +733,17 @@ will have to flow around the marker -left, right or above [TBD: review rules for
 </div>
 <p><br/></p>
 
-<p>The following example applies the <code>sereyue</code> tags to a haleita exemplar...</p>
+<p>The following example applies the <code>sereyu</code> tags to define a haleita reference from an exemplar. The <code>haleita</code> would later be
+inserted into a document through an <code>idref</code> type attribute.  For example <code>&lt;haleita idref="ዖደ"/&gt;</code> in a document would
+display the only the marker part inline, an event would be used to display the definition.</p>
+<p><em>Isssue: This needs a rethink, we want sereyu to define either a miliket or haleita.  However, a haleita definition appears to require one
+additional component than a miliket.
+<ul>
+  <li><code>marker</code>: the symbol to display that indicates a definition is being made.</li>
+  <li><code>dfn</code>: the part to display inline in a future reference to the element.</li>
+  <li><code>abbr</code>: the part to display as the code identifier.</li>
+  <li>the sereyu body is the full definition of the code (in <code>abbr</code>).</li>
+</ul></em></p>
 <div class="example"><div class="example-title"><span>Example 4</span></div>
 <table>
   <colgroup>
@@ -757,9 +767,9 @@ will have to flow around the marker -left, right or above [TBD: review rules for
 <script type="text/plain">
 <chant>
 <medgam id="medgam-araray"><marker>፪</marker></medgam>
-<sereyu>
+<sereyu id="ዖደ">
 <marker>ዩ</marker>
-<dfn>በ<span style="color:red">፫</span>፡</dfn>ሃ
+<dfn>በ<span class="rubricate">፫</span>፡</dfn>ሃ
 <cbase>ሌ</cbase><notation>፴</notation>፡ሉ<cbase>ያ</cbase><notation>ጺ</notation>፡<cbase>ሃ</cbase><notation>፴</notation>ሌ፡<cbase>ሃ</cbase><notation>᎓</notation>ሌ፡ሉ<cbase>ያ</cbase><notation>በበ</notation>፡
 <notationGroup>
   <group class="medgam-araray"><abbr><cbase>ዖደ</cbase><notation>᎖᎑</notation></group>
@@ -796,8 +806,13 @@ is also expected to be stylized. The fully expanded haleita may then appear in t
 <code><a data-link-type="element" href="#elementdef-dfn" id="ref-for-elementdef-dfn-1">dfn</a></code> 
 element which should not appear in the document by default (<code>display: none</code>). The web author is left to decide how to display the 
 expanded from of the <code>haleita</code> .</p>
+
 <!-- haleita as a stylized reference marker -is &lt;a href="" ... &gt; suitable? -->
 <p>A <code><a data-link-type="element" href="#elementdef-haleita" id="ref-for-elementdef-haleita-2">haleita</a></code> element that is not a child of a <code><a data-link-type="element" href="#elementdef-beit" id="ref-for-elementdef-chant-16">chant</a></code> element <a data-link-type="dfn" href="https://www.w3.org/TR/html51/dom.html#represent" id="ref-for-represent-3">represents</a> the same thing as its children.</p>
+
+<p><em>Issue: Review if a haleita ID in the margin note is also a beit, or is just there to help dereference a haleita number.  Is every beit
+defined in a haleita definition? Or are beits fully orthogonal and do not require a haleita? In this case the haleita is another entity that
+has a marker residing in the margin.</em></p>
 </section>
 </em>
 
@@ -826,7 +841,7 @@ expanded from of the <code>haleita</code> .</p>
 <chant class="geez">  <!-- all notation will be in Ge'ez mode, setting class to something else in a notation tag would override the value here -->
   <beit>
     <marker>ዑ</marker><dfn>ስምዑ</dfn>
-    <haleita><marker>በ<span class="rubricate">፬</span></marker><dfn>TBD</dfn></haleita>
+    <haleita><marker>በ<span class="rubricate">፬</span></marker></haleita>
     <cbase>ወ</cbase><notation>᎑</notation>ነ<cbase>ገረ</cbase><notation>ወቃ</notation>፡ስም<cbase>የ</cbase><notation>᎐</notation>፡ዮሐን<cbase>ስ</cbase><notation style="text-align: right;">ር</notation>፡ወይ<cbase>ቢ</cbase><notation>ሊ</notation>፡<cbase>ር</cbase><notation>ሀየ</notation>ኢ<br/>
     <medgam id="ng1"><marker>፪</marker><cbase>ኩ</cbase><notation>ዋ᎙</notation>፡መን<cbase>ፈ</cbase><notation>ሊ</notation>ስ፡ቅ<cbase>ዱ</cbase><notation>᎖</notation><cbase>ስ</cbase><notation>ነቢ</notation>፡
   <notationGroup class="ng1">
@@ -839,19 +854,19 @@ expanded from of the <code>haleita</code> .</p>
   </beit>
   <beit>
     <marker>ሮ</marker><dfn>አፍቂሮ፡</dfn>
-    ዚአ<cbase>ሁ</cbase><notation>ዓለ᎙</notation>፡ነ<cbase>ሣ</cbase><notation>᎑</notation>እ<cbase>ነ</cbase><notation>ቃ</notation>፡<cbase>ደ</cbase><notation>᎑</notation><cbase>ጋ</cbase><notation>ብራ</notation>፡በ<cbase>ዲ</cbase><notation>᎐</notation><cbase>በ</cbase><notation>᎖</notation>፡ደ<cbase>ጋ</cbase><notation>ረየ</notation>፡<haleita><marker>በ<span class="rubricate">፪</marker><dfn></dfn></haleita>ካ<cbase>ህ</cbase><notation>ቡር</notation>ን፡<cbase>ወ</cbase><notation>ዘቦ</notation><br/>
+    ዚአ<cbase>ሁ</cbase><notation>ዓለ᎙</notation>፡ነ<cbase>ሣ</cbase><notation>᎑</notation>እ<cbase>ነ</cbase><notation>ቃ</notation>፡<cbase>ደ</cbase><notation>᎑</notation><cbase>ጋ</cbase><notation>ብራ</notation>፡በ<cbase>ዲ</cbase><notation>᎐</notation><cbase>በ</cbase><notation>᎖</notation>፡ደ<cbase>ጋ</cbase><notation>ረየ</notation>፡<haleita><marker>በ<span class="rubricate">፪</marker></haleita>ካ<cbase>ህ</cbase><notation>ቡር</notation>ን፡<cbase>ወ</cbase><notation>ዘቦ</notation><br/>
     ነቢ<cbase>ይ</cbase><notation>ሰ</notation>፡ወን<cbase>ጌ</cbase><notation>᎑</notation>ላ<cbase>ዊ</cbase><notation>ው</notation>፡<cbase>መ</cbase><notation></notation>ጥምቅ፡<sereyu><abbr><cbase>ቃ</cbase></abbr><notation>፴</notation><abbr>ለ</abbr>፡ዓ<abbr>ዋ<cbase>ዲ</cbase></abbr><notation><marker>ረዩ</marker></notation><dfn>ቃለ&#x22ef;ዋዲ</dfn></sereyu>፡<br/>
-    ዘይ<cbase>ሰ</cbase><notation>ይ</notation>ብክ፡በ<cbase>ገ</cbase><notation>᎐</notation>ደ<cbase>ም</cbase><notation>ር</notation>፡<haleita><marker>በ<span class="rubricate">፪</span><dfn></dfn></haleita>ካ<cbase>ህ</cbase><notation>᎑</notation><cbase>ን</cbase><notation>ባኡ᎙</notation>፡ወነ<cbase>ቢ</cbase><notation>᎖</notation>ይ</cbase><notation>ጸል</notation>፡<br/>
+    ዘይ<cbase>ሰ</cbase><notation>ይ</notation>ብክ፡በ<cbase>ገ</cbase><notation>᎐</notation>ደ<cbase>ም</cbase><notation>ር</notation>፡<haleita><marker>በ<span class="rubricate">፪</span></haleita>ካ<cbase>ህ</cbase><notation>᎑</notation><cbase>ን</cbase><notation>ባኡ᎙</notation>፡ወነ<cbase>ቢ</cbase><notation>᎖</notation>ይ</cbase><notation>ጸል</notation>፡<br/>
     ወን<cbase>ጌ</cbase><notation>ቡር</notation>ላ<cbase>ዊ</cbase><notation>ነነ</notation>፡<cbase>መ</cbase><notation>᎐</notation>ጥም<cbase>ቀ</cbase><notation>ሉ᎙</notation>፡ቃ<cbase>ለ</cbase><notation>᎐</notation>፡ዓዋ<cbase>ዲ</cbase><notation>ዚና</notation>፡ዘይስ<br/>
   </beit>
   <beit>
     <marker>ዘዮ</marker><dfn>ዘዮም፡መስቀል፡</dfn>
-    <cbase>ብ</cbase><notation>᎐</notation>ክ፡በንደ<cbase>ም</cbase><notation>ር</notation>፡<haleita><marker>በ<span class="rubricate">፪</span></marker><dfn></dfn></haleita><cbase>ካ</cbase><notation>᎑</notation><cbase>ህን</cbase><notation>ብራ</notation>፡<cbase>ወ</cbase><notation>᎐</notation><cbase>ነ</cbase><notation>᎖</notation>ቢይ</cbase><notation>ነየ</notation>፡ወን<cbase>ጌ</cbase><notation>᎑</notation><br/>
+    <cbase>ብ</cbase><notation>᎐</notation>ክ፡በንደ<cbase>ም</cbase><notation>ር</notation>፡<haleita><marker>በ<span class="rubricate">፪</span></marker></haleita><cbase>ካ</cbase><notation>᎑</notation><cbase>ህን</cbase><notation>ብራ</notation>፡<cbase>ወ</cbase><notation>᎐</notation><cbase>ነ</cbase><notation>᎖</notation>ቢይ</cbase><notation>ነየ</notation>፡ወን<cbase>ጌ</cbase><notation>᎑</notation><br/>
     ላ<cbase>ዊ</cbase><notation>ው</notation>፡<cbase>መ</cbase><notation>᎑</notation>ጥም<cbase>ቀ</cbase><notation>ው</notation>፡<cbase>ቃ</cbase><notation>ከመ </notation>ለ፡<cbase>ዓ</cbase><notation>᎖</notation>ዋ<cbase>ዲ</cbase><notation>ንጋ</notation>፡ዘይ<cbase>ሰ</cbase><notation>ብራ</notation>ብክ፡<cbase>በ</cbase><notation>᎐</notation>ገ<br/>
   </beit>
   <beit>
     <marker>ጣ</marker><dfn>ዕጣነ፡ሞገር፡ወደሞ፡ክቡረ፡</dfn>
-    ደ<cbase>ም</cbase><notation>ኔሃ</notation>፡<haleita><marker>በ<span class="rubricate">፪</span></marker><dfn>TBD</dfn></haleita></div>ዮ<cbase>ሐን</cbase><notation>ይሠ </notation>ስ፡<cbase>ክ</cbase><notation>᎓</notation><cbase>ቡር</cbase><notation style="text-align: right;">ንከ᎖</notation>፡አር<cbase>ኩ</cbase><notation>ነዋ</notation>፡ሰመር<br/>
+    ደ<cbase>ም</cbase><notation>ኔሃ</notation>፡<haleita><marker>በ<span class="rubricate">፪</span></marker></haleita></div>ዮ<cbase>ሐን</cbase><notation>ይሠ </notation>ስ፡<cbase>ክ</cbase><notation>᎓</notation><cbase>ቡር</cbase><notation style="text-align: right;">ንከ᎖</notation>፡አር<cbase>ኩ</cbase><notation>ነዋ</notation>፡ሰመር<br/>
     <cbase>ዓ</cbase><notation>᎐</notation><cbase>ዊ</cbase><notation>ግዑ </notation>፡ዮ<cbase>ሐ</cbase><notation>᎔</notation>ን<cbase>ስ</cbase><notation>ርሡ </notation>፡ብእ<cbase>ሲ</cbase><notation>᎔</notation>፡ወንጌላ<cbase>ዊ</cbase><notation>ር</notation>፡<cbase>ዮ</cbase><notation>᎑</notation><cbase>ሐን</cbase><notation>አጻ</notation>ስ፡<br/>
     ወአዝ<cbase>ማ</cbase><notation>᎑</notation><cbase>ዱ</cbase><notation>፴</notation>፡ዘሥ<cbase>ጋ</cbase><notation>᎖</notation>፡ተስም<cbase>የ</cbase><notation>ሰን </notation>፡ዮ<cbase>ሐ</cbase><notation>ይሠ</notation>ንስ፡<cbase>አ</cbase><notation>᎐</notation><br/>
     ጥመ<cbase>ቶ</cbase><notation>ዚኦ </notation>፡ዮ<cbase>ሐ</cbase><notation>᎑</notation><cbase>ን</cbase><notation>᎒</notation>ስ፡ለ<cbase>ኢ</cbase><notation>᎐</notation>የሱ<cbase>ስ</cbase><notation>ዑ</notation>፡ዮ<cbase>ሐ</cbase><notation>ፒር</notation><cbase>ንስ</cbase><notation>ርሡ</notation>፡ወ
