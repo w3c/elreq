@@ -327,7 +327,10 @@ documents (<a href="ZaimaUseCases-Chrome60.html">apply <code>bottom</code> prope
 
 <section>
 <h2>An Independent Model for Zaima Chant</h2>
-<p><em>[TBD: Present a high level structural overview  (component breakdown) that is compatible with DOM tree.]</em></p>
+<p>A notational model for the body of a Zaima Chant document is depicted in Figure 5. The model presents a high level view
+of the document components that are subject to identification, layout and styling. Semantics of the components are reviewed
+in the <a href="WhatIsZaima.html#types"><cite>What is Zaima?</cite></a> article. This section will detail corresponding
+markup elements to support the document model.</p>
 
 <div class="figWrap">
   <figure>
@@ -336,16 +339,22 @@ documents (<a href="ZaimaUseCases-Chrome60.html">apply <code>bottom</code> prope
   </figure>
 </div>
 
-<section>
 
-<p><em>[TBD: From here review the markup requirements for each component individually. 
+<!--
+[TBD: From here review the markup requirements for each component individually. 
 Suggest a general approach where Zaima may overlap with other chant traditions.
 The principle proposed here is to use common tag terminally for the common notional subset,
 then specific tags where needed for a given practice. Thus we have a small "Chant Markup Language"
 where extension tags produce dialects that support requirements of a specific practice.  Consider
 a schema.org extension approach.  Determine what will be the most ammenable to HTML maintainers.
-]</em></p>
+]
+-->
+<p>The following subsections propose HTML elements starting with those that would support interlinear layout
+requirements common to many chant traditions (<code>chant</code>, <code>cbase</code>, <code>notation</code>, <code>notationGroup</code>,
+and <code>group</code>). Elements are then introduced to support layout requirements only known to be
+relevant to Zaima chant (<code>beit</code>, <code>marker</code>, <code>medgam</code>, <code>sereyu</code> and <code>haleita</code>).</p>
 
+<section>
 <h3 class="element-header">The <dfn><code>chant</code></dfn> element</h3>
 <dl class="element">
   <dt><span>Categories:</span></dt>
