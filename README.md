@@ -22,7 +22,7 @@ Editors should be familiar with and use the following:
 - [Editorial guidelines for working with i18n documents](http://w3c.github.io/i18n-activity/guidelines/editing)
 
 ### Links
-- [Task Force Home Page](https://w3c.github.io/i18n-activity/elreq/)
-- [Charter](https://www.w3.org/International/groups/ethiopic-layout/charter.html)
+- [Task Force Home Page](https://w3c.github.io/elreq/homepage/)
+- [Charter](https://w3c.github.io/elreq/charter/)
 - [Practical tips for task forces](https://w3c.github.io/i18n-activity/guidelines/process.html)
 
