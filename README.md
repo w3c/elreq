@@ -33,7 +33,8 @@ Editors should be familiar with and use the following:
 
 
 ### Links
-- [Discussion list](https://github.com/w3c/elreq/issues)
+- [Issue tracker](http://w3c.github.io/i18n-activity/textlayout/?filter=ethiopic)
+- [Issue list](https://github.com/w3c/elreq/issues)
 - [Task Force Home Page](https://w3c.github.io/elreq/homepage/)
 - [Charter](http://w3c.github.io/alreq/charter/)
 - [Action tracker](https://www.w3.org/International/groups/arabic-layout/track/actions/open)
