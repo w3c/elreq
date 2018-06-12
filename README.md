@@ -35,7 +35,7 @@ Editors should be familiar with and use the following:
 ### Links
 - [Issue tracker](http://w3c.github.io/i18n-activity/textlayout/?filter=ethiopic)
 - [Issue list](https://github.com/w3c/elreq/issues)
-- [Task Force Home Page](https://w3c.github.io/elreq/homepage/)
+- [Home Page](https://w3c.github.io/elreq/homepage/)
 - [Charter](http://w3c.github.io/alreq/charter/)
 - [Action tracker](https://www.w3.org/International/groups/arabic-layout/track/actions/open)
 - [Practical tips for task forces](https://w3c.github.io/i18n-activity/guidelines/process.html) (See also the github and editorial guidelines below)
