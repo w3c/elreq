@@ -238,9 +238,9 @@ function lowerBorder(rowNumber) {
    var row = getCSSRule( zaimaRows[rowNumber-1] );
    var rowLarge = getCSSRule( zaimaRowsLarge[rowNumber-1] );
    if ( border ) {
-   	rowLarge.style['border-color'] = null;
-   	rowLarge.style['border-color'] = null;
+   	row.style['border-color'] = null;
  	row.style['border-bottom'] = "1px dashed #666";
+   	rowLarge.style['border-color'] = null;
    	rowLarge.style['border-bottom'] = "1px dashed #666";
    }
   else {
