@@ -38,6 +38,7 @@ Editors should be familiar with and use the following:
 - [Home Page](https://w3c.github.io/elreq/homepage/)
 - [Charter](http://w3c.github.io/alreq/charter/)
 - [Action tracker](https://www.w3.org/International/groups/arabic-layout/track/actions/open)
+- [Writing i18n tests](https://github.com/w3c/i18n-activity/wiki/Writing-i18n-tests)
 - [Practical tips for task forces](https://w3c.github.io/i18n-activity/guidelines/process.html) (See also the github and editorial guidelines below)
 - Meeting info (tbd)
 - [Mail archive](https://lists.w3.org/Archives/Public/public-i18n-ethiopic/)
