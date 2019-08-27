@@ -49,12 +49,12 @@
 		wgPatentURI:  "https://www.w3.org/2004/01/pp-impl/32113/status",
 	};
     </script>
-    <link rel="stylesheet" href="local.css" type="text/css" />
-    <link rel="stylesheet" href="AbyssinicaSIL-webfont-elreq.css" type="text/css">
+    <link rel="stylesheet" href="../local.css" type="text/css" />
+    <link rel="stylesheet" href="../AbyssinicaSIL-webfont-elreq.css" type="text/css">
   </head>
   <body>
     <div id="abstract">
-      <p>This document describes requirements for the layout and presentation of text in languages that use the Ethiopic script when they are used by Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode.</p>
+      <p>This document presents recommendations for the layout and formatting of Ethiopic text in keeping with best practices is use by individual languages.</p>
     </div>
     <div id="sotd">
       <p>This document describes the basic requirements for Ethiopic script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support users of Ethiopic scripts.  Currently the document focuses on Amharic and Tigrinya. </p>
@@ -67,21 +67,34 @@
     </div>
   <section id="intro">
     <h2>Introduction</h2>
-    <section id="purpose">
-    <h3>Purpose of this Document</h3>
-    <p>This document describes requirements of the layout and presentation of text in the Ethiopic script for use with Web standards and technologies, such as HTML, CSS, Mobile Web and Digital Publications (e.g. eBooks). In addition to the Ethiopian and Eritrean homelands, the script is widely used througout the diaspora of these two nations. Accordingly, requirements are gathered from stakeholders engaged in Ethiopic publishing from all regions.</p>
-    <p>The document does not describe implementations or issues related to specific technologies, such as CSS. Instead it describes the typographic requirements of Ethiopic in a technology-agnostic manner, so that the content remains evergreen and is equally relevant to all technologies that aim to represent Ethiopic text on the Web.</p>
+    <section id="scope">
+    <h3>Stylistic Scope of this Document</h3>
+    <p>This style guide limits its focus to the aspects of writing style that can be automated by publishing technology.  In particular technology responsible for implementing
+    Web standards such as HTML, CSS, Mobile Web and Digital Publications (e.g. eBooks). The stylistical scope of this guide then covers primarily the visual style of text as
+    seen by a reader and not the literary style of propose. The guide will go beyond describing best practices for the appearance of text in some cases; such as to describe
+    best practices for the syntax of written symbols.  Simple syntactic rules for punctuation can be evaluated by word processing applications without requiring the analysis of
+    words under their part of speach or in their role shaping grammar.</p>
     </section>
+
+    <section id="relationship_elreq">
+    <h3>Relationship to <em>Ethiopic Layout Requirements</em></h3>
+    </section>
+
+<!--
+<p> In addition to the Ethiopian and Eritrean homelands, the script is widely used througout the diaspora of these two nations. Accordingly, requirements are gathered from stakeholders engaged in Ethiopic publishing from all regions.</p>
+    <p>The document does not describe implementations or issues related to specific technologies, such as CSS. Instead it describes the typographic requirements of Ethiopic in a technology-agnostic manner, so that the content remains evergreen and is equally relevant to all technologies that aim to represent Ethiopic text on the Web.</p>
+-->
     <section id="how_developed">
     <h3>How this Document was Created</h3>
-    <p>This document was created by the W3C Ethiopic Layout Task Force.  The Task Force will discuss many issues and harmonize the requirements from user communities and solutions from technological experts.</p>
+    <p>This document was created by the W3C Ethiopic Layout Task Force.  The Task Force will discuss many issues and harmonize the recommendations from writer and publisher communities</p>
     <p>The following types of experts will be involved in the creation of this document:</p>
     <ol>
-      <li>Ethiopic typography experts.</li>
       <li>Experts from the publishing industry representing the spectrum of traditional to modern layout practices.</li>
-      <li>Academic experts with a focus on <a href="#term.geez" class="termref">Ge’ez</a> manuscripts and philogy.</li>
+      <li>Ethiopian and Eritrean author and language associations.</li>
+      <li>Ethiopic typography experts.</li>
+      <li>Academic experts with a focus on  manuscripts, philogy and digitization.</li>
     </ol>
-    <p>The Task Force will conduct a survey of the publishing industry to solicit input and identify the set of in-use layout styles. This document will then represent the normalized results of the industry survey which in turn becomes a basis for its validity and suitability to purpose. In the interim before to the survey results have been compiled and applied to this document, tentative specifications will be given based on the most-probable survey results anticipated from participating experts. <span class="note">Survey Pending</span> notes will appear along side specification sections to denote their status.</p>
+    <p>The Task Force will translate a draft of the style guide and circulate it in the publishing industry as well as among writer and language focused organizations. A workshop is planned to review responses and arrive at resolutions to support all perspectives on style under the guide.</p>
     </section>
   </section>
 
@@ -443,6 +456,7 @@ If the list is unordered no end punctuation is needed unless the content forms a
       <figure id="fig_counter_suffix_marker_justified"> <img src="images/list-aligned-on-suffix.png" alt="" width="400"/>
         <figcaption>Alphabetical list aligned on suffix.</figcaption>
       </figure>
+      </section>
     </section>
   </section><!-- end of Punctuation section -->
 
@@ -501,12 +515,16 @@ If the list is unordered no end punctuation is needed unless the content forms a
       <section id="h_foreign_language_latin" class="ok">
       <h3>Languages Using the Latin Alphabet</h3>
       </section>
+      <section id="h_foreign_language_arabic" class="ok">
+      <h3>Arabic</h3>
+      </section>
       <section id="h_foreign_language_chinese" class="ok">
       <h3>Chinese</h3>
       </section>
       <section id="h_foreign_language_general" class="ok">
       <h3>General Rules</h3>
       <p><em>Discuss height alignment</em></p>
+      </section>
   </section><!-- end of Non-Ethiopic Languages section -->
 
   <section id="h_numbers">
