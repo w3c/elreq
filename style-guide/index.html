@@ -324,7 +324,7 @@
       </section>
       <section id="h_punctuation_apostrophe_smart" class="ok">
       <h4>“Smart” apostrophes</h4>
-      <p>In published works the direcitonal “smart” (or “curly”) apostrophe should be used. This apostrophe
+      <p>In published works the directional “smart” (or “curly”) apostrophe should be used. This apostrophe
       appears like a raised western comma and should be in the same typeface weight as the letters that will
       surround it in a contraction.</p>
       </section>
@@ -333,12 +333,47 @@
     <h3>Spaces</h3>
       <section id="h_punctuation_spaces_use_of" class="ok">
       <h4>Use of the space</h4>
+      <p>Both the Ethiopic and Western (unprinted) word spaces are important in Ethiopic writing and an author may chose to 
+         use either space as the document space.
+      <p>Like the western space, Ethiopic wordspace is not punctuation per se, but plays a similar if more fundamental role.
+         Both are used as a separator between words, however special rules apply when the Ethiopic wordspace would precede or 
+         follow punctuation and numerals. These special rules will be reviewed in the following subsections.</p>
       </section>
-      <section id="h_punctuation_spaces_with_different_widths" class="ok">
-      <h4>Spaces with different widths</h4>
+      <section id="h_punctuation_spaces_with_punctuation" class="ok">
+      <h4>Spaces with punctuation</h4>
+        <table>
+          <tr>
+            <td style="border: 0px;">&nbsp;</td>
+            <td style="font-weight: bold;">May Precede</th>
+            <td style="font-weight: bold;">May Follow</th>
+          </tr>
+          <tr style="border: 1px solid black;">
+            <td>፣ ፥ ፤ ። . … ! ?</td>
+            <td>No</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>@ $ % + - =</td>
+            <td>No</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>‹ « “ ‘ ( [ {</td>
+            <td>Yes? (Historic -Yes)</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>} ] ) ’ ” » ›</td>
+            <td>Yes</td>
+            <td>Yes? (Historic -No)</td>
+          </tr>
+        </table>
       </section>
-      <section id="h_punctuation_spaces_nonbreaking" class="ok">
-      <h4>Nonbreaking spaces</h4>
+      <section id="h_punctuation_spaces_with_dates" class="ok">
+      <h4>Spaces with dates</h4>
+      </section>
+      <section id="h_punctuation_spaces_with_measurements" class="ok">
+      <h4>Spaces with measurements</h4>
       </section>
     </section>
     <section id="h_punctuation_multiple" class="ok">
@@ -529,6 +564,88 @@ If the list is unordered no end punctuation is needed unless the content forms a
   <h2>Non-Ethiopic Languages</h2>
       <section id="h_foreign_language_latin" class="ok">
       <h3>Languages Using the Latin Alphabet</h3>
+    <section id="relative_character_heights">
+      <h4>Relative Character Heights</h4>
+      <p>In multilingual documents, differences between the heights of letters in Ethiopic script and its companion foreign script are often found.
+        The difference is likely an artifact of the typesetting technology in use and does not represent the intent of the author or publisher.
+        In the classic typeface style of Ethiopic script the letters will be of variable heights. Fixed height styles are more generally used for
+        advertisement and not publishing. The nature of variable height Ethiopic letters is a factor that complicates how to  best align letter height with a foreign script.</p>
+      <figure id="comparative_heights_latn_ethi"> <img src="../images/English-Ethiopic-Relative-Heights-With-Guide-Lines.png" alt=""/>
+        <figcaption>Comparative heights of English and Ethiopic script.</figcaption>
+      </figure>
+      <p>At a given point size, letter heights within a script may vary widely between typefaces. This adds another level of difficulty
+        to aligning heights between scripts as an alignment will only be optimal between a specific typeface pair. Within a script featuring variable
+        (not fixed) height letters the relative heights of letters are subject to change between typefaces. This phenomena reinforces the
+        previous assertion on typeface pair optimization, but also introduces the possibility that alignment optimization can be language
+        sensistive. This happens when an alignment pair designed for the letter inventory of one language is applied to another language
+        that includes letters that exceed the heights of the optimized set. </p>
+      <figure id="comparative_height_typeface"> <img src="../images/Z-Reference-Monotype.png" alt=""/>
+        <figcaption>Comparative letter heights.</figcaption>
+      </figure>
+      <p>The relative heights of letters used in different languages may also change with typeface as this next figure illustrates. </p>
+      <figure id="comparative_height_blin_tigrinya"> <img src="../images/Z-Reference-Abyssinica.png" alt=""/>
+        <figcaption>Comparative letter heights change with typeface, <span lang="am">ቕ</span> of Blin and Tigrinya now exceeds the heights of Amharic.</figcaption>
+      </figure>
+      <p> With these caveats considered, “Zen” alignment is a means to optimize an Ethiopic-Latin typeface pair that is suitable for a general
+        use case when priori knowledge of a document language is unknown. Its basis is reviewed here.
+        The Latin letter “Z” and Ethiopic letter “<span lang="am">ን</span>” are chosen as pairing symbols representative of the mean height .  They both feature broad
+        horizontal strokes that are easy for the eye to follow as a nearly continuous stroke.
+        Ethiopic letters that were introduced as an extension to the Ge’ez core will  typically feature a macron or other modifier at the top of
+        a base letter in order to form the extension letter. The macron necessarily extends the height of a letter.  Using the top of the macron
+        for the reference height of a letter leads to height alignment that makes the majority of Ethiopic letters appear too short against Latin letters. </p>
+      <figure id="align_top_symbol"> <img src="../images/Z-Ny-N-Top-Aligned.png" alt=""/>
+        <figcaption>Alignment and top of symbols (Ethiopic letters too squat).</figcaption>
+      </figure>
+      <p> A better approach is to align Z with caron (Ž) against <span lang="am">ን</span> with marcon <span lang="am">(ኝ)</span> while aligning and Z with <span lang="am">ን</span> and find typefaces with a good tuple of aligned pairings.</p>
+      <figure id="align_below_accent"> <img src="images/Z-caron-Ny-Z-N-Alignment.png" alt=""/>
+        <figcaption>Alignment below accent (better sizing).</figcaption>
+      </figure>
+      <p>Going further, we may assume that the <span lang="am">ኝ</span> and Ž will align satisfactorily (optionally check any irregularities) and simply align the Z-<span lang="am">ን</span> pair.
+        Phonetically the sequence of these two letters would sound like “zen”, hence the name.</p>
+      <figure id="zen_reference_alignment"> <img src="../images/Z-N-Alignment.png" alt=""/>
+        <figcaption>Z-<span lang="am">ን</span> or “Zen” Reference Alignment.</figcaption>
+      </figure>
+      <div class="issues">
+        <p>Issues/Questions:</p>
+        <ol>
+          <li>Does Z-<span lang="am">ን</span> alignment seem reasonable?</li>
+          <li>If not Z-<span lang="am">ን</span> alignment, what Ethiopic letter should be applied as a height reference point for alignment? Or what other height alignment basis should be used?</li>
+          <li>Should height alignment be attempted as per the letter inventory of a target language or for the script as a whole (practical but less optimal)?</li>
+          <li>Relative to a Latin uppercase letter, should the height of Ethiopic letters: (a) equal (b) shorter (c) taller?</li>
+          <li>Is height alignment an issue with other writing systems?  If so, how is it addressed?</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="relative_typeface_weights">
+      <h4>Relative Typeface Weights</h4>
+      <p>A common practice in Ethiopic literature is the change of typeface weight in one script to appear more visually similar to the other.
+        Most typically a Latin typeface will be made heavier to better match its Ethiopic counterpart.  This weight increase is demonstrated in many
+        Ethiopic fonts that include  Latin letters. The font designer may have increased the weight of the Latin range primarily to provide heavier
+        weight punctuation to use with Ethiopic script (see <a href="#ethiopicized_punctuation">Ethiopicized Punctuation</a>).</p>
+      <p>Literature produced with a heavier Latin typeface may represent the author’s stylistic sensibilities but in some cases may  only be a
+        pragmatic outcome when an author finds manually changing between fonts too burdensome. 
+        The view of professional publishers is unknown here and should be determined.</p>
+      <div class="issues">
+        <p>Issues/Questions:</p>
+        <ol>
+          <li>When publishing in the classical Ethiopic weight, should English words appear in their default English weight?</li>
+          <li>If heavier Latin letters are desirable, how much so? Can a weight increase be defined as a percentage of the Ethiopic?</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="baseline_alignment">
+      <h4>Baseline Alignment</h4>
+      <p>It is not uncommon to observe mid-sentence baseline changes in interlingual documents produced with pre-digital typesetting systems
+         where Ethiopic and Latin text, for example, would appear to be laid out along different baselines in a line of text.  The most common
+         example of this appears in documents produced with a typewriter where a sheet of paper had to be moved between typewriters to produce
+         a line in two scripts.  An apparent baseline difference here would be the result of mechanical misalignment.</p>
+
+       <p><em>Note: The only point that seems can be made here would be to state that Ethiopic and foreign scripts should share the same baseline.  This
+              may already be the case with computer typography.  If so, this section should be removed.</em></p>
+    </section>
+
       </section>
       <section id="h_foreign_language_arabic" class="ok">
       <h3>Arabic</h3>
