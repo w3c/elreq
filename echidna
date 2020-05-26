@@ -1,5 +1,6 @@
 # ECHIDNA configuration
 index.html?specStatus=WD;shortName=elreq respec
+https://www.w3.org/Tools/respec/respec-w3c-common
 local.css
 images/English-Ethiopic-Relative-Heights-With-Guide-Lines.png
 images/Z-Reference-Monotype.png
@@ -15,8 +16,13 @@ images/Punctuation-At-Latin-Boundary-Ethiopic-Guillemets.png
 images/Punctuation-At-Latin-Boundary-Latin-Quotes.png
 images/Punctuation-At-Latin-Boundary-Ethiopic-Quotes.png
 images/gemination-heights-comparison.png
+images/kwk-mashafa-sawasew-page-65-inner-parenthesis-one-line.png
+images/raised-ellipsis.png
 images/isolated-and-joining-numeral-bars.png
 images/numeral-vertical-alignment.png
+images/heavy-underline-example.png
+images/kwk-mashafa-sawasew-page-268-typeface-change-for-emphasis.jpg
+images/kwk-mezgebe-fidel-page-43-font-size-increase-for-emphasis.png
 images/ecclesiastical-emphasis-sample-cropped.jpg
 images/Kerning-Examples.png
 images/Ligature-Examples.png
@@ -35,14 +41,9 @@ images/list-aligned-on-counter-left.png
 images/list-aligned-on-suffix.png
 images/inline-list-with-wordspace.png
 images/inline-list-with-space.png
-images/heavy-underline-example.png
-images/kwk-mashafa-sawasew-page-268-typeface-change-for-emphasis.jpg
-images/kwk-mashafa-sawasew-page-65-inner-parenthesis-one-line.png
-images/kwk-mezgebe-fidel-page-43-font-size-increase-for-emphasis.png
 images/end-of-list-inline-continuation.png
-images/raised-ellipsis.png
-images/page-number-in-two-systems.png
 images/GeezMargins.png
+images/page-number-in-two-systems.png
 images/ZN-Superscript.png
 images/Superscript-Vertical-Alignment.png
 AbyssinicaSIL-webfont-elreq.css
