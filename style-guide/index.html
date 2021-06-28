@@ -71,7 +71,7 @@
     <h3>Stylistic Scope of this Document</h3>
     <p>This style guide limits its focus to the aspects of writing style that can be automated by publishing technology.  In particular technology responsible for implementing
     Web standards such as HTML, CSS, Mobile Web and Digital Publications (e.g. eBooks). The stylistical scope of this guide then covers primarily the visual style of text as
-    seen by a reader and not the literary style of propose. The guide will go beyond describing best practices for the appearance of text in some cases; such as to describe
+    seen by a reader and not the literary style of prose. The guide will go beyond describing best practices for the appearance of text in some cases; such as to describe
     best practices for the syntax of written symbols.  Simple syntactic rules for punctuation can be evaluated by word processing applications without requiring the analysis of
     words under their part of speach or in their role shaping grammar.</p>
     </section>
@@ -146,12 +146,16 @@
     <h3>Periods</h3>
       <section id="h_punctuation_periods_use_of" class="ok">
       <h4>Use of the period</h4>
+      In Ethiopic writing the period has a more limited use than in the west. In Ethiopic writing, the period, or "dot", is appropriate
+      for denoting decimal values, forming an ellipsis, and in single word abbreviations (see XX, YY, ZZ).
+       <!-- example of single vs multiword abbreviation -->
       </section>
       <section id="h_punctuation_periods_relation_to_parentheses_and_brackets" class="ok">
       <h4>Periods in relation to parentheses and brackets</h4>
       </section>
       <section id="h_punctuation_periods_in_ellipses" class="ok">
       <h4>Periods in ellipses</h4>
+      <h4>Ethiopic Fullstop</h4>
       </section>
     </section>
     <section id="h_punctuation_commas" class="ok">
@@ -200,15 +204,38 @@
     <h3>Question Marks</h3>
       <section id="h_punctuation_question_marks_use_of" class="ok">
       <h4>Use of the question mark</h4>
+      <p>The question mark in Ethiopian literature is used as it is internationally. Its primaray use is
+         to indicate that the statement leading up to the mark is a direct question.  It may also be used
+         for a rhetorical question, to indicate doubt, disbelief, or a level of factual uncertainity of a
+         statement.</p>
+      <p>An archaic question mark written with three vertical dots (፧) can be found in some legacy works.
+         While the mark is recognized internationally as the "Ethiopic Question Mark" its use should be
+         reserved strictly for the reproduction of materials that have employed it, and not as a substitute
+         for the regular question mark in any new works.</p>
       </section>
       <section id="h_punctuation_question_marks_in_relation" class="ok">
       <h4>Question marks in relation to surrounding text and punctuation</h4>
+      <p>Question marks should be placed within any circumfix punctuation marks such as quotation marks,
+         parenthesis and brackets.  As a device for emphasis, a question mark may follow some other punctuation,
+         specifically another question mark, an exclamation point, or an ellipsis.
+         A question mark should replace, and not follow the Ethiopic wordspace.
+       </p>
+      <p class="example">
+        <b><u>With Space</u></b><br/>
+	<b>Wrong:</b> &nbsp;«እንዚህ እነማን ናቸው»?ብለው<br/>
+	<b>Correct:</b> «እንዚህ እነማን ናቸው?» ብለው<br/>
+        <b><u>With Wordspace</u></b><br/>
+	<b>Wrong:</b> &nbsp;«እንዚህ፡እነማን፡ናቸው፡»?ብለው፡<br/>
+	<b>Wrong:</b> &nbsp;«እንዚህ፡እነማን፡ናቸው፡?»ብለው፡<br/>
+	<b>Correct:</b> «እንዚህ፡እነማን፡ናቸው?» ብለው፡
       </section>
     </section>
     <section id="h_punctuation_exclamation_points" class="ok">
     <h3>Exclamation Points</h3>
       <section id="h_punctuation_exlamation_points_use_of" class="ok">
       <h4>Use of the exclamation point</h4>
+      <p>
+      </p>
       </section>
       <section id="h_punctuation_exlamation_points_in_relation" class="ok">
       <h4>Exclamation points in relation to surrounding punctuation</h4>
@@ -291,6 +318,7 @@
       </section>
       <section id="h_punctuation_slashes_in_abbreviations" class="ok">
       <h4>Slashes in abbreviations</h4>
+       <!-- example of single vs multiword abbreviation, "." is ok for a single word  -->
       </section>
       <section id="h_punctuation_slashes_as_fraction_bars" class="ok">
       <h4>Slashes as fraction bars</h4>
@@ -341,6 +369,7 @@
       </section>
       <section id="h_punctuation_spaces_with_punctuation" class="ok">
       <h4>Spaces with punctuation</h4>
+        Consider space after a terminating punctuation ( ! ? ። ) in Modern Classic style.
         <table>
           <tr>
             <td style="border: 0px;">&nbsp;</td>
@@ -579,42 +608,18 @@ If the list is unordered no end punctuation is needed unless the content forms a
         previous assertion on typeface pair optimization, but also introduces the possibility that alignment optimization can be language
         sensistive. This happens when an alignment pair designed for the letter inventory of one language is applied to another language
         that includes letters that exceed the heights of the optimized set. </p>
-      <figure id="comparative_height_typeface"> <img src="../images/Z-Reference-Monotype.png" alt=""/>
-        <figcaption>Comparative letter heights.</figcaption>
-      </figure>
-      <p>The relative heights of letters used in different languages may also change with typeface as this next figure illustrates. </p>
-      <figure id="comparative_height_blin_tigrinya"> <img src="../images/Z-Reference-Abyssinica.png" alt=""/>
-        <figcaption>Comparative letter heights change with typeface, <span lang="am">ቕ</span> of Blin and Tigrinya now exceeds the heights of Amharic.</figcaption>
-      </figure>
       <p> With these caveats considered, “Zen” alignment is a means to optimize an Ethiopic-Latin typeface pair that is suitable for a general
         use case when priori knowledge of a document language is unknown. Its basis is reviewed here.
-        The Latin letter “Z” and Ethiopic letter “<span lang="am">ን</span>” are chosen as pairing symbols representative of the mean height .  They both feature broad
+        The Latin letter “Z” and Ethiopic letter “<span lang="am">ን</span>” are chosen as pairing symbols representative of the mean height.  They both feature broad
         horizontal strokes that are easy for the eye to follow as a nearly continuous stroke.
-        Ethiopic letters that were introduced as an extension to the Ge’ez core will  typically feature a macron or other modifier at the top of
-        a base letter in order to form the extension letter. The macron necessarily extends the height of a letter.  Using the top of the macron
-        for the reference height of a letter leads to height alignment that makes the majority of Ethiopic letters appear too short against Latin letters. </p>
-      <figure id="align_top_symbol"> <img src="../images/Z-Ny-N-Top-Aligned.png" alt=""/>
-        <figcaption>Alignment and top of symbols (Ethiopic letters too squat).</figcaption>
-      </figure>
       <p> A better approach is to align Z with caron (Ž) against <span lang="am">ን</span> with marcon <span lang="am">(ኝ)</span> while aligning and Z with <span lang="am">ን</span> and find typefaces with a good tuple of aligned pairings.</p>
       <figure id="align_below_accent"> <img src="images/Z-caron-Ny-Z-N-Alignment.png" alt=""/>
         <figcaption>Alignment below accent (better sizing).</figcaption>
       </figure>
-      <p>Going further, we may assume that the <span lang="am">ኝ</span> and Ž will align satisfactorily (optionally check any irregularities) and simply align the Z-<span lang="am">ን</span> pair.
         Phonetically the sequence of these two letters would sound like “zen”, hence the name.</p>
       <figure id="zen_reference_alignment"> <img src="../images/Z-N-Alignment.png" alt=""/>
         <figcaption>Z-<span lang="am">ን</span> or “Zen” Reference Alignment.</figcaption>
       </figure>
-      <div class="issues">
-        <p>Issues/Questions:</p>
-        <ol>
-          <li>Does Z-<span lang="am">ን</span> alignment seem reasonable?</li>
-          <li>If not Z-<span lang="am">ን</span> alignment, what Ethiopic letter should be applied as a height reference point for alignment? Or what other height alignment basis should be used?</li>
-          <li>Should height alignment be attempted as per the letter inventory of a target language or for the script as a whole (practical but less optimal)?</li>
-          <li>Relative to a Latin uppercase letter, should the height of Ethiopic letters: (a) equal (b) shorter (c) taller?</li>
-          <li>Is height alignment an issue with other writing systems?  If so, how is it addressed?</li>
-        </ol>
-      </div>
     </section>
 
     <section id="relative_typeface_weights">

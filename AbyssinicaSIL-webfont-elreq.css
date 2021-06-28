@@ -13,7 +13,7 @@ of the license along with this Font Software. If this is not the case, go to
 /* use Abyssinica SIL - Regular in .woff format */
 @font-face {
   font-family: AbyssinicaSILW;
-  src: url(AbyssinicaSIL-R.woff);
+  src: url(AbyssinicaSIL-Regular.woff);
 }
 
 /* set body to use Abyssinica SIL in .woff format */
