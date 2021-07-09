@@ -1,0 +1,16 @@
+.multilineGlossedText {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+.stack {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    font-size: 25px;
+    }
+.zbase {
+    font-size: 50px;
+    }
+.legend { font-style: italic; }

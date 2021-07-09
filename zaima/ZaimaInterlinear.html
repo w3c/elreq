@@ -1,0 +1,252 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Interlinear Layout of Zaima Annotation"/>
+<script type="text/javascript">
+var f = { }
+
+// AUTHORS should fill in these assignments:
+f.directory = 'articles/zaima'+'/'; // the path to this file, not including /International or the file name
+f.filename = 'styling'; // the file name WITHOUT extensions
+f.authors = 'Daniel Yacob, GFF'; // author(s) and affiliations
+f.previousauthors = ''; // as above
+f.modifiers = ''; // people making substantive changes, and their affiliation
+f.searchString = 'article-zaima-styling'; // blog search string - usually the filename without extensions
+f.firstPubDate = '2017-10-01'; // date of the first publication of the document (after review)
+f.lastSubstUpdate = { date:'2017-10-10', time:'11:23'}  // date and time of latest substantive changes to this document
+f.status = 'draft';  // should be one of draft, review, published, notreviewed or obsolete
+f.path = '../../' // what you need to prepend to a URL to get to the /International directory 
+
+// AUTHORS AND TRANSLATORS should fill in these assignments:
+f.thisVersion = { date:'2017-10-07', time:'11:23'} // date and time of latest edits to this document/translation
+f.contributors = ''; // people providing useful contributions or feedback during review or at other times
+// also make sure that the lang attribute on the html tag is correct!
+
+// TRANSLATORS should fill in these assignments:
+f.translators = 'xxxNAME, ORG'; // translator(s) and their affiliation - a elements allowed, but use double quotes for attributes
+
+f.breadcrumb = 'markup';
+
+f.additionalLinks = ''
+</script>
+<link rel="stylesheet" href="https://www.w3.org/International/style/article-2016.css" type="text/css" />
+<link rel="stylesheet" href="zaima-gloss.css" type="text/css" />
+<link rel="stylesheet" href="zaima-chrome61.css" type="text/css" />
+<style>
+  /* ASCII diagram colors */
+  .base { color: blue; }
+  .annot { color: red; }
+  .column { color: gray; }
+  .flagtxt1 { color: green; }
+  .flagtxt2 { color: #ae4a00; }
+  .flagbg1 { background: green; opacity: 0.3; }
+  .flagbg2 { background: orange; opacity: 0.3; }
+   code.highlight { padding: .1em; border-radius: .3em; }
+   pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
+   table td { border: solid black 1px; }
+   table { border-collapse: collapse; }
+   td.local { padding-left: 20px; padding-right: 20px; vertical-align: bottom; }
+   pre {
+	line-height: unset;
+	font-size: unset;
+	}
+</style>
+</head>
+<body>
+
+<h1>Interlinear Layout of Zaima Annotation</h1>
+<p>In a 2019 post, Richard Ishida devised a clever CSS definition for markup and display of 
+<a href="http://r12a.github.io/blog/201708.html#20190304">Linguistic glosses</a>.
+The approach proved successful and easy to use for the glossing use cases.  
+This page presents attempts to apply the same interlinear gloss styling to the 
+<a href="ZaimaUseCases.html#use-case-1">first use case</a> sample of the Zaima Uses Cases.
+
+</p>
+
+<table>
+  <caption style="caption-side:bottom"><strong>Figure 1</strong> Target annotation from Selot Kidassie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage113.png">p. 113</a> and decomposition.</caption>
+  <colgroup>
+    <col width="200px"/>
+    <col width="400px"/>
+  </colgroup>
+  <tbody>
+<tr>
+  <td class="local"><img style="border: 2px solid black;" src="use-cases/SelotKidasiePage113i1.png"/> <br/> <br/> <br/></td>
+  <td>
+<pre class="highlight" style="font-family: Abyssinica SIL;">
+<span style="font-size: 2em;">
+  <span class="column">|</span><span class="annot">[</span> <span style="font-size: 0.5em"> ∅</span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span>    <span style="font-size: 0.5em">᎔᎖</span>    <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span style="font-size: 0.5em"> ∅</span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span>   <span style="font-size: 0.5em">᎓ ሞኂ </span>   <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span style="font-size: 0.5em">᎖</span>  <span class="annot">]</span><span class="column">|</span><span class="annot">[</span>    <span style="font-size: 0.5em">ሥቱ </span>   <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span style="font-size: 0.5em"> ᎐ </span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span> <span style="font-size: 0.5em"> ᎐ </span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span> <span style="font-size: 0.5em"> ር </span> <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="base">[</span> ከ <span class="base">]</span><span class="column">|</span><span class="base">[</span> በ <span class="base">]</span><span class="column">|</span><span class="base">[</span> ሮ <span class="base">]</span><span class="column">|</span>
+</span>
+</pre>
+  </td>
+</tr>
+</tbody>
+</table>
+
+<h3>Word Level Columns</h3>
+<p>
+With interlinear glosses, columns align words in a vertical arrangement. The column as a container also provides the interlinear
+association between the base text and the text of other rows, the semantic context of a row will be set with a style class. With Zaima annotation
+characters are the alignment tokens whereas glosses use word-level tokens. This difference in grandularity will lead to difficulty in
+the horizontal alignment of one element relative to another across the interlinear rows. Horizontal positioning of symbols in the
+annotation rows is achieved with some success by applying non-breaking spaces.
+</p>
+<table>
+  <caption style="caption-side:bottom"><strong>Figure 2</strong> Interlinear alignment over rows using word-columns.</caption>
+  <colgroup>
+    <col width="200px"/>
+    <col width="150px"/>
+    <col width="600px"/>
+  </colgroup>
+  <tbody>
+<tr>
+  <td class="local"><img style="border: 2px solid black;" src="use-cases/SelotKidasiePage113i1.png"/> <br/> <br/> </td>
+  <td class="local">
+<div class="stack" style="display: inline-block; font-family:Abyssinica SIL;">
+    <span class="stack" style="text-align: right;">᎔᎖&nbsp;</span>
+    <span class="stack" style="text-align: right;">᎓ ሞኂ</span>
+    <span class="stack">᎖ &nbsp;&nbsp;ሥቱ</span></span>
+    <span class="stack">&nbsp;᎐&nbsp; ᎐&nbsp; ር</span></span>
+    <span class="zbase">ከበሮ</span>
+</div>
+</td>
+  <td class="local"><script type="text/plain">
+<div class="stack" style="display: inline-block; font-family:Abyssinica SIL;">
+    <span class="stack" style="text-align: right;">᎔᎖&nbsp;</span>
+    <span class="stack" style="text-align: right;">᎓ ሞኂ</span>
+    <span class="stack">᎖ &nbsp;&nbsp;ሥቱ</span></span>
+    <span class="stack">&nbsp;᎐&nbsp; ᎐&nbsp; ር</span></span>
+    <span class="zbase">ከበሮ</span>
+</div>
+  </script></td>
+</tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h3>Character Level Columns</h3>
+<p>
+The main deficit with this approach is that column spanning can not vary across rows. once a column width is set, it can not be subdivided
+Thus to have a 2 spanning column on the top rows, it must exist on the bottom row.
+</p>
+<table>
+  <caption style="caption-side:bottom"><strong>Figure 3</strong> Interlinear alignment over rows using character-columns.</caption>
+  <colgroup>
+    <col width="200px"/>
+    <col width="150px"/>
+    <col width="600px"/>
+  </colgroup>
+  <tbody>
+<tr>
+  <td class="local"><img style="border: 2px solid black;" src="use-cases/SelotKidasiePage113i1.png"/> <br/> <br/> </td>
+  <td class="local">
+<div class="stack" style="display: inline-block; font-family: Abyssinica SIL;">
+    <span class="stack">᎖</span>
+    <span class="stack" style="text-align: center;">᎐</span>
+    <span class="zbase">ከ</span>
+</div>
+<div class="stack" style="display: inline-block; font-family:Abyssinica SIL;">
+    <span class="stack" style="text-align: center;">᎔᎖</span>
+    <span class="stack" style="text-align: center;">᎓ ሞኂ</span>
+    <span class="stack" style="text-align: center;">ሥቱ</span></span>
+    <span class="stack">&nbsp;᎐&nbsp;&nbsp;ር&nbsp;&nbsp;</span></span>
+    <span class="zbase">በሮ</span>
+</div>
+</td>
+  <td class="local"><script type="text/plain">
+<div class="stack" style="display: inline-block; font-family: Abyssinica SIL;">
+    <span class="stack">᎖</span>
+    <span class="stack" style="text-align: center;">᎐</span>
+    <span class="zbase">ከ</span>
+</div>
+<div class="stack" style="display: inline-block; font-family:Abyssinica SIL;">
+    <span class="stack" style="text-align: center;">᎔᎖</span>
+    <span class="stack" style="text-align: center;">᎓ ሞኂ</span>
+    <span class="stack" style="text-align: center;">ሥቱ</span></span>
+    <span class="stack">&nbsp;᎐&nbsp;&nbsp;ር&nbsp;&nbsp;</span></span>
+    <span class="zbase">በሮ</span>
+</div>
+  </script></td>
+</td>
+</tr>
+</tbody>
+</table>
+
+<style>
+  .nowrap { white-space:nowrap; }
+  ruby { font-size: 50px; font-family: "Abyssinica SIL", "ms mincho", stsong, 'lisong pro';  }
+
+  td img { vertical-align: bottom; }
+  script { display: block; white-space: pre-wrap; }
+  .figure-wide { margin-right: 10%; }
+  .justify-full { text-align: justify; }
+</style>
+
+<h3>Overlayed Rubies</h3>
+<table>
+  <caption style="caption-side:bottom"><strong>Figure 4</strong> Interlinear alignment over rows using Ruby overlays.</caption>
+  <colgroup>
+    <col width="200px"/>
+    <col width="150px"/>
+    <col width="400px"/>
+  </colgroup>
+  <tbody>
+<tr>
+  <td class="local"><img style="border: 2px solid black;" src="use-cases/SelotKidasiePage113i1.png"/> <br/> <br/> </td>
+  <td> 
+    <div style="position: relative; top: 390px;">
+    <ruby class="row4ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በሮ</rb><rt>᎔᎖</rt>
+    </ruby>
+    <ruby class="row3ex">
+      <rb>ከ</rb><rt></rt>
+      <rb>በ</rb><rt>᎓</rt>
+      <rb>ሮ</rb><rt style="text-align: right;">ሞኂ</rt>
+    </ruby>
+    <ruby class="row2ex">
+      <rb>ከ</rb><rt>᎖</rt>
+      <rb>በ</rb><rt></rt>
+      <rb>ሮ</rb><rt style="text-align: right;">ሥቱ</rt>
+    </ruby>
+    <ruby class="row1ex">
+      <rb>ከ</rb><rt>᎐</rt>
+      <rb>በ</rb><rt>᎐</rt>
+      <rb>ሮ</rb><rt style="text-align: right;">ር</rt>
+    </ruby>
+    </div>
+</td>
+  <td><script type="text/plain">
+    <div style="position: relative;">
+      <ruby class="row4ex">
+        <rb>ከ</rb><rt></rt>
+        <rb>በሮ</rb><rt>᎔᎖</rt>
+      </ruby>
+      <ruby class="row3ex">
+        <rb>ከ</rb><rt></rt>
+        <rb>በሮ</rb><rt>᎓ሞኂ</rt>
+      </ruby>
+      <ruby class="row2ex">
+        <rb>ከ</rb><rt style="text-align: left;">᎖</rt>
+        <rb>በሮ</rb><rt>ሥቱ</rt>
+      </ruby>
+      <ruby class="row1ex">
+        <rb>ከ</rb><rt>᎐</rt>
+        <rb>በ</rb><rt>᎐</rt>
+        <rb>ሮ</rb><rt>ር</rt>
+      </ruby>
+    </div>
+  </script></td>
+</tr>
+</tbody>
+</table>
+
+<p>With the Gloss approach, within a row, columns are defined.  With Ruby, within a column, rows are defined.</p>
+
+</body>
+</html>
