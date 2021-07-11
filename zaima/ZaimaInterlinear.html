@@ -37,6 +37,7 @@ f.additionalLinks = ''
   .base { color: blue; }
   .annot { color: red; }
   .column { color: gray; }
+  .miliket { font-size: 0.5em; }
   .flagtxt1 { color: green; }
   .flagtxt2 { color: #ae4a00; }
   .flagbg1 { background: green; opacity: 0.3; }
@@ -54,13 +55,14 @@ f.additionalLinks = ''
 </head>
 <body>
 
+<section>
 <h1>Interlinear Layout of Zaima Annotation</h1>
-<p>In a 2019 post, Richard Ishida devised a clever CSS definition for markup and display of 
+<p>
+In a 2019 post, Richard Ishida devised a clever CSS definition for markup and display of 
 <a href="http://r12a.github.io/blog/201708.html#20190304">Linguistic glosses</a>.
 The approach proved successful and easy to use for the glossing use cases.  
 This page presents attempts to apply the same interlinear gloss styling to the 
 <a href="ZaimaUseCases.html#use-case-1">first use case</a> sample of the Zaima Uses Cases.
-
 </p>
 
 <table>
@@ -75,10 +77,10 @@ This page presents attempts to apply the same interlinear gloss styling to the
   <td>
 <pre class="highlight" style="font-family: Abyssinica SIL;">
 <span style="font-size: 2em;">
-  <span class="column">|</span><span class="annot">[</span> <span style="font-size: 0.5em"> ∅</span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span>    <span style="font-size: 0.5em">᎔᎖</span>    <span class="annot">]</span><span class="column">|</span>
-  <span class="column">|</span><span class="annot">[</span> <span style="font-size: 0.5em"> ∅</span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span>   <span style="font-size: 0.5em">᎓ ሞኂ </span>   <span class="annot">]</span><span class="column">|</span>
-  <span class="column">|</span><span class="annot">[</span> <span style="font-size: 0.5em">᎖</span>  <span class="annot">]</span><span class="column">|</span><span class="annot">[</span>    <span style="font-size: 0.5em">ሥቱ </span>   <span class="annot">]</span><span class="column">|</span>
-  <span class="column">|</span><span class="annot">[</span> <span style="font-size: 0.5em"> ᎐ </span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span> <span style="font-size: 0.5em"> ᎐ </span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span> <span style="font-size: 0.5em"> ር </span> <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket"> ∅</span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span>    <span class="miliket">᎔᎖</span>    <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket"> ∅</span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span>   <span class="miliket">᎓ ሞኂ </span>   <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket">᎖</span>  <span class="annot">]</span><span class="column">|</span><span class="annot">[</span>    <span class="miliket">ሥቱ </span>   <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket"> ᎐ </span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span> <span class="miliket"> ᎐ </span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span> <span class="miliket"> ር </span> <span class="annot">]</span><span class="column">|</span>
   <span class="column">|</span><span class="base">[</span> ከ <span class="base">]</span><span class="column">|</span><span class="base">[</span> በ <span class="base">]</span><span class="column">|</span><span class="base">[</span> ሮ <span class="base">]</span><span class="column">|</span>
 </span>
 </pre>
@@ -86,10 +88,12 @@ This page presents attempts to apply the same interlinear gloss styling to the
 </tr>
 </tbody>
 </table>
+</section>
 
+<section>
 <h3>Word Level Columns</h3>
 <p>
-With interlinear glosses, columns align words in a vertical arrangement. The column as a container also provides the interlinear
+With interlinear glosses, columns align <em>words</em> in a vertical arrangement. The column as a container also provides the interlinear
 association between the base text and the text of other rows, the semantic context of a row will be set with a style class. With Zaima annotation
 characters are the alignment tokens whereas glosses use word-level tokens. This difference in grandularity will lead to difficulty in
 the horizontal alignment of one element relative to another across the interlinear rows. Horizontal positioning of symbols in the
@@ -103,6 +107,11 @@ annotation rows is achieved with some success by applying non-breaking spaces.
     <col width="600px"/>
   </colgroup>
   <tbody>
+<tr class="column">
+  <th>Sample</th>
+  <th>Display Result</th>
+  <th>Display Source</th>
+</tr>
 <tr>
   <td class="local"><img style="border: 2px solid black;" src="use-cases/SelotKidasiePage113i1.png"/> <br/> <br/> </td>
   <td class="local">
@@ -126,13 +135,13 @@ annotation rows is achieved with some success by applying non-breaking spaces.
 </tr>
 </tbody>
 </table>
+</section>
 
-<p>&nbsp;</p>
-
+<section>
 <h3>Character Level Columns</h3>
 <p>
 The main deficit with this approach is that column spanning can not vary across rows. once a column width is set, it can not be subdivided
-Thus to have a 2 spanning column on the top rows, it must exist on the bottom row.
+Thus to have cells spanning two columns on the top rows, the corresponding bottom rows cells must also be identically column spanning. 
 </p>
 <table>
   <caption style="caption-side:bottom"><strong>Figure 3</strong> Interlinear alignment over rows using character-columns.</caption>
@@ -142,6 +151,11 @@ Thus to have a 2 spanning column on the top rows, it must exist on the bottom ro
     <col width="600px"/>
   </colgroup>
   <tbody>
+<tr class="column">
+  <th>Sample</th>
+  <th>Display Result</th>
+  <th>Display Source</th>
+</tr>
 <tr>
   <td class="local"><img style="border: 2px solid black;" src="use-cases/SelotKidasiePage113i1.png"/> <br/> <br/> </td>
   <td class="local">
@@ -176,7 +190,9 @@ Thus to have a 2 spanning column on the top rows, it must exist on the bottom ro
 </tr>
 </tbody>
 </table>
+</section>
 
+<section>
 <style>
   .nowrap { white-space:nowrap; }
   ruby { font-size: 50px; font-family: "Abyssinica SIL", "ms mincho", stsong, 'lisong pro';  }
@@ -188,6 +204,13 @@ Thus to have a 2 spanning column on the top rows, it must exist on the bottom ro
 </style>
 
 <h3>Overlayed Rubies</h3>
+<p>
+The following presents the originally layered ruby approach where each <code>&lt;ruby&gt;</code> group is given a different
+z-index value and layers after "1" hide the base (<code>&lt;rb&gt;</code>) text. This approach was found to have the display
+shortcoming that the spacing between the letters of the base text may vary with each layer as driven by the <code>&lt;rt&gt;</code>
+content width requirements.  This can lead to the "columns" shifting laterally across layers slightly and leading to an
+imperfect layout.
+</p>
 <table>
   <caption style="caption-side:bottom"><strong>Figure 4</strong> Interlinear alignment over rows using Ruby overlays.</caption>
   <colgroup>
@@ -196,6 +219,11 @@ Thus to have a 2 spanning column on the top rows, it must exist on the bottom ro
     <col width="400px"/>
   </colgroup>
   <tbody>
+<tr class="column">
+  <th>Sample</th>
+  <th>Display Result</th>
+  <th>Display Source</th>
+</tr>
 <tr>
   <td class="local"><img style="border: 2px solid black;" src="use-cases/SelotKidasiePage113i1.png"/> <br/> <br/> </td>
   <td> 
@@ -245,8 +273,25 @@ Thus to have a 2 spanning column on the top rows, it must exist on the bottom ro
 </tr>
 </tbody>
 </table>
+</section>
 
-<p>With the Gloss approach, within a row, columns are defined.  With Ruby, within a column, rows are defined.</p>
+<section>
+<h3>Conclusion</h3>
+<p>
+The exercise helped illuminate the distinction between word level alignment across rows, version character level alignment.
+In the Zaima practice, annotation is associated with one or more base letters.  This is different from glossing where
+the need is to manage the association of an annotation with one or more words.  Under this consideration, Zaima annotation
+is more akin to the Ruby annotation practice.  Like Ruby layout, fascilities to control the horizontal alignment of the
+annotation text with respect to the extents of the base is essential.
+</p>
+<p>
+Difficulties with the interlinear gloss approach were revealed with the horizontal positioning of the annotation over specific
+base characters.  Non-breaking spaces were used as a solution to adjust the annotation text slightly leftward or rightward
+but this approach is not believed to be dependable since space width is not guaranteed across platforms and the character
+alignments are likely to change in unpredictable ways as text is scaled upward or downward in size.
+</p>
+<section>
+
 
 </body>
 </html>
