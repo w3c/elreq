@@ -1,0 +1,252 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Zaima ASCII Tables"/>
+<script type="text/javascript">
+var f = { }
+
+// AUTHORS should fill in these assignments:
+f.directory = 'articles/zaima'+'/'; // the path to this file, not including /International or the file name
+f.filename = 'styling'; // the file name WITHOUT extensions
+f.authors = 'Daniel Yacob, GFF'; // author(s) and affiliations
+f.previousauthors = ''; // as above
+f.modifiers = ''; // people making substantive changes, and their affiliation
+f.searchString = 'article-zaima-styling'; // blog search string - usually the filename without extensions
+f.firstPubDate = '2017-10-01'; // date of the first publication of the document (after review)
+f.lastSubstUpdate = { date:'2017-10-10', time:'11:23'}  // date and time of latest substantive changes to this document
+f.status = 'draft';  // should be one of draft, review, published, notreviewed or obsolete
+f.path = '../../' // what you need to prepend to a URL to get to the /International directory 
+
+// AUTHORS AND TRANSLATORS should fill in these assignments:
+f.thisVersion = { date:'2017-10-07', time:'11:23'} // date and time of latest edits to this document/translation
+f.contributors = ''; // people providing useful contributions or feedback during review or at other times
+// also make sure that the lang attribute on the html tag is correct!
+
+// TRANSLATORS should fill in these assignments:
+f.translators = 'xxxNAME, ORG'; // translator(s) and their affiliation - a elements allowed, but use double quotes for attributes
+
+f.breadcrumb = 'markup';
+
+f.additionalLinks = ''
+</script>
+<link rel="stylesheet" href="https://www.w3.org/International/style/article-2016.css" type="text/css" />
+<link rel="stylesheet" href="zaima-gloss.css" type="text/css" />
+<link rel="stylesheet" href="zaima-chrome61.css" type="text/css" />
+<style>
+  /* ASCII diagram colors */
+  .base { color: blue; }
+  .annot { color: red; }
+  .column { color: gray; }
+  .miliket { font-size: 0.5em; }
+  .flagtxt1 { color: green; }
+  .flagtxt2 { color: #ae4a00; }
+  .flagbg1 { background: green; opacity: 0.3; }
+  .flagbg2 { background: orange; opacity: 0.3; }
+   code.highlight { padding: .1em; border-radius: .3em; }
+   pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
+   table td { border: solid black 1px; }
+   table { border-collapse: collapse; }
+   td.local { padding-left: 20px; padding-right: 20px; vertical-align: bottom; }
+   pre {
+	line-height: unset;
+	font-size: unset;
+	}
+</style>
+</head>
+<body>
+
+<section>
+<h1>ASCII Table Samples for Zaima Use Cases</h1>
+<p>
+This document provides samples of Zaima annotation presented in the ASCII table style found in the current
+draft of the <a href="https://drafts.csswg.org/css-ruby-1/">CSS Ruby Annotation Layout Module Level 1</a> document.
+</p>
+</section>
+
+<section>
+<h3>Use Case 1</h3>
+<p>
+The <a href="ZaimaUseCases.html#use-case-1">first use case</a> presented as an ASCII table.
+</p>
+
+<table>
+  <caption style="caption-side:bottom"><strong>Figure 1</strong> Target annotation from Selot Kidassie <a href="http://yacob.org/ethio-ruby/use-cases/SelotKidasie/Pages/SelotKidasiePage113.png">p. 113</a> and decomposition.</caption>
+  <colgroup>
+    <col width="200px"/>
+    <col width="400px"/>
+  </colgroup>
+  <tbody>
+<tr>
+  <td class="local"><img style="border: 2px solid black;" src="use-cases/SelotKidasiePage113i1.png"/> <br/> <br/> <br/></td>
+  <td>
+<pre class="highlight" style="font-family: Abyssinica SIL;">
+<span style="font-size: 2em;">
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket"> ∅</span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span>    <span class="miliket">᎔᎖</span>    <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket"> ∅</span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span>   <span class="miliket">᎓ ሞኂ </span>   <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket">᎖</span>  <span class="annot">]</span><span class="column">|</span><span class="annot">[</span>    <span class="miliket">ሥቱ </span>   <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket"> ᎐ </span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span> <span class="miliket"> ᎐ </span> <span class="annot">]</span><span class="column">|</span><span class="annot">[</span> <span class="miliket"> ር </span> <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="base">[</span> ከ <span class="base">]</span><span class="column">|</span><span class="base">[</span> በ <span class="base">]</span><span class="column">|</span><span class="base">[</span> ሮ <span class="base">]</span><span class="column">|</span>
+</span>
+</pre>
+  </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h3>Use Case 2</h3>
+<p>
+The <a href="ZaimaUseCases.html#use-case-2">second use case</a> is skipped becuase it requires notation symbols not yet supported in the Unicode Standard.
+</p>
+</section>
+
+
+<section>
+<h3>Use Case 3</h3>
+<p>
+The <a href="ZaimaUseCases.html#use-case-3">third use case</a> presented as an ASCII table.
+</p>
+
+<table>
+  <caption style="caption-side:bottom"><strong>Figure 3a</strong> Zimarie Wemewasit <a href="http://yacob.org/ethio-ruby/use-cases/ZimarieWemewasit/Pages/ZimarieWemewasitSecondHalfPage34.png">p. 34</a> with empty table cells shown.</caption>
+  <colgroup>
+    <col width="200px"/>
+    <col width="400px"/>
+  </colgroup>
+  <tbody>
+<tr>
+  <td class="local"><img style="border: 2px solid black;" src="use-cases/ZimarieWemewasitPageSecondHalf34i2-600dpi.png"/> <br/> <br/> <br/></td>
+  <td>
+<pre class="highlight" style="font-family: Abyssinica SIL;">
+<span style="font-size: 2em;">
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket">∅ </span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span>  <span class="miliket">᎒</span>  <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span>  <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket"> ∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket"> ር</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket">∅ </span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span>    <span class="miliket">᎖᎔</span>     <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">᎐ </span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span>  <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket"> ∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket"> ር</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket"> ᎑ </span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span>    <span class="miliket">᎖መን</span>    <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">᎐ </span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span>  <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket"> ∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket"> ር</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket"> ᎐ </span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span>      <span class="miliket">᎓᎔᎖᎓᎔᎓᎔᎖᎖</span>      <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">᎖᎖</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span>  <span class="miliket">᎐ </span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket"> ∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket"> ር</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket">∅ </span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span>      <span class="miliket">᎑ደረ᎓᎔᎖᎖</span>      <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">᎖᎖</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span>  <span class="miliket">᎐ </span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket"> ∅</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket"> ር</span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">∅</span> <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="base">[</span> ሊ <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ባ <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ኖ <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ስ <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ሃ <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ፡ <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ና <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ክ <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ብ <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ር <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ፡ <span class="base">]</span><span class="column">|</span>
+</span>
+</pre>
+  </td>
+</tr>
+</tbody>
+</table>
+
+<p>A simplification to corresponding markup may be possbile if empty cells can be removed without impacting the table structure.  This has been done in the follwing where 
+the cells wihtout content have been removed at the tops of their respective columns.</p>
+
+<table>
+  <caption style="caption-side:bottom"><strong>Figure 3b</strong> Zimarie Wemewasit <a href="http://yacob.org/ethio-ruby/use-cases/ZimarieWemewasit/Pages/ZimarieWemewasitSecondHalfPage34.png">p. 34</a> with empty cells removed from the top levels.</caption>
+  <colgroup>
+    <col width="200px"/>
+    <col width="400px"/>
+  </colgroup>
+  <tbody>
+<tr>
+  <td class="local"><img style="border: 2px solid black;" src="use-cases/ZimarieWemewasitPageSecondHalf34i2-600dpi.png"/> <br/> <br/> <br/></td>
+  <td>
+<pre class="highlight" style="font-family: Abyssinica SIL;">
+<span style="font-size: 2em;">
+              <span class="column">|</span><span
+                class="annot">[</span>  <span class="miliket">᎒</span>  <span class="annot">]</span><span class="column">|</span
+  >                              <span class="column">|</span><span class="annot">[</span> <span class="miliket"> ር</span> <span class="annot">]</span><span class="column">|</span>
+        <span class="column">|</span><span
+        class="annot">[</span>    <span class="miliket">᎖᎔</span>     <span class="annot">]</span><span class="column">|</span
+        >     <span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">᎐ </span> <span class="annot">]</span><span class="column">|</span
+        >                   <span class="column">|</span><span 
+        class="annot">[</span> <span class="miliket"> ር</span> <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket"> ᎑ </span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span>    <span class="miliket">᎖መን</span>    <span class="annot">]</span><span class="column">|</span
+        >     <span class="column">|</span><span 
+        class="annot">[</span> <span class="miliket">᎐ </span> <span class="annot">]</span><span class="column">|</span> <span
+        >                  <span class="column">|</span><span 
+        class="annot">[</span> <span class="miliket"> ር</span> <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket"> ᎐ </span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span>      <span class="miliket">᎓᎔᎖᎓᎔᎓᎔᎖᎖</span>      <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">᎖᎖</span> <span class="annot">]</span><span class="column">|</span> <span
+        class="column">|</span><span
+        class="annot">[</span>  <span class="miliket">᎐ </span> <span class="annot">]</span><span class="column">|</span
+        >           <span class="column">|</span><span 
+        class="annot">[</span> <span class="miliket"> ር</span> <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="annot">[</span> <span class="miliket">∅ </span> <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span>      <span class="miliket">᎑ደረ᎓᎔᎖᎖</span>      <span class="annot">]</span><span class="column">|</span><span
+        class="annot">[</span> <span class="miliket">᎖᎖</span> <span class="annot">]</span><span class="column">|</span> <span
+        class="column">|</span><span
+        class="annot">[</span>  <span class="miliket">᎐ </span> <span class="annot">]</span><span class="column">|</span
+        >           <span class="column">|</span><span 
+        class="annot">[</span> <span class="miliket"> ር</span> <span class="annot">]</span><span class="column">|</span>
+  <span class="column">|</span><span class="base">[</span> ሊ <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ባ <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ኖ <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ስ <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ሃ <span class="base">]</span><span class="column">|</span>፡<span class="column">|</span><span
+        class="base">[</span> ና <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ክ <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ብ <span class="base">]</span><span class="column">|</span><span
+        class="base">[</span> ር <span class="base">]</span><span class="column">|</span>፡
+</span>
+</pre>
+  </td>
+</tr>
+</tbody>
+</table>
+</section>
+
+</body>
+</html>
