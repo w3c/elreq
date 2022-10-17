@@ -55,8 +55,8 @@
     <h2>Introduction</h2>
     <section id="purpose">
     <h3>Purpose of this Document</h3>
-    <p>This document describes requirements of the layout and presentation of text in the Ethiopic script for use with Web standards and technologies, such as HTML, CSS, Mobile Web and Digital Publications (e.g. eBooks). In addition to the Ethiopian and Eritrean homelands, the script is widely used througout the diaspora of these two nations. Accordingly, requirements are gathered from stakeholders engaged in Ethiopic publishing from all regions.</p>
-    <p>The document does not describe implementations or issues related to specific technologies, such as CSS. Instead it describes the typographic requirements of Ethiopic in a technology-agnostic manner, so that the content remains evergreen and is equally relevant to all technologies that aim to represent Ethiopic text on the Web.</p>
+    <p>This document describes requirements of the layout and presentation of text in the Ethiopic script for use with Web standards and technologies, such as HTML, CSS, Mobile Web and Digital Publications (e.g. eBooks). In addition to the Ethiopian and Eritrean homelands, the script is widely used throughout the diaspora of these two nations. Accordingly, requirements are gathered from stakeholders engaged in Ethiopic publishing from all regions.</p>
+    <p>The document does not describe implementations or issues related to specific technologies, such as CSS. Instead, it describes the typographic requirements of Ethiopic in a technology-agnostic manner, so that the content remains evergreen and is equally relevant to all technologies that aim to represent Ethiopic text on the Web.</p>
     </section>
     <section id="how_developed">
     <h3>How this Document was Created</h3>
@@ -65,7 +65,7 @@
     <ol>
       <li>Ethiopic typography experts.</li>
       <li>Experts from the publishing industry representing the spectrum of traditional to modern layout practices.</li>
-      <li>Academic experts with a focus on <a href="#term.geez" class="termref">Ge’ez</a> manuscripts and philogy.</li>
+      <li>Academic experts with a focus on <a href="#term.geez" class="termref">Ge’ez</a> manuscripts and philology.</li>
     </ol>
     <p>The Task Force will conduct a survey of the publishing industry to solicit input and identify the set of in-use layout styles. This document will then represent the normalized results of the industry survey which in turn becomes a basis for its validity and suitability to purpose. In the interim before to the survey results have been compiled and applied to this document, tentative specifications will be given based on the most-probable survey results anticipated from participating experts. <span class="note">Survey Pending</span> notes will appear along side specification sections to denote their status.</p>
   </section>
@@ -77,7 +77,7 @@
       <li>Attempt a “90% solution” where the common and primary needs of publishers are addressed. Important but less widely used practices such as for <a href="#term.yaredic-zaima-notation" class="termref">Yaredic Zaima Notation</a> will be addressed at a future time.</li>
       <li>It does not cover every issue of Ethiopic typography, but only the import differences from the Western language systems.</li>
       <li>The technical aspects of actual implementation are not covered by this document.</li>
-      <li>In order to help readers’ understanding of how Ethiopic is used, typical real life examples are provided.</li>
+      <li>In order to help readers’ understanding of how Ethiopic is used, typical real-life examples are provided.</li>
       <li>Text layout rules and recommendations for readable design are different things, however these two issues are difficult to discuss independently. In this document, these two aspects are carefully separated. The aesthetic design recommendations are mainly described using notes.</li>
       <li>The main target of this document is common books. The authors’ experiences are mainly related to common books, and the quality required for common books is the highest in the market. There are many kinds of books in the market, and the requirements are quite diverse. The task force has a lot of accumulated experience in requirements and solutions for Ethiopic text composition. Nonetheless, many issues, which have been discussed over a long period of time, are applicable for other kinds of publication.</li>
       <li>In terms of frequency of use, the importance of magazines, technical manuals, and Web documents rates alongside common books. However, there are several characteristics in these publications, which are different from common books. These issues should be treated more fully in future documents.</li>
@@ -110,7 +110,7 @@
         to aligning heights between scripts as an alignment will only be optimal between a specific typeface pair. Within a script featuring variable
         (not fixed) height letters the relative heights of letters are subject to change between typefaces. This phenomena reinforces the
         previous assertion on typeface pair optimization, but also introduces the possibility that alignment optimization can be language
-        sensistive. This happens when an alignment pair designed for the letter inventory of one language is applied to another language
+        sensitive. This happens when an alignment pair designed for the letter inventory of one language is applied to another language
         that includes letters that exceed the heights of the optimized set. </p>
       <figure id="comparative_height_typeface"> <img src="images/Z-Reference-Monotype.png" alt=""/>
         <figcaption>Comparative letter heights.</figcaption>
@@ -129,7 +129,7 @@
       <figure id="align_top_symbol"> <img src="images/Z-Ny-N-Top-Aligned.png" alt=""/>
         <figcaption>Alignment and top of symbols (Ethiopic letters too squat).</figcaption>
       </figure>
-      <p> A better approach is to align Z with caron (Ž) against <span lang="am">ን</span> with marcon <span lang="am">(ኝ)</span> while aligning and Z with <span lang="am">ን</span> and find typefaces with a good tuple of aligned pairings.</p>
+      <p> A better approach is to align Z with caron (Ž) against <span lang="am">ን</span> with macron <span lang="am">(ኝ)</span> while aligning and Z with <span lang="am">ን</span> and find typefaces with a good tuple of aligned pairings.</p>
       <figure id="align_below_accent"> <img src="images/Z-caron-Ny-Z-N-Alignment.png" alt=""/>
         <figcaption>Alignment below accent (better sizing).</figcaption>
       </figure>
@@ -156,7 +156,7 @@
         Most typically a Latin typeface will be made heavier to better match its Ethiopic counterpart.  This weight increase is demonstrated in many
         Ethiopic fonts that include  Latin letters. The font designer may have increased the weight of the Latin range primarily to provide heavier
         weight punctuation to use with Ethiopic script (see <a href="#ethiopicized_punctuation">Ethiopicized Punctuation</a>).</p>
-      <p>Literature produced with a heavier Latin typeface may represent the author’s stylistic sensibilities but in some cases may  only be a
+      <p>Literature produced with a heavier Latin typeface may represent the author’s stylistic sensibilities but, in some cases, may  only be a
         pragmatic outcome when an author finds manually changing between fonts too burdensome. 
         The view of professional publishers is unknown here and should be determined.</p>
       <div class="issues">
@@ -260,7 +260,7 @@
           </td>
           <td>Often used to separate comparative and sequential list of names, phrases, or numbers as well as to separate parts of a sentence that are not complete by themselves.
               <em>A special note of explanation is needed here.  While the Unicode standard refers to “<span lang="am">፥</span>” as “ETHIOPIC COLON” the correlation with “colon” from Western practices as
-              the name implies can given the wrong impression over the functional role of the symbol in writing.  Noted writing experts Desta Tekle Wold, Kidane Wolde Kifle, Dereje Gebre, and Tesfaye Shewaye all assert the equivalence of the two symbols; a shared view that reduces the two symbols to simple glyph alternatives of one another.  There is some observed tendency to use “<span lang="am">፥</span>” glyph more frequently in religious works, thus to distinguish the two in discussion the “<span lang="am">፥</span>” glyph will be refered to in this document as either <span lang="gez">ንዑስ ሠረዝ</span> or ecclesiastical comma</em>
+              the name implies can given the wrong impression over the functional role of the symbol in writing.  Noted writing experts Desta Tekle Wold, Kidane Wolde Kifle, Dereje Gebre, and Tesfaye Shewaye all assert the equivalence of the two symbols; a shared view that reduces the two symbols to simple glyph alternatives of one another.  There is some observed tendency to use “<span lang="am">፥</span>” glyph more frequently in religious works, thus to distinguish the two in discussion the “<span lang="am">፥</span>” glyph will be referred to in this document as either <span lang="gez">ንዑስ ሠረዝ</span> or ecclesiastical comma</em>
           </td>
         </tr>
         <tr>
@@ -281,7 +281,7 @@
               Tigrinya: <span lang="ti">ምልክት ሕቶ (ትእምርተ ሕቶ)</span><br/>
               English: Ethiopic Question Mark<br/>
           </td>
-          <td>Used at the end of the questioning sentence. In modern writing  “?” is preffered.</td>
+          <td>Used at the end of the questioning sentence. In modern writing  “?” is preferred.</td>
         </tr>
         <tr>
           <td lang="am" style="text-align: center;">።</td>
@@ -409,7 +409,7 @@
       <h4>Optical Balancing</h4>
       <p>Foreign language words or phrases are regularly found inline within a paragraph of Ethiopic text, often bounded within
          enclosing punctuation such as brackets and quotation marks (e.g. []()""''«»‹›).  This practice is most often observed in
-         news articles on international topics.  The weight of the enclosing punctuation may found as matching either the Ethiopic or
+         news articles on international topics.  The weight of the enclosing punctuation may be found as matching either the Ethiopic or
          Latin weight.  The preference of stakeholders must be determined here. Comparative samples follow:</p>
       <figure id="punctuation_at_latin_boundary_latin_guillemets"> <img src="images/Punctuation-At-Latin-Boundary-Latin-Guillemets.png" alt=" " />
         <figcaption>Latin text enclosed with Latin weight guillemets.</figcaption>
@@ -495,7 +495,7 @@
 -->
       </ol>
       <p>An additional wordspace conversion rule that is independent of the above space-wordspace substitution rules: Very commonly in Ethiopic documents
-         a sequence of two wordspaces are found and may be substituted for ethiopic fullstop. This may be considered a defect correction rule.</p>
+         a sequence of two wordspaces are found and may be substituted for Ethiopic fullstop. This may be considered a defect correction rule.</p>
     </section>
 
     <section id="ethiopic_gemination_mark_positioning">
@@ -718,7 +718,7 @@
 
       <section id="ecclesiastical_emphasis">
         <h4>Ecclesiastical Emphasis</h4>
-        <p>In religous literature, certain words or phrases with a spiritual or more holy aspect may be rubricated (inked in red).  The practice is context dependent and a word rubricated in one sentence may not be in the next (or elsewhere in the same sentence).</p>
+        <p>In religious literature, certain words or phrases with a spiritual or more holy aspect may be rubricated (inked in red).  The practice is context dependent and a word rubricated in one sentence may not be in the next (or elsewhere in the same sentence).</p>
         <figure id="ecclesiastical_emphasis_sample"> <img src="images/ecclesiastical-emphasis-sample-cropped.jpg" alt=" " width="600"/>
           <figcaption>Ecclesiastical emphasis sample from Maṣḥafa Ṣalot Mes Ser’ate Kiddase Betegreññā, Page 32 (Woldemariam, 1995 (1988 EC))</figcaption>
         </figure>
@@ -748,7 +748,7 @@
   <section id="ethiopic_abbreviation_formation">
     <h3>Abbreviation Formation</h3>
     <p>Abbreviations in Ethiopic languages will apply an abbreviation marker ("/" or ".") placed between the first letters of each word in a phrase.
-       In a multi-word abbreviations the last word may sometimes remain whole. Abbreviation of a single word will keep the first and final letters of the word separated by slash “/”.
+       In a multi-word abbreviation, the last word may sometimes remain whole. Abbreviation of a single word will keep the first and final letters of the word separated by slash “/”.
        Classical literature that uses the Ethiopic Wordspace may not use an abbreviation marker and instead will rely on the Ethiopic Wordspace to separate initial letter abbreviations
        that will be understood from context: (e.g. <span lang="am">ዓመተ፡ምሕረት፡</span> ⇒ <span lang="am">ዓ፡ም፡</span>).
        </p>
@@ -769,7 +769,7 @@
       <ol>
         <li>When “.” is used as the abbreviation marker, it is sometimes found at the end of the abbreviation.</li>
         <li>Confirm single word abbreviation rule.</li>
-        <li>Are mixed abbreviation markers appropriate? Some well established abbreviations apply a “.” as the marker, for example
+        <li>Are mixed abbreviation markers appropriate? Some well-established abbreviations apply a “.” as the marker, for example
             “<span lang="am">አዲስ አበባ ዩኒቨርሲቲ</span>” becomes “<span lang="am">አ.አ.ዩ</span>”.  This may reflect the chosen convention of the institute.</li>
         <li>What symbol is applied for foreign words transcribed into an Ethiopic languages?</li>
         <li>Do copy editors or publishers set a policy for abbreviation, or leave it up to the author to decide?</li>
@@ -876,7 +876,7 @@
 
     <section id="justification_with_word_bound_wordspace">
       <h5>Justification with Word Bound Wordspace and Punctuation</h5>
-      <p>In keeping with line justification for Latin script, the non-printed or “blank space” (space and gaps) between words is treated as stretchable. The width of the space symbol itself will be elongated to some aesthetic width value that may vary from space symbol to space symbol across a printed line. In Ethiopic justification, the blank space between the Ethiopic word separator and the words it separates is likewise allowed to stretch. This stretching of blank space may be either symmetrical (“centered”) or asymmetrical but in the latter case space stretching is always between the right side of the separator and the following word –referred to here as “word bound”. </p>
+      <p>In keeping with line justification for Latin script, the non-printed or “blank space” (space and gaps) between words is treated as stretchable. The width of the space symbol itself will be elongated to some aesthetic width value that may vary from space symbol to space symbol across a printed line. In Ethiopic justification, the blank space between the Ethiopic word separator and the words it separates is likewise allowed to stretch. This stretching of blank space may be either symmetrical (“centered”) or asymmetrical but in the latter case space stretching is always between the right-side of the separator and the following word –referred to here as “word bound”. </p>
       <p>In  “word bound”  justification  the  word  separator,   which  may  be  either  a  punctuation  symbol  or <span class="uname">U+1361 ETHIOPIC WORDSPACE</span> [<span lang="am">፡</span>], appears to adhere to the word to the left as if it were its final character. Figures <a href="#justification_word_bound"></a> and <a href="#justification_in_historia_aethiopica"></a> both illustrate the word bound style.</p>
       <figure id="justification_word_bound"> <img src="images/corpus-samples/Ografi-Page-35-Cropped.png" alt=" " width="800" height="223" />
         <figcaption>Ethiopic justification in word bound style (Erikson, 1921 (1913 EC))</figcaption>
@@ -939,7 +939,7 @@
       <h3>First Paragraph Rule</h3>
       <p>Paragraph indentation is a regular practice in Ethiopic publishing, and not common in hand written manuscripts where a Hareg (<span lang="am">ሐረግ</span>) or Mekfel (<span lang="am">መክፈል</span>)
          will be used instead. Some Western publishers will apply a special rule whereby the first paragraph of a section is not indented. The same
-         rule can be found applied in Ethiopic publications, however, the adoption appears to be limited.</p>
+         rule can be found applied in Ethiopic publications; however, the adoption appears to be limited.</p>
       <!-- Note that ልጅነት ተመልሶ አይመጣም ፲፱፻፶፱ provides examples of no-indent-at-start-of-section -->
       <div class="issues">
       <p>Issues/Questions:</p>
@@ -1654,10 +1654,10 @@
       </figure>
       <p>In Ethiopic book publishing, the first numbered page will generally be seen on the <span lang="am">መቅድም</span> section. When a <span lang="am">መቅድም</span> section is not present,
          numbering is expected to begin at the <span lang="am">መግቢያ</span>. The prevailing Modern Ethiopic practice is to begin counting pages from the inner cover page (this
-         is a matter of perception, by some views the outer cover is the first page and the inner cover, which is generally empty, is not counted). Thus the first printed
+         is a matter of perception, by some views the outer cover is the first page and the inner cover, which is generally empty, is not counted). Thus, the first printed
          number appearing at either the <span lang="am">መቅድም</span> or <span lang="am">መግቢያ</span> is not “1” (or “<span lang="am">፩</span>”) but the physical page count up to
          this point (for example “4” or “5”).</p>
-      <p>At the author's discretion, either Western or Ethiopic numerals may be used for page numbers. In digital publishing, it is recommended that the a setting be offered
+      <p>At the author's discretion, either Western or Ethiopic numerals may be used for page numbers. In digital publishing, it is recommended that a setting be offered
          the user to toggle the numeral system from the published default. Additionally, a tooltip that appears when focus is over an Ethiopic page number to present the Western
          numeral equivalent would be helpful for some readers.</p>
         <div class="issues">
@@ -1780,7 +1780,7 @@
     <section id="ethiopic_footnotes">
       <h4>Footnotes &amp; Superscript</h4>
       <p>Using Microsoft Word as a reference point, Footnote counters are simple superscripted cardinal numbers.  The superscripted text is "top-aligned" with the reference text.  This alignment
-         style works well the letters of the typeface are fixed height, but may not be visually optimal in a variable letter height writing sytem. We will apply Z-<span lang="am">ን</span> Alignment
+         style works well the letters of the typeface are fixed height, but may not be visually optimal in a variable letter height writing system. We will apply Z-<span lang="am">ን</span> Alignment
          to illustrate the difficulty encountered with Ethiopic text.</p>
       <figure id="zn_superscript"> <img src="images/ZN-Superscript.png" alt=" " />
         <figcaption>Superscript Top Alignment.</figcaption>
@@ -1853,7 +1853,7 @@
         <td>Ge’ez</td>
         <td lang="am">ግዕዝ</td>
         <td lang="ti">ግዕዝ</td>
-        <td>The name of both the ancient Semitic language of northern Ethiopia and Eritrea as well as the name of the corresponding syllabic writing system.  Also known as “Ethiopic”. It survives today as the liturgical language language of the Eritrean and Ethiopian Orthodox Chuches.</td>
+        <td>The name of both the ancient Semitic language of northern Ethiopia and Eritrea as well as the name of the corresponding syllabic writing system.  Also known as “Ethiopic”. It survives today as the liturgical language of the Eritrean and Ethiopian Orthodox Chuches.</td>
       </tr>
       <tr id="def_text_block">
         <td>text block</td>
@@ -1871,7 +1871,7 @@
         <td>measure</td>
         <td lang="am">TBD</td>
         <td lang="ti">TBD</td>
-        <td>The standard length of the line; ie. column width or width of the overall textblock.</td>
+        <td>The standard length of the line; ie. column width or width of the overall text block.</td>
       </tr>
       <tr id="term.wordspace">
         <td>Ethiopic Wordspace</td>
@@ -1883,7 +1883,7 @@
         <td>Ethiopicized</td>
         <td lang="am">TBD</td>
         <td lang="ti">TBD</td>
-        <td>The sytlization of western symbols (usually punctuation and numerals) to match the strokes and weight of an Ethiopic typeface.</td>
+        <td>The stylization of western symbols (usually punctuation and numerals) to match the strokes and weight of an Ethiopic typeface.</td>
       </tr>
       <tr id="term.classical-ethiopic">
         <td>Classical Ethiopic</td>
@@ -1891,7 +1891,7 @@
         <td lang="ti">TBD</td>
         <td>In the scope of this specification Classical Ethiopic refers to the set of practices observed
             in the mechanic printing of Ethiopian and Eritrean literature through the end of the imperial era.
-            Literature at the start of this era begins as an outgrowth of scribal practices and in the the later half
+            Literature at the start of this era begins as an outgrowth of scribal practices and in the later half
             is more uniform in layout and editorial quality which is likely the result of state control over publishing.</td>
       </tr>
       <tr id="term.modern-ethiopic">
@@ -1900,7 +1900,7 @@
         <td lang="ti">TBD</td>
         <td>Ethiopic manuscripts published primarily after the reign of Emperor Haile Selassie where
             writing practices have become less adherent to the Ge’ez tradition, more pragmatic so as
-            to fascilitate the constraints and limitations imposed by mass media.</td>
+            to facilitate the constraints and limitations imposed by mass media.</td>
       </tr>
       <tr id="term.yaredic-zaima-notation">
         <td>Yaredic Zaima Notation</td>
@@ -2017,7 +2017,7 @@
 
   <section class="appendix" id="html5-alignment">
     <h1>Alignment with HTML5 Layout &amp; Formatting</h1>
-    <p>This appendix is introduced to help insure that the Ethiopic layout requirements in this recommendation has a sufficient and practical coverage in its scope.
+    <p>This appendix is introduced to help ensure that the Ethiopic layout requirements in this recommendation has a sufficient and practical coverage in its scope.
        HTML5 is applied here for comparison as it is anticipated as the most frequently applied document language under which the recommendation will be applied.
        HTML5 elements will be reviewed in this appendix and remarks made to indicate that either: no recommendation is needed (western defaults are applicable),
        a document section is identified that covers the element in the Ethiopic context, or that a gap in coverage is identified and will be addressed.</p>
