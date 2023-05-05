@@ -6,16 +6,18 @@ We aim to address the problem that local users don't know how to tell the W3C wh
 
 Topics for discussion are suggested by [the gap-analysis template](https://www.w3.org/International/i18n-activity/templates/gap-analysis/gap-analysis_template.html). This work feeds into the [language matrix](https://www.w3.org/International/typography/gap-analysis/language-matrix.html) which provides a heat-map for language issues on the Web.
 
+---
+
+## Help wanted!
+**We're looking for information about this writing system. Follow the link for specific questions.**
+
+**[Ethiopic](https://github.com/w3c/elreq/issues?q=is%3Aissue+is%3Aopen+label%3Aquestion)**
+
+---
+
 
 ### Key links
 [GitHub repo](https://github.com/w3c/elreq) • [Discussion threads](https://github.com/w3c/elreq/issues) • [Issue tracker](https://www.w3.org/International/i18n-activity/textlayout/?filter=elreq) (with elreq filter) • [Charter](https://www.w3.org/International/elreq/charter/)
-
-
-
-### Help wanted!
-We're looking for information about this writing system. Follow the link for specific questions.
-
-[Ethiopic](https://github.com/w3c/elreq/issues?q=is%3Aissue+is%3Aopen+label%3Aquestion)
 
 
 ### Documents
