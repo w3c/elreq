@@ -21,9 +21,17 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 
 
 ### Documents
-- **Ethiopic Gap Analysis** • [DNOTE](https://www.w3.org/TR/elreq-gap) • [*Editor's draft*](https://www.w3.org/International/elreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/gap-analysis/index.html) • [*Discuss*](https://github.com/w3c/elreq/issues/) • [*Edit*](https://github.com/w3c/elreq/labels/doc%3Aethi)
+- **Ethiopic Gap Analysis** • [DNOTE](https://www.w3.org/TR/elreq-gap) • [*Editor's draft*](https://www.w3.org/International/elreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/gap-analysis/index.html)
 
-- **Ethiopic Layout Requirements** • [DNOTE](https://www.w3.org/TR/elreq) • [*Editor's draft*](https://www.w3.org/International/elreq/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/index.html) • [*Discuss*](https://github.com/w3c/elreq/issues/)
+- **Ethiopic Layout Requirements** • [DNOTE](https://www.w3.org/TR/elreq) • [*Editor's draft*](https://www.w3.org/International/elreq/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/index.html)
+
+
+### Discussions
+- **Ethiopic** • [*Questions*](https://github.com/w3c/elreq/issues?q=is%3Aissue+is%3Aopen+label%3Aquestion)
+• [*Gap reports*](https://github.com/w3c/elreq/labels/doc%3Aethi)
+• [*Other*](https://github.com/w3c/elreq/issues?q=is%3Aopen+-label%3Aquestion) 
+• [*Spec issues*](https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Aelreq+label%3Aspec-type-issue)
+
 
 
 ### Related documents
