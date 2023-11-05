@@ -6,14 +6,32 @@ We aim to address the problem that local users don't know how to tell the W3C wh
 
 Topics for discussion are suggested by [the gap-analysis template](https://www.w3.org/International/i18n-activity/templates/gap-analysis/gap-analysis_template.html). This work feeds into the [language matrix](https://www.w3.org/International/typography/gap-analysis/language-matrix.html) which provides a heat-map for language issues on the Web.
 
+---
+
+## Help wanted!
+**We're looking for information about this writing system. Follow the link for specific questions.**
+
+**[Ethiopic](https://github.com/w3c/elreq/issues?q=is%3Aissue+is%3Aopen+label%3Aquestion)**
+
+---
+
 
 ### Key links
 [GitHub repo](https://github.com/w3c/elreq) • [Discussion threads](https://github.com/w3c/elreq/issues) • [Issue tracker](https://www.w3.org/International/i18n-activity/textlayout/?filter=elreq) (with elreq filter) • [Charter](https://www.w3.org/International/elreq/charter/)
 
 
 ### Documents
-- [**Ethiopic Gap Analysis**](https://www.w3.org/TR/elreq-gap) • [*Editor's draft*](https://www.w3.org/International/elreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/gap-analysis/index.html) • [*Edit/comment on GitHub*](https://github.com/w3c/elreq/labels/doc%3Aethi)
-- [**Ethiopic Layout Requirements**](https://www.w3.org/TR/elreq) • [*Editor's draft*](https://www.w3.org/International/elreq/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/index.html)
+- **Ethiopic Gap Analysis** • [DNOTE](https://www.w3.org/TR/elreq-gap) • [*Editor's draft*](https://www.w3.org/International/elreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/gap-analysis/index.html)
+
+- **Ethiopic Layout Requirements** • [DNOTE](https://www.w3.org/TR/elreq) • [*Editor's draft*](https://www.w3.org/International/elreq/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/index.html)
+
+
+### Discussions
+- **Ethiopic** • [*Questions*](https://github.com/w3c/elreq/issues?q=is%3Aissue+is%3Aopen+label%3Aquestion)
+• [*Gap reports*](https://github.com/w3c/elreq/labels/doc%3Aethi)
+• [*Other*](https://github.com/w3c/elreq/issues?q=is%3Aopen+-label%3Aquestion) 
+• [*Spec issues*](https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Aelreq+label%3Aspec-type-issue)
+
 
 
 ### Related documents
@@ -27,7 +45,7 @@ Note that the public-i18n-arabic mailing list is used to send notification diges
 
 
 ### Participate
-You can participate in the task force work at various levels. In order of increasing commitment, these include Follower, Contributor, Participant, Editor, and Chair. [Find your level](https://www.w3.org/International/i18n-drafts/pages/task_force_roles).
+You can participate in the work at various levels. In order of increasing commitment, these include List subscriber, Participant, Editor, and Chair. [Explore the options](https://www.w3.org/International/i18n-drafts/pages/languagedev_participation.html).
 
 **To just follow the work:** Rather than 'Watch' this repository, [subscribe](mailto:public-i18n-ethiopic-request@w3.org?subject=subscribe) to the [public-i18n-ethiopic](https://lists.w3.org/Archives/Public/public-i18n-ethiopic/) mailing list. That list is notified (no more than once a day, and in digest form), about changes to issues in this repository, but also about other W3C Working Group issues related to the Ethiopic writing systems.
 
