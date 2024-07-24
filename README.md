@@ -20,10 +20,14 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 [GitHub repo](https://github.com/w3c/elreq) • [Discussion threads](https://github.com/w3c/elreq/issues) • [Charter](https://www.w3.org/International/elreq/charter/)
 
 
-### Documents
-- **Ethiopic Gap Analysis** • [DNOTE](https://www.w3.org/TR/elreq-gap) • [*Editor's draft*](https://www.w3.org/International/elreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/gap-analysis/index.html)
+### Resource & requirement documents
+- **Ethiopic Script Resources** • [DNOTE](https://www.w3.org/TR/ethi-lreq) • [*Editor's draft*](https://www.w3.org/International/elreq/ethi/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/ethi/index.html)
 
 - **Ethiopic Layout Requirements** • [DNOTE](https://www.w3.org/TR/elreq) • [*Editor's draft*](https://www.w3.org/International/elreq/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/index.html)
+
+### Gap analysis documents
+- **Ethiopic Gap Analysis** • [DNOTE](https://www.w3.org/TR/elreq-gap) • [*Editor's draft*](https://www.w3.org/International/elreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/gap-analysis/index.html)
+
 
 
 ### Discussions
