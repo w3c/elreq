@@ -17,13 +17,17 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 
 
 ### Key links
-[GitHub repo](https://github.com/w3c/elreq) • [Discussion threads](https://github.com/w3c/elreq/issues) • [Issue tracker](https://www.w3.org/International/i18n-activity/textlayout/?filter=elreq) (with elreq filter) • [Charter](https://www.w3.org/International/elreq/charter/)
+[GitHub repo](https://github.com/w3c/elreq) • [Discussion threads](https://github.com/w3c/elreq/issues) • [Charter](https://www.w3.org/International/elreq/charter/)
 
 
-### Documents
-- **Ethiopic Gap Analysis** • [DNOTE](https://www.w3.org/TR/elreq-gap) • [*Editor's draft*](https://www.w3.org/International/elreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/gap-analysis/index.html)
+### Resource & requirement documents
+- **Ethiopic Script Resources** • [DNOTE](https://www.w3.org/TR/ethi-lreq) • [*Editor's draft*](https://www.w3.org/International/elreq/ethi/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/ethi/index.html)
 
 - **Ethiopic Layout Requirements** • [DNOTE](https://www.w3.org/TR/elreq) • [*Editor's draft*](https://www.w3.org/International/elreq/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/index.html)
+
+### Gap analysis documents
+- **Ethiopic Gap Analysis** • [DNOTE](https://www.w3.org/TR/elreq-gap) • [*Editor's draft*](https://www.w3.org/International/elreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/gap-analysis/index.html)
+
 
 
 ### Discussions
@@ -66,7 +70,7 @@ To get an idea about what's involved, see  [Get involved with Language Enablemen
 
 ### Links
 - [Mail archive](https://lists.w3.org/Archives/Public/public-i18n-ethiopic/)
-- [Writing i18n tests](https://github.com/w3c/i18n-activity/wiki/Writing-i18n-tests)
+- [Writing i18n tests](https://github.com/w3c/i18n-tests/wiki/Writing-i18n-tests)
 - [Practical tips for task forces](https://www.w3.org/International/i18n-activity/guidelines/process.html) (See also the github and editorial guidelines below)
 - [Action tracker](https://www.w3.org/International/groups/ethiopic-layout/track/actions/open)
 - Meeting info (tbd)
