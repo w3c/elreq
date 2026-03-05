@@ -6,6 +6,9 @@ We aim to address the problem that local users don't know how to tell the W3C wh
 
 Topics for discussion are suggested by [the gap-analysis template](https://www.w3.org/International/i18n-activity/templates/gap-analysis/gap-analysis_template.html). This work feeds into the [language matrix](https://www.w3.org/International/typography/gap-analysis/language-matrix.html) which provides a heat-map for language issues on the Web.
 
+### Key links
+[GitHub repo](https://github.com/w3c/elreq) • [Discussion threads](https://github.com/w3c/elreq/issues) • [Charter](https://www.w3.org/International/elreq/charter/)
+
 ---
 
 ## Help wanted!
@@ -16,29 +19,19 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 ---
 
 
-### Key links
-[GitHub repo](https://github.com/w3c/elreq) • [Discussion threads](https://github.com/w3c/elreq/issues) • [Charter](https://www.w3.org/International/elreq/charter/)
 
-
-### Resource & requirement documents
+### Ethiopic
 - **Ethiopic Script Resources** • [DNOTE](https://www.w3.org/TR/ethi-lreq) • [*Editor's draft*](https://www.w3.org/International/elreq/ethi/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/ethi/index.html)
-
 - **Ethiopic Layout Requirements** • [DNOTE](https://www.w3.org/TR/elreq) • [*Editor's draft*](https://www.w3.org/International/elreq/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/index.html)
-
-### Gap analysis documents
 - **Ethiopic Gap Analysis** • [DNOTE](https://www.w3.org/TR/elreq-gap) • [*Editor's draft*](https://www.w3.org/International/elreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/gap-analysis/index.html)
-
-
-
-### Discussions
-- **Ethiopic** • [*Questions*](https://github.com/w3c/elreq/issues?q=is%3Aissue+is%3Aopen+label%3Aquestion)
+- **Discussions** • [*Questions*](https://github.com/w3c/elreq/issues?q=is%3Aissue+is%3Aopen+label%3Aquestion)
 • [*Gap reports*](https://github.com/w3c/elreq/labels/doc%3Aethi)
 • [*Other*](https://github.com/w3c/elreq/issues?q=is%3Aopen+-label%3Aquestion) 
 • [*Spec issues*](https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Aelreq+label%3Aspec-type-issue)
 
 
 
-### Related documents
+### Other documents
 - [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/)
 
 
