@@ -19,7 +19,6 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 ---
 
 
-
 ### Ethiopic
 - **Ethiopic Script Resources** • [DNOTE](https://www.w3.org/TR/ethi-lreq) • [*Editor's draft*](https://www.w3.org/International/elreq/ethi/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/ethi/index.html)
 - **Ethiopic Layout Requirements** • [DNOTE](https://www.w3.org/TR/elreq) • [*Editor's draft*](https://www.w3.org/International/elreq/) • [*Latest commits*](https://github.com/w3c/elreq/commits/gh-pages/index.html)
